@@ -29,6 +29,12 @@ public final class ExampleTwo {
      */
     com.google.protobuf.ByteString
         getMessageBytes();
+
+    /**
+     * <code>int32 number = 2;</code>
+     * @return The number.
+     */
+    int getNumber();
   }
   /**
    * Protobuf type {@code example_two.ExampleTwoRequest}
@@ -110,6 +116,17 @@ public final class ExampleTwo {
       }
     }
 
+    public static final int NUMBER_FIELD_NUMBER = 2;
+    private int number_ = 0;
+    /**
+     * <code>int32 number = 2;</code>
+     * @return The number.
+     */
+    @java.lang.Override
+    public int getNumber() {
+      return number_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -127,6 +144,9 @@ public final class ExampleTwo {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
       }
+      if (number_ != 0) {
+        output.writeInt32(2, number_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -138,6 +158,10 @@ public final class ExampleTwo {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
+      }
+      if (number_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, number_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -156,6 +180,8 @@ public final class ExampleTwo {
 
       if (!getMessage()
           .equals(other.getMessage())) return false;
+      if (getNumber()
+          != other.getNumber()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -169,6 +195,8 @@ public final class ExampleTwo {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
       hash = (53 * hash) + getMessage().hashCode();
+      hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getNumber();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -299,6 +327,7 @@ public final class ExampleTwo {
         super.clear();
         bitField0_ = 0;
         message_ = "";
+        number_ = 0;
         return this;
       }
 
@@ -334,6 +363,9 @@ public final class ExampleTwo {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.message_ = message_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.number_ = number_;
         }
       }
 
@@ -386,6 +418,9 @@ public final class ExampleTwo {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (other.getNumber() != 0) {
+          setNumber(other.getNumber());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -417,6 +452,11 @@ public final class ExampleTwo {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 16: {
+                number_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -502,6 +542,38 @@ public final class ExampleTwo {
         checkByteStringIsUtf8(value);
         message_ = value;
         bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int number_ ;
+      /**
+       * <code>int32 number = 2;</code>
+       * @return The number.
+       */
+      @java.lang.Override
+      public int getNumber() {
+        return number_;
+      }
+      /**
+       * <code>int32 number = 2;</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumber(int value) {
+        
+        number_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 number = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        number_ = 0;
         onChanged();
         return this;
       }
@@ -1143,14 +1215,15 @@ public final class ExampleTwo {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021example_two.proto\022\013example_two\"$\n\021Exam" +
-      "pleTwoRequest\022\017\n\007message\030\001 \001(\t\"#\n\022Exampl" +
-      "eTwoResponse\022\r\n\005reply\030\001 \001(\t2\\\n\021ExampleTw" +
-      "oService\022G\n\004Call\022\036.example_two.ExampleTw" +
-      "oRequest\032\037.example_two.ExampleTwoRespons" +
-      "eB_\n\030com.soustify.example_twoZCgithub.co" +
-      "m/soustify/data-gateway-buffer/gen/examp" +
-      "le_two;example_twob\006proto3"
+      "\n\021example_two.proto\022\013example_two\"4\n\021Exam" +
+      "pleTwoRequest\022\017\n\007message\030\001 \001(\t\022\016\n\006number" +
+      "\030\002 \001(\005\"#\n\022ExampleTwoResponse\022\r\n\005reply\030\001 " +
+      "\001(\t2\\\n\021ExampleTwoService\022G\n\004Call\022\036.examp" +
+      "le_two.ExampleTwoRequest\032\037.example_two.E" +
+      "xampleTwoResponseB_\n\030com.soustify.exampl" +
+      "e_twoZCgithub.com/soustify/data-gateway-" +
+      "buffer/gen/example_two;example_twob\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1161,7 +1234,7 @@ public final class ExampleTwo {
     internal_static_example_two_ExampleTwoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_example_two_ExampleTwoRequest_descriptor,
-        new java.lang.String[] { "Message", });
+        new java.lang.String[] { "Message", "Number", });
     internal_static_example_two_ExampleTwoResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_example_two_ExampleTwoResponse_fieldAccessorTable = new
