@@ -71,9 +71,29 @@ jobs:
           server-id: github
           settings-path: ${{ github.workspace }}
 
+
+      - name: Configure Maven Settings for GitHub Packages
+        run: |
+          mkdir -p $HOME/.m2
+          cat <<EOF > $HOME/.m2/settings.xml
+          <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                                        https://maven.apache.org/xsd/settings-1.0.0.xsd">
+            <servers>
+              <server>
+                <id>github</id>
+                <username>${GITHUB_ACTOR}</username>
+                <password>${{ secrets.GITHUB_TOKEN }}</password>
+              </server>
+            </servers>
+          </settings>
+          EOF
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+
+
       - name: Build and Deploy to GitHub Packages
         run: |
-          mvn clean install
-          mvn deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          mvn clean install --settings $HOME/.m2/settings.xml
+          mvn deploy --settings $HOME/.m2/settings.xml
