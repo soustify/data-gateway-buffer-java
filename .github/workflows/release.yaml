@@ -60,6 +60,7 @@ jobs:
           git tag "${{ env.new_version }}"
           git push origin "${{ env.new_version }}"
 
+
       - name: Setup Java and Maven
         uses: actions/setup-java@v3
         with:
