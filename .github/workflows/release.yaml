@@ -51,12 +51,14 @@ jobs:
           esac
           echo "New version: v$new_version"
           echo "new_version=v$new_version" >> $GITHUB_ENV
-
+          
       - name: Create and Push Tag
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+          git remote set-url origin https://soustify:${GH_PAT}@github.com/soustify/data-gateway-buffer-java.git
           git tag "${{ env.new_version }}"
           git push origin "${{ env.new_version }}"
 
