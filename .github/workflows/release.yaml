@@ -55,12 +55,10 @@ jobs:
           echo "new_version=v$new_version" >> $GITHUB_ENV
           
       - name: Create and Push Tag
-        env:
-          GH_PAT: ${{ secrets.PAT_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git remote set-url origin https://soustify:${GH_PAT}@github.com/soustify/data-gateway-buffer-java.git
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/soustify/data-gateway-buffer-java.git
           git tag "${{ env.new_version }}"
           git push origin "${{ env.new_version }}"
 
