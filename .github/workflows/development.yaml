@@ -68,6 +68,7 @@ jobs:
           </settings>
           EOF
 
+
       - name: Build and Deploy to GitHub Packages
         run: |
           mvn clean install --settings $HOME/.m2/settings.xml
