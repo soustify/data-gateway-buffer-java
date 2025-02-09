@@ -2,7 +2,8 @@ name: Deploy Dev to GitHub Packages
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   deploy-dev:
@@ -19,7 +20,7 @@ jobs:
       - name: Get Latest Tag
         id: get-latest-tag
         run: |
-          # Busca por tags que seguem o padrão vX.Y.Z
+          # Procura por tags que sigam o padrão vX.Y.Z
           latest_tag=$(git tag -l 'v*' | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -n1)
           if [ -z "$latest_tag" ]; then
             latest_tag="v0.0.0"
@@ -27,19 +28,21 @@ jobs:
           echo "Latest tag: $latest_tag"
           echo "LATEST_TAG=$latest_tag" >> $GITHUB_ENV
 
-      - name: Set Dev Version
+      - name: Set Dev Version with Inverted Timestamp
         id: set-dev-version
         run: |
-          # Remove o "v" do prefixo e adiciona o sufixo "-dev"
+          # Remove o "v" do início da tag
           version_without_v="${LATEST_TAG#v}"
-          dev_version="${version_without_v}-dev"
+          # Gera o timestamp invertido com o formato AAAAMMDD_HHSSmm
+          # Obs.: Usamos %H%S%M para que o valor de segundos e minutos fiquem invertidos em relação ao padrão (%H%M%S)
+          timestamp=$(date +'%Y%m%d_%H%S%M')
+          dev_version="${version_without_v}-dev_${timestamp}"
           echo "Dev version: $dev_version"
           echo "DEV_VERSION=$dev_version" >> $GITHUB_ENV
 
       - name: Update POM Version
         run: |
           echo "Updating Maven POM version to ${{ env.DEV_VERSION }}"
-          # Atualiza a versão do POM para a versão dev (sem o "v")
           mvn versions:set -DnewVersion=${{ env.DEV_VERSION }} -DgenerateBackupPoms=false
 
       - name: Setup Java and Maven
@@ -67,7 +70,6 @@ jobs:
             </servers>
           </settings>
           EOF
-
 
       - name: Build and Deploy to GitHub Packages
         run: |
