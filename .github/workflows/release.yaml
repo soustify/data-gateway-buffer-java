@@ -54,7 +54,14 @@ jobs:
           esac
           echo "New version: v$new_version"
           echo "new_version=v$new_version" >> $GITHUB_ENV
-          
+
+      - name: Update POM Version
+        run: |
+          # Remove o "v" da nova versão para ficar somente numérica
+          version_without_v=$(echo "${{ env.new_version }}" | sed 's/^v//')
+          echo "Setting Maven version to $version_without_v"
+          mvn versions:set -DnewVersion=$version_without_v -DgenerateBackupPoms=false
+
       - name: Create and Push Tag
         run: |
           git config --global user.name "github-actions"
@@ -63,7 +70,6 @@ jobs:
           git tag "${{ env.new_version }}"
           git push origin "${{ env.new_version }}"
 
-
       - name: Setup Java and Maven
         uses: actions/setup-java@v3
         with:
@@ -71,7 +77,6 @@ jobs:
           java-version: '17'
           server-id: github
           settings-path: ${{ github.workspace }}
-
 
       - name: Configure Maven Settings for GitHub Packages
         run: |
