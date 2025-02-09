@@ -1220,9 +1220,8 @@ public final class ExampleTwo {
       "\030\002 \001(\005\"#\n\022ExampleTwoResponse\022\r\n\005reply\030\001 " +
       "\001(\t2\\\n\021ExampleTwoService\022G\n\004Call\022\036.examp" +
       "le_two.ExampleTwoRequest\032\037.example_two.E" +
-      "xampleTwoResponseB_\n\030com.soustify.exampl" +
-      "e_twoZCgithub.com/soustify/data-gateway-" +
-      "buffer/gen/example_two;example_twob\006prot" +
+      "xampleTwoResponseB7\n\030com.soustify.exampl" +
+      "e_twoZ\033gen/example_two;example_twob\006prot" +
       "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

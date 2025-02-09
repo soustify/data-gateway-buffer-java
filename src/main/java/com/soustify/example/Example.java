@@ -1147,8 +1147,7 @@ public final class Example {
       "t\022\017\n\007message\030\001 \001(\t\"\037\n\016SimpleResponse\022\r\n\005" +
       "reply\030\001 \001(\t2I\n\016ExampleService\0227\n\004Call\022\026." +
       "example.SimpleRequest\032\027.example.SimpleRe" +
-      "sponseBS\n\024com.soustify.exampleZ;github.c" +
-      "om/soustify/data-gateway-buffer/gen/exam" +
+      "sponseB+\n\024com.soustify.exampleZ\023gen/exam" +
       "ple;exampleb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
