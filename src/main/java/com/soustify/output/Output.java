@@ -509,8 +509,9 @@ public final class Output {
   static {
     java.lang.String[] descriptorData = {
       "\n\014output.proto\022\006output\"\036\n\rCountResponse\022" +
-      "\r\n\005count\030\001 \001(\003B(\n\023com.soustify.outputZ\021g" +
-      "en/output;outputb\006proto3"
+      "\r\n\005count\030\001 \001(\003BS\n\023com.soustify.outputZ<g" +
+      "ithub.com/soustify/data-gateway-buffer-g" +
+      "o/pkg/output;outputb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

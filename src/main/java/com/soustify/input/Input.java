@@ -2455,8 +2455,9 @@ public final class Input {
       "_by\030\004 \001(\0132\025.input.OrderByRequest\"B\n\017Filt" +
       "eredRequest\022\026\n\016filter_content\030\001 \001(\t\022\027\n\017f" +
       "iltered_fields\030\002 \003(\t\".\n\016OrderByRequest\022\r" +
-      "\n\005field\030\001 \001(\t\022\r\n\005order\030\002 \001(\tB%\n\022com.sous" +
-      "tify.inputZ\017gen/input;inputb\006proto3"
+      "\n\005field\030\001 \001(\t\022\r\n\005order\030\002 \001(\tBP\n\022com.sous" +
+      "tify.inputZ:github.com/soustify/data-gat" +
+      "eway-buffer-go/pkg/input;inputb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
