@@ -3181,9 +3181,10 @@ public final class Category {
       "Response\022C\n\006Create\022\033.category.Categories" +
       "Request\032\034.category.CategoriesResponse\022C\n" +
       "\006Update\022\033.category.CategoriesRequest\032\034.c" +
-      "ategory.CategoriesResponseB.\n\025com.sousti" +
-      "fy.categoryZ\025gen/category;categoryb\006prot" +
-      "o3"
+      "ategory.CategoriesResponseBY\n\025com.sousti" +
+      "fy.categoryZ@github.com/soustify/data-ga" +
+      "teway-buffer-go/pkg/category;categoryb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
