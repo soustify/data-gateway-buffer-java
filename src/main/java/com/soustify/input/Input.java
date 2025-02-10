@@ -31,19 +31,28 @@ public final class Input {
     int getLimit();
 
     /**
-     * <code>.input.FilteredRequest filter = 3;</code>
-     * @return Whether the filter field is set.
+     * <code>repeated .input.FilteredRequest filter = 3;</code>
      */
-    boolean hasFilter();
+    java.util.List<com.soustify.input.Input.FilteredRequest> 
+        getFilterList();
     /**
-     * <code>.input.FilteredRequest filter = 3;</code>
-     * @return The filter.
+     * <code>repeated .input.FilteredRequest filter = 3;</code>
      */
-    com.soustify.input.Input.FilteredRequest getFilter();
+    com.soustify.input.Input.FilteredRequest getFilter(int index);
     /**
-     * <code>.input.FilteredRequest filter = 3;</code>
+     * <code>repeated .input.FilteredRequest filter = 3;</code>
      */
-    com.soustify.input.Input.FilteredRequestOrBuilder getFilterOrBuilder();
+    int getFilterCount();
+    /**
+     * <code>repeated .input.FilteredRequest filter = 3;</code>
+     */
+    java.util.List<? extends com.soustify.input.Input.FilteredRequestOrBuilder> 
+        getFilterOrBuilderList();
+    /**
+     * <code>repeated .input.FilteredRequest filter = 3;</code>
+     */
+    com.soustify.input.Input.FilteredRequestOrBuilder getFilterOrBuilder(
+        int index);
 
     /**
      * <code>.input.OrderByRequest order_by = 4;</code>
@@ -73,6 +82,7 @@ public final class Input {
       super(builder);
     }
     private PaginationRequest() {
+      filter_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -123,29 +133,44 @@ public final class Input {
     }
 
     public static final int FILTER_FIELD_NUMBER = 3;
-    private com.soustify.input.Input.FilteredRequest filter_;
+    @SuppressWarnings("serial")
+    private java.util.List<com.soustify.input.Input.FilteredRequest> filter_;
     /**
-     * <code>.input.FilteredRequest filter = 3;</code>
-     * @return Whether the filter field is set.
+     * <code>repeated .input.FilteredRequest filter = 3;</code>
      */
     @java.lang.Override
-    public boolean hasFilter() {
-      return filter_ != null;
+    public java.util.List<com.soustify.input.Input.FilteredRequest> getFilterList() {
+      return filter_;
     }
     /**
-     * <code>.input.FilteredRequest filter = 3;</code>
-     * @return The filter.
+     * <code>repeated .input.FilteredRequest filter = 3;</code>
      */
     @java.lang.Override
-    public com.soustify.input.Input.FilteredRequest getFilter() {
-      return filter_ == null ? com.soustify.input.Input.FilteredRequest.getDefaultInstance() : filter_;
+    public java.util.List<? extends com.soustify.input.Input.FilteredRequestOrBuilder> 
+        getFilterOrBuilderList() {
+      return filter_;
     }
     /**
-     * <code>.input.FilteredRequest filter = 3;</code>
+     * <code>repeated .input.FilteredRequest filter = 3;</code>
      */
     @java.lang.Override
-    public com.soustify.input.Input.FilteredRequestOrBuilder getFilterOrBuilder() {
-      return filter_ == null ? com.soustify.input.Input.FilteredRequest.getDefaultInstance() : filter_;
+    public int getFilterCount() {
+      return filter_.size();
+    }
+    /**
+     * <code>repeated .input.FilteredRequest filter = 3;</code>
+     */
+    @java.lang.Override
+    public com.soustify.input.Input.FilteredRequest getFilter(int index) {
+      return filter_.get(index);
+    }
+    /**
+     * <code>repeated .input.FilteredRequest filter = 3;</code>
+     */
+    @java.lang.Override
+    public com.soustify.input.Input.FilteredRequestOrBuilder getFilterOrBuilder(
+        int index) {
+      return filter_.get(index);
     }
 
     public static final int ORDER_BY_FIELD_NUMBER = 4;
@@ -194,8 +219,8 @@ public final class Input {
       if (limit_ != 0) {
         output.writeInt32(2, limit_);
       }
-      if (filter_ != null) {
-        output.writeMessage(3, getFilter());
+      for (int i = 0; i < filter_.size(); i++) {
+        output.writeMessage(3, filter_.get(i));
       }
       if (orderBy_ != null) {
         output.writeMessage(4, getOrderBy());
@@ -217,9 +242,9 @@ public final class Input {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, limit_);
       }
-      if (filter_ != null) {
+      for (int i = 0; i < filter_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getFilter());
+          .computeMessageSize(3, filter_.get(i));
       }
       if (orderBy_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -244,11 +269,8 @@ public final class Input {
           != other.getPage()) return false;
       if (getLimit()
           != other.getLimit()) return false;
-      if (hasFilter() != other.hasFilter()) return false;
-      if (hasFilter()) {
-        if (!getFilter()
-            .equals(other.getFilter())) return false;
-      }
+      if (!getFilterList()
+          .equals(other.getFilterList())) return false;
       if (hasOrderBy() != other.hasOrderBy()) return false;
       if (hasOrderBy()) {
         if (!getOrderBy()
@@ -269,9 +291,9 @@ public final class Input {
       hash = (53 * hash) + getPage();
       hash = (37 * hash) + LIMIT_FIELD_NUMBER;
       hash = (53 * hash) + getLimit();
-      if (hasFilter()) {
+      if (getFilterCount() > 0) {
         hash = (37 * hash) + FILTER_FIELD_NUMBER;
-        hash = (53 * hash) + getFilter().hashCode();
+        hash = (53 * hash) + getFilterList().hashCode();
       }
       if (hasOrderBy()) {
         hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
@@ -408,11 +430,13 @@ public final class Input {
         bitField0_ = 0;
         page_ = 0;
         limit_ = 0;
-        filter_ = null;
-        if (filterBuilder_ != null) {
-          filterBuilder_.dispose();
-          filterBuilder_ = null;
+        if (filterBuilder_ == null) {
+          filter_ = java.util.Collections.emptyList();
+        } else {
+          filter_ = null;
+          filterBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         orderBy_ = null;
         if (orderByBuilder_ != null) {
           orderByBuilder_.dispose();
@@ -444,9 +468,22 @@ public final class Input {
       @java.lang.Override
       public com.soustify.input.Input.PaginationRequest buildPartial() {
         com.soustify.input.Input.PaginationRequest result = new com.soustify.input.Input.PaginationRequest(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.soustify.input.Input.PaginationRequest result) {
+        if (filterBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            filter_ = java.util.Collections.unmodifiableList(filter_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.filter_ = filter_;
+        } else {
+          result.filter_ = filterBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.soustify.input.Input.PaginationRequest result) {
@@ -456,11 +493,6 @@ public final class Input {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.limit_ = limit_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.filter_ = filterBuilder_ == null
-              ? filter_
-              : filterBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.orderBy_ = orderByBuilder_ == null
@@ -519,8 +551,31 @@ public final class Input {
         if (other.getLimit() != 0) {
           setLimit(other.getLimit());
         }
-        if (other.hasFilter()) {
-          mergeFilter(other.getFilter());
+        if (filterBuilder_ == null) {
+          if (!other.filter_.isEmpty()) {
+            if (filter_.isEmpty()) {
+              filter_ = other.filter_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureFilterIsMutable();
+              filter_.addAll(other.filter_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.filter_.isEmpty()) {
+            if (filterBuilder_.isEmpty()) {
+              filterBuilder_.dispose();
+              filterBuilder_ = null;
+              filter_ = other.filter_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              filterBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFilterFieldBuilder() : null;
+            } else {
+              filterBuilder_.addAllMessages(other.filter_);
+            }
+          }
         }
         if (other.hasOrderBy()) {
           mergeOrderBy(other.getOrderBy());
@@ -562,10 +617,16 @@ public final class Input {
                 break;
               } // case 16
               case 26: {
-                input.readMessage(
-                    getFilterFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
+                com.soustify.input.Input.FilteredRequest m =
+                    input.readMessage(
+                        com.soustify.input.Input.FilteredRequest.parser(),
+                        extensionRegistry);
+                if (filterBuilder_ == null) {
+                  ensureFilterIsMutable();
+                  filter_.add(m);
+                } else {
+                  filterBuilder_.addMessage(m);
+                }
                 break;
               } // case 26
               case 34: {
@@ -656,118 +717,239 @@ public final class Input {
         return this;
       }
 
-      private com.soustify.input.Input.FilteredRequest filter_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.soustify.input.Input.FilteredRequest, com.soustify.input.Input.FilteredRequest.Builder, com.soustify.input.Input.FilteredRequestOrBuilder> filterBuilder_;
-      /**
-       * <code>.input.FilteredRequest filter = 3;</code>
-       * @return Whether the filter field is set.
-       */
-      public boolean hasFilter() {
-        return ((bitField0_ & 0x00000004) != 0);
+      private java.util.List<com.soustify.input.Input.FilteredRequest> filter_ =
+        java.util.Collections.emptyList();
+      private void ensureFilterIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          filter_ = new java.util.ArrayList<com.soustify.input.Input.FilteredRequest>(filter_);
+          bitField0_ |= 0x00000004;
+         }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.soustify.input.Input.FilteredRequest, com.soustify.input.Input.FilteredRequest.Builder, com.soustify.input.Input.FilteredRequestOrBuilder> filterBuilder_;
+
       /**
-       * <code>.input.FilteredRequest filter = 3;</code>
-       * @return The filter.
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
        */
-      public com.soustify.input.Input.FilteredRequest getFilter() {
+      public java.util.List<com.soustify.input.Input.FilteredRequest> getFilterList() {
         if (filterBuilder_ == null) {
-          return filter_ == null ? com.soustify.input.Input.FilteredRequest.getDefaultInstance() : filter_;
+          return java.util.Collections.unmodifiableList(filter_);
         } else {
-          return filterBuilder_.getMessage();
+          return filterBuilder_.getMessageList();
         }
       }
       /**
-       * <code>.input.FilteredRequest filter = 3;</code>
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
        */
-      public Builder setFilter(com.soustify.input.Input.FilteredRequest value) {
+      public int getFilterCount() {
+        if (filterBuilder_ == null) {
+          return filter_.size();
+        } else {
+          return filterBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
+       */
+      public com.soustify.input.Input.FilteredRequest getFilter(int index) {
+        if (filterBuilder_ == null) {
+          return filter_.get(index);
+        } else {
+          return filterBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
+       */
+      public Builder setFilter(
+          int index, com.soustify.input.Input.FilteredRequest value) {
         if (filterBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          filter_ = value;
+          ensureFilterIsMutable();
+          filter_.set(index, value);
+          onChanged();
         } else {
-          filterBuilder_.setMessage(value);
+          filterBuilder_.setMessage(index, value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
         return this;
       }
       /**
-       * <code>.input.FilteredRequest filter = 3;</code>
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
        */
       public Builder setFilter(
+          int index, com.soustify.input.Input.FilteredRequest.Builder builderForValue) {
+        if (filterBuilder_ == null) {
+          ensureFilterIsMutable();
+          filter_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          filterBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
+       */
+      public Builder addFilter(com.soustify.input.Input.FilteredRequest value) {
+        if (filterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilterIsMutable();
+          filter_.add(value);
+          onChanged();
+        } else {
+          filterBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
+       */
+      public Builder addFilter(
+          int index, com.soustify.input.Input.FilteredRequest value) {
+        if (filterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilterIsMutable();
+          filter_.add(index, value);
+          onChanged();
+        } else {
+          filterBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
+       */
+      public Builder addFilter(
           com.soustify.input.Input.FilteredRequest.Builder builderForValue) {
         if (filterBuilder_ == null) {
-          filter_ = builderForValue.build();
+          ensureFilterIsMutable();
+          filter_.add(builderForValue.build());
+          onChanged();
         } else {
-          filterBuilder_.setMessage(builderForValue.build());
+          filterBuilder_.addMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
         return this;
       }
       /**
-       * <code>.input.FilteredRequest filter = 3;</code>
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
        */
-      public Builder mergeFilter(com.soustify.input.Input.FilteredRequest value) {
+      public Builder addFilter(
+          int index, com.soustify.input.Input.FilteredRequest.Builder builderForValue) {
         if (filterBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            filter_ != null &&
-            filter_ != com.soustify.input.Input.FilteredRequest.getDefaultInstance()) {
-            getFilterBuilder().mergeFrom(value);
-          } else {
-            filter_ = value;
-          }
+          ensureFilterIsMutable();
+          filter_.add(index, builderForValue.build());
+          onChanged();
         } else {
-          filterBuilder_.mergeFrom(value);
+          filterBuilder_.addMessage(index, builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
         return this;
       }
       /**
-       * <code>.input.FilteredRequest filter = 3;</code>
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
+       */
+      public Builder addAllFilter(
+          java.lang.Iterable<? extends com.soustify.input.Input.FilteredRequest> values) {
+        if (filterBuilder_ == null) {
+          ensureFilterIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, filter_);
+          onChanged();
+        } else {
+          filterBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
        */
       public Builder clearFilter() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        filter_ = null;
-        if (filterBuilder_ != null) {
-          filterBuilder_.dispose();
-          filterBuilder_ = null;
+        if (filterBuilder_ == null) {
+          filter_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          filterBuilder_.clear();
         }
-        onChanged();
         return this;
       }
       /**
-       * <code>.input.FilteredRequest filter = 3;</code>
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
        */
-      public com.soustify.input.Input.FilteredRequest.Builder getFilterBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getFilterFieldBuilder().getBuilder();
+      public Builder removeFilter(int index) {
+        if (filterBuilder_ == null) {
+          ensureFilterIsMutable();
+          filter_.remove(index);
+          onChanged();
+        } else {
+          filterBuilder_.remove(index);
+        }
+        return this;
       }
       /**
-       * <code>.input.FilteredRequest filter = 3;</code>
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
        */
-      public com.soustify.input.Input.FilteredRequestOrBuilder getFilterOrBuilder() {
-        if (filterBuilder_ != null) {
-          return filterBuilder_.getMessageOrBuilder();
-        } else {
-          return filter_ == null ?
-              com.soustify.input.Input.FilteredRequest.getDefaultInstance() : filter_;
+      public com.soustify.input.Input.FilteredRequest.Builder getFilterBuilder(
+          int index) {
+        return getFilterFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
+       */
+      public com.soustify.input.Input.FilteredRequestOrBuilder getFilterOrBuilder(
+          int index) {
+        if (filterBuilder_ == null) {
+          return filter_.get(index);  } else {
+          return filterBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>.input.FilteredRequest filter = 3;</code>
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
+      public java.util.List<? extends com.soustify.input.Input.FilteredRequestOrBuilder> 
+           getFilterOrBuilderList() {
+        if (filterBuilder_ != null) {
+          return filterBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(filter_);
+        }
+      }
+      /**
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
+       */
+      public com.soustify.input.Input.FilteredRequest.Builder addFilterBuilder() {
+        return getFilterFieldBuilder().addBuilder(
+            com.soustify.input.Input.FilteredRequest.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
+       */
+      public com.soustify.input.Input.FilteredRequest.Builder addFilterBuilder(
+          int index) {
+        return getFilterFieldBuilder().addBuilder(
+            index, com.soustify.input.Input.FilteredRequest.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .input.FilteredRequest filter = 3;</code>
+       */
+      public java.util.List<com.soustify.input.Input.FilteredRequest.Builder> 
+           getFilterBuilderList() {
+        return getFilterFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           com.soustify.input.Input.FilteredRequest, com.soustify.input.Input.FilteredRequest.Builder, com.soustify.input.Input.FilteredRequestOrBuilder> 
           getFilterFieldBuilder() {
         if (filterBuilder_ == null) {
-          filterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          filterBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.soustify.input.Input.FilteredRequest, com.soustify.input.Input.FilteredRequest.Builder, com.soustify.input.Input.FilteredRequestOrBuilder>(
-                  getFilter(),
+                  filter_,
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           filter_ = null;
@@ -2451,7 +2633,7 @@ public final class Input {
     java.lang.String[] descriptorData = {
       "\n\013input.proto\022\005input\"\201\001\n\021PaginationReque" +
       "st\022\014\n\004page\030\001 \001(\005\022\r\n\005limit\030\002 \001(\005\022&\n\006filte" +
-      "r\030\003 \001(\0132\026.input.FilteredRequest\022\'\n\010order" +
+      "r\030\003 \003(\0132\026.input.FilteredRequest\022\'\n\010order" +
       "_by\030\004 \001(\0132\025.input.OrderByRequest\"B\n\017Filt" +
       "eredRequest\022\026\n\016filter_content\030\001 \001(\t\022\027\n\017f" +
       "iltered_fields\030\002 \003(\t\".\n\016OrderByRequest\022\r" +
