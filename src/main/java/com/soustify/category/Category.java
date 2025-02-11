@@ -722,27 +722,27 @@ public final class Category {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .category.CategoriesRequest categories = 1;</code>
+     * <code>repeated .category.CategoryRequest categories = 1;</code>
      */
-    java.util.List<com.soustify.category.Category.CategoriesRequest> 
+    java.util.List<com.soustify.category.Category.CategoryRequest> 
         getCategoriesList();
     /**
-     * <code>repeated .category.CategoriesRequest categories = 1;</code>
+     * <code>repeated .category.CategoryRequest categories = 1;</code>
      */
-    com.soustify.category.Category.CategoriesRequest getCategories(int index);
+    com.soustify.category.Category.CategoryRequest getCategories(int index);
     /**
-     * <code>repeated .category.CategoriesRequest categories = 1;</code>
+     * <code>repeated .category.CategoryRequest categories = 1;</code>
      */
     int getCategoriesCount();
     /**
-     * <code>repeated .category.CategoriesRequest categories = 1;</code>
+     * <code>repeated .category.CategoryRequest categories = 1;</code>
      */
-    java.util.List<? extends com.soustify.category.Category.CategoriesRequestOrBuilder> 
+    java.util.List<? extends com.soustify.category.Category.CategoryRequestOrBuilder> 
         getCategoriesOrBuilderList();
     /**
-     * <code>repeated .category.CategoriesRequest categories = 1;</code>
+     * <code>repeated .category.CategoryRequest categories = 1;</code>
      */
-    com.soustify.category.Category.CategoriesRequestOrBuilder getCategoriesOrBuilder(
+    com.soustify.category.Category.CategoryRequestOrBuilder getCategoriesOrBuilder(
         int index);
   }
   /**
@@ -788,41 +788,41 @@ public final class Category {
 
     public static final int CATEGORIES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.soustify.category.Category.CategoriesRequest> categories_;
+    private java.util.List<com.soustify.category.Category.CategoryRequest> categories_;
     /**
-     * <code>repeated .category.CategoriesRequest categories = 1;</code>
+     * <code>repeated .category.CategoryRequest categories = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<com.soustify.category.Category.CategoriesRequest> getCategoriesList() {
+    public java.util.List<com.soustify.category.Category.CategoryRequest> getCategoriesList() {
       return categories_;
     }
     /**
-     * <code>repeated .category.CategoriesRequest categories = 1;</code>
+     * <code>repeated .category.CategoryRequest categories = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.soustify.category.Category.CategoriesRequestOrBuilder> 
+    public java.util.List<? extends com.soustify.category.Category.CategoryRequestOrBuilder> 
         getCategoriesOrBuilderList() {
       return categories_;
     }
     /**
-     * <code>repeated .category.CategoriesRequest categories = 1;</code>
+     * <code>repeated .category.CategoryRequest categories = 1;</code>
      */
     @java.lang.Override
     public int getCategoriesCount() {
       return categories_.size();
     }
     /**
-     * <code>repeated .category.CategoriesRequest categories = 1;</code>
+     * <code>repeated .category.CategoryRequest categories = 1;</code>
      */
     @java.lang.Override
-    public com.soustify.category.Category.CategoriesRequest getCategories(int index) {
+    public com.soustify.category.Category.CategoryRequest getCategories(int index) {
       return categories_.get(index);
     }
     /**
-     * <code>repeated .category.CategoriesRequest categories = 1;</code>
+     * <code>repeated .category.CategoryRequest categories = 1;</code>
      */
     @java.lang.Override
-    public com.soustify.category.Category.CategoriesRequestOrBuilder getCategoriesOrBuilder(
+    public com.soustify.category.Category.CategoryRequestOrBuilder getCategoriesOrBuilder(
         int index) {
       return categories_.get(index);
     }
@@ -1170,9 +1170,9 @@ public final class Category {
                 done = true;
                 break;
               case 10: {
-                com.soustify.category.Category.CategoriesRequest m =
+                com.soustify.category.Category.CategoryRequest m =
                     input.readMessage(
-                        com.soustify.category.Category.CategoriesRequest.parser(),
+                        com.soustify.category.Category.CategoryRequest.parser(),
                         extensionRegistry);
                 if (categoriesBuilder_ == null) {
                   ensureCategoriesIsMutable();
@@ -1199,22 +1199,22 @@ public final class Category {
       }
       private int bitField0_;
 
-      private java.util.List<com.soustify.category.Category.CategoriesRequest> categories_ =
+      private java.util.List<com.soustify.category.Category.CategoryRequest> categories_ =
         java.util.Collections.emptyList();
       private void ensureCategoriesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          categories_ = new java.util.ArrayList<com.soustify.category.Category.CategoriesRequest>(categories_);
+          categories_ = new java.util.ArrayList<com.soustify.category.Category.CategoryRequest>(categories_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.soustify.category.Category.CategoriesRequest, com.soustify.category.Category.CategoriesRequest.Builder, com.soustify.category.Category.CategoriesRequestOrBuilder> categoriesBuilder_;
+          com.soustify.category.Category.CategoryRequest, com.soustify.category.Category.CategoryRequest.Builder, com.soustify.category.Category.CategoryRequestOrBuilder> categoriesBuilder_;
 
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
-      public java.util.List<com.soustify.category.Category.CategoriesRequest> getCategoriesList() {
+      public java.util.List<com.soustify.category.Category.CategoryRequest> getCategoriesList() {
         if (categoriesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(categories_);
         } else {
@@ -1222,7 +1222,7 @@ public final class Category {
         }
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
       public int getCategoriesCount() {
         if (categoriesBuilder_ == null) {
@@ -1232,9 +1232,9 @@ public final class Category {
         }
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
-      public com.soustify.category.Category.CategoriesRequest getCategories(int index) {
+      public com.soustify.category.Category.CategoryRequest getCategories(int index) {
         if (categoriesBuilder_ == null) {
           return categories_.get(index);
         } else {
@@ -1242,10 +1242,10 @@ public final class Category {
         }
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
       public Builder setCategories(
-          int index, com.soustify.category.Category.CategoriesRequest value) {
+          int index, com.soustify.category.Category.CategoryRequest value) {
         if (categoriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1259,10 +1259,10 @@ public final class Category {
         return this;
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
       public Builder setCategories(
-          int index, com.soustify.category.Category.CategoriesRequest.Builder builderForValue) {
+          int index, com.soustify.category.Category.CategoryRequest.Builder builderForValue) {
         if (categoriesBuilder_ == null) {
           ensureCategoriesIsMutable();
           categories_.set(index, builderForValue.build());
@@ -1273,9 +1273,9 @@ public final class Category {
         return this;
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
-      public Builder addCategories(com.soustify.category.Category.CategoriesRequest value) {
+      public Builder addCategories(com.soustify.category.Category.CategoryRequest value) {
         if (categoriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1289,10 +1289,10 @@ public final class Category {
         return this;
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
       public Builder addCategories(
-          int index, com.soustify.category.Category.CategoriesRequest value) {
+          int index, com.soustify.category.Category.CategoryRequest value) {
         if (categoriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1306,10 +1306,10 @@ public final class Category {
         return this;
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
       public Builder addCategories(
-          com.soustify.category.Category.CategoriesRequest.Builder builderForValue) {
+          com.soustify.category.Category.CategoryRequest.Builder builderForValue) {
         if (categoriesBuilder_ == null) {
           ensureCategoriesIsMutable();
           categories_.add(builderForValue.build());
@@ -1320,10 +1320,10 @@ public final class Category {
         return this;
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
       public Builder addCategories(
-          int index, com.soustify.category.Category.CategoriesRequest.Builder builderForValue) {
+          int index, com.soustify.category.Category.CategoryRequest.Builder builderForValue) {
         if (categoriesBuilder_ == null) {
           ensureCategoriesIsMutable();
           categories_.add(index, builderForValue.build());
@@ -1334,10 +1334,10 @@ public final class Category {
         return this;
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
       public Builder addAllCategories(
-          java.lang.Iterable<? extends com.soustify.category.Category.CategoriesRequest> values) {
+          java.lang.Iterable<? extends com.soustify.category.Category.CategoryRequest> values) {
         if (categoriesBuilder_ == null) {
           ensureCategoriesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1349,7 +1349,7 @@ public final class Category {
         return this;
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
       public Builder clearCategories() {
         if (categoriesBuilder_ == null) {
@@ -1362,7 +1362,7 @@ public final class Category {
         return this;
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
       public Builder removeCategories(int index) {
         if (categoriesBuilder_ == null) {
@@ -1375,16 +1375,16 @@ public final class Category {
         return this;
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
-      public com.soustify.category.Category.CategoriesRequest.Builder getCategoriesBuilder(
+      public com.soustify.category.Category.CategoryRequest.Builder getCategoriesBuilder(
           int index) {
         return getCategoriesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
-      public com.soustify.category.Category.CategoriesRequestOrBuilder getCategoriesOrBuilder(
+      public com.soustify.category.Category.CategoryRequestOrBuilder getCategoriesOrBuilder(
           int index) {
         if (categoriesBuilder_ == null) {
           return categories_.get(index);  } else {
@@ -1392,9 +1392,9 @@ public final class Category {
         }
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
-      public java.util.List<? extends com.soustify.category.Category.CategoriesRequestOrBuilder> 
+      public java.util.List<? extends com.soustify.category.Category.CategoryRequestOrBuilder> 
            getCategoriesOrBuilderList() {
         if (categoriesBuilder_ != null) {
           return categoriesBuilder_.getMessageOrBuilderList();
@@ -1403,33 +1403,33 @@ public final class Category {
         }
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
-      public com.soustify.category.Category.CategoriesRequest.Builder addCategoriesBuilder() {
+      public com.soustify.category.Category.CategoryRequest.Builder addCategoriesBuilder() {
         return getCategoriesFieldBuilder().addBuilder(
-            com.soustify.category.Category.CategoriesRequest.getDefaultInstance());
+            com.soustify.category.Category.CategoryRequest.getDefaultInstance());
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
-      public com.soustify.category.Category.CategoriesRequest.Builder addCategoriesBuilder(
+      public com.soustify.category.Category.CategoryRequest.Builder addCategoriesBuilder(
           int index) {
         return getCategoriesFieldBuilder().addBuilder(
-            index, com.soustify.category.Category.CategoriesRequest.getDefaultInstance());
+            index, com.soustify.category.Category.CategoryRequest.getDefaultInstance());
       }
       /**
-       * <code>repeated .category.CategoriesRequest categories = 1;</code>
+       * <code>repeated .category.CategoryRequest categories = 1;</code>
        */
-      public java.util.List<com.soustify.category.Category.CategoriesRequest.Builder> 
+      public java.util.List<com.soustify.category.Category.CategoryRequest.Builder> 
            getCategoriesBuilderList() {
         return getCategoriesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.soustify.category.Category.CategoriesRequest, com.soustify.category.Category.CategoriesRequest.Builder, com.soustify.category.Category.CategoriesRequestOrBuilder> 
+          com.soustify.category.Category.CategoryRequest, com.soustify.category.Category.CategoryRequest.Builder, com.soustify.category.Category.CategoryRequestOrBuilder> 
           getCategoriesFieldBuilder() {
         if (categoriesBuilder_ == null) {
           categoriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.soustify.category.Category.CategoriesRequest, com.soustify.category.Category.CategoriesRequest.Builder, com.soustify.category.Category.CategoriesRequestOrBuilder>(
+              com.soustify.category.Category.CategoryRequest, com.soustify.category.Category.CategoryRequest.Builder, com.soustify.category.Category.CategoryRequestOrBuilder>(
                   categories_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -3169,22 +3169,22 @@ public final class Category {
     java.lang.String[] descriptorData = {
       "\n\016category.proto\022\010category\032\013input.proto\032" +
       "\014output.proto\"+\n\017CategoryRequest\022\n\n\002id\030\001" +
-      " \001(\t\022\014\n\004name\030\002 \001(\t\"D\n\021CategoriesRequest\022" +
-      "/\n\ncategories\030\001 \003(\0132\033.category.Categorie" +
-      "sRequest\"@\n\020CategoryResponse\022\n\n\002id\030\001 \001(\t" +
-      "\022\014\n\004name\030\002 \001(\t\022\022\n\ncreated_at\030\003 \001(\t\"D\n\022Ca" +
-      "tegoriesResponse\022.\n\ncategories\030\001 \003(\0132\032.c" +
-      "ategory.CategoryResponse2\227\002\n\017CategorySer" +
-      "vice\022B\n\010Paginate\022\030.input.PaginationReque" +
-      "st\032\034.category.CategoriesResponse\0226\n\005Coun" +
-      "t\022\026.input.FilteredRequest\032\025.output.Count" +
-      "Response\022C\n\006Create\022\033.category.Categories" +
-      "Request\032\034.category.CategoriesResponse\022C\n" +
-      "\006Update\022\033.category.CategoriesRequest\032\034.c" +
-      "ategory.CategoriesResponseBY\n\025com.sousti" +
-      "fy.categoryZ@github.com/soustify/data-ga" +
-      "teway-buffer-go/pkg/category;categoryb\006p" +
-      "roto3"
+      " \001(\t\022\014\n\004name\030\002 \001(\t\"B\n\021CategoriesRequest\022" +
+      "-\n\ncategories\030\001 \003(\0132\031.category.CategoryR" +
+      "equest\"@\n\020CategoryResponse\022\n\n\002id\030\001 \001(\t\022\014" +
+      "\n\004name\030\002 \001(\t\022\022\n\ncreated_at\030\003 \001(\t\"D\n\022Cate" +
+      "goriesResponse\022.\n\ncategories\030\001 \003(\0132\032.cat" +
+      "egory.CategoryResponse2\227\002\n\017CategoryServi" +
+      "ce\022B\n\010Paginate\022\030.input.PaginationRequest" +
+      "\032\034.category.CategoriesResponse\0226\n\005Count\022" +
+      "\026.input.FilteredRequest\032\025.output.CountRe" +
+      "sponse\022C\n\006Create\022\033.category.CategoriesRe" +
+      "quest\032\034.category.CategoriesResponse\022C\n\006U" +
+      "pdate\022\033.category.CategoriesRequest\032\034.cat" +
+      "egory.CategoriesResponseBY\n\025com.soustify" +
+      ".categoryZ@github.com/soustify/data-gate" +
+      "way-buffer-go/pkg/category;categoryb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
