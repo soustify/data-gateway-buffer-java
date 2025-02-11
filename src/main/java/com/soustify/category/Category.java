@@ -41,6 +41,18 @@ public final class Category {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <code>string status = 3;</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <code>string status = 3;</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
   }
   /**
    * Protobuf type {@code category.CategoryRequest}
@@ -57,6 +69,7 @@ public final class Category {
     private CategoryRequest() {
       id_ = "";
       name_ = "";
+      status_ = "";
     }
 
     @java.lang.Override
@@ -162,6 +175,45 @@ public final class Category {
       }
     }
 
+    public static final int STATUS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object status_ = "";
+    /**
+     * <code>string status = 3;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string status = 3;</code>
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -182,6 +234,9 @@ public final class Category {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, status_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -196,6 +251,9 @@ public final class Category {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, status_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -216,6 +274,8 @@ public final class Category {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -231,6 +291,8 @@ public final class Category {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -362,6 +424,7 @@ public final class Category {
         bitField0_ = 0;
         id_ = "";
         name_ = "";
+        status_ = "";
         return this;
       }
 
@@ -400,6 +463,9 @@ public final class Category {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.status_ = status_;
         }
       }
 
@@ -457,6 +523,11 @@ public final class Category {
           bitField0_ |= 0x00000002;
           onChanged();
         }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -493,6 +564,11 @@ public final class Category {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                status_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -650,6 +726,78 @@ public final class Category {
         checkByteStringIsUtf8(value);
         name_ = value;
         bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <code>string status = 3;</code>
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string status = 3;</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string status = 3;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        status_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        status_ = getDefaultInstance().getStatus();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 3;</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        status_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1531,16 +1679,16 @@ public final class Category {
         getNameBytes();
 
     /**
-     * <code>string created_at = 3;</code>
-     * @return The createdAt.
+     * <code>string status = 3;</code>
+     * @return The status.
      */
-    java.lang.String getCreatedAt();
+    java.lang.String getStatus();
     /**
-     * <code>string created_at = 3;</code>
-     * @return The bytes for createdAt.
+     * <code>string status = 3;</code>
+     * @return The bytes for status.
      */
     com.google.protobuf.ByteString
-        getCreatedAtBytes();
+        getStatusBytes();
   }
   /**
    * Protobuf type {@code category.CategoryResponse}
@@ -1557,7 +1705,7 @@ public final class Category {
     private CategoryResponse() {
       id_ = "";
       name_ = "";
-      createdAt_ = "";
+      status_ = "";
     }
 
     @java.lang.Override
@@ -1663,39 +1811,39 @@ public final class Category {
       }
     }
 
-    public static final int CREATED_AT_FIELD_NUMBER = 3;
+    public static final int STATUS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object createdAt_ = "";
+    private volatile java.lang.Object status_ = "";
     /**
-     * <code>string created_at = 3;</code>
-     * @return The createdAt.
+     * <code>string status = 3;</code>
+     * @return The status.
      */
     @java.lang.Override
-    public java.lang.String getCreatedAt() {
-      java.lang.Object ref = createdAt_;
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        createdAt_ = s;
+        status_ = s;
         return s;
       }
     }
     /**
-     * <code>string created_at = 3;</code>
-     * @return The bytes for createdAt.
+     * <code>string status = 3;</code>
+     * @return The bytes for status.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getCreatedAtBytes() {
-      java.lang.Object ref = createdAt_;
+        getStatusBytes() {
+      java.lang.Object ref = status_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        createdAt_ = b;
+        status_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1722,8 +1870,8 @@ public final class Category {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdAt_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, createdAt_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, status_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1740,8 +1888,8 @@ public final class Category {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdAt_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, createdAt_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, status_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1762,8 +1910,8 @@ public final class Category {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (!getCreatedAt()
-          .equals(other.getCreatedAt())) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1779,8 +1927,8 @@ public final class Category {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
-      hash = (53 * hash) + getCreatedAt().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1912,7 +2060,7 @@ public final class Category {
         bitField0_ = 0;
         id_ = "";
         name_ = "";
-        createdAt_ = "";
+        status_ = "";
         return this;
       }
 
@@ -1953,7 +2101,7 @@ public final class Category {
           result.name_ = name_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.createdAt_ = createdAt_;
+          result.status_ = status_;
         }
       }
 
@@ -2011,8 +2159,8 @@ public final class Category {
           bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (!other.getCreatedAt().isEmpty()) {
-          createdAt_ = other.createdAt_;
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
           bitField0_ |= 0x00000004;
           onChanged();
         }
@@ -2053,7 +2201,7 @@ public final class Category {
                 break;
               } // case 18
               case 26: {
-                createdAt_ = input.readStringRequireUtf8();
+                status_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
@@ -2218,73 +2366,73 @@ public final class Category {
         return this;
       }
 
-      private java.lang.Object createdAt_ = "";
+      private java.lang.Object status_ = "";
       /**
-       * <code>string created_at = 3;</code>
-       * @return The createdAt.
+       * <code>string status = 3;</code>
+       * @return The status.
        */
-      public java.lang.String getCreatedAt() {
-        java.lang.Object ref = createdAt_;
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          createdAt_ = s;
+          status_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string created_at = 3;</code>
-       * @return The bytes for createdAt.
+       * <code>string status = 3;</code>
+       * @return The bytes for status.
        */
       public com.google.protobuf.ByteString
-          getCreatedAtBytes() {
-        java.lang.Object ref = createdAt_;
+          getStatusBytes() {
+        java.lang.Object ref = status_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          createdAt_ = b;
+          status_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string created_at = 3;</code>
-       * @param value The createdAt to set.
+       * <code>string status = 3;</code>
+       * @param value The status to set.
        * @return This builder for chaining.
        */
-      public Builder setCreatedAt(
+      public Builder setStatus(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        createdAt_ = value;
+        status_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string created_at = 3;</code>
+       * <code>string status = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCreatedAt() {
-        createdAt_ = getDefaultInstance().getCreatedAt();
+      public Builder clearStatus() {
+        status_ = getDefaultInstance().getStatus();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string created_at = 3;</code>
-       * @param value The bytes for createdAt to set.
+       * <code>string status = 3;</code>
+       * @param value The bytes for status to set.
        * @return This builder for chaining.
        */
-      public Builder setCreatedAtBytes(
+      public Builder setStatusBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        createdAt_ = value;
+        status_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
@@ -3168,23 +3316,23 @@ public final class Category {
   static {
     java.lang.String[] descriptorData = {
       "\n\016category.proto\022\010category\032\013input.proto\032" +
-      "\014output.proto\"+\n\017CategoryRequest\022\n\n\002id\030\001" +
-      " \001(\t\022\014\n\004name\030\002 \001(\t\"B\n\021CategoriesRequest\022" +
-      "-\n\ncategories\030\001 \003(\0132\031.category.CategoryR" +
-      "equest\"@\n\020CategoryResponse\022\n\n\002id\030\001 \001(\t\022\014" +
-      "\n\004name\030\002 \001(\t\022\022\n\ncreated_at\030\003 \001(\t\"D\n\022Cate" +
-      "goriesResponse\022.\n\ncategories\030\001 \003(\0132\032.cat" +
-      "egory.CategoryResponse2\227\002\n\017CategoryServi" +
-      "ce\022B\n\010Paginate\022\030.input.PaginationRequest" +
-      "\032\034.category.CategoriesResponse\0226\n\005Count\022" +
-      "\026.input.FilteredRequest\032\025.output.CountRe" +
-      "sponse\022C\n\006Create\022\033.category.CategoriesRe" +
-      "quest\032\034.category.CategoriesResponse\022C\n\006U" +
-      "pdate\022\033.category.CategoriesRequest\032\034.cat" +
-      "egory.CategoriesResponseBY\n\025com.soustify" +
-      ".categoryZ@github.com/soustify/data-gate" +
-      "way-buffer-go/pkg/category;categoryb\006pro" +
-      "to3"
+      "\014output.proto\";\n\017CategoryRequest\022\n\n\002id\030\001" +
+      " \001(\t\022\014\n\004name\030\002 \001(\t\022\016\n\006status\030\003 \001(\t\"B\n\021Ca" +
+      "tegoriesRequest\022-\n\ncategories\030\001 \003(\0132\031.ca" +
+      "tegory.CategoryRequest\"<\n\020CategoryRespon" +
+      "se\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\016\n\006status\030\003" +
+      " \001(\t\"D\n\022CategoriesResponse\022.\n\ncategories" +
+      "\030\001 \003(\0132\032.category.CategoryResponse2\227\002\n\017C" +
+      "ategoryService\022B\n\010Paginate\022\030.input.Pagin" +
+      "ationRequest\032\034.category.CategoriesRespon" +
+      "se\0226\n\005Count\022\026.input.FilteredRequest\032\025.ou" +
+      "tput.CountResponse\022C\n\006Create\022\033.category." +
+      "CategoriesRequest\032\034.category.CategoriesR" +
+      "esponse\022C\n\006Update\022\033.category.CategoriesR" +
+      "equest\032\034.category.CategoriesResponseBY\n\025" +
+      "com.soustify.categoryZ@github.com/sousti" +
+      "fy/data-gateway-buffer-go/pkg/category;c" +
+      "ategoryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3197,7 +3345,7 @@ public final class Category {
     internal_static_category_CategoryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_category_CategoryRequest_descriptor,
-        new java.lang.String[] { "Id", "Name", });
+        new java.lang.String[] { "Id", "Name", "Status", });
     internal_static_category_CategoriesRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_category_CategoriesRequest_fieldAccessorTable = new
@@ -3209,7 +3357,7 @@ public final class Category {
     internal_static_category_CategoryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_category_CategoryResponse_descriptor,
-        new java.lang.String[] { "Id", "Name", "CreatedAt", });
+        new java.lang.String[] { "Id", "Name", "Status", });
     internal_static_category_CategoriesResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_category_CategoriesResponse_fieldAccessorTable = new
