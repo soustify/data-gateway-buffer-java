@@ -78,28 +78,28 @@ public final class ExampleServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest,
-      com.soustify.example.Example.ExampleResponses> getCreateMethod;
+      com.soustify.output.Output.PersistenceDataResponse> getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Create",
       requestType = com.soustify.example.Example.ExampleRequest.class,
-      responseType = com.soustify.example.Example.ExampleResponses.class,
+      responseType = com.soustify.output.Output.PersistenceDataResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
   public static io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest,
-      com.soustify.example.Example.ExampleResponses> getCreateMethod() {
-    io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest, com.soustify.example.Example.ExampleResponses> getCreateMethod;
+      com.soustify.output.Output.PersistenceDataResponse> getCreateMethod() {
+    io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest, com.soustify.output.Output.PersistenceDataResponse> getCreateMethod;
     if ((getCreateMethod = ExampleServiceGrpc.getCreateMethod) == null) {
       synchronized (ExampleServiceGrpc.class) {
         if ((getCreateMethod = ExampleServiceGrpc.getCreateMethod) == null) {
           ExampleServiceGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<com.soustify.example.Example.ExampleRequest, com.soustify.example.Example.ExampleResponses>newBuilder()
+              io.grpc.MethodDescriptor.<com.soustify.example.Example.ExampleRequest, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.example.Example.ExampleRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.example.Example.ExampleResponses.getDefaultInstance()))
+                  com.soustify.output.Output.PersistenceDataResponse.getDefaultInstance()))
               .setSchemaDescriptor(new ExampleServiceMethodDescriptorSupplier("Create"))
               .build();
         }
@@ -109,28 +109,28 @@ public final class ExampleServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest,
-      com.soustify.example.Example.ExampleResponses> getUpdateMethod;
+      com.soustify.output.Output.PersistenceDataResponse> getUpdateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Update",
       requestType = com.soustify.example.Example.ExampleRequest.class,
-      responseType = com.soustify.example.Example.ExampleResponses.class,
+      responseType = com.soustify.output.Output.PersistenceDataResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
   public static io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest,
-      com.soustify.example.Example.ExampleResponses> getUpdateMethod() {
-    io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest, com.soustify.example.Example.ExampleResponses> getUpdateMethod;
+      com.soustify.output.Output.PersistenceDataResponse> getUpdateMethod() {
+    io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest, com.soustify.output.Output.PersistenceDataResponse> getUpdateMethod;
     if ((getUpdateMethod = ExampleServiceGrpc.getUpdateMethod) == null) {
       synchronized (ExampleServiceGrpc.class) {
         if ((getUpdateMethod = ExampleServiceGrpc.getUpdateMethod) == null) {
           ExampleServiceGrpc.getUpdateMethod = getUpdateMethod =
-              io.grpc.MethodDescriptor.<com.soustify.example.Example.ExampleRequest, com.soustify.example.Example.ExampleResponses>newBuilder()
+              io.grpc.MethodDescriptor.<com.soustify.example.Example.ExampleRequest, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.example.Example.ExampleRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.example.Example.ExampleResponses.getDefaultInstance()))
+                  com.soustify.output.Output.PersistenceDataResponse.getDefaultInstance()))
               .setSchemaDescriptor(new ExampleServiceMethodDescriptorSupplier("Update"))
               .build();
         }
@@ -297,14 +297,14 @@ public final class ExampleServiceGrpc {
     /**
      */
     default io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleRequest> create(
-        io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleResponses> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getCreateMethod(), responseObserver);
     }
 
     /**
      */
     default io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleRequest> update(
-        io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleResponses> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getUpdateMethod(), responseObserver);
     }
 
@@ -376,7 +376,7 @@ public final class ExampleServiceGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleRequest> create(
-        io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleResponses> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), responseObserver);
     }
@@ -384,7 +384,7 @@ public final class ExampleServiceGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleRequest> update(
-        io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleResponses> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), responseObserver);
     }
@@ -535,10 +535,10 @@ public final class ExampleServiceGrpc {
       switch (methodId) {
         case METHODID_CREATE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.create(
-              (io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleResponses>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse>) responseObserver);
         case METHODID_UPDATE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.update(
-              (io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleResponses>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse>) responseObserver);
         case METHODID_INACTIVE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.inactive(
               (io.grpc.stub.StreamObserver<com.soustify.output.Output.StatusDataResponse>) responseObserver);
@@ -572,14 +572,14 @@ public final class ExampleServiceGrpc {
           io.grpc.stub.ServerCalls.asyncClientStreamingCall(
             new MethodHandlers<
               com.soustify.example.Example.ExampleRequest,
-              com.soustify.example.Example.ExampleResponses>(
+              com.soustify.output.Output.PersistenceDataResponse>(
                 service, METHODID_CREATE)))
         .addMethod(
           getUpdateMethod(),
           io.grpc.stub.ServerCalls.asyncClientStreamingCall(
             new MethodHandlers<
               com.soustify.example.Example.ExampleRequest,
-              com.soustify.example.Example.ExampleResponses>(
+              com.soustify.output.Output.PersistenceDataResponse>(
                 service, METHODID_UPDATE)))
         .addMethod(
           getInactiveMethod(),
