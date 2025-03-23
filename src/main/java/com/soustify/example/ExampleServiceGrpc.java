@@ -232,6 +232,68 @@ public final class ExampleServiceGrpc {
     return getFindOneMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest,
+      com.soustify.output.Output.ValidateDataResponse> getValidateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Validate",
+      requestType = com.soustify.example.Example.ExampleRequest.class,
+      responseType = com.soustify.output.Output.ValidateDataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest,
+      com.soustify.output.Output.ValidateDataResponse> getValidateMethod() {
+    io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest, com.soustify.output.Output.ValidateDataResponse> getValidateMethod;
+    if ((getValidateMethod = ExampleServiceGrpc.getValidateMethod) == null) {
+      synchronized (ExampleServiceGrpc.class) {
+        if ((getValidateMethod = ExampleServiceGrpc.getValidateMethod) == null) {
+          ExampleServiceGrpc.getValidateMethod = getValidateMethod =
+              io.grpc.MethodDescriptor.<com.soustify.example.Example.ExampleRequest, com.soustify.output.Output.ValidateDataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Validate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.soustify.example.Example.ExampleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.soustify.output.Output.ValidateDataResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ExampleServiceMethodDescriptorSupplier("Validate"))
+              .build();
+        }
+      }
+    }
+    return getValidateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
+      com.soustify.output.Output.PersistenceDataResponse> getDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Delete",
+      requestType = com.soustify.input.Input.UUIDRequest.class,
+      responseType = com.soustify.output.Output.PersistenceDataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
+      com.soustify.output.Output.PersistenceDataResponse> getDeleteMethod() {
+    io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.PersistenceDataResponse> getDeleteMethod;
+    if ((getDeleteMethod = ExampleServiceGrpc.getDeleteMethod) == null) {
+      synchronized (ExampleServiceGrpc.class) {
+        if ((getDeleteMethod = ExampleServiceGrpc.getDeleteMethod) == null) {
+          ExampleServiceGrpc.getDeleteMethod = getDeleteMethod =
+              io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.soustify.input.Input.UUIDRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.soustify.output.Output.PersistenceDataResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ExampleServiceMethodDescriptorSupplier("Delete"))
+              .build();
+        }
+      }
+    }
+    return getDeleteMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -328,6 +390,20 @@ public final class ExampleServiceGrpc {
         io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindOneMethod(), responseObserver);
     }
+
+    /**
+     */
+    default io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleRequest> validate(
+        io.grpc.stub.StreamObserver<com.soustify.output.Output.ValidateDataResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getValidateMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default io.grpc.stub.StreamObserver<com.soustify.input.Input.UUIDRequest> delete(
+        io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getDeleteMethod(), responseObserver);
+    }
   }
 
   /**
@@ -412,6 +488,22 @@ public final class ExampleServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getFindOneMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleRequest> validate(
+        io.grpc.stub.StreamObserver<com.soustify.output.Output.ValidateDataResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getValidateMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.soustify.input.Input.UUIDRequest> delete(
+        io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), responseObserver);
+    }
   }
 
   /**
@@ -493,6 +585,8 @@ public final class ExampleServiceGrpc {
   private static final int METHODID_UPDATE = 4;
   private static final int METHODID_INACTIVE = 5;
   private static final int METHODID_ACTIVE = 6;
+  private static final int METHODID_VALIDATE = 7;
+  private static final int METHODID_DELETE = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -545,6 +639,12 @@ public final class ExampleServiceGrpc {
         case METHODID_ACTIVE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.active(
               (io.grpc.stub.StreamObserver<com.soustify.output.Output.StatusDataResponse>) responseObserver);
+        case METHODID_VALIDATE:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.validate(
+              (io.grpc.stub.StreamObserver<com.soustify.output.Output.ValidateDataResponse>) responseObserver);
+        case METHODID_DELETE:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.delete(
+              (io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -602,6 +702,20 @@ public final class ExampleServiceGrpc {
               com.soustify.input.Input.UUIDRequest,
               com.soustify.example.Example.ExampleResponse>(
                 service, METHODID_FIND_ONE)))
+        .addMethod(
+          getValidateMethod(),
+          io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+            new MethodHandlers<
+              com.soustify.example.Example.ExampleRequest,
+              com.soustify.output.Output.ValidateDataResponse>(
+                service, METHODID_VALIDATE)))
+        .addMethod(
+          getDeleteMethod(),
+          io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+            new MethodHandlers<
+              com.soustify.input.Input.UUIDRequest,
+              com.soustify.output.Output.PersistenceDataResponse>(
+                service, METHODID_DELETE)))
         .build();
   }
 
@@ -657,6 +771,8 @@ public final class ExampleServiceGrpc {
               .addMethod(getInactiveMethod())
               .addMethod(getActiveMethod())
               .addMethod(getFindOneMethod())
+              .addMethod(getValidateMethod())
+              .addMethod(getDeleteMethod())
               .build();
         }
       }
