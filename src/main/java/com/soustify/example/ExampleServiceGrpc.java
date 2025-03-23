@@ -232,27 +232,27 @@ public final class ExampleServiceGrpc {
     return getFindOneMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest,
+  private static volatile io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleBody,
       com.soustify.output.Output.ValidateDataResponse> getValidateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Validate",
-      requestType = com.soustify.example.Example.ExampleRequest.class,
+      requestType = com.soustify.example.Example.ExampleBody.class,
       responseType = com.soustify.output.Output.ValidateDataResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest,
+  public static io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleBody,
       com.soustify.output.Output.ValidateDataResponse> getValidateMethod() {
-    io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleRequest, com.soustify.output.Output.ValidateDataResponse> getValidateMethod;
+    io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleBody, com.soustify.output.Output.ValidateDataResponse> getValidateMethod;
     if ((getValidateMethod = ExampleServiceGrpc.getValidateMethod) == null) {
       synchronized (ExampleServiceGrpc.class) {
         if ((getValidateMethod = ExampleServiceGrpc.getValidateMethod) == null) {
           ExampleServiceGrpc.getValidateMethod = getValidateMethod =
-              io.grpc.MethodDescriptor.<com.soustify.example.Example.ExampleRequest, com.soustify.output.Output.ValidateDataResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.soustify.example.Example.ExampleBody, com.soustify.output.Output.ValidateDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Validate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.example.Example.ExampleRequest.getDefaultInstance()))
+                  com.soustify.example.Example.ExampleBody.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.ValidateDataResponse.getDefaultInstance()))
               .setSchemaDescriptor(new ExampleServiceMethodDescriptorSupplier("Validate"))
@@ -393,7 +393,7 @@ public final class ExampleServiceGrpc {
 
     /**
      */
-    default io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleRequest> validate(
+    default io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleBody> validate(
         io.grpc.stub.StreamObserver<com.soustify.output.Output.ValidateDataResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getValidateMethod(), responseObserver);
     }
@@ -491,7 +491,7 @@ public final class ExampleServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleRequest> validate(
+    public io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleBody> validate(
         io.grpc.stub.StreamObserver<com.soustify.output.Output.ValidateDataResponse> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getValidateMethod(), getCallOptions()), responseObserver);
@@ -706,7 +706,7 @@ public final class ExampleServiceGrpc {
           getValidateMethod(),
           io.grpc.stub.ServerCalls.asyncClientStreamingCall(
             new MethodHandlers<
-              com.soustify.example.Example.ExampleRequest,
+              com.soustify.example.Example.ExampleBody,
               com.soustify.output.Output.ValidateDataResponse>(
                 service, METHODID_VALIDATE)))
         .addMethod(

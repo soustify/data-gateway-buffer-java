@@ -2956,31 +2956,19 @@ public final class Output {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string index = 1;</code>
-     * @return The index.
-     */
-    java.lang.String getIndex();
-    /**
-     * <code>string index = 1;</code>
-     * @return The bytes for index.
-     */
-    com.google.protobuf.ByteString
-        getIndexBytes();
-
-    /**
-     * <code>string content = 2;</code>
+     * <code>string content = 1;</code>
      * @return The content.
      */
     java.lang.String getContent();
     /**
-     * <code>string content = 2;</code>
+     * <code>string content = 1;</code>
      * @return The bytes for content.
      */
     com.google.protobuf.ByteString
         getContentBytes();
 
     /**
-     * <code>bool valid = 3;</code>
+     * <code>bool valid = 2;</code>
      * @return The valid.
      */
     boolean getValid();
@@ -2998,7 +2986,6 @@ public final class Output {
       super(builder);
     }
     private Validator() {
-      index_ = "";
       content_ = "";
     }
 
@@ -3027,50 +3014,11 @@ public final class Output {
               com.soustify.output.Output.Validator.class, com.soustify.output.Output.Validator.Builder.class);
     }
 
-    public static final int INDEX_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object index_ = "";
-    /**
-     * <code>string index = 1;</code>
-     * @return The index.
-     */
-    @java.lang.Override
-    public java.lang.String getIndex() {
-      java.lang.Object ref = index_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        index_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string index = 1;</code>
-     * @return The bytes for index.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIndexBytes() {
-      java.lang.Object ref = index_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        index_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CONTENT_FIELD_NUMBER = 2;
+    public static final int CONTENT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object content_ = "";
     /**
-     * <code>string content = 2;</code>
+     * <code>string content = 1;</code>
      * @return The content.
      */
     @java.lang.Override
@@ -3087,7 +3035,7 @@ public final class Output {
       }
     }
     /**
-     * <code>string content = 2;</code>
+     * <code>string content = 1;</code>
      * @return The bytes for content.
      */
     @java.lang.Override
@@ -3105,10 +3053,10 @@ public final class Output {
       }
     }
 
-    public static final int VALID_FIELD_NUMBER = 3;
+    public static final int VALID_FIELD_NUMBER = 2;
     private boolean valid_ = false;
     /**
-     * <code>bool valid = 3;</code>
+     * <code>bool valid = 2;</code>
      * @return The valid.
      */
     @java.lang.Override
@@ -3130,14 +3078,11 @@ public final class Output {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(index_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, index_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, content_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, content_);
       }
       if (valid_ != false) {
-        output.writeBool(3, valid_);
+        output.writeBool(2, valid_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3148,15 +3093,12 @@ public final class Output {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(index_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, index_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, content_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, content_);
       }
       if (valid_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, valid_);
+          .computeBoolSize(2, valid_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3173,8 +3115,6 @@ public final class Output {
       }
       com.soustify.output.Output.Validator other = (com.soustify.output.Output.Validator) obj;
 
-      if (!getIndex()
-          .equals(other.getIndex())) return false;
       if (!getContent()
           .equals(other.getContent())) return false;
       if (getValid()
@@ -3190,8 +3130,6 @@ public final class Output {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + INDEX_FIELD_NUMBER;
-      hash = (53 * hash) + getIndex().hashCode();
       hash = (37 * hash) + CONTENT_FIELD_NUMBER;
       hash = (53 * hash) + getContent().hashCode();
       hash = (37 * hash) + VALID_FIELD_NUMBER;
@@ -3326,7 +3264,6 @@ public final class Output {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        index_ = "";
         content_ = "";
         valid_ = false;
         return this;
@@ -3363,12 +3300,9 @@ public final class Output {
       private void buildPartial0(com.soustify.output.Output.Validator result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.index_ = index_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.content_ = content_;
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.valid_ = valid_;
         }
       }
@@ -3417,14 +3351,9 @@ public final class Output {
 
       public Builder mergeFrom(com.soustify.output.Output.Validator other) {
         if (other == com.soustify.output.Output.Validator.getDefaultInstance()) return this;
-        if (!other.getIndex().isEmpty()) {
-          index_ = other.index_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
         if (!other.getContent().isEmpty()) {
           content_ = other.content_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getValid() != false) {
@@ -3457,20 +3386,15 @@ public final class Output {
                 done = true;
                 break;
               case 10: {
-                index_ = input.readStringRequireUtf8();
+                content_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 18: {
-                content_ = input.readStringRequireUtf8();
+              case 16: {
+                valid_ = input.readBool();
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 18
-              case 24: {
-                valid_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
+              } // case 16
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3488,81 +3412,9 @@ public final class Output {
       }
       private int bitField0_;
 
-      private java.lang.Object index_ = "";
-      /**
-       * <code>string index = 1;</code>
-       * @return The index.
-       */
-      public java.lang.String getIndex() {
-        java.lang.Object ref = index_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          index_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string index = 1;</code>
-       * @return The bytes for index.
-       */
-      public com.google.protobuf.ByteString
-          getIndexBytes() {
-        java.lang.Object ref = index_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          index_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string index = 1;</code>
-       * @param value The index to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIndex(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        index_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string index = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIndex() {
-        index_ = getDefaultInstance().getIndex();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string index = 1;</code>
-       * @param value The bytes for index to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIndexBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        index_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object content_ = "";
       /**
-       * <code>string content = 2;</code>
+       * <code>string content = 1;</code>
        * @return The content.
        */
       public java.lang.String getContent() {
@@ -3578,7 +3430,7 @@ public final class Output {
         }
       }
       /**
-       * <code>string content = 2;</code>
+       * <code>string content = 1;</code>
        * @return The bytes for content.
        */
       public com.google.protobuf.ByteString
@@ -3595,7 +3447,7 @@ public final class Output {
         }
       }
       /**
-       * <code>string content = 2;</code>
+       * <code>string content = 1;</code>
        * @param value The content to set.
        * @return This builder for chaining.
        */
@@ -3603,22 +3455,22 @@ public final class Output {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         content_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string content = 2;</code>
+       * <code>string content = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearContent() {
         content_ = getDefaultInstance().getContent();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string content = 2;</code>
+       * <code>string content = 1;</code>
        * @param value The bytes for content to set.
        * @return This builder for chaining.
        */
@@ -3627,14 +3479,14 @@ public final class Output {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         content_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
 
       private boolean valid_ ;
       /**
-       * <code>bool valid = 3;</code>
+       * <code>bool valid = 2;</code>
        * @return The valid.
        */
       @java.lang.Override
@@ -3642,23 +3494,23 @@ public final class Output {
         return valid_;
       }
       /**
-       * <code>bool valid = 3;</code>
+       * <code>bool valid = 2;</code>
        * @param value The valid to set.
        * @return This builder for chaining.
        */
       public Builder setValid(boolean value) {
         
         valid_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>bool valid = 3;</code>
+       * <code>bool valid = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearValid() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         valid_ = false;
         onChanged();
         return this;
@@ -3767,11 +3619,11 @@ public final class Output {
       "tenceDataResponse\022\023\n\013created_ids\030\001 \003(\t\022\022" +
       "\n\nfailed_ids\030\002 \003(\t\022\017\n\007message\030\003 \001(\t\"K\n\024V" +
       "alidateDataResponse\022\r\n\005valid\030\001 \001(\010\022$\n\tva" +
-      "lidator\030\002 \003(\0132\021.output.Validator\":\n\tVali" +
-      "dator\022\r\n\005index\030\001 \001(\t\022\017\n\007content\030\002 \001(\t\022\r\n" +
-      "\005valid\030\003 \001(\010BS\n\023com.soustify.outputZ<git" +
-      "hub.com/soustify/data-gateway-buffer-go/" +
-      "pkg/output;outputb\006proto3"
+      "lidator\030\002 \003(\0132\021.output.Validator\"+\n\tVali" +
+      "dator\022\017\n\007content\030\001 \001(\t\022\r\n\005valid\030\002 \001(\010BS\n" +
+      "\023com.soustify.outputZ<github.com/soustif" +
+      "y/data-gateway-buffer-go/pkg/output;outp" +
+      "utb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3806,7 +3658,7 @@ public final class Output {
     internal_static_output_Validator_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_output_Validator_descriptor,
-        new java.lang.String[] { "Index", "Content", "Valid", });
+        new java.lang.String[] { "Content", "Valid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

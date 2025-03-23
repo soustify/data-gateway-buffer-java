@@ -6143,7 +6143,7 @@ public final class Example {
       "ct\022.\n\nlast_login\030\021 \001(\0132\032.google.protobuf" +
       ".Timestamp\022+\n\006status\030\022 \001(\0162\033.example.Sta" +
       "tusEnumResponse*/\n\022StatusEnumResponse\022\013\n" +
-      "\007ENABLED\020\000\022\014\n\010DISABLED\020\0012\317\004\n\016ExampleServ" +
+      "\007ENABLED\020\000\022\014\n\010DISABLED\020\0012\314\004\n\016ExampleServ" +
       "ice\022@\n\010Paginate\022\030.input.PaginationReques" +
       "t\032\030.example.ExampleResponse0\001\0226\n\005Count\022\026" +
       ".input.FilteredRequest\032\025.output.CountRes" +
@@ -6155,12 +6155,12 @@ public final class Example {
       "ponse(\001\022:\n\006Active\022\022.input.UUIDRequest\032\032." +
       "output.StatusDataResponse(\001\0227\n\007FindOne\022\022" +
       ".input.UUIDRequest\032\030.example.ExampleResp" +
-      "onse\022C\n\010Validate\022\027.example.ExampleReques" +
-      "t\032\034.output.ValidateDataResponse(\001\022?\n\006Del" +
-      "ete\022\022.input.UUIDRequest\032\037.output.Persist" +
-      "enceDataResponse(\001BV\n\024com.soustify.examp" +
-      "leZ>github.com/soustify/data-gateway-buf" +
-      "fer-go/pkg/example;exampleb\006proto3"
+      "onse\022@\n\010Validate\022\024.example.ExampleBody\032\034" +
+      ".output.ValidateDataResponse(\001\022?\n\006Delete" +
+      "\022\022.input.UUIDRequest\032\037.output.Persistenc" +
+      "eDataResponse(\001BV\n\024com.soustify.exampleZ" +
+      ">github.com/soustify/data-gateway-buffer" +
+      "-go/pkg/example;exampleb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
