@@ -19,37 +19,37 @@ public final class Validator {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
-    int getContentCount();
+    int getDataCount();
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
-    boolean containsContent(
+    boolean containsData(
         java.lang.String key);
     /**
-     * Use {@link #getContentMap()} instead.
+     * Use {@link #getDataMap()} instead.
      */
     @java.lang.Deprecated
     java.util.Map<java.lang.String, java.lang.String>
-    getContent();
+    getData();
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
-    getContentMap();
+    getDataMap();
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     /* nullable */
-java.lang.String getContentOrDefault(
+java.lang.String getDataOrDefault(
         java.lang.String key,
         /* nullable */
 java.lang.String defaultValue);
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
-    java.lang.String getContentOrThrow(
+    java.lang.String getDataOrThrow(
         java.lang.String key);
   }
   /**
@@ -90,7 +90,7 @@ java.lang.String defaultValue);
         int number) {
       switch (number) {
         case 1:
-          return internalGetContent();
+          return internalGetData();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -104,13 +104,13 @@ java.lang.String defaultValue);
               com.soustify.validator.Validator.Response.class, com.soustify.validator.Validator.Response.Builder.class);
     }
 
-    public static final int CONTENT_FIELD_NUMBER = 1;
-    private static final class ContentDefaultEntryHolder {
+    public static final int DATA_FIELD_NUMBER = 1;
+    private static final class DataDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.soustify.validator.Validator.internal_static_validator_Response_ContentEntry_descriptor, 
+                  com.soustify.validator.Validator.internal_static_validator_Response_DataEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -118,65 +118,65 @@ java.lang.String defaultValue);
     }
     @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> content_;
+        java.lang.String, java.lang.String> data_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetContent() {
-      if (content_ == null) {
+    internalGetData() {
+      if (data_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
-            ContentDefaultEntryHolder.defaultEntry);
+            DataDefaultEntryHolder.defaultEntry);
       }
-      return content_;
+      return data_;
     }
-    public int getContentCount() {
-      return internalGetContent().getMap().size();
+    public int getDataCount() {
+      return internalGetData().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     @java.lang.Override
-    public boolean containsContent(
+    public boolean containsData(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetContent().getMap().containsKey(key);
+      return internalGetData().getMap().containsKey(key);
     }
     /**
-     * Use {@link #getContentMap()} instead.
+     * Use {@link #getDataMap()} instead.
      */
     @java.lang.Override
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getContent() {
-      return getContentMap();
+    public java.util.Map<java.lang.String, java.lang.String> getData() {
+      return getDataMap();
     }
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getContentMap() {
-      return internalGetContent().getMap();
+    public java.util.Map<java.lang.String, java.lang.String> getDataMap() {
+      return internalGetData().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     @java.lang.Override
     public /* nullable */
-java.lang.String getContentOrDefault(
+java.lang.String getDataOrDefault(
         java.lang.String key,
         /* nullable */
 java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetContent().getMap();
+          internalGetData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     @java.lang.Override
-    public java.lang.String getContentOrThrow(
+    public java.lang.String getDataOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetContent().getMap();
+          internalGetData().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -200,8 +200,8 @@ java.lang.String defaultValue) {
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
-          internalGetContent(),
-          ContentDefaultEntryHolder.defaultEntry,
+          internalGetData(),
+          DataDefaultEntryHolder.defaultEntry,
           1);
       getUnknownFields().writeTo(output);
     }
@@ -213,14 +213,14 @@ java.lang.String defaultValue) {
 
       size = 0;
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetContent().getMap().entrySet()) {
+           : internalGetData().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        content__ = ContentDefaultEntryHolder.defaultEntry.newBuilderForType()
+        data__ = DataDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, content__);
+            .computeMessageSize(1, data__);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -237,8 +237,8 @@ java.lang.String defaultValue) {
       }
       com.soustify.validator.Validator.Response other = (com.soustify.validator.Validator.Response) obj;
 
-      if (!internalGetContent().equals(
-          other.internalGetContent())) return false;
+      if (!internalGetData().equals(
+          other.internalGetData())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -250,9 +250,9 @@ java.lang.String defaultValue) {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetContent().getMap().isEmpty()) {
-        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetContent().hashCode();
+      if (!internalGetData().getMap().isEmpty()) {
+        hash = (37 * hash) + DATA_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetData().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -366,7 +366,7 @@ java.lang.String defaultValue) {
           int number) {
         switch (number) {
           case 1:
-            return internalGetContent();
+            return internalGetData();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -377,7 +377,7 @@ java.lang.String defaultValue) {
           int number) {
         switch (number) {
           case 1:
-            return internalGetMutableContent();
+            return internalGetMutableData();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -405,7 +405,7 @@ java.lang.String defaultValue) {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        internalGetMutableContent().clear();
+        internalGetMutableData().clear();
         return this;
       }
 
@@ -440,8 +440,8 @@ java.lang.String defaultValue) {
       private void buildPartial0(com.soustify.validator.Validator.Response result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.content_ = internalGetContent();
-          result.content_.makeImmutable();
+          result.data_ = internalGetData();
+          result.data_.makeImmutable();
         }
       }
 
@@ -489,8 +489,8 @@ java.lang.String defaultValue) {
 
       public Builder mergeFrom(com.soustify.validator.Validator.Response other) {
         if (other == com.soustify.validator.Validator.Response.getDefaultInstance()) return this;
-        internalGetMutableContent().mergeFrom(
-            other.internalGetContent());
+        internalGetMutableData().mergeFrom(
+            other.internalGetData());
         bitField0_ |= 0x00000001;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -520,10 +520,10 @@ java.lang.String defaultValue) {
                 break;
               case 10: {
                 com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-                content__ = input.readMessage(
-                    ContentDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableContent().getMutableMap().put(
-                    content__.getKey(), content__.getValue());
+                data__ = input.readMessage(
+                    DataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableData().getMutableMap().put(
+                    data__.getKey(), data__.getValue());
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -545,96 +545,96 @@ java.lang.String defaultValue) {
       private int bitField0_;
 
       private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> content_;
+          java.lang.String, java.lang.String> data_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetContent() {
-        if (content_ == null) {
+          internalGetData() {
+        if (data_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
-              ContentDefaultEntryHolder.defaultEntry);
+              DataDefaultEntryHolder.defaultEntry);
         }
-        return content_;
+        return data_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetMutableContent() {
-        if (content_ == null) {
-          content_ = com.google.protobuf.MapField.newMapField(
-              ContentDefaultEntryHolder.defaultEntry);
+          internalGetMutableData() {
+        if (data_ == null) {
+          data_ = com.google.protobuf.MapField.newMapField(
+              DataDefaultEntryHolder.defaultEntry);
         }
-        if (!content_.isMutable()) {
-          content_ = content_.copy();
+        if (!data_.isMutable()) {
+          data_ = data_.copy();
         }
         bitField0_ |= 0x00000001;
         onChanged();
-        return content_;
+        return data_;
       }
-      public int getContentCount() {
-        return internalGetContent().getMap().size();
+      public int getDataCount() {
+        return internalGetData().getMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
       @java.lang.Override
-      public boolean containsContent(
+      public boolean containsData(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetContent().getMap().containsKey(key);
+        return internalGetData().getMap().containsKey(key);
       }
       /**
-       * Use {@link #getContentMap()} instead.
+       * Use {@link #getDataMap()} instead.
        */
       @java.lang.Override
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getContent() {
-        return getContentMap();
+      public java.util.Map<java.lang.String, java.lang.String> getData() {
+        return getDataMap();
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
       @java.lang.Override
-      public java.util.Map<java.lang.String, java.lang.String> getContentMap() {
-        return internalGetContent().getMap();
+      public java.util.Map<java.lang.String, java.lang.String> getDataMap() {
+        return internalGetData().getMap();
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
       @java.lang.Override
       public /* nullable */
-java.lang.String getContentOrDefault(
+java.lang.String getDataOrDefault(
           java.lang.String key,
           /* nullable */
 java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetContent().getMap();
+            internalGetData().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
       @java.lang.Override
-      public java.lang.String getContentOrThrow(
+      public java.lang.String getDataOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetContent().getMap();
+            internalGetData().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
         return map.get(key);
       }
-      public Builder clearContent() {
+      public Builder clearData() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        internalGetMutableContent().getMutableMap()
+        internalGetMutableData().getMutableMap()
             .clear();
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
-      public Builder removeContent(
+      public Builder removeData(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableContent().getMutableMap()
+        internalGetMutableData().getMutableMap()
             .remove(key);
         return this;
       }
@@ -643,29 +643,29 @@ java.lang.String defaultValue) {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-          getMutableContent() {
+          getMutableData() {
         bitField0_ |= 0x00000001;
-        return internalGetMutableContent().getMutableMap();
+        return internalGetMutableData().getMutableMap();
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
-      public Builder putContent(
+      public Builder putData(
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
         if (value == null) { throw new NullPointerException("map value"); }
-        internalGetMutableContent().getMutableMap()
+        internalGetMutableData().getMutableMap()
             .put(key, value);
         bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
-      public Builder putAllContent(
+      public Builder putAllData(
           java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableContent().getMutableMap()
+        internalGetMutableData().getMutableMap()
             .putAll(values);
         bitField0_ |= 0x00000001;
         return this;
@@ -739,37 +739,37 @@ java.lang.String defaultValue) {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
-    int getContentCount();
+    int getDataCount();
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
-    boolean containsContent(
+    boolean containsData(
         java.lang.String key);
     /**
-     * Use {@link #getContentMap()} instead.
+     * Use {@link #getDataMap()} instead.
      */
     @java.lang.Deprecated
     java.util.Map<java.lang.String, java.lang.String>
-    getContent();
+    getData();
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
-    getContentMap();
+    getDataMap();
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     /* nullable */
-java.lang.String getContentOrDefault(
+java.lang.String getDataOrDefault(
         java.lang.String key,
         /* nullable */
 java.lang.String defaultValue);
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
-    java.lang.String getContentOrThrow(
+    java.lang.String getDataOrThrow(
         java.lang.String key);
   }
   /**
@@ -810,7 +810,7 @@ java.lang.String defaultValue);
         int number) {
       switch (number) {
         case 1:
-          return internalGetContent();
+          return internalGetData();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -824,13 +824,13 @@ java.lang.String defaultValue);
               com.soustify.validator.Validator.Request.class, com.soustify.validator.Validator.Request.Builder.class);
     }
 
-    public static final int CONTENT_FIELD_NUMBER = 1;
-    private static final class ContentDefaultEntryHolder {
+    public static final int DATA_FIELD_NUMBER = 1;
+    private static final class DataDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.soustify.validator.Validator.internal_static_validator_Request_ContentEntry_descriptor, 
+                  com.soustify.validator.Validator.internal_static_validator_Request_DataEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -838,65 +838,65 @@ java.lang.String defaultValue);
     }
     @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> content_;
+        java.lang.String, java.lang.String> data_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetContent() {
-      if (content_ == null) {
+    internalGetData() {
+      if (data_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
-            ContentDefaultEntryHolder.defaultEntry);
+            DataDefaultEntryHolder.defaultEntry);
       }
-      return content_;
+      return data_;
     }
-    public int getContentCount() {
-      return internalGetContent().getMap().size();
+    public int getDataCount() {
+      return internalGetData().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     @java.lang.Override
-    public boolean containsContent(
+    public boolean containsData(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetContent().getMap().containsKey(key);
+      return internalGetData().getMap().containsKey(key);
     }
     /**
-     * Use {@link #getContentMap()} instead.
+     * Use {@link #getDataMap()} instead.
      */
     @java.lang.Override
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getContent() {
-      return getContentMap();
+    public java.util.Map<java.lang.String, java.lang.String> getData() {
+      return getDataMap();
     }
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getContentMap() {
-      return internalGetContent().getMap();
+    public java.util.Map<java.lang.String, java.lang.String> getDataMap() {
+      return internalGetData().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     @java.lang.Override
     public /* nullable */
-java.lang.String getContentOrDefault(
+java.lang.String getDataOrDefault(
         java.lang.String key,
         /* nullable */
 java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetContent().getMap();
+          internalGetData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; content = 1;</code>
+     * <code>map&lt;string, string&gt; data = 1;</code>
      */
     @java.lang.Override
-    public java.lang.String getContentOrThrow(
+    public java.lang.String getDataOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetContent().getMap();
+          internalGetData().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -920,8 +920,8 @@ java.lang.String defaultValue) {
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
-          internalGetContent(),
-          ContentDefaultEntryHolder.defaultEntry,
+          internalGetData(),
+          DataDefaultEntryHolder.defaultEntry,
           1);
       getUnknownFields().writeTo(output);
     }
@@ -933,14 +933,14 @@ java.lang.String defaultValue) {
 
       size = 0;
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetContent().getMap().entrySet()) {
+           : internalGetData().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        content__ = ContentDefaultEntryHolder.defaultEntry.newBuilderForType()
+        data__ = DataDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, content__);
+            .computeMessageSize(1, data__);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -957,8 +957,8 @@ java.lang.String defaultValue) {
       }
       com.soustify.validator.Validator.Request other = (com.soustify.validator.Validator.Request) obj;
 
-      if (!internalGetContent().equals(
-          other.internalGetContent())) return false;
+      if (!internalGetData().equals(
+          other.internalGetData())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -970,9 +970,9 @@ java.lang.String defaultValue) {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetContent().getMap().isEmpty()) {
-        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetContent().hashCode();
+      if (!internalGetData().getMap().isEmpty()) {
+        hash = (37 * hash) + DATA_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetData().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1086,7 +1086,7 @@ java.lang.String defaultValue) {
           int number) {
         switch (number) {
           case 1:
-            return internalGetContent();
+            return internalGetData();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -1097,7 +1097,7 @@ java.lang.String defaultValue) {
           int number) {
         switch (number) {
           case 1:
-            return internalGetMutableContent();
+            return internalGetMutableData();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -1125,7 +1125,7 @@ java.lang.String defaultValue) {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        internalGetMutableContent().clear();
+        internalGetMutableData().clear();
         return this;
       }
 
@@ -1160,8 +1160,8 @@ java.lang.String defaultValue) {
       private void buildPartial0(com.soustify.validator.Validator.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.content_ = internalGetContent();
-          result.content_.makeImmutable();
+          result.data_ = internalGetData();
+          result.data_.makeImmutable();
         }
       }
 
@@ -1209,8 +1209,8 @@ java.lang.String defaultValue) {
 
       public Builder mergeFrom(com.soustify.validator.Validator.Request other) {
         if (other == com.soustify.validator.Validator.Request.getDefaultInstance()) return this;
-        internalGetMutableContent().mergeFrom(
-            other.internalGetContent());
+        internalGetMutableData().mergeFrom(
+            other.internalGetData());
         bitField0_ |= 0x00000001;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1240,10 +1240,10 @@ java.lang.String defaultValue) {
                 break;
               case 10: {
                 com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-                content__ = input.readMessage(
-                    ContentDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableContent().getMutableMap().put(
-                    content__.getKey(), content__.getValue());
+                data__ = input.readMessage(
+                    DataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableData().getMutableMap().put(
+                    data__.getKey(), data__.getValue());
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -1265,96 +1265,96 @@ java.lang.String defaultValue) {
       private int bitField0_;
 
       private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> content_;
+          java.lang.String, java.lang.String> data_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetContent() {
-        if (content_ == null) {
+          internalGetData() {
+        if (data_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
-              ContentDefaultEntryHolder.defaultEntry);
+              DataDefaultEntryHolder.defaultEntry);
         }
-        return content_;
+        return data_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetMutableContent() {
-        if (content_ == null) {
-          content_ = com.google.protobuf.MapField.newMapField(
-              ContentDefaultEntryHolder.defaultEntry);
+          internalGetMutableData() {
+        if (data_ == null) {
+          data_ = com.google.protobuf.MapField.newMapField(
+              DataDefaultEntryHolder.defaultEntry);
         }
-        if (!content_.isMutable()) {
-          content_ = content_.copy();
+        if (!data_.isMutable()) {
+          data_ = data_.copy();
         }
         bitField0_ |= 0x00000001;
         onChanged();
-        return content_;
+        return data_;
       }
-      public int getContentCount() {
-        return internalGetContent().getMap().size();
+      public int getDataCount() {
+        return internalGetData().getMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
       @java.lang.Override
-      public boolean containsContent(
+      public boolean containsData(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetContent().getMap().containsKey(key);
+        return internalGetData().getMap().containsKey(key);
       }
       /**
-       * Use {@link #getContentMap()} instead.
+       * Use {@link #getDataMap()} instead.
        */
       @java.lang.Override
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getContent() {
-        return getContentMap();
+      public java.util.Map<java.lang.String, java.lang.String> getData() {
+        return getDataMap();
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
       @java.lang.Override
-      public java.util.Map<java.lang.String, java.lang.String> getContentMap() {
-        return internalGetContent().getMap();
+      public java.util.Map<java.lang.String, java.lang.String> getDataMap() {
+        return internalGetData().getMap();
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
       @java.lang.Override
       public /* nullable */
-java.lang.String getContentOrDefault(
+java.lang.String getDataOrDefault(
           java.lang.String key,
           /* nullable */
 java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetContent().getMap();
+            internalGetData().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
       @java.lang.Override
-      public java.lang.String getContentOrThrow(
+      public java.lang.String getDataOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetContent().getMap();
+            internalGetData().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
         return map.get(key);
       }
-      public Builder clearContent() {
+      public Builder clearData() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        internalGetMutableContent().getMutableMap()
+        internalGetMutableData().getMutableMap()
             .clear();
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
-      public Builder removeContent(
+      public Builder removeData(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableContent().getMutableMap()
+        internalGetMutableData().getMutableMap()
             .remove(key);
         return this;
       }
@@ -1363,29 +1363,29 @@ java.lang.String defaultValue) {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-          getMutableContent() {
+          getMutableData() {
         bitField0_ |= 0x00000001;
-        return internalGetMutableContent().getMutableMap();
+        return internalGetMutableData().getMutableMap();
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
-      public Builder putContent(
+      public Builder putData(
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
         if (value == null) { throw new NullPointerException("map value"); }
-        internalGetMutableContent().getMutableMap()
+        internalGetMutableData().getMutableMap()
             .put(key, value);
         bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; content = 1;</code>
+       * <code>map&lt;string, string&gt; data = 1;</code>
        */
-      public Builder putAllContent(
+      public Builder putAllData(
           java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableContent().getMutableMap()
+        internalGetMutableData().getMutableMap()
             .putAll(values);
         bitField0_ |= 0x00000001;
         return this;
@@ -1460,20 +1460,20 @@ java.lang.String defaultValue) {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_validator_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_validator_Response_ContentEntry_descriptor;
+    internal_static_validator_Response_DataEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_validator_Response_ContentEntry_fieldAccessorTable;
+      internal_static_validator_Response_DataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_validator_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_validator_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_validator_Request_ContentEntry_descriptor;
+    internal_static_validator_Request_DataEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_validator_Request_ContentEntry_fieldAccessorTable;
+      internal_static_validator_Request_DataEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1483,15 +1483,15 @@ java.lang.String defaultValue) {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017validator.proto\022\tvalidator\"m\n\010Response" +
-      "\0221\n\007content\030\001 \003(\0132 .validator.Response.C" +
-      "ontentEntry\032.\n\014ContentEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"k\n\007Request\0220\n\007conten" +
-      "t\030\001 \003(\0132\037.validator.Request.ContentEntry" +
-      "\032.\n\014ContentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001B\\\n\026com.soustify.validatorZBgith" +
-      "ub.com/soustify/data-gateway-buffer-go/p" +
-      "kg/validator;validatorb\006proto3"
+      "\n\017validator.proto\022\tvalidator\"d\n\010Response" +
+      "\022+\n\004data\030\001 \003(\0132\035.validator.Response.Data" +
+      "Entry\032+\n\tDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"b\n\007Request\022*\n\004data\030\001 \003(\0132\034.va" +
+      "lidator.Request.DataEntry\032+\n\tDataEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\\\n\026com.so" +
+      "ustify.validatorZBgithub.com/soustify/da" +
+      "ta-gateway-buffer-go/pkg/validator;valid" +
+      "atorb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1502,24 +1502,24 @@ java.lang.String defaultValue) {
     internal_static_validator_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_validator_Response_descriptor,
-        new java.lang.String[] { "Content", });
-    internal_static_validator_Response_ContentEntry_descriptor =
+        new java.lang.String[] { "Data", });
+    internal_static_validator_Response_DataEntry_descriptor =
       internal_static_validator_Response_descriptor.getNestedTypes().get(0);
-    internal_static_validator_Response_ContentEntry_fieldAccessorTable = new
+    internal_static_validator_Response_DataEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_validator_Response_ContentEntry_descriptor,
+        internal_static_validator_Response_DataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_validator_Request_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_validator_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_validator_Request_descriptor,
-        new java.lang.String[] { "Content", });
-    internal_static_validator_Request_ContentEntry_descriptor =
+        new java.lang.String[] { "Data", });
+    internal_static_validator_Request_DataEntry_descriptor =
       internal_static_validator_Request_descriptor.getNestedTypes().get(0);
-    internal_static_validator_Request_ContentEntry_fieldAccessorTable = new
+    internal_static_validator_Request_DataEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_validator_Request_ContentEntry_descriptor,
+        internal_static_validator_Request_DataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
   }
 
