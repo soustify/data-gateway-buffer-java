@@ -233,28 +233,28 @@ public final class ExampleServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleBody,
-      com.soustify.output.Output.ValidateDataResponse> getValidateMethod;
+      com.soustify.validator.Validator.Response> getValidateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Validate",
       requestType = com.soustify.example.Example.ExampleBody.class,
-      responseType = com.soustify.output.Output.ValidateDataResponse.class,
+      responseType = com.soustify.validator.Validator.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
   public static io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleBody,
-      com.soustify.output.Output.ValidateDataResponse> getValidateMethod() {
-    io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleBody, com.soustify.output.Output.ValidateDataResponse> getValidateMethod;
+      com.soustify.validator.Validator.Response> getValidateMethod() {
+    io.grpc.MethodDescriptor<com.soustify.example.Example.ExampleBody, com.soustify.validator.Validator.Response> getValidateMethod;
     if ((getValidateMethod = ExampleServiceGrpc.getValidateMethod) == null) {
       synchronized (ExampleServiceGrpc.class) {
         if ((getValidateMethod = ExampleServiceGrpc.getValidateMethod) == null) {
           ExampleServiceGrpc.getValidateMethod = getValidateMethod =
-              io.grpc.MethodDescriptor.<com.soustify.example.Example.ExampleBody, com.soustify.output.Output.ValidateDataResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.soustify.example.Example.ExampleBody, com.soustify.validator.Validator.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Validate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.example.Example.ExampleBody.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.output.Output.ValidateDataResponse.getDefaultInstance()))
+                  com.soustify.validator.Validator.Response.getDefaultInstance()))
               .setSchemaDescriptor(new ExampleServiceMethodDescriptorSupplier("Validate"))
               .build();
         }
@@ -394,7 +394,7 @@ public final class ExampleServiceGrpc {
     /**
      */
     default io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleBody> validate(
-        io.grpc.stub.StreamObserver<com.soustify.output.Output.ValidateDataResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.validator.Validator.Response> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getValidateMethod(), responseObserver);
     }
 
@@ -492,7 +492,7 @@ public final class ExampleServiceGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<com.soustify.example.Example.ExampleBody> validate(
-        io.grpc.stub.StreamObserver<com.soustify.output.Output.ValidateDataResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.validator.Validator.Response> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getValidateMethod(), getCallOptions()), responseObserver);
     }
@@ -641,7 +641,7 @@ public final class ExampleServiceGrpc {
               (io.grpc.stub.StreamObserver<com.soustify.output.Output.StatusDataResponse>) responseObserver);
         case METHODID_VALIDATE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.validate(
-              (io.grpc.stub.StreamObserver<com.soustify.output.Output.ValidateDataResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.soustify.validator.Validator.Response>) responseObserver);
         case METHODID_DELETE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.delete(
               (io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse>) responseObserver);
@@ -707,7 +707,7 @@ public final class ExampleServiceGrpc {
           io.grpc.stub.ServerCalls.asyncClientStreamingCall(
             new MethodHandlers<
               com.soustify.example.Example.ExampleBody,
-              com.soustify.output.Output.ValidateDataResponse>(
+              com.soustify.validator.Validator.Response>(
                 service, METHODID_VALIDATE)))
         .addMethod(
           getDeleteMethod(),

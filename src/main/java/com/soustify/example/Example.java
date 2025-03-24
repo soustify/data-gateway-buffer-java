@@ -6119,54 +6119,55 @@ public final class Example {
   static {
     java.lang.String[] descriptorData = {
       "\n\rexample.proto\022\007example\032\013input.proto\032\014o" +
-      "utput.proto\032\037google/protobuf/timestamp.p" +
-      "roto\032\034google/protobuf/struct.proto\"F\n\016Ex" +
-      "ampleRequest\022\020\n\010hashcode\030\001 \001(\t\022\"\n\004body\030\002" +
-      " \001(\0132\024.example.ExampleBody\"\247\002\n\013ExampleBo" +
-      "dy\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013descript" +
-      "ion\030\003 \001(\t\022-\n\tborn_date\030\004 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022\r\n\005price\030\005 \001(\001\022\020\n\010categ" +
-      "ory\030\006 \001(\t\022\014\n\004tags\030\007 \003(\t\022\016\n\006rating\030\010 \001(\001\022" +
-      "\020\n\010quantity\030\t \001(\005\022\020\n\010discount\030\n \001(\001\022\r\n\005e" +
-      "mail\030\013 \001(\t\022\r\n\005phone\030\014 \001(\t\022)\n\010metadata\030\r " +
-      "\001(\0132\027.google.protobuf.Struct\022\016\n\006public\030\016" +
-      " \001(\010\"\350\003\n\017ExampleResponse\022\n\n\002id\030\001 \001(\t\022\014\n\004" +
-      "name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022-\n\tborn_" +
-      "date\030\004 \001(\0132\032.google.protobuf.Timestamp\022\016" +
-      "\n\006public\030\005 \001(\010\022\r\n\005price\030\006 \001(\001\022.\n\ncreated" +
-      "_at\030\007 \001(\0132\032.google.protobuf.Timestamp\022.\n" +
-      "\nupdated_at\030\010 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022\020\n\010category\030\t \001(\t\022\014\n\004tags\030\n \003(\t\022\016\n" +
-      "\006rating\030\013 \001(\001\022\020\n\010quantity\030\014 \001(\005\022\020\n\010disco" +
-      "unt\030\r \001(\001\022\r\n\005email\030\016 \001(\t\022\r\n\005phone\030\017 \001(\t\022" +
-      ")\n\010metadata\030\020 \001(\0132\027.google.protobuf.Stru" +
-      "ct\022.\n\nlast_login\030\021 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022+\n\006status\030\022 \001(\0162\033.example.Sta" +
-      "tusEnumResponse*/\n\022StatusEnumResponse\022\013\n" +
-      "\007ENABLED\020\000\022\014\n\010DISABLED\020\0012\314\004\n\016ExampleServ" +
-      "ice\022@\n\010Paginate\022\030.input.PaginationReques" +
-      "t\032\030.example.ExampleResponse0\001\0226\n\005Count\022\026" +
-      ".input.FilteredRequest\032\025.output.CountRes" +
-      "ponse\022D\n\006Create\022\027.example.ExampleRequest" +
-      "\032\037.output.PersistenceDataResponse(\001\022D\n\006U" +
-      "pdate\022\027.example.ExampleRequest\032\037.output." +
-      "PersistenceDataResponse(\001\022<\n\010Inactive\022\022." +
-      "input.UUIDRequest\032\032.output.StatusDataRes" +
-      "ponse(\001\022:\n\006Active\022\022.input.UUIDRequest\032\032." +
-      "output.StatusDataResponse(\001\0227\n\007FindOne\022\022" +
-      ".input.UUIDRequest\032\030.example.ExampleResp" +
-      "onse\022@\n\010Validate\022\024.example.ExampleBody\032\034" +
-      ".output.ValidateDataResponse(\001\022?\n\006Delete" +
-      "\022\022.input.UUIDRequest\032\037.output.Persistenc" +
-      "eDataResponse(\001BV\n\024com.soustify.exampleZ" +
-      ">github.com/soustify/data-gateway-buffer" +
-      "-go/pkg/example;exampleb\006proto3"
+      "utput.proto\032\017validator.proto\032\037google/pro" +
+      "tobuf/timestamp.proto\032\034google/protobuf/s" +
+      "truct.proto\"F\n\016ExampleRequest\022\020\n\010hashcod" +
+      "e\030\001 \001(\t\022\"\n\004body\030\002 \001(\0132\024.example.ExampleB" +
+      "ody\"\247\002\n\013ExampleBody\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030" +
+      "\002 \001(\t\022\023\n\013description\030\003 \001(\t\022-\n\tborn_date\030" +
+      "\004 \001(\0132\032.google.protobuf.Timestamp\022\r\n\005pri" +
+      "ce\030\005 \001(\001\022\020\n\010category\030\006 \001(\t\022\014\n\004tags\030\007 \003(\t" +
+      "\022\016\n\006rating\030\010 \001(\001\022\020\n\010quantity\030\t \001(\005\022\020\n\010di" +
+      "scount\030\n \001(\001\022\r\n\005email\030\013 \001(\t\022\r\n\005phone\030\014 \001" +
+      "(\t\022)\n\010metadata\030\r \001(\0132\027.google.protobuf.S" +
+      "truct\022\016\n\006public\030\016 \001(\010\"\350\003\n\017ExampleRespons" +
+      "e\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013descripti" +
+      "on\030\003 \001(\t\022-\n\tborn_date\030\004 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022\016\n\006public\030\005 \001(\010\022\r\n\005price" +
+      "\030\006 \001(\001\022.\n\ncreated_at\030\007 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022.\n\nupdated_at\030\010 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022\020\n\010category\030\t \001(\t" +
+      "\022\014\n\004tags\030\n \003(\t\022\016\n\006rating\030\013 \001(\001\022\020\n\010quanti" +
+      "ty\030\014 \001(\005\022\020\n\010discount\030\r \001(\001\022\r\n\005email\030\016 \001(" +
+      "\t\022\r\n\005phone\030\017 \001(\t\022)\n\010metadata\030\020 \001(\0132\027.goo" +
+      "gle.protobuf.Struct\022.\n\nlast_login\030\021 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022+\n\006status\030\022 " +
+      "\001(\0162\033.example.StatusEnumResponse*/\n\022Stat" +
+      "usEnumResponse\022\013\n\007ENABLED\020\000\022\014\n\010DISABLED\020" +
+      "\0012\303\004\n\016ExampleService\022@\n\010Paginate\022\030.input" +
+      ".PaginationRequest\032\030.example.ExampleResp" +
+      "onse0\001\0226\n\005Count\022\026.input.FilteredRequest\032" +
+      "\025.output.CountResponse\022D\n\006Create\022\027.examp" +
+      "le.ExampleRequest\032\037.output.PersistenceDa" +
+      "taResponse(\001\022D\n\006Update\022\027.example.Example" +
+      "Request\032\037.output.PersistenceDataResponse" +
+      "(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032\032.out" +
+      "put.StatusDataResponse(\001\022:\n\006Active\022\022.inp" +
+      "ut.UUIDRequest\032\032.output.StatusDataRespon" +
+      "se(\001\0227\n\007FindOne\022\022.input.UUIDRequest\032\030.ex" +
+      "ample.ExampleResponse\0227\n\010Validate\022\024.exam" +
+      "ple.ExampleBody\032\023.validator.Response(\001\022?" +
+      "\n\006Delete\022\022.input.UUIDRequest\032\037.output.Pe" +
+      "rsistenceDataResponse(\001BV\n\024com.soustify." +
+      "exampleZ>github.com/soustify/data-gatewa" +
+      "y-buffer-go/pkg/example;exampleb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.soustify.input.Input.getDescriptor(),
           com.soustify.output.Output.getDescriptor(),
+          com.soustify.validator.Validator.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.StructProto.getDescriptor(),
         });
@@ -6190,6 +6191,7 @@ public final class Example {
         new java.lang.String[] { "Id", "Name", "Description", "BornDate", "Public", "Price", "CreatedAt", "UpdatedAt", "Category", "Tags", "Rating", "Quantity", "Discount", "Email", "Phone", "Metadata", "LastLogin", "Status", });
     com.soustify.input.Input.getDescriptor();
     com.soustify.output.Output.getDescriptor();
+    com.soustify.validator.Validator.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.StructProto.getDescriptor();
   }
