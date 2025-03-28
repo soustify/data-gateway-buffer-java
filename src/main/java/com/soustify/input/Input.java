@@ -1711,25 +1711,37 @@ public final class Input {
         getFilterContentBytes();
 
     /**
-     * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+     * <code>string operator = 2;</code>
+     * @return The operator.
+     */
+    java.lang.String getOperator();
+    /**
+     * <code>string operator = 2;</code>
+     * @return The bytes for operator.
+     */
+    com.google.protobuf.ByteString
+        getOperatorBytes();
+
+    /**
+     * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
      */
     java.util.List<com.soustify.input.Input.FilterFieldsRequest> 
         getFilteredFieldsList();
     /**
-     * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+     * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
      */
     com.soustify.input.Input.FilterFieldsRequest getFilteredFields(int index);
     /**
-     * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+     * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
      */
     int getFilteredFieldsCount();
     /**
-     * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+     * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
      */
     java.util.List<? extends com.soustify.input.Input.FilterFieldsRequestOrBuilder> 
         getFilteredFieldsOrBuilderList();
     /**
-     * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+     * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
      */
     com.soustify.input.Input.FilterFieldsRequestOrBuilder getFilteredFieldsOrBuilder(
         int index);
@@ -1748,6 +1760,7 @@ public final class Input {
     }
     private FilteredRequest() {
       filterContent_ = "";
+      operator_ = "";
       filteredFields_ = java.util.Collections.emptyList();
     }
 
@@ -1815,18 +1828,57 @@ public final class Input {
       }
     }
 
-    public static final int FILTERED_FIELDS_FIELD_NUMBER = 2;
+    public static final int OPERATOR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operator_ = "";
+    /**
+     * <code>string operator = 2;</code>
+     * @return The operator.
+     */
+    @java.lang.Override
+    public java.lang.String getOperator() {
+      java.lang.Object ref = operator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string operator = 2;</code>
+     * @return The bytes for operator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorBytes() {
+      java.lang.Object ref = operator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTERED_FIELDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private java.util.List<com.soustify.input.Input.FilterFieldsRequest> filteredFields_;
     /**
-     * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+     * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
      */
     @java.lang.Override
     public java.util.List<com.soustify.input.Input.FilterFieldsRequest> getFilteredFieldsList() {
       return filteredFields_;
     }
     /**
-     * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+     * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.soustify.input.Input.FilterFieldsRequestOrBuilder> 
@@ -1834,21 +1886,21 @@ public final class Input {
       return filteredFields_;
     }
     /**
-     * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+     * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
      */
     @java.lang.Override
     public int getFilteredFieldsCount() {
       return filteredFields_.size();
     }
     /**
-     * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+     * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
      */
     @java.lang.Override
     public com.soustify.input.Input.FilterFieldsRequest getFilteredFields(int index) {
       return filteredFields_.get(index);
     }
     /**
-     * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+     * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
      */
     @java.lang.Override
     public com.soustify.input.Input.FilterFieldsRequestOrBuilder getFilteredFieldsOrBuilder(
@@ -1873,8 +1925,11 @@ public final class Input {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterContent_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filterContent_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, operator_);
+      }
       for (int i = 0; i < filteredFields_.size(); i++) {
-        output.writeMessage(2, filteredFields_.get(i));
+        output.writeMessage(3, filteredFields_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -1888,9 +1943,12 @@ public final class Input {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterContent_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filterContent_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, operator_);
+      }
       for (int i = 0; i < filteredFields_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, filteredFields_.get(i));
+          .computeMessageSize(3, filteredFields_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1909,6 +1967,8 @@ public final class Input {
 
       if (!getFilterContent()
           .equals(other.getFilterContent())) return false;
+      if (!getOperator()
+          .equals(other.getOperator())) return false;
       if (!getFilteredFieldsList()
           .equals(other.getFilteredFieldsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1924,6 +1984,8 @@ public final class Input {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FILTER_CONTENT_FIELD_NUMBER;
       hash = (53 * hash) + getFilterContent().hashCode();
+      hash = (37 * hash) + OPERATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getOperator().hashCode();
       if (getFilteredFieldsCount() > 0) {
         hash = (37 * hash) + FILTERED_FIELDS_FIELD_NUMBER;
         hash = (53 * hash) + getFilteredFieldsList().hashCode();
@@ -2058,13 +2120,14 @@ public final class Input {
         super.clear();
         bitField0_ = 0;
         filterContent_ = "";
+        operator_ = "";
         if (filteredFieldsBuilder_ == null) {
           filteredFields_ = java.util.Collections.emptyList();
         } else {
           filteredFields_ = null;
           filteredFieldsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -2099,9 +2162,9 @@ public final class Input {
 
       private void buildPartialRepeatedFields(com.soustify.input.Input.FilteredRequest result) {
         if (filteredFieldsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             filteredFields_ = java.util.Collections.unmodifiableList(filteredFields_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.filteredFields_ = filteredFields_;
         } else {
@@ -2113,6 +2176,9 @@ public final class Input {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.filterContent_ = filterContent_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.operator_ = operator_;
         }
       }
 
@@ -2165,11 +2231,16 @@ public final class Input {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (!other.getOperator().isEmpty()) {
+          operator_ = other.operator_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         if (filteredFieldsBuilder_ == null) {
           if (!other.filteredFields_.isEmpty()) {
             if (filteredFields_.isEmpty()) {
               filteredFields_ = other.filteredFields_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureFilteredFieldsIsMutable();
               filteredFields_.addAll(other.filteredFields_);
@@ -2182,7 +2253,7 @@ public final class Input {
               filteredFieldsBuilder_.dispose();
               filteredFieldsBuilder_ = null;
               filteredFields_ = other.filteredFields_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
               filteredFieldsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFilteredFieldsFieldBuilder() : null;
@@ -2223,6 +2294,11 @@ public final class Input {
                 break;
               } // case 10
               case 18: {
+                operator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
                 com.soustify.input.Input.FilterFieldsRequest m =
                     input.readMessage(
                         com.soustify.input.Input.FilterFieldsRequest.parser(),
@@ -2234,7 +2310,7 @@ public final class Input {
                   filteredFieldsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 18
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2324,12 +2400,84 @@ public final class Input {
         return this;
       }
 
+      private java.lang.Object operator_ = "";
+      /**
+       * <code>string operator = 2;</code>
+       * @return The operator.
+       */
+      public java.lang.String getOperator() {
+        java.lang.Object ref = operator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string operator = 2;</code>
+       * @return The bytes for operator.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorBytes() {
+        java.lang.Object ref = operator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string operator = 2;</code>
+       * @param value The operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperator() {
+        operator_ = getDefaultInstance().getOperator();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator = 2;</code>
+       * @param value The bytes for operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<com.soustify.input.Input.FilterFieldsRequest> filteredFields_ =
         java.util.Collections.emptyList();
       private void ensureFilteredFieldsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           filteredFields_ = new java.util.ArrayList<com.soustify.input.Input.FilterFieldsRequest>(filteredFields_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -2337,7 +2485,7 @@ public final class Input {
           com.soustify.input.Input.FilterFieldsRequest, com.soustify.input.Input.FilterFieldsRequest.Builder, com.soustify.input.Input.FilterFieldsRequestOrBuilder> filteredFieldsBuilder_;
 
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public java.util.List<com.soustify.input.Input.FilterFieldsRequest> getFilteredFieldsList() {
         if (filteredFieldsBuilder_ == null) {
@@ -2347,7 +2495,7 @@ public final class Input {
         }
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public int getFilteredFieldsCount() {
         if (filteredFieldsBuilder_ == null) {
@@ -2357,7 +2505,7 @@ public final class Input {
         }
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public com.soustify.input.Input.FilterFieldsRequest getFilteredFields(int index) {
         if (filteredFieldsBuilder_ == null) {
@@ -2367,7 +2515,7 @@ public final class Input {
         }
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public Builder setFilteredFields(
           int index, com.soustify.input.Input.FilterFieldsRequest value) {
@@ -2384,7 +2532,7 @@ public final class Input {
         return this;
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public Builder setFilteredFields(
           int index, com.soustify.input.Input.FilterFieldsRequest.Builder builderForValue) {
@@ -2398,7 +2546,7 @@ public final class Input {
         return this;
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public Builder addFilteredFields(com.soustify.input.Input.FilterFieldsRequest value) {
         if (filteredFieldsBuilder_ == null) {
@@ -2414,7 +2562,7 @@ public final class Input {
         return this;
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public Builder addFilteredFields(
           int index, com.soustify.input.Input.FilterFieldsRequest value) {
@@ -2431,7 +2579,7 @@ public final class Input {
         return this;
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public Builder addFilteredFields(
           com.soustify.input.Input.FilterFieldsRequest.Builder builderForValue) {
@@ -2445,7 +2593,7 @@ public final class Input {
         return this;
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public Builder addFilteredFields(
           int index, com.soustify.input.Input.FilterFieldsRequest.Builder builderForValue) {
@@ -2459,7 +2607,7 @@ public final class Input {
         return this;
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public Builder addAllFilteredFields(
           java.lang.Iterable<? extends com.soustify.input.Input.FilterFieldsRequest> values) {
@@ -2474,12 +2622,12 @@ public final class Input {
         return this;
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public Builder clearFilteredFields() {
         if (filteredFieldsBuilder_ == null) {
           filteredFields_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           filteredFieldsBuilder_.clear();
@@ -2487,7 +2635,7 @@ public final class Input {
         return this;
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public Builder removeFilteredFields(int index) {
         if (filteredFieldsBuilder_ == null) {
@@ -2500,14 +2648,14 @@ public final class Input {
         return this;
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public com.soustify.input.Input.FilterFieldsRequest.Builder getFilteredFieldsBuilder(
           int index) {
         return getFilteredFieldsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public com.soustify.input.Input.FilterFieldsRequestOrBuilder getFilteredFieldsOrBuilder(
           int index) {
@@ -2517,7 +2665,7 @@ public final class Input {
         }
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public java.util.List<? extends com.soustify.input.Input.FilterFieldsRequestOrBuilder> 
            getFilteredFieldsOrBuilderList() {
@@ -2528,14 +2676,14 @@ public final class Input {
         }
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public com.soustify.input.Input.FilterFieldsRequest.Builder addFilteredFieldsBuilder() {
         return getFilteredFieldsFieldBuilder().addBuilder(
             com.soustify.input.Input.FilterFieldsRequest.getDefaultInstance());
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public com.soustify.input.Input.FilterFieldsRequest.Builder addFilteredFieldsBuilder(
           int index) {
@@ -2543,7 +2691,7 @@ public final class Input {
             index, com.soustify.input.Input.FilterFieldsRequest.getDefaultInstance());
       }
       /**
-       * <code>repeated .input.FilterFieldsRequest filtered_fields = 2;</code>
+       * <code>repeated .input.FilterFieldsRequest filtered_fields = 3;</code>
        */
       public java.util.List<com.soustify.input.Input.FilterFieldsRequest.Builder> 
            getFilteredFieldsBuilderList() {
@@ -2556,7 +2704,7 @@ public final class Input {
           filteredFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.soustify.input.Input.FilterFieldsRequest, com.soustify.input.Input.FilterFieldsRequest.Builder, com.soustify.input.Input.FilterFieldsRequestOrBuilder>(
                   filteredFields_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           filteredFields_ = null;
@@ -2644,24 +2792,12 @@ public final class Input {
         getFieldBytes();
 
     /**
-     * <code>string operator = 2;</code>
-     * @return The operator.
-     */
-    java.lang.String getOperator();
-    /**
-     * <code>string operator = 2;</code>
-     * @return The bytes for operator.
-     */
-    com.google.protobuf.ByteString
-        getOperatorBytes();
-
-    /**
-     * <code>string comparison_kind = 3;</code>
+     * <code>string comparison_kind = 2;</code>
      * @return The comparisonKind.
      */
     java.lang.String getComparisonKind();
     /**
-     * <code>string comparison_kind = 3;</code>
+     * <code>string comparison_kind = 2;</code>
      * @return The bytes for comparisonKind.
      */
     com.google.protobuf.ByteString
@@ -2681,7 +2817,6 @@ public final class Input {
     }
     private FilterFieldsRequest() {
       field_ = "";
-      operator_ = "";
       comparisonKind_ = "";
     }
 
@@ -2749,50 +2884,11 @@ public final class Input {
       }
     }
 
-    public static final int OPERATOR_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object operator_ = "";
-    /**
-     * <code>string operator = 2;</code>
-     * @return The operator.
-     */
-    @java.lang.Override
-    public java.lang.String getOperator() {
-      java.lang.Object ref = operator_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        operator_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string operator = 2;</code>
-     * @return The bytes for operator.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getOperatorBytes() {
-      java.lang.Object ref = operator_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        operator_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int COMPARISON_KIND_FIELD_NUMBER = 3;
+    public static final int COMPARISON_KIND_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object comparisonKind_ = "";
     /**
-     * <code>string comparison_kind = 3;</code>
+     * <code>string comparison_kind = 2;</code>
      * @return The comparisonKind.
      */
     @java.lang.Override
@@ -2809,7 +2905,7 @@ public final class Input {
       }
     }
     /**
-     * <code>string comparison_kind = 3;</code>
+     * <code>string comparison_kind = 2;</code>
      * @return The bytes for comparisonKind.
      */
     @java.lang.Override
@@ -2844,11 +2940,8 @@ public final class Input {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(field_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, field_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operator_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, operator_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comparisonKind_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, comparisonKind_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, comparisonKind_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2862,11 +2955,8 @@ public final class Input {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(field_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, field_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operator_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, operator_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comparisonKind_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, comparisonKind_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, comparisonKind_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2885,8 +2975,6 @@ public final class Input {
 
       if (!getField()
           .equals(other.getField())) return false;
-      if (!getOperator()
-          .equals(other.getOperator())) return false;
       if (!getComparisonKind()
           .equals(other.getComparisonKind())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -2902,8 +2990,6 @@ public final class Input {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FIELD_FIELD_NUMBER;
       hash = (53 * hash) + getField().hashCode();
-      hash = (37 * hash) + OPERATOR_FIELD_NUMBER;
-      hash = (53 * hash) + getOperator().hashCode();
       hash = (37 * hash) + COMPARISON_KIND_FIELD_NUMBER;
       hash = (53 * hash) + getComparisonKind().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -3036,7 +3122,6 @@ public final class Input {
         super.clear();
         bitField0_ = 0;
         field_ = "";
-        operator_ = "";
         comparisonKind_ = "";
         return this;
       }
@@ -3075,9 +3160,6 @@ public final class Input {
           result.field_ = field_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.operator_ = operator_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.comparisonKind_ = comparisonKind_;
         }
       }
@@ -3131,14 +3213,9 @@ public final class Input {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (!other.getOperator().isEmpty()) {
-          operator_ = other.operator_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
         if (!other.getComparisonKind().isEmpty()) {
           comparisonKind_ = other.comparisonKind_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3173,15 +3250,10 @@ public final class Input {
                 break;
               } // case 10
               case 18: {
-                operator_ = input.readStringRequireUtf8();
+                comparisonKind_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
-              case 26: {
-                comparisonKind_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3271,81 +3343,9 @@ public final class Input {
         return this;
       }
 
-      private java.lang.Object operator_ = "";
-      /**
-       * <code>string operator = 2;</code>
-       * @return The operator.
-       */
-      public java.lang.String getOperator() {
-        java.lang.Object ref = operator_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          operator_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string operator = 2;</code>
-       * @return The bytes for operator.
-       */
-      public com.google.protobuf.ByteString
-          getOperatorBytes() {
-        java.lang.Object ref = operator_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          operator_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string operator = 2;</code>
-       * @param value The operator to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOperator(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        operator_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string operator = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOperator() {
-        operator_ = getDefaultInstance().getOperator();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string operator = 2;</code>
-       * @param value The bytes for operator to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOperatorBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        operator_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object comparisonKind_ = "";
       /**
-       * <code>string comparison_kind = 3;</code>
+       * <code>string comparison_kind = 2;</code>
        * @return The comparisonKind.
        */
       public java.lang.String getComparisonKind() {
@@ -3361,7 +3361,7 @@ public final class Input {
         }
       }
       /**
-       * <code>string comparison_kind = 3;</code>
+       * <code>string comparison_kind = 2;</code>
        * @return The bytes for comparisonKind.
        */
       public com.google.protobuf.ByteString
@@ -3378,7 +3378,7 @@ public final class Input {
         }
       }
       /**
-       * <code>string comparison_kind = 3;</code>
+       * <code>string comparison_kind = 2;</code>
        * @param value The comparisonKind to set.
        * @return This builder for chaining.
        */
@@ -3386,22 +3386,22 @@ public final class Input {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         comparisonKind_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string comparison_kind = 3;</code>
+       * <code>string comparison_kind = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearComparisonKind() {
         comparisonKind_ = getDefaultInstance().getComparisonKind();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string comparison_kind = 3;</code>
+       * <code>string comparison_kind = 2;</code>
        * @param value The bytes for comparisonKind to set.
        * @return This builder for chaining.
        */
@@ -3410,7 +3410,7 @@ public final class Input {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         comparisonKind_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4219,11 +4219,11 @@ public final class Input {
       "st\022\014\n\004page\030\001 \001(\005\022\r\n\005limit\030\002 \001(\005\022&\n\006filte" +
       "r\030\003 \003(\0132\026.input.FilteredRequest\022\'\n\010order" +
       "_by\030\004 \001(\0132\025.input.OrderByRequest\"\033\n\013UUID" +
-      "Request\022\014\n\004uuid\030\001 \001(\t\"^\n\017FilteredRequest" +
-      "\022\026\n\016filter_content\030\001 \001(\t\0223\n\017filtered_fie" +
-      "lds\030\002 \003(\0132\032.input.FilterFieldsRequest\"O\n" +
-      "\023FilterFieldsRequest\022\r\n\005field\030\001 \001(\t\022\020\n\010o" +
-      "perator\030\002 \001(\t\022\027\n\017comparison_kind\030\003 \001(\t\"." +
+      "Request\022\014\n\004uuid\030\001 \001(\t\"p\n\017FilteredRequest" +
+      "\022\026\n\016filter_content\030\001 \001(\t\022\020\n\010operator\030\002 \001" +
+      "(\t\0223\n\017filtered_fields\030\003 \003(\0132\032.input.Filt" +
+      "erFieldsRequest\"=\n\023FilterFieldsRequest\022\r" +
+      "\n\005field\030\001 \001(\t\022\027\n\017comparison_kind\030\002 \001(\t\"." +
       "\n\016OrderByRequest\022\r\n\005field\030\001 \001(\t\022\r\n\005order" +
       "\030\002 \001(\tBP\n\022com.soustify.inputZ:github.com" +
       "/soustify/data-gateway-buffer-go/pkg/inp" +
@@ -4250,13 +4250,13 @@ public final class Input {
     internal_static_input_FilteredRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_input_FilteredRequest_descriptor,
-        new java.lang.String[] { "FilterContent", "FilteredFields", });
+        new java.lang.String[] { "FilterContent", "Operator", "FilteredFields", });
     internal_static_input_FilterFieldsRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_input_FilterFieldsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_input_FilterFieldsRequest_descriptor,
-        new java.lang.String[] { "Field", "Operator", "ComparisonKind", });
+        new java.lang.String[] { "Field", "ComparisonKind", });
     internal_static_input_OrderByRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_input_OrderByRequest_fieldAccessorTable = new
