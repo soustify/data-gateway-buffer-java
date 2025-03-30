@@ -127,757 +127,6 @@ public final class Example {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string hashcode = 1;</code>
-     * @return The hashcode.
-     */
-    java.lang.String getHashcode();
-    /**
-     * <code>string hashcode = 1;</code>
-     * @return The bytes for hashcode.
-     */
-    com.google.protobuf.ByteString
-        getHashcodeBytes();
-
-    /**
-     * <code>.example.ExampleBody body = 2;</code>
-     * @return Whether the body field is set.
-     */
-    boolean hasBody();
-    /**
-     * <code>.example.ExampleBody body = 2;</code>
-     * @return The body.
-     */
-    com.soustify.example.Example.ExampleBody getBody();
-    /**
-     * <code>.example.ExampleBody body = 2;</code>
-     */
-    com.soustify.example.Example.ExampleBodyOrBuilder getBodyOrBuilder();
-  }
-  /**
-   * Protobuf type {@code example.ExampleRequest}
-   */
-  public static final class ExampleRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:example.ExampleRequest)
-      ExampleRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ExampleRequest.newBuilder() to construct.
-    private ExampleRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ExampleRequest() {
-      hashcode_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ExampleRequest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.soustify.example.Example.internal_static_example_ExampleRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.soustify.example.Example.internal_static_example_ExampleRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.soustify.example.Example.ExampleRequest.class, com.soustify.example.Example.ExampleRequest.Builder.class);
-    }
-
-    public static final int HASHCODE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object hashcode_ = "";
-    /**
-     * <code>string hashcode = 1;</code>
-     * @return The hashcode.
-     */
-    @java.lang.Override
-    public java.lang.String getHashcode() {
-      java.lang.Object ref = hashcode_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        hashcode_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string hashcode = 1;</code>
-     * @return The bytes for hashcode.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getHashcodeBytes() {
-      java.lang.Object ref = hashcode_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        hashcode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int BODY_FIELD_NUMBER = 2;
-    private com.soustify.example.Example.ExampleBody body_;
-    /**
-     * <code>.example.ExampleBody body = 2;</code>
-     * @return Whether the body field is set.
-     */
-    @java.lang.Override
-    public boolean hasBody() {
-      return body_ != null;
-    }
-    /**
-     * <code>.example.ExampleBody body = 2;</code>
-     * @return The body.
-     */
-    @java.lang.Override
-    public com.soustify.example.Example.ExampleBody getBody() {
-      return body_ == null ? com.soustify.example.Example.ExampleBody.getDefaultInstance() : body_;
-    }
-    /**
-     * <code>.example.ExampleBody body = 2;</code>
-     */
-    @java.lang.Override
-    public com.soustify.example.Example.ExampleBodyOrBuilder getBodyOrBuilder() {
-      return body_ == null ? com.soustify.example.Example.ExampleBody.getDefaultInstance() : body_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hashcode_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hashcode_);
-      }
-      if (body_ != null) {
-        output.writeMessage(2, getBody());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hashcode_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hashcode_);
-      }
-      if (body_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getBody());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.soustify.example.Example.ExampleRequest)) {
-        return super.equals(obj);
-      }
-      com.soustify.example.Example.ExampleRequest other = (com.soustify.example.Example.ExampleRequest) obj;
-
-      if (!getHashcode()
-          .equals(other.getHashcode())) return false;
-      if (hasBody() != other.hasBody()) return false;
-      if (hasBody()) {
-        if (!getBody()
-            .equals(other.getBody())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HASHCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getHashcode().hashCode();
-      if (hasBody()) {
-        hash = (37 * hash) + BODY_FIELD_NUMBER;
-        hash = (53 * hash) + getBody().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.soustify.example.Example.ExampleRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.soustify.example.Example.ExampleRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.soustify.example.Example.ExampleRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.soustify.example.Example.ExampleRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.soustify.example.Example.ExampleRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.soustify.example.Example.ExampleRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.soustify.example.Example.ExampleRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.soustify.example.Example.ExampleRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.soustify.example.Example.ExampleRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.soustify.example.Example.ExampleRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.soustify.example.Example.ExampleRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.soustify.example.Example.ExampleRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.soustify.example.Example.ExampleRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code example.ExampleRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.ExampleRequest)
-        com.soustify.example.Example.ExampleRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.soustify.example.Example.internal_static_example_ExampleRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.soustify.example.Example.internal_static_example_ExampleRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.soustify.example.Example.ExampleRequest.class, com.soustify.example.Example.ExampleRequest.Builder.class);
-      }
-
-      // Construct using com.soustify.example.Example.ExampleRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        hashcode_ = "";
-        body_ = null;
-        if (bodyBuilder_ != null) {
-          bodyBuilder_.dispose();
-          bodyBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.soustify.example.Example.internal_static_example_ExampleRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.soustify.example.Example.ExampleRequest getDefaultInstanceForType() {
-        return com.soustify.example.Example.ExampleRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.soustify.example.Example.ExampleRequest build() {
-        com.soustify.example.Example.ExampleRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.soustify.example.Example.ExampleRequest buildPartial() {
-        com.soustify.example.Example.ExampleRequest result = new com.soustify.example.Example.ExampleRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.soustify.example.Example.ExampleRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.hashcode_ = hashcode_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.body_ = bodyBuilder_ == null
-              ? body_
-              : bodyBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.example.Example.ExampleRequest) {
-          return mergeFrom((com.soustify.example.Example.ExampleRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.soustify.example.Example.ExampleRequest other) {
-        if (other == com.soustify.example.Example.ExampleRequest.getDefaultInstance()) return this;
-        if (!other.getHashcode().isEmpty()) {
-          hashcode_ = other.hashcode_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasBody()) {
-          mergeBody(other.getBody());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                hashcode_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getBodyFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object hashcode_ = "";
-      /**
-       * <code>string hashcode = 1;</code>
-       * @return The hashcode.
-       */
-      public java.lang.String getHashcode() {
-        java.lang.Object ref = hashcode_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          hashcode_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string hashcode = 1;</code>
-       * @return The bytes for hashcode.
-       */
-      public com.google.protobuf.ByteString
-          getHashcodeBytes() {
-        java.lang.Object ref = hashcode_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          hashcode_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string hashcode = 1;</code>
-       * @param value The hashcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHashcode(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        hashcode_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string hashcode = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearHashcode() {
-        hashcode_ = getDefaultInstance().getHashcode();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string hashcode = 1;</code>
-       * @param value The bytes for hashcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHashcodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        hashcode_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      private com.soustify.example.Example.ExampleBody body_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.soustify.example.Example.ExampleBody, com.soustify.example.Example.ExampleBody.Builder, com.soustify.example.Example.ExampleBodyOrBuilder> bodyBuilder_;
-      /**
-       * <code>.example.ExampleBody body = 2;</code>
-       * @return Whether the body field is set.
-       */
-      public boolean hasBody() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>.example.ExampleBody body = 2;</code>
-       * @return The body.
-       */
-      public com.soustify.example.Example.ExampleBody getBody() {
-        if (bodyBuilder_ == null) {
-          return body_ == null ? com.soustify.example.Example.ExampleBody.getDefaultInstance() : body_;
-        } else {
-          return bodyBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.example.ExampleBody body = 2;</code>
-       */
-      public Builder setBody(com.soustify.example.Example.ExampleBody value) {
-        if (bodyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          body_ = value;
-        } else {
-          bodyBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.ExampleBody body = 2;</code>
-       */
-      public Builder setBody(
-          com.soustify.example.Example.ExampleBody.Builder builderForValue) {
-        if (bodyBuilder_ == null) {
-          body_ = builderForValue.build();
-        } else {
-          bodyBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.ExampleBody body = 2;</code>
-       */
-      public Builder mergeBody(com.soustify.example.Example.ExampleBody value) {
-        if (bodyBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            body_ != null &&
-            body_ != com.soustify.example.Example.ExampleBody.getDefaultInstance()) {
-            getBodyBuilder().mergeFrom(value);
-          } else {
-            body_ = value;
-          }
-        } else {
-          bodyBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.ExampleBody body = 2;</code>
-       */
-      public Builder clearBody() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        body_ = null;
-        if (bodyBuilder_ != null) {
-          bodyBuilder_.dispose();
-          bodyBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.ExampleBody body = 2;</code>
-       */
-      public com.soustify.example.Example.ExampleBody.Builder getBodyBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getBodyFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.example.ExampleBody body = 2;</code>
-       */
-      public com.soustify.example.Example.ExampleBodyOrBuilder getBodyOrBuilder() {
-        if (bodyBuilder_ != null) {
-          return bodyBuilder_.getMessageOrBuilder();
-        } else {
-          return body_ == null ?
-              com.soustify.example.Example.ExampleBody.getDefaultInstance() : body_;
-        }
-      }
-      /**
-       * <code>.example.ExampleBody body = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.soustify.example.Example.ExampleBody, com.soustify.example.Example.ExampleBody.Builder, com.soustify.example.Example.ExampleBodyOrBuilder> 
-          getBodyFieldBuilder() {
-        if (bodyBuilder_ == null) {
-          bodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.soustify.example.Example.ExampleBody, com.soustify.example.Example.ExampleBody.Builder, com.soustify.example.Example.ExampleBodyOrBuilder>(
-                  getBody(),
-                  getParentForChildren(),
-                  isClean());
-          body_ = null;
-        }
-        return bodyBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:example.ExampleRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:example.ExampleRequest)
-    private static final com.soustify.example.Example.ExampleRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.soustify.example.Example.ExampleRequest();
-    }
-
-    public static com.soustify.example.Example.ExampleRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ExampleRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ExampleRequest>() {
-      @java.lang.Override
-      public ExampleRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<ExampleRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ExampleRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.soustify.example.Example.ExampleRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ExampleBodyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.ExampleBody)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
@@ -1035,18 +284,18 @@ public final class Example {
     boolean getPublic();
   }
   /**
-   * Protobuf type {@code example.ExampleBody}
+   * Protobuf type {@code example.ExampleRequest}
    */
-  public static final class ExampleBody extends
+  public static final class ExampleRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:example.ExampleBody)
-      ExampleBodyOrBuilder {
+      // @@protoc_insertion_point(message_implements:example.ExampleRequest)
+      ExampleRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ExampleBody.newBuilder() to construct.
-    private ExampleBody(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ExampleRequest.newBuilder() to construct.
+    private ExampleRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ExampleBody() {
+    private ExampleRequest() {
       id_ = "";
       name_ = "";
       description_ = "";
@@ -1060,7 +309,7 @@ public final class Example {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new ExampleBody();
+      return new ExampleRequest();
     }
 
     @java.lang.Override
@@ -1070,15 +319,15 @@ public final class Example {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.example.Example.internal_static_example_ExampleBody_descriptor;
+      return com.soustify.example.Example.internal_static_example_ExampleRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.example.Example.internal_static_example_ExampleBody_fieldAccessorTable
+      return com.soustify.example.Example.internal_static_example_ExampleRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.example.Example.ExampleBody.class, com.soustify.example.Example.ExampleBody.Builder.class);
+              com.soustify.example.Example.ExampleRequest.class, com.soustify.example.Example.ExampleRequest.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1587,10 +836,10 @@ public final class Example {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.example.Example.ExampleBody)) {
+      if (!(obj instanceof com.soustify.example.Example.ExampleRequest)) {
         return super.equals(obj);
       }
-      com.soustify.example.Example.ExampleBody other = (com.soustify.example.Example.ExampleBody) obj;
+      com.soustify.example.Example.ExampleRequest other = (com.soustify.example.Example.ExampleRequest) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1683,69 +932,69 @@ public final class Example {
       return hash;
     }
 
-    public static com.soustify.example.Example.ExampleBody parseFrom(
+    public static com.soustify.example.Example.ExampleRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.example.Example.ExampleBody parseFrom(
+    public static com.soustify.example.Example.ExampleRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.example.Example.ExampleBody parseFrom(
+    public static com.soustify.example.Example.ExampleRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.example.Example.ExampleBody parseFrom(
+    public static com.soustify.example.Example.ExampleRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.example.Example.ExampleBody parseFrom(byte[] data)
+    public static com.soustify.example.Example.ExampleRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.example.Example.ExampleBody parseFrom(
+    public static com.soustify.example.Example.ExampleRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.example.Example.ExampleBody parseFrom(java.io.InputStream input)
+    public static com.soustify.example.Example.ExampleRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.example.Example.ExampleBody parseFrom(
+    public static com.soustify.example.Example.ExampleRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.example.Example.ExampleBody parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.example.Example.ExampleRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.example.Example.ExampleBody parseDelimitedFrom(
+    public static com.soustify.example.Example.ExampleRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.example.Example.ExampleBody parseFrom(
+    public static com.soustify.example.Example.ExampleRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.example.Example.ExampleBody parseFrom(
+    public static com.soustify.example.Example.ExampleRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1758,7 +1007,7 @@ public final class Example {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.example.Example.ExampleBody prototype) {
+    public static Builder newBuilder(com.soustify.example.Example.ExampleRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1774,26 +1023,26 @@ public final class Example {
       return builder;
     }
     /**
-     * Protobuf type {@code example.ExampleBody}
+     * Protobuf type {@code example.ExampleRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.ExampleBody)
-        com.soustify.example.Example.ExampleBodyOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.ExampleRequest)
+        com.soustify.example.Example.ExampleRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.example.Example.internal_static_example_ExampleBody_descriptor;
+        return com.soustify.example.Example.internal_static_example_ExampleRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.example.Example.internal_static_example_ExampleBody_fieldAccessorTable
+        return com.soustify.example.Example.internal_static_example_ExampleRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.example.Example.ExampleBody.class, com.soustify.example.Example.ExampleBody.Builder.class);
+                com.soustify.example.Example.ExampleRequest.class, com.soustify.example.Example.ExampleRequest.Builder.class);
       }
 
-      // Construct using com.soustify.example.Example.ExampleBody.newBuilder()
+      // Construct using com.soustify.example.Example.ExampleRequest.newBuilder()
       private Builder() {
 
       }
@@ -1836,17 +1085,17 @@ public final class Example {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.example.Example.internal_static_example_ExampleBody_descriptor;
+        return com.soustify.example.Example.internal_static_example_ExampleRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.example.Example.ExampleBody getDefaultInstanceForType() {
-        return com.soustify.example.Example.ExampleBody.getDefaultInstance();
+      public com.soustify.example.Example.ExampleRequest getDefaultInstanceForType() {
+        return com.soustify.example.Example.ExampleRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.example.Example.ExampleBody build() {
-        com.soustify.example.Example.ExampleBody result = buildPartial();
+      public com.soustify.example.Example.ExampleRequest build() {
+        com.soustify.example.Example.ExampleRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1854,15 +1103,15 @@ public final class Example {
       }
 
       @java.lang.Override
-      public com.soustify.example.Example.ExampleBody buildPartial() {
-        com.soustify.example.Example.ExampleBody result = new com.soustify.example.Example.ExampleBody(this);
+      public com.soustify.example.Example.ExampleRequest buildPartial() {
+        com.soustify.example.Example.ExampleRequest result = new com.soustify.example.Example.ExampleRequest(this);
         buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.soustify.example.Example.ExampleBody result) {
+      private void buildPartialRepeatedFields(com.soustify.example.Example.ExampleRequest result) {
         if (((bitField0_ & 0x00000040) != 0)) {
           tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000040);
@@ -1870,7 +1119,7 @@ public final class Example {
         result.tags_ = tags_;
       }
 
-      private void buildPartial0(com.soustify.example.Example.ExampleBody result) {
+      private void buildPartial0(com.soustify.example.Example.ExampleRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -1951,16 +1200,16 @@ public final class Example {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.example.Example.ExampleBody) {
-          return mergeFrom((com.soustify.example.Example.ExampleBody)other);
+        if (other instanceof com.soustify.example.Example.ExampleRequest) {
+          return mergeFrom((com.soustify.example.Example.ExampleRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.example.Example.ExampleBody other) {
-        if (other == com.soustify.example.Example.ExampleBody.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.example.Example.ExampleRequest other) {
+        if (other == com.soustify.example.Example.ExampleRequest.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -3086,23 +2335,23 @@ public final class Example {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:example.ExampleBody)
+      // @@protoc_insertion_point(builder_scope:example.ExampleRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:example.ExampleBody)
-    private static final com.soustify.example.Example.ExampleBody DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.ExampleRequest)
+    private static final com.soustify.example.Example.ExampleRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.example.Example.ExampleBody();
+      DEFAULT_INSTANCE = new com.soustify.example.Example.ExampleRequest();
     }
 
-    public static com.soustify.example.Example.ExampleBody getDefaultInstance() {
+    public static com.soustify.example.Example.ExampleRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ExampleBody>
-        PARSER = new com.google.protobuf.AbstractParser<ExampleBody>() {
+    private static final com.google.protobuf.Parser<ExampleRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ExampleRequest>() {
       @java.lang.Override
-      public ExampleBody parsePartialFrom(
+      public ExampleRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3121,17 +2370,17 @@ public final class Example {
       }
     };
 
-    public static com.google.protobuf.Parser<ExampleBody> parser() {
+    public static com.google.protobuf.Parser<ExampleRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ExampleBody> getParserForType() {
+    public com.google.protobuf.Parser<ExampleRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.example.Example.ExampleBody getDefaultInstanceForType() {
+    public com.soustify.example.Example.ExampleRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6100,11 +5349,6 @@ public final class Example {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_example_ExampleRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_ExampleBody_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_example_ExampleBody_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_example_ExampleResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6118,60 +5362,56 @@ public final class Example {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rexample.proto\022\007example\032\013input.proto\032\014o" +
-      "utput.proto\032\017validator.proto\032\016validate.p" +
-      "roto\032\037google/protobuf/timestamp.proto\032\034g" +
-      "oogle/protobuf/struct.proto\"F\n\016ExampleRe" +
-      "quest\022\020\n\010hashcode\030\001 \001(\t\022\"\n\004body\030\002 \001(\0132\024." +
-      "example.ExampleBody\"\253\003\n\013ExampleBody\022\024\n\002i" +
-      "d\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\025\n\004name\030\002 \001(\tB\007\372B\004r\002\020\001" +
-      "\022\034\n\013description\030\003 \001(\tB\007\372B\004r\002\020\003\0227\n\tborn_d" +
-      "ate\030\004 \001(\0132\032.google.protobuf.TimestampB\010\372" +
-      "B\005\262\001\002\010\001\022\035\n\005price\030\005 \001(\001B\016\372B\013\022\t!\000\000\000\000\000\000\000\000\022\031" +
-      "\n\010category\030\006 \001(\tB\007\372B\004r\002\020\005\022\026\n\004tags\030\007 \003(\tB" +
-      "\010\372B\005\222\001\002\010\002\022\036\n\006rating\030\010 \001(\001B\016\372B\013\022\t!\000\000\000\000\000\000\000" +
-      "\000\022\031\n\010quantity\030\t \001(\005B\007\372B\004\032\002(\000\022 \n\010discount" +
-      "\030\n \001(\001B\016\372B\013\022\t)\000\000\000\000\000\000\000\000\022\026\n\005email\030\013 \001(\tB\007\372" +
-      "B\004r\002`\001\022\026\n\005phone\030\014 \001(\tB\007\372B\004r\002\020\001\022)\n\010metada" +
-      "ta\030\r \001(\0132\027.google.protobuf.Struct\022\016\n\006pub" +
-      "lic\030\016 \001(\010\"\350\003\n\017ExampleResponse\022\n\n\002id\030\001 \001(" +
-      "\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022-\n\t" +
-      "born_date\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022\016\n\006public\030\005 \001(\010\022\r\n\005price\030\006 \001(\001\022.\n\ncr" +
-      "eated_at\030\007 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022.\n\nupdated_at\030\010 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022\020\n\010category\030\t \001(\t\022\014\n\004tags\030\n \003" +
-      "(\t\022\016\n\006rating\030\013 \001(\001\022\020\n\010quantity\030\014 \001(\005\022\020\n\010" +
-      "discount\030\r \001(\001\022\r\n\005email\030\016 \001(\t\022\r\n\005phone\030\017" +
-      " \001(\t\022)\n\010metadata\030\020 \001(\0132\027.google.protobuf" +
-      ".Struct\022.\n\nlast_login\030\021 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022+\n\006status\030\022 \001(\0162\033.exampl" +
-      "e.StatusEnumResponse*/\n\022StatusEnumRespon" +
-      "se\022\013\n\007ENABLED\020\000\022\014\n\010DISABLED\020\0012\303\004\n\016Exampl" +
-      "eService\022@\n\010Paginate\022\030.input.PaginationR" +
-      "equest\032\030.example.ExampleResponse0\001\0226\n\005Co" +
-      "unt\022\026.input.FilteredRequest\032\025.output.Cou" +
-      "ntResponse\022D\n\006Create\022\027.example.ExampleRe" +
-      "quest\032\037.output.PersistenceDataResponse(\001" +
-      "\022D\n\006Update\022\027.example.ExampleRequest\032\037.ou" +
-      "tput.PersistenceDataResponse(\001\022<\n\010Inacti" +
-      "ve\022\022.input.UUIDRequest\032\032.output.StatusDa" +
-      "taResponse(\001\022:\n\006Active\022\022.input.UUIDReque" +
-      "st\032\032.output.StatusDataResponse(\001\0227\n\007Find" +
-      "One\022\022.input.UUIDRequest\032\030.example.Exampl" +
-      "eResponse\0227\n\010Validate\022\024.example.ExampleB" +
-      "ody\032\023.validator.Response(\001\022?\n\006Delete\022\022.i" +
-      "nput.UUIDRequest\032\037.output.PersistenceDat" +
-      "aResponse(\001BV\n\024com.soustify.exampleZ>git" +
-      "hub.com/soustify/data-gateway-buffer-go/" +
-      "pkg/example;exampleb\006proto3"
+      "\n\rexample.proto\022\007example\032\016io/input.proto" +
+      "\032\017io/output.proto\032\022ext/validate.proto\032\037g" +
+      "oogle/protobuf/timestamp.proto\032\034google/p" +
+      "rotobuf/struct.proto\"\277\003\n\016ExampleRequest\022" +
+      "\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\025\n\004name\030\002 \001(\tB\007\372B\004" +
+      "r\002\020\001\022\034\n\013description\030\003 \001(\tB\007\372B\004r\002\020\003\0227\n\tbo" +
+      "rn_date\030\004 \001(\0132\032.google.protobuf.Timestam" +
+      "pB\010\372B\005\262\001\002\010\001\022\035\n\005price\030\005 \001(\001B\016\372B\013\022\t!\000\000\000\000\000\000" +
+      "\000\000\022\031\n\010category\030\006 \001(\tB\007\372B\004r\002\020\005\022\026\n\004tags\030\007 " +
+      "\003(\tB\010\372B\005\222\001\002\010\002\022\036\n\006rating\030\010 \001(\001B\016\372B\013\022\t!\000\000\000" +
+      "\000\000\000\000\000\022\031\n\010quantity\030\t \001(\005B\007\372B\004\032\002(\000\022 \n\010disc" +
+      "ount\030\n \001(\001B\016\372B\013\022\t)\000\000\000\000\000\000\000\000\022\026\n\005email\030\013 \001(" +
+      "\tB\007\372B\004r\002`\001\022\'\n\005phone\030\014 \001(\tB\030\372B\025r\0232\021^[0-9\\" +
+      "-\\+]{9,20}$\022)\n\010metadata\030\r \001(\0132\027.google.p" +
+      "rotobuf.Struct\022\016\n\006public\030\016 \001(\010\"\350\003\n\017Examp" +
+      "leResponse\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013" +
+      "description\030\003 \001(\t\022-\n\tborn_date\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022\016\n\006public\030\005 \001(\010" +
+      "\022\r\n\005price\030\006 \001(\001\022.\n\ncreated_at\030\007 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022.\n\nupdated_at\030\010 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022\020\n\010categ" +
+      "ory\030\t \001(\t\022\014\n\004tags\030\n \003(\t\022\016\n\006rating\030\013 \001(\001\022" +
+      "\020\n\010quantity\030\014 \001(\005\022\020\n\010discount\030\r \001(\001\022\r\n\005e" +
+      "mail\030\016 \001(\t\022\r\n\005phone\030\017 \001(\t\022)\n\010metadata\030\020 " +
+      "\001(\0132\027.google.protobuf.Struct\022.\n\nlast_log" +
+      "in\030\021 \001(\0132\032.google.protobuf.Timestamp\022+\n\006" +
+      "status\030\022 \001(\0162\033.example.StatusEnumRespons" +
+      "e*/\n\022StatusEnumResponse\022\013\n\007ENABLED\020\000\022\014\n\010" +
+      "DISABLED\020\0012\212\004\n\016ExampleService\022@\n\010Paginat" +
+      "e\022\030.input.PaginationRequest\032\030.example.Ex" +
+      "ampleResponse0\001\0226\n\005Count\022\026.input.Filtere" +
+      "dRequest\032\025.output.CountResponse\022D\n\006Creat" +
+      "e\022\027.example.ExampleRequest\032\037.output.Pers" +
+      "istenceDataResponse(\001\022D\n\006Update\022\027.exampl" +
+      "e.ExampleRequest\032\037.output.PersistenceDat" +
+      "aResponse(\001\022<\n\010Inactive\022\022.input.UUIDRequ" +
+      "est\032\032.output.StatusDataResponse(\001\022:\n\006Act" +
+      "ive\022\022.input.UUIDRequest\032\032.output.StatusD" +
+      "ataResponse(\001\0227\n\007FindOne\022\022.input.UUIDReq" +
+      "uest\032\030.example.ExampleResponse\022?\n\006Delete" +
+      "\022\022.input.UUIDRequest\032\037.output.Persistenc" +
+      "eDataResponse(\001BV\n\024com.soustify.exampleZ" +
+      ">github.com/soustify/data-gateway-buffer" +
+      "-go/pkg/example;exampleb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.soustify.input.Input.getDescriptor(),
           com.soustify.output.Output.getDescriptor(),
-          com.soustify.validator.Validator.getDescriptor(),
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.StructProto.getDescriptor(),
@@ -6181,15 +5421,9 @@ public final class Example {
     internal_static_example_ExampleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_example_ExampleRequest_descriptor,
-        new java.lang.String[] { "Hashcode", "Body", });
-    internal_static_example_ExampleBody_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_example_ExampleBody_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_example_ExampleBody_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "BornDate", "Price", "Category", "Tags", "Rating", "Quantity", "Discount", "Email", "Phone", "Metadata", "Public", });
     internal_static_example_ExampleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_example_ExampleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_example_ExampleResponse_descriptor,
@@ -6201,7 +5435,6 @@ public final class Example {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.soustify.input.Input.getDescriptor();
     com.soustify.output.Output.getDescriptor();
-    com.soustify.validator.Validator.getDescriptor();
     io.envoyproxy.pgv.validate.Validate.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.StructProto.getDescriptor();

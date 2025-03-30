@@ -9,7 +9,6 @@ public class ExampleValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
 		if (clazz.equals(com.soustify.example.Example.ExampleRequest.class)) return new ExampleRequestValidator();
-		if (clazz.equals(com.soustify.example.Example.ExampleBody.class)) return new ExampleBodyValidator();
 		if (clazz.equals(com.soustify.example.Example.ExampleResponse.class)) return new ExampleResponseValidator();
 		return null;
 	}
@@ -19,27 +18,6 @@ public class ExampleValidator {
 	 * Validates {@code ExampleRequest} protobuf objects.
 	 */
 	public static class ExampleRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.example.Example.ExampleRequest> {
-		
-	
-		
-	
-	
-	
-
-	public void assertValid(com.soustify.example.Example.ExampleRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
-	// no validation rules for Hashcode
-
-	
-			// Validate body
-			if (proto.hasBody()) index.validatorFor(proto.getBody()).assertValid(proto.getBody());
-	
-	
-	}
-}
-/**
-	 * Validates {@code ExampleBody} protobuf objects.
-	 */
-	public static class ExampleBodyValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.example.Example.ExampleBody> {
 		
 	
 		
@@ -67,6 +45,7 @@ public class ExampleValidator {
 		
 	
 		
+		com.google.re2j.Pattern PHONE__PATTERN = com.google.re2j.Pattern.compile("^[0-9\\-\\+]{9,20}$");
 	
 		
 	
@@ -75,39 +54,39 @@ public class ExampleValidator {
 	
 	
 
-	public void assertValid(com.soustify.example.Example.ExampleBody proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.example.Example.ExampleRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".example.ExampleBody.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".example.ExampleRequest.id", proto.getId());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".example.ExampleBody.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.minLength(".example.ExampleRequest.name", proto.getName(), 1);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".example.ExampleBody.description", proto.getDescription(), 3);
+			io.envoyproxy.pgv.StringValidation.minLength(".example.ExampleRequest.description", proto.getDescription(), 3);
 	
 		if (proto.hasBornDate()) {
-			io.envoyproxy.pgv.RequiredValidation.required(".example.ExampleBody.born_date", proto.getBornDate());
+			io.envoyproxy.pgv.RequiredValidation.required(".example.ExampleRequest.born_date", proto.getBornDate());
 		} else {
-			io.envoyproxy.pgv.RequiredValidation.required(".example.ExampleBody.born_date", null);
+			io.envoyproxy.pgv.RequiredValidation.required(".example.ExampleRequest.born_date", null);
 		};
 	
-			io.envoyproxy.pgv.ComparativeValidation.greaterThan(".example.ExampleBody.price", proto.getPrice(), PRICE__GT, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.greaterThan(".example.ExampleRequest.price", proto.getPrice(), PRICE__GT, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".example.ExampleBody.category", proto.getCategory(), 5);
+			io.envoyproxy.pgv.StringValidation.minLength(".example.ExampleRequest.category", proto.getCategory(), 5);
 	
-			io.envoyproxy.pgv.RepeatedValidation.minItems(".example.ExampleBody.tags", proto.getTagsList(), 2);
+			io.envoyproxy.pgv.RepeatedValidation.minItems(".example.ExampleRequest.tags", proto.getTagsList(), 2);
 			io.envoyproxy.pgv.RepeatedValidation.forEach(proto.getTagsList(), item -> {
 				// no validation rules for Tags
 
 			});
 	
-			io.envoyproxy.pgv.ComparativeValidation.greaterThan(".example.ExampleBody.rating", proto.getRating(), RATING__GT, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.greaterThan(".example.ExampleRequest.rating", proto.getRating(), RATING__GT, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.ComparativeValidation.greaterThanOrEqual(".example.ExampleBody.quantity", proto.getQuantity(), QUANTITY__GTE, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.greaterThanOrEqual(".example.ExampleRequest.quantity", proto.getQuantity(), QUANTITY__GTE, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.ComparativeValidation.greaterThanOrEqual(".example.ExampleBody.discount", proto.getDiscount(), DISCOUNT__GTE, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.greaterThanOrEqual(".example.ExampleRequest.discount", proto.getDiscount(), DISCOUNT__GTE, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.StringValidation.email(".example.ExampleBody.email", proto.getEmail());
+			io.envoyproxy.pgv.StringValidation.email(".example.ExampleRequest.email", proto.getEmail());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".example.ExampleBody.phone", proto.getPhone(), 1);
+			io.envoyproxy.pgv.StringValidation.pattern(".example.ExampleRequest.phone", proto.getPhone(), PHONE__PATTERN);
 	
 			// Validate metadata
 			if (proto.hasMetadata()) index.validatorFor(proto.getMetadata()).assertValid(proto.getMetadata());
