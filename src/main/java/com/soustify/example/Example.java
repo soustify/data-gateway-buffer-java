@@ -878,93 +878,93 @@ public final class Example {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.validate.rules) = { ... }</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.validate.rules) = { ... }</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
-     * <code>.google.protobuf.Timestamp born_date = 4;</code>
+     * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
      * @return Whether the bornDate field is set.
      */
     boolean hasBornDate();
     /**
-     * <code>.google.protobuf.Timestamp born_date = 4;</code>
+     * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
      * @return The bornDate.
      */
     com.google.protobuf.Timestamp getBornDate();
     /**
-     * <code>.google.protobuf.Timestamp born_date = 4;</code>
+     * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getBornDateOrBuilder();
 
     /**
-     * <code>double price = 5;</code>
+     * <code>double price = 5 [(.validate.rules) = { ... }</code>
      * @return The price.
      */
     double getPrice();
 
     /**
-     * <code>string category = 6;</code>
+     * <code>string category = 6 [(.validate.rules) = { ... }</code>
      * @return The category.
      */
     java.lang.String getCategory();
     /**
-     * <code>string category = 6;</code>
+     * <code>string category = 6 [(.validate.rules) = { ... }</code>
      * @return The bytes for category.
      */
     com.google.protobuf.ByteString
         getCategoryBytes();
 
     /**
-     * <code>repeated string tags = 7;</code>
+     * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
      * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 7;</code>
+     * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
      * @return The count of tags.
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 7;</code>
+     * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 7;</code>
+     * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -972,42 +972,42 @@ public final class Example {
         getTagsBytes(int index);
 
     /**
-     * <code>double rating = 8;</code>
+     * <code>double rating = 8 [(.validate.rules) = { ... }</code>
      * @return The rating.
      */
     double getRating();
 
     /**
-     * <code>int32 quantity = 9;</code>
+     * <code>int32 quantity = 9 [(.validate.rules) = { ... }</code>
      * @return The quantity.
      */
     int getQuantity();
 
     /**
-     * <code>double discount = 10;</code>
+     * <code>double discount = 10 [(.validate.rules) = { ... }</code>
      * @return The discount.
      */
     double getDiscount();
 
     /**
-     * <code>string email = 11;</code>
+     * <code>string email = 11 [(.validate.rules) = { ... }</code>
      * @return The email.
      */
     java.lang.String getEmail();
     /**
-     * <code>string email = 11;</code>
+     * <code>string email = 11 [(.validate.rules) = { ... }</code>
      * @return The bytes for email.
      */
     com.google.protobuf.ByteString
         getEmailBytes();
 
     /**
-     * <code>string phone = 12;</code>
+     * <code>string phone = 12 [(.validate.rules) = { ... }</code>
      * @return The phone.
      */
     java.lang.String getPhone();
     /**
-     * <code>string phone = 12;</code>
+     * <code>string phone = 12 [(.validate.rules) = { ... }</code>
      * @return The bytes for phone.
      */
     com.google.protobuf.ByteString
@@ -1085,7 +1085,7 @@ public final class Example {
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1102,7 +1102,7 @@ public final class Example {
       }
     }
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -1124,7 +1124,7 @@ public final class Example {
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     @java.lang.Override
@@ -1141,7 +1141,7 @@ public final class Example {
       }
     }
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -1163,7 +1163,7 @@ public final class Example {
     @SuppressWarnings("serial")
     private volatile java.lang.Object description_ = "";
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.validate.rules) = { ... }</code>
      * @return The description.
      */
     @java.lang.Override
@@ -1180,7 +1180,7 @@ public final class Example {
       }
     }
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.validate.rules) = { ... }</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -1201,7 +1201,7 @@ public final class Example {
     public static final int BORN_DATE_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp bornDate_;
     /**
-     * <code>.google.protobuf.Timestamp born_date = 4;</code>
+     * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
      * @return Whether the bornDate field is set.
      */
     @java.lang.Override
@@ -1209,7 +1209,7 @@ public final class Example {
       return bornDate_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp born_date = 4;</code>
+     * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
      * @return The bornDate.
      */
     @java.lang.Override
@@ -1217,7 +1217,7 @@ public final class Example {
       return bornDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : bornDate_;
     }
     /**
-     * <code>.google.protobuf.Timestamp born_date = 4;</code>
+     * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getBornDateOrBuilder() {
@@ -1227,7 +1227,7 @@ public final class Example {
     public static final int PRICE_FIELD_NUMBER = 5;
     private double price_ = 0D;
     /**
-     * <code>double price = 5;</code>
+     * <code>double price = 5 [(.validate.rules) = { ... }</code>
      * @return The price.
      */
     @java.lang.Override
@@ -1239,7 +1239,7 @@ public final class Example {
     @SuppressWarnings("serial")
     private volatile java.lang.Object category_ = "";
     /**
-     * <code>string category = 6;</code>
+     * <code>string category = 6 [(.validate.rules) = { ... }</code>
      * @return The category.
      */
     @java.lang.Override
@@ -1256,7 +1256,7 @@ public final class Example {
       }
     }
     /**
-     * <code>string category = 6;</code>
+     * <code>string category = 6 [(.validate.rules) = { ... }</code>
      * @return The bytes for category.
      */
     @java.lang.Override
@@ -1278,7 +1278,7 @@ public final class Example {
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 7;</code>
+     * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
@@ -1286,14 +1286,14 @@ public final class Example {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 7;</code>
+     * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
      * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 7;</code>
+     * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -1301,7 +1301,7 @@ public final class Example {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 7;</code>
+     * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -1313,7 +1313,7 @@ public final class Example {
     public static final int RATING_FIELD_NUMBER = 8;
     private double rating_ = 0D;
     /**
-     * <code>double rating = 8;</code>
+     * <code>double rating = 8 [(.validate.rules) = { ... }</code>
      * @return The rating.
      */
     @java.lang.Override
@@ -1324,7 +1324,7 @@ public final class Example {
     public static final int QUANTITY_FIELD_NUMBER = 9;
     private int quantity_ = 0;
     /**
-     * <code>int32 quantity = 9;</code>
+     * <code>int32 quantity = 9 [(.validate.rules) = { ... }</code>
      * @return The quantity.
      */
     @java.lang.Override
@@ -1335,7 +1335,7 @@ public final class Example {
     public static final int DISCOUNT_FIELD_NUMBER = 10;
     private double discount_ = 0D;
     /**
-     * <code>double discount = 10;</code>
+     * <code>double discount = 10 [(.validate.rules) = { ... }</code>
      * @return The discount.
      */
     @java.lang.Override
@@ -1347,7 +1347,7 @@ public final class Example {
     @SuppressWarnings("serial")
     private volatile java.lang.Object email_ = "";
     /**
-     * <code>string email = 11;</code>
+     * <code>string email = 11 [(.validate.rules) = { ... }</code>
      * @return The email.
      */
     @java.lang.Override
@@ -1364,7 +1364,7 @@ public final class Example {
       }
     }
     /**
-     * <code>string email = 11;</code>
+     * <code>string email = 11 [(.validate.rules) = { ... }</code>
      * @return The bytes for email.
      */
     @java.lang.Override
@@ -1386,7 +1386,7 @@ public final class Example {
     @SuppressWarnings("serial")
     private volatile java.lang.Object phone_ = "";
     /**
-     * <code>string phone = 12;</code>
+     * <code>string phone = 12 [(.validate.rules) = { ... }</code>
      * @return The phone.
      */
     @java.lang.Override
@@ -1403,7 +1403,7 @@ public final class Example {
       }
     }
     /**
-     * <code>string phone = 12;</code>
+     * <code>string phone = 12 [(.validate.rules) = { ... }</code>
      * @return The bytes for phone.
      */
     @java.lang.Override
@@ -2142,7 +2142,7 @@ public final class Example {
 
       private java.lang.Object id_ = "";
       /**
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -2158,7 +2158,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -2175,7 +2175,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -2188,7 +2188,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -2198,7 +2198,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -2214,7 +2214,7 @@ public final class Example {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [(.validate.rules) = { ... }</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -2230,7 +2230,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [(.validate.rules) = { ... }</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -2247,7 +2247,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [(.validate.rules) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -2260,7 +2260,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -2270,7 +2270,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [(.validate.rules) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -2286,7 +2286,7 @@ public final class Example {
 
       private java.lang.Object description_ = "";
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.validate.rules) = { ... }</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -2302,7 +2302,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.validate.rules) = { ... }</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -2319,7 +2319,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.validate.rules) = { ... }</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -2332,7 +2332,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -2342,7 +2342,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.validate.rules) = { ... }</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -2360,14 +2360,14 @@ public final class Example {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> bornDateBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp born_date = 4;</code>
+       * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
        * @return Whether the bornDate field is set.
        */
       public boolean hasBornDate() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>.google.protobuf.Timestamp born_date = 4;</code>
+       * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
        * @return The bornDate.
        */
       public com.google.protobuf.Timestamp getBornDate() {
@@ -2378,7 +2378,7 @@ public final class Example {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp born_date = 4;</code>
+       * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
        */
       public Builder setBornDate(com.google.protobuf.Timestamp value) {
         if (bornDateBuilder_ == null) {
@@ -2394,7 +2394,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp born_date = 4;</code>
+       * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
        */
       public Builder setBornDate(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2408,7 +2408,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp born_date = 4;</code>
+       * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
        */
       public Builder mergeBornDate(com.google.protobuf.Timestamp value) {
         if (bornDateBuilder_ == null) {
@@ -2427,7 +2427,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp born_date = 4;</code>
+       * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
        */
       public Builder clearBornDate() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -2440,7 +2440,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp born_date = 4;</code>
+       * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getBornDateBuilder() {
         bitField0_ |= 0x00000008;
@@ -2448,7 +2448,7 @@ public final class Example {
         return getBornDateFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp born_date = 4;</code>
+       * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getBornDateOrBuilder() {
         if (bornDateBuilder_ != null) {
@@ -2459,7 +2459,7 @@ public final class Example {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp born_date = 4;</code>
+       * <code>.google.protobuf.Timestamp born_date = 4 [(.validate.rules) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -2477,7 +2477,7 @@ public final class Example {
 
       private double price_ ;
       /**
-       * <code>double price = 5;</code>
+       * <code>double price = 5 [(.validate.rules) = { ... }</code>
        * @return The price.
        */
       @java.lang.Override
@@ -2485,7 +2485,7 @@ public final class Example {
         return price_;
       }
       /**
-       * <code>double price = 5;</code>
+       * <code>double price = 5 [(.validate.rules) = { ... }</code>
        * @param value The price to set.
        * @return This builder for chaining.
        */
@@ -2497,7 +2497,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>double price = 5;</code>
+       * <code>double price = 5 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearPrice() {
@@ -2509,7 +2509,7 @@ public final class Example {
 
       private java.lang.Object category_ = "";
       /**
-       * <code>string category = 6;</code>
+       * <code>string category = 6 [(.validate.rules) = { ... }</code>
        * @return The category.
        */
       public java.lang.String getCategory() {
@@ -2525,7 +2525,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string category = 6;</code>
+       * <code>string category = 6 [(.validate.rules) = { ... }</code>
        * @return The bytes for category.
        */
       public com.google.protobuf.ByteString
@@ -2542,7 +2542,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string category = 6;</code>
+       * <code>string category = 6 [(.validate.rules) = { ... }</code>
        * @param value The category to set.
        * @return This builder for chaining.
        */
@@ -2555,7 +2555,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string category = 6;</code>
+       * <code>string category = 6 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearCategory() {
@@ -2565,7 +2565,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string category = 6;</code>
+       * <code>string category = 6 [(.validate.rules) = { ... }</code>
        * @param value The bytes for category to set.
        * @return This builder for chaining.
        */
@@ -2587,7 +2587,7 @@ public final class Example {
          }
       }
       /**
-       * <code>repeated string tags = 7;</code>
+       * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
        * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
@@ -2595,14 +2595,14 @@ public final class Example {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 7;</code>
+       * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
        * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 7;</code>
+       * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
@@ -2610,7 +2610,7 @@ public final class Example {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 7;</code>
+       * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
@@ -2619,7 +2619,7 @@ public final class Example {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 7;</code>
+       * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The tags to set.
        * @return This builder for chaining.
@@ -2633,7 +2633,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>repeated string tags = 7;</code>
+       * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
        * @param value The tags to add.
        * @return This builder for chaining.
        */
@@ -2646,7 +2646,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>repeated string tags = 7;</code>
+       * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
        * @param values The tags to add.
        * @return This builder for chaining.
        */
@@ -2659,7 +2659,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>repeated string tags = 7;</code>
+       * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearTags() {
@@ -2669,7 +2669,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>repeated string tags = 7;</code>
+       * <code>repeated string tags = 7 [(.validate.rules) = { ... }</code>
        * @param value The bytes of the tags to add.
        * @return This builder for chaining.
        */
@@ -2685,7 +2685,7 @@ public final class Example {
 
       private double rating_ ;
       /**
-       * <code>double rating = 8;</code>
+       * <code>double rating = 8 [(.validate.rules) = { ... }</code>
        * @return The rating.
        */
       @java.lang.Override
@@ -2693,7 +2693,7 @@ public final class Example {
         return rating_;
       }
       /**
-       * <code>double rating = 8;</code>
+       * <code>double rating = 8 [(.validate.rules) = { ... }</code>
        * @param value The rating to set.
        * @return This builder for chaining.
        */
@@ -2705,7 +2705,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>double rating = 8;</code>
+       * <code>double rating = 8 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearRating() {
@@ -2717,7 +2717,7 @@ public final class Example {
 
       private int quantity_ ;
       /**
-       * <code>int32 quantity = 9;</code>
+       * <code>int32 quantity = 9 [(.validate.rules) = { ... }</code>
        * @return The quantity.
        */
       @java.lang.Override
@@ -2725,7 +2725,7 @@ public final class Example {
         return quantity_;
       }
       /**
-       * <code>int32 quantity = 9;</code>
+       * <code>int32 quantity = 9 [(.validate.rules) = { ... }</code>
        * @param value The quantity to set.
        * @return This builder for chaining.
        */
@@ -2737,7 +2737,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>int32 quantity = 9;</code>
+       * <code>int32 quantity = 9 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearQuantity() {
@@ -2749,7 +2749,7 @@ public final class Example {
 
       private double discount_ ;
       /**
-       * <code>double discount = 10;</code>
+       * <code>double discount = 10 [(.validate.rules) = { ... }</code>
        * @return The discount.
        */
       @java.lang.Override
@@ -2757,7 +2757,7 @@ public final class Example {
         return discount_;
       }
       /**
-       * <code>double discount = 10;</code>
+       * <code>double discount = 10 [(.validate.rules) = { ... }</code>
        * @param value The discount to set.
        * @return This builder for chaining.
        */
@@ -2769,7 +2769,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>double discount = 10;</code>
+       * <code>double discount = 10 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDiscount() {
@@ -2781,7 +2781,7 @@ public final class Example {
 
       private java.lang.Object email_ = "";
       /**
-       * <code>string email = 11;</code>
+       * <code>string email = 11 [(.validate.rules) = { ... }</code>
        * @return The email.
        */
       public java.lang.String getEmail() {
@@ -2797,7 +2797,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string email = 11;</code>
+       * <code>string email = 11 [(.validate.rules) = { ... }</code>
        * @return The bytes for email.
        */
       public com.google.protobuf.ByteString
@@ -2814,7 +2814,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string email = 11;</code>
+       * <code>string email = 11 [(.validate.rules) = { ... }</code>
        * @param value The email to set.
        * @return This builder for chaining.
        */
@@ -2827,7 +2827,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string email = 11;</code>
+       * <code>string email = 11 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearEmail() {
@@ -2837,7 +2837,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string email = 11;</code>
+       * <code>string email = 11 [(.validate.rules) = { ... }</code>
        * @param value The bytes for email to set.
        * @return This builder for chaining.
        */
@@ -2853,7 +2853,7 @@ public final class Example {
 
       private java.lang.Object phone_ = "";
       /**
-       * <code>string phone = 12;</code>
+       * <code>string phone = 12 [(.validate.rules) = { ... }</code>
        * @return The phone.
        */
       public java.lang.String getPhone() {
@@ -2869,7 +2869,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string phone = 12;</code>
+       * <code>string phone = 12 [(.validate.rules) = { ... }</code>
        * @return The bytes for phone.
        */
       public com.google.protobuf.ByteString
@@ -2886,7 +2886,7 @@ public final class Example {
         }
       }
       /**
-       * <code>string phone = 12;</code>
+       * <code>string phone = 12 [(.validate.rules) = { ... }</code>
        * @param value The phone to set.
        * @return This builder for chaining.
        */
@@ -2899,7 +2899,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string phone = 12;</code>
+       * <code>string phone = 12 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearPhone() {
@@ -2909,7 +2909,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>string phone = 12;</code>
+       * <code>string phone = 12 [(.validate.rules) = { ... }</code>
        * @param value The bytes for phone to set.
        * @return This builder for chaining.
        */
@@ -6119,48 +6119,52 @@ public final class Example {
   static {
     java.lang.String[] descriptorData = {
       "\n\rexample.proto\022\007example\032\013input.proto\032\014o" +
-      "utput.proto\032\017validator.proto\032\037google/pro" +
-      "tobuf/timestamp.proto\032\034google/protobuf/s" +
-      "truct.proto\"F\n\016ExampleRequest\022\020\n\010hashcod" +
-      "e\030\001 \001(\t\022\"\n\004body\030\002 \001(\0132\024.example.ExampleB" +
-      "ody\"\247\002\n\013ExampleBody\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030" +
-      "\002 \001(\t\022\023\n\013description\030\003 \001(\t\022-\n\tborn_date\030" +
-      "\004 \001(\0132\032.google.protobuf.Timestamp\022\r\n\005pri" +
-      "ce\030\005 \001(\001\022\020\n\010category\030\006 \001(\t\022\014\n\004tags\030\007 \003(\t" +
-      "\022\016\n\006rating\030\010 \001(\001\022\020\n\010quantity\030\t \001(\005\022\020\n\010di" +
-      "scount\030\n \001(\001\022\r\n\005email\030\013 \001(\t\022\r\n\005phone\030\014 \001" +
-      "(\t\022)\n\010metadata\030\r \001(\0132\027.google.protobuf.S" +
-      "truct\022\016\n\006public\030\016 \001(\010\"\350\003\n\017ExampleRespons" +
-      "e\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013descripti" +
-      "on\030\003 \001(\t\022-\n\tborn_date\030\004 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022\016\n\006public\030\005 \001(\010\022\r\n\005price" +
-      "\030\006 \001(\001\022.\n\ncreated_at\030\007 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022.\n\nupdated_at\030\010 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022\020\n\010category\030\t \001(\t" +
-      "\022\014\n\004tags\030\n \003(\t\022\016\n\006rating\030\013 \001(\001\022\020\n\010quanti" +
-      "ty\030\014 \001(\005\022\020\n\010discount\030\r \001(\001\022\r\n\005email\030\016 \001(" +
-      "\t\022\r\n\005phone\030\017 \001(\t\022)\n\010metadata\030\020 \001(\0132\027.goo" +
-      "gle.protobuf.Struct\022.\n\nlast_login\030\021 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022+\n\006status\030\022 " +
-      "\001(\0162\033.example.StatusEnumResponse*/\n\022Stat" +
-      "usEnumResponse\022\013\n\007ENABLED\020\000\022\014\n\010DISABLED\020" +
-      "\0012\303\004\n\016ExampleService\022@\n\010Paginate\022\030.input" +
-      ".PaginationRequest\032\030.example.ExampleResp" +
-      "onse0\001\0226\n\005Count\022\026.input.FilteredRequest\032" +
-      "\025.output.CountResponse\022D\n\006Create\022\027.examp" +
-      "le.ExampleRequest\032\037.output.PersistenceDa" +
-      "taResponse(\001\022D\n\006Update\022\027.example.Example" +
-      "Request\032\037.output.PersistenceDataResponse" +
-      "(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032\032.out" +
-      "put.StatusDataResponse(\001\022:\n\006Active\022\022.inp" +
-      "ut.UUIDRequest\032\032.output.StatusDataRespon" +
-      "se(\001\0227\n\007FindOne\022\022.input.UUIDRequest\032\030.ex" +
-      "ample.ExampleResponse\0227\n\010Validate\022\024.exam" +
-      "ple.ExampleBody\032\023.validator.Response(\001\022?" +
-      "\n\006Delete\022\022.input.UUIDRequest\032\037.output.Pe" +
-      "rsistenceDataResponse(\001BV\n\024com.soustify." +
-      "exampleZ>github.com/soustify/data-gatewa" +
-      "y-buffer-go/pkg/example;exampleb\006proto3"
+      "utput.proto\032\017validator.proto\032\016validate.p" +
+      "roto\032\037google/protobuf/timestamp.proto\032\034g" +
+      "oogle/protobuf/struct.proto\"F\n\016ExampleRe" +
+      "quest\022\020\n\010hashcode\030\001 \001(\t\022\"\n\004body\030\002 \001(\0132\024." +
+      "example.ExampleBody\"\253\003\n\013ExampleBody\022\024\n\002i" +
+      "d\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\025\n\004name\030\002 \001(\tB\007\372B\004r\002\020\001" +
+      "\022\034\n\013description\030\003 \001(\tB\007\372B\004r\002\020\003\0227\n\tborn_d" +
+      "ate\030\004 \001(\0132\032.google.protobuf.TimestampB\010\372" +
+      "B\005\262\001\002\010\001\022\035\n\005price\030\005 \001(\001B\016\372B\013\022\t!\000\000\000\000\000\000\000\000\022\031" +
+      "\n\010category\030\006 \001(\tB\007\372B\004r\002\020\005\022\026\n\004tags\030\007 \003(\tB" +
+      "\010\372B\005\222\001\002\010\002\022\036\n\006rating\030\010 \001(\001B\016\372B\013\022\t!\000\000\000\000\000\000\000" +
+      "\000\022\031\n\010quantity\030\t \001(\005B\007\372B\004\032\002(\000\022 \n\010discount" +
+      "\030\n \001(\001B\016\372B\013\022\t)\000\000\000\000\000\000\000\000\022\026\n\005email\030\013 \001(\tB\007\372" +
+      "B\004r\002`\001\022\026\n\005phone\030\014 \001(\tB\007\372B\004r\002\020\001\022)\n\010metada" +
+      "ta\030\r \001(\0132\027.google.protobuf.Struct\022\016\n\006pub" +
+      "lic\030\016 \001(\010\"\350\003\n\017ExampleResponse\022\n\n\002id\030\001 \001(" +
+      "\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022-\n\t" +
+      "born_date\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022\016\n\006public\030\005 \001(\010\022\r\n\005price\030\006 \001(\001\022.\n\ncr" +
+      "eated_at\030\007 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022.\n\nupdated_at\030\010 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022\020\n\010category\030\t \001(\t\022\014\n\004tags\030\n \003" +
+      "(\t\022\016\n\006rating\030\013 \001(\001\022\020\n\010quantity\030\014 \001(\005\022\020\n\010" +
+      "discount\030\r \001(\001\022\r\n\005email\030\016 \001(\t\022\r\n\005phone\030\017" +
+      " \001(\t\022)\n\010metadata\030\020 \001(\0132\027.google.protobuf" +
+      ".Struct\022.\n\nlast_login\030\021 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022+\n\006status\030\022 \001(\0162\033.exampl" +
+      "e.StatusEnumResponse*/\n\022StatusEnumRespon" +
+      "se\022\013\n\007ENABLED\020\000\022\014\n\010DISABLED\020\0012\303\004\n\016Exampl" +
+      "eService\022@\n\010Paginate\022\030.input.PaginationR" +
+      "equest\032\030.example.ExampleResponse0\001\0226\n\005Co" +
+      "unt\022\026.input.FilteredRequest\032\025.output.Cou" +
+      "ntResponse\022D\n\006Create\022\027.example.ExampleRe" +
+      "quest\032\037.output.PersistenceDataResponse(\001" +
+      "\022D\n\006Update\022\027.example.ExampleRequest\032\037.ou" +
+      "tput.PersistenceDataResponse(\001\022<\n\010Inacti" +
+      "ve\022\022.input.UUIDRequest\032\032.output.StatusDa" +
+      "taResponse(\001\022:\n\006Active\022\022.input.UUIDReque" +
+      "st\032\032.output.StatusDataResponse(\001\0227\n\007Find" +
+      "One\022\022.input.UUIDRequest\032\030.example.Exampl" +
+      "eResponse\0227\n\010Validate\022\024.example.ExampleB" +
+      "ody\032\023.validator.Response(\001\022?\n\006Delete\022\022.i" +
+      "nput.UUIDRequest\032\037.output.PersistenceDat" +
+      "aResponse(\001BV\n\024com.soustify.exampleZ>git" +
+      "hub.com/soustify/data-gateway-buffer-go/" +
+      "pkg/example;exampleb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6168,6 +6172,7 @@ public final class Example {
           com.soustify.input.Input.getDescriptor(),
           com.soustify.output.Output.getDescriptor(),
           com.soustify.validator.Validator.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.StructProto.getDescriptor(),
         });
@@ -6189,9 +6194,15 @@ public final class Example {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_example_ExampleResponse_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "BornDate", "Public", "Price", "CreatedAt", "UpdatedAt", "Category", "Tags", "Rating", "Quantity", "Discount", "Email", "Phone", "Metadata", "LastLogin", "Status", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.soustify.input.Input.getDescriptor();
     com.soustify.output.Output.getDescriptor();
     com.soustify.validator.Validator.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.StructProto.getDescriptor();
   }
