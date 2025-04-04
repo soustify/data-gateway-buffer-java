@@ -1105,19 +1105,19 @@ public final class ContextDomainTableDetail {
       "textdomain_table\032\013input.proto\032\014output.pr" +
       "oto\032\016validate.proto\032\037google/protobuf/tim" +
       "estamp.proto\032\034google/protobuf/struct.pro" +
-      "to\"\270\001\n\037ContextDomainTableDetailRequest\022\034" +
+      "to\"\274\001\n\037ContextDomainTableDetailRequest\022\034" +
       "\n\ncontext_id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\033\n\tentity_i" +
       "d\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\035\n\014entity_table\030\003 \001(\tB" +
-      "\007\372B\004r\002\020\n\022;\n\toperation\030\004 \001(\0162\036.contextdom" +
-      "ain_table.OperationB\010\372B\005\262\001\002\010\001*/\n\tOperati" +
-      "on\022\n\n\006INSERT\020\000\022\n\n\006UPDATE\020\001\022\n\n\006DELETE\020\0022\204" +
-      "\001\n\037ContextDomainTableDetailService\022a\n\006Cr" +
-      "eate\0224.contextdomain_table.ContextDomain" +
-      "TableDetailRequest\032\037.output.PersistenceD" +
-      "ataResponse(\001Bz\n com.soustify.contextdom" +
-      "ain_tableZVgithub.com/soustify/data-gate" +
-      "way-buffer-go/pkg/contextdomain_table;co" +
-      "ntextdomain_tableb\006proto3"
+      "\007\372B\004r\002\020\n\022?\n\toperation\030\004 \001(\0162\036.contextdom" +
+      "ain_table.OperationB\014\372B\t\202\001\006\030\000\030\001\030\002*/\n\tOpe" +
+      "ration\022\n\n\006INSERT\020\000\022\n\n\006UPDATE\020\001\022\n\n\006DELETE" +
+      "\020\0022\204\001\n\037ContextDomainTableDetailService\022a" +
+      "\n\006Create\0224.contextdomain_table.ContextDo" +
+      "mainTableDetailRequest\032\037.output.Persiste" +
+      "nceDataResponse(\001Bz\n com.soustify.contex" +
+      "tdomain_tableZVgithub.com/soustify/data-" +
+      "gateway-buffer-go/pkg/contextdomain_tabl" +
+      "e;contextdomain_tableb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
