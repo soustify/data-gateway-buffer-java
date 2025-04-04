@@ -14,6 +14,114 @@ public final class Output {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code output.StatusResponse}
+   */
+  public enum StatusResponse
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ENABLED = 0;</code>
+     */
+    ENABLED(0),
+    /**
+     * <code>DISABLED = 1;</code>
+     */
+    DISABLED(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>ENABLED = 0;</code>
+     */
+    public static final int ENABLED_VALUE = 0;
+    /**
+     * <code>DISABLED = 1;</code>
+     */
+    public static final int DISABLED_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static StatusResponse valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static StatusResponse forNumber(int value) {
+      switch (value) {
+        case 0: return ENABLED;
+        case 1: return DISABLED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<StatusResponse>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        StatusResponse> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<StatusResponse>() {
+            public StatusResponse findValueByNumber(int number) {
+              return StatusResponse.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.soustify.output.Output.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final StatusResponse[] VALUES = values();
+
+    public static StatusResponse valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private StatusResponse(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:output.StatusResponse)
+  }
+
   public interface CountResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:output.CountResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -2121,10 +2229,11 @@ public final class Output {
       "\r\n\005count\030\001 \001(\003\"6\n\022StatusDataResponse\022\017\n\007" +
       "success\030\001 \001(\010\022\017\n\007message\030\002 \001(\t\"S\n\027Persis" +
       "tenceDataResponse\022\023\n\013created_ids\030\001 \003(\t\022\022" +
-      "\n\nfailed_ids\030\002 \003(\t\022\017\n\007message\030\003 \001(\tBS\n\023c" +
-      "om.soustify.outputZ<github.com/soustify/" +
-      "data-gateway-buffer-go/pkg/output;output" +
-      "b\006proto3"
+      "\n\nfailed_ids\030\002 \003(\t\022\017\n\007message\030\003 \001(\t*+\n\016S" +
+      "tatusResponse\022\013\n\007ENABLED\020\000\022\014\n\010DISABLED\020\001" +
+      "BS\n\023com.soustify.outputZ<github.com/sous" +
+      "tify/data-gateway-buffer-go/pkg/output;o" +
+      "utputb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
