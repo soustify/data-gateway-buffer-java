@@ -14,123 +14,6 @@ public final class ContextDomainTableChange {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  /**
-   * Protobuf enum {@code contextdomain_change.Operation}
-   */
-  public enum Operation
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>INSERT = 0;</code>
-     */
-    INSERT(0),
-    /**
-     * <code>UPDATE = 1;</code>
-     */
-    UPDATE(1),
-    /**
-     * <code>DELETE = 2;</code>
-     */
-    DELETE(2),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>INSERT = 0;</code>
-     */
-    public static final int INSERT_VALUE = 0;
-    /**
-     * <code>UPDATE = 1;</code>
-     */
-    public static final int UPDATE_VALUE = 1;
-    /**
-     * <code>DELETE = 2;</code>
-     */
-    public static final int DELETE_VALUE = 2;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static Operation valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static Operation forNumber(int value) {
-      switch (value) {
-        case 0: return INSERT;
-        case 1: return UPDATE;
-        case 2: return DELETE;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<Operation>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        Operation> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<Operation>() {
-            public Operation findValueByNumber(int number) {
-              return Operation.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.soustify.contextdomain_change.ContextDomainTableChange.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final Operation[] VALUES = values();
-
-    public static Operation valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private Operation(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:contextdomain_change.Operation)
-  }
-
   public interface ContextDomainTableChangeRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:contextdomain_change.ContextDomainTableChangeRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -1151,15 +1034,14 @@ public final class ContextDomainTableChange {
       "oto\"\212\001\n\037ContextDomainTableChangeRequest\022" +
       ")\n\027context_table_detail_id\030\001 \001(\tB\010\372B\005r\003\260" +
       "\001\001\022\026\n\005field\030\002 \001(\tB\007\372B\004r\002\020\001\022\021\n\told_value\030" +
-      "\003 \001(\t\022\021\n\tnew_value\030\004 \001(\t*/\n\tOperation\022\n\n" +
-      "\006INSERT\020\000\022\n\n\006UPDATE\020\001\022\n\n\006DELETE\020\0022\205\001\n\037Co" +
-      "ntextDomainTableChangeService\022b\n\006Create\022" +
-      "5.contextdomain_change.ContextDomainTabl" +
-      "eChangeRequest\032\037.output.PersistenceDataR" +
-      "esponse(\001B}\n!com.soustify.contextdomain_" +
-      "changeZXgithub.com/soustify/data-gateway" +
-      "-buffer-go/pkg/contextdomain_change;cont" +
-      "extdomain_changeb\006proto3"
+      "\003 \001(\t\022\021\n\tnew_value\030\004 \001(\t2\205\001\n\037ContextDoma" +
+      "inTableChangeService\022b\n\006Create\0225.context" +
+      "domain_change.ContextDomainTableChangeRe" +
+      "quest\032\037.output.PersistenceDataResponse(\001" +
+      "B}\n!com.soustify.contextdomain_changeZXg" +
+      "ithub.com/soustify/data-gateway-buffer-g" +
+      "o/pkg/contextdomain_change;contextdomain" +
+      "_changeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
