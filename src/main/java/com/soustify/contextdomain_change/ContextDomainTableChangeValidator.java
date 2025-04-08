@@ -25,18 +25,22 @@ public class ContextDomainTableChangeValidator {
 	
 		
 	
+		
+	
 	
 	
 
 	public void assertValid(com.soustify.contextdomain_change.ContextDomainTableChange.ContextDomainTableChangeRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_change.ContextDomainTableChangeRequest.context_table_detail_id", proto.getContextTableDetailId());
+			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_change.ContextDomainTableChangeRequest.id", proto.getId());
 	
 			io.envoyproxy.pgv.StringValidation.minLength(".contextdomain_change.ContextDomainTableChangeRequest.field", proto.getField(), 1);
 	// no validation rules for OldValue
 
 	// no validation rules for NewValue
 
+	
+			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_change.ContextDomainTableChangeRequest.context_table_detail_id", proto.getContextTableDetailId());
 	
 	
 	}

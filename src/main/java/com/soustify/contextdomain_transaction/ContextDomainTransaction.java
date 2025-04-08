@@ -19,16 +19,16 @@ public final class ContextDomainTransaction {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-     * @return The contextId.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The id.
      */
-    java.lang.String getContextId();
+    java.lang.String getId();
     /**
-     * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for contextId.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
-        getContextIdBytes();
+        getIdBytes();
 
     /**
      * <code>string user_id = 2 [(.validate.rules) = { ... }</code>
@@ -67,7 +67,7 @@ public final class ContextDomainTransaction {
       super(builder);
     }
     private ContextDomainTransactionRequest() {
-      contextId_ = "";
+      id_ = "";
       userId_ = "";
       userPool_ = "";
     }
@@ -97,39 +97,39 @@ public final class ContextDomainTransaction {
               com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionRequest.class, com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionRequest.Builder.class);
     }
 
-    public static final int CONTEXT_ID_FIELD_NUMBER = 1;
+    public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object contextId_ = "";
+    private volatile java.lang.Object id_ = "";
     /**
-     * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-     * @return The contextId.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The id.
      */
     @java.lang.Override
-    public java.lang.String getContextId() {
-      java.lang.Object ref = contextId_;
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        contextId_ = s;
+        id_ = s;
         return s;
       }
     }
     /**
-     * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for contextId.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getContextIdBytes() {
-      java.lang.Object ref = contextId_;
+        getIdBytes() {
+      java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        contextId_ = b;
+        id_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -228,8 +228,8 @@ public final class ContextDomainTransaction {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contextId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contextId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
@@ -246,8 +246,8 @@ public final class ContextDomainTransaction {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contextId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contextId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
@@ -270,8 +270,8 @@ public final class ContextDomainTransaction {
       }
       com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionRequest other = (com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionRequest) obj;
 
-      if (!getContextId()
-          .equals(other.getContextId())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
       if (!getUserId()
           .equals(other.getUserId())) return false;
       if (!getUserPool()
@@ -287,8 +287,8 @@ public final class ContextDomainTransaction {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTEXT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getContextId().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getUserId().hashCode();
       hash = (37 * hash) + USER_POOL_FIELD_NUMBER;
@@ -422,7 +422,7 @@ public final class ContextDomainTransaction {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        contextId_ = "";
+        id_ = "";
         userId_ = "";
         userPool_ = "";
         return this;
@@ -459,7 +459,7 @@ public final class ContextDomainTransaction {
       private void buildPartial0(com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.contextId_ = contextId_;
+          result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.userId_ = userId_;
@@ -513,8 +513,8 @@ public final class ContextDomainTransaction {
 
       public Builder mergeFrom(com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionRequest other) {
         if (other == com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionRequest.getDefaultInstance()) return this;
-        if (!other.getContextId().isEmpty()) {
-          contextId_ = other.contextId_;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -555,7 +555,7 @@ public final class ContextDomainTransaction {
                 done = true;
                 break;
               case 10: {
-                contextId_ = input.readStringRequireUtf8();
+                id_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -586,73 +586,73 @@ public final class ContextDomainTransaction {
       }
       private int bitField0_;
 
-      private java.lang.Object contextId_ = "";
+      private java.lang.Object id_ = "";
       /**
-       * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-       * @return The contextId.
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @return The id.
        */
-      public java.lang.String getContextId() {
-        java.lang.Object ref = contextId_;
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          contextId_ = s;
+          id_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-       * @return The bytes for contextId.
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
-          getContextIdBytes() {
-        java.lang.Object ref = contextId_;
+          getIdBytes() {
+        java.lang.Object ref = id_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          contextId_ = b;
+          id_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-       * @param value The contextId to set.
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setContextId(
+      public Builder setId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        contextId_ = value;
+        id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearContextId() {
-        contextId_ = getDefaultInstance().getContextId();
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for contextId to set.
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
-      public Builder setContextIdBytes(
+      public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        contextId_ = value;
+        id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -883,17 +883,17 @@ public final class ContextDomainTransaction {
       "extdomain_transaction\032\013input.proto\032\014outp" +
       "ut.proto\032\016validate.proto\032\037google/protobu" +
       "f/timestamp.proto\032\034google/protobuf/struc" +
-      "t.proto\"v\n\037ContextDomainTransactionReque" +
-      "st\022\034\n\ncontext_id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\031\n\007user" +
-      "_id\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\032\n\tuser_pool\030\003 \001(\tB\007" +
-      "\372B\004r\002\020\n2\212\001\n\037ContextDomainTransactionServ" +
-      "ice\022g\n\006Create\022:.contextdomain_transactio" +
-      "n.ContextDomainTransactionRequest\032\037.outp" +
-      "ut.PersistenceDataResponse(\001B\214\001\n&com.sou" +
-      "stify.contextdomain_transactionZbgithub." +
-      "com/soustify/data-gateway-buffer-go/pkg/" +
-      "contextdomain_transaction;contextdomain_" +
-      "transactionb\006proto3"
+      "t.proto\"n\n\037ContextDomainTransactionReque" +
+      "st\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\031\n\007user_id\030\002 \001(" +
+      "\tB\010\372B\005r\003\260\001\001\022\032\n\tuser_pool\030\003 \001(\tB\007\372B\004r\002\020\n2" +
+      "\212\001\n\037ContextDomainTransactionService\022g\n\006C" +
+      "reate\022:.contextdomain_transaction.Contex" +
+      "tDomainTransactionRequest\032\037.output.Persi" +
+      "stenceDataResponse(\001B\214\001\n&com.soustify.co" +
+      "ntextdomain_transactionZbgithub.com/sous" +
+      "tify/data-gateway-buffer-go/pkg/contextd" +
+      "omain_transaction;contextdomain_transact" +
+      "ionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -909,7 +909,7 @@ public final class ContextDomainTransaction {
     internal_static_contextdomain_transaction_ContextDomainTransactionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_contextdomain_transaction_ContextDomainTransactionRequest_descriptor,
-        new java.lang.String[] { "ContextId", "UserId", "UserPool", });
+        new java.lang.String[] { "Id", "UserId", "UserPool", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);

@@ -28,7 +28,7 @@ public class ContextDomainTransactionValidator {
 
 	public void assertValid(com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_transaction.ContextDomainTransactionRequest.context_id", proto.getContextId());
+			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_transaction.ContextDomainTransactionRequest.id", proto.getId());
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_transaction.ContextDomainTransactionRequest.user_id", proto.getUserId());
 	

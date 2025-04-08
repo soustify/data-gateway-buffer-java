@@ -24,6 +24,8 @@ public class ContextDomainTableDetailValidator {
 		
 	
 		
+	
+		
 		private final com.soustify.contextdomain_table.ContextDomainTableDetail.Operation[] OPERATION__IN = new com.soustify.contextdomain_table.ContextDomainTableDetail.Operation[]{
 			com.soustify.contextdomain_table.ContextDomainTableDetail.Operation.forNumber(0),
 			com.soustify.contextdomain_table.ContextDomainTableDetail.Operation.forNumber(1),
@@ -35,7 +37,9 @@ public class ContextDomainTableDetailValidator {
 
 	public void assertValid(com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_table.ContextDomainTableDetailRequest.context_id", proto.getContextId());
+			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_table.ContextDomainTableDetailRequest.id", proto.getId());
+	
+			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_table.ContextDomainTableDetailRequest.transaction_id", proto.getTransactionId());
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_table.ContextDomainTableDetailRequest.entity_id", proto.getEntityId());
 	

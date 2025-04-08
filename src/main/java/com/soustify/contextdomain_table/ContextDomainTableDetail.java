@@ -136,48 +136,60 @@ public final class ContextDomainTableDetail {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-     * @return The contextId.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The id.
      */
-    java.lang.String getContextId();
+    java.lang.String getId();
     /**
-     * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for contextId.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
-        getContextIdBytes();
+        getIdBytes();
 
     /**
-     * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+     * <code>string transaction_id = 2 [(.validate.rules) = { ... }</code>
+     * @return The transactionId.
+     */
+    java.lang.String getTransactionId();
+    /**
+     * <code>string transaction_id = 2 [(.validate.rules) = { ... }</code>
+     * @return The bytes for transactionId.
+     */
+    com.google.protobuf.ByteString
+        getTransactionIdBytes();
+
+    /**
+     * <code>string entity_id = 3 [(.validate.rules) = { ... }</code>
      * @return The entityId.
      */
     java.lang.String getEntityId();
     /**
-     * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+     * <code>string entity_id = 3 [(.validate.rules) = { ... }</code>
      * @return The bytes for entityId.
      */
     com.google.protobuf.ByteString
         getEntityIdBytes();
 
     /**
-     * <code>string entity_table = 3 [(.validate.rules) = { ... }</code>
+     * <code>string entity_table = 4 [(.validate.rules) = { ... }</code>
      * @return The entityTable.
      */
     java.lang.String getEntityTable();
     /**
-     * <code>string entity_table = 3 [(.validate.rules) = { ... }</code>
+     * <code>string entity_table = 4 [(.validate.rules) = { ... }</code>
      * @return The bytes for entityTable.
      */
     com.google.protobuf.ByteString
         getEntityTableBytes();
 
     /**
-     * <code>.contextdomain_table.Operation operation = 4 [(.validate.rules) = { ... }</code>
+     * <code>.contextdomain_table.Operation operation = 5 [(.validate.rules) = { ... }</code>
      * @return The enum numeric value on the wire for operation.
      */
     int getOperationValue();
     /**
-     * <code>.contextdomain_table.Operation operation = 4 [(.validate.rules) = { ... }</code>
+     * <code>.contextdomain_table.Operation operation = 5 [(.validate.rules) = { ... }</code>
      * @return The operation.
      */
     com.soustify.contextdomain_table.ContextDomainTableDetail.Operation getOperation();
@@ -195,7 +207,8 @@ public final class ContextDomainTableDetail {
       super(builder);
     }
     private ContextDomainTableDetailRequest() {
-      contextId_ = "";
+      id_ = "";
+      transactionId_ = "";
       entityId_ = "";
       entityTable_ = "";
       operation_ = 0;
@@ -226,50 +239,89 @@ public final class ContextDomainTableDetail {
               com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest.class, com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest.Builder.class);
     }
 
-    public static final int CONTEXT_ID_FIELD_NUMBER = 1;
+    public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object contextId_ = "";
+    private volatile java.lang.Object id_ = "";
     /**
-     * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-     * @return The contextId.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The id.
      */
     @java.lang.Override
-    public java.lang.String getContextId() {
-      java.lang.Object ref = contextId_;
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        contextId_ = s;
+        id_ = s;
         return s;
       }
     }
     /**
-     * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for contextId.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getContextIdBytes() {
-      java.lang.Object ref = contextId_;
+        getIdBytes() {
+      java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        contextId_ = b;
+        id_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 2;
+    public static final int TRANSACTION_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transactionId_ = "";
+    /**
+     * <code>string transaction_id = 2 [(.validate.rules) = { ... }</code>
+     * @return The transactionId.
+     */
+    @java.lang.Override
+    public java.lang.String getTransactionId() {
+      java.lang.Object ref = transactionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transactionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string transaction_id = 2 [(.validate.rules) = { ... }</code>
+     * @return The bytes for transactionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransactionIdBytes() {
+      java.lang.Object ref = transactionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transactionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTITY_ID_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object entityId_ = "";
     /**
-     * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+     * <code>string entity_id = 3 [(.validate.rules) = { ... }</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -286,7 +338,7 @@ public final class ContextDomainTableDetail {
       }
     }
     /**
-     * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+     * <code>string entity_id = 3 [(.validate.rules) = { ... }</code>
      * @return The bytes for entityId.
      */
     @java.lang.Override
@@ -304,11 +356,11 @@ public final class ContextDomainTableDetail {
       }
     }
 
-    public static final int ENTITY_TABLE_FIELD_NUMBER = 3;
+    public static final int ENTITY_TABLE_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object entityTable_ = "";
     /**
-     * <code>string entity_table = 3 [(.validate.rules) = { ... }</code>
+     * <code>string entity_table = 4 [(.validate.rules) = { ... }</code>
      * @return The entityTable.
      */
     @java.lang.Override
@@ -325,7 +377,7 @@ public final class ContextDomainTableDetail {
       }
     }
     /**
-     * <code>string entity_table = 3 [(.validate.rules) = { ... }</code>
+     * <code>string entity_table = 4 [(.validate.rules) = { ... }</code>
      * @return The bytes for entityTable.
      */
     @java.lang.Override
@@ -343,17 +395,17 @@ public final class ContextDomainTableDetail {
       }
     }
 
-    public static final int OPERATION_FIELD_NUMBER = 4;
+    public static final int OPERATION_FIELD_NUMBER = 5;
     private int operation_ = 0;
     /**
-     * <code>.contextdomain_table.Operation operation = 4 [(.validate.rules) = { ... }</code>
+     * <code>.contextdomain_table.Operation operation = 5 [(.validate.rules) = { ... }</code>
      * @return The enum numeric value on the wire for operation.
      */
     @java.lang.Override public int getOperationValue() {
       return operation_;
     }
     /**
-     * <code>.contextdomain_table.Operation operation = 4 [(.validate.rules) = { ... }</code>
+     * <code>.contextdomain_table.Operation operation = 5 [(.validate.rules) = { ... }</code>
      * @return The operation.
      */
     @java.lang.Override public com.soustify.contextdomain_table.ContextDomainTableDetail.Operation getOperation() {
@@ -375,17 +427,20 @@ public final class ContextDomainTableDetail {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contextId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contextId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, transactionId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, entityId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, entityId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityTable_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, entityTable_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, entityTable_);
       }
       if (operation_ != com.soustify.contextdomain_table.ContextDomainTableDetail.Operation.INSERT.getNumber()) {
-        output.writeEnum(4, operation_);
+        output.writeEnum(5, operation_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -396,18 +451,21 @@ public final class ContextDomainTableDetail {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contextId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contextId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, transactionId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, entityId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, entityId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityTable_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, entityTable_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, entityTable_);
       }
       if (operation_ != com.soustify.contextdomain_table.ContextDomainTableDetail.Operation.INSERT.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, operation_);
+          .computeEnumSize(5, operation_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -424,8 +482,10 @@ public final class ContextDomainTableDetail {
       }
       com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest other = (com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest) obj;
 
-      if (!getContextId()
-          .equals(other.getContextId())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getTransactionId()
+          .equals(other.getTransactionId())) return false;
       if (!getEntityId()
           .equals(other.getEntityId())) return false;
       if (!getEntityTable()
@@ -442,8 +502,10 @@ public final class ContextDomainTableDetail {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTEXT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getContextId().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + TRANSACTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTransactionId().hashCode();
       hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getEntityId().hashCode();
       hash = (37 * hash) + ENTITY_TABLE_FIELD_NUMBER;
@@ -579,7 +641,8 @@ public final class ContextDomainTableDetail {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        contextId_ = "";
+        id_ = "";
+        transactionId_ = "";
         entityId_ = "";
         entityTable_ = "";
         operation_ = 0;
@@ -617,15 +680,18 @@ public final class ContextDomainTableDetail {
       private void buildPartial0(com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.contextId_ = contextId_;
+          result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.entityId_ = entityId_;
+          result.transactionId_ = transactionId_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.entityTable_ = entityTable_;
+          result.entityId_ = entityId_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.entityTable_ = entityTable_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.operation_ = operation_;
         }
       }
@@ -674,19 +740,24 @@ public final class ContextDomainTableDetail {
 
       public Builder mergeFrom(com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest other) {
         if (other == com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest.getDefaultInstance()) return this;
-        if (!other.getContextId().isEmpty()) {
-          contextId_ = other.contextId_;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
           bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTransactionId().isEmpty()) {
+          transactionId_ = other.transactionId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getEntityId().isEmpty()) {
           entityId_ = other.entityId_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getEntityTable().isEmpty()) {
           entityTable_ = other.entityTable_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.operation_ != 0) {
@@ -719,25 +790,30 @@ public final class ContextDomainTableDetail {
                 done = true;
                 break;
               case 10: {
-                contextId_ = input.readStringRequireUtf8();
+                id_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
-                entityId_ = input.readStringRequireUtf8();
+                transactionId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
-                entityTable_ = input.readStringRequireUtf8();
+                entityId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 32: {
-                operation_ = input.readEnum();
+              case 34: {
+                entityTable_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 32
+              } // case 34
+              case 40: {
+                operation_ = input.readEnum();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -755,81 +831,153 @@ public final class ContextDomainTableDetail {
       }
       private int bitField0_;
 
-      private java.lang.Object contextId_ = "";
+      private java.lang.Object id_ = "";
       /**
-       * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-       * @return The contextId.
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @return The id.
        */
-      public java.lang.String getContextId() {
-        java.lang.Object ref = contextId_;
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          contextId_ = s;
+          id_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-       * @return The bytes for contextId.
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
-          getContextIdBytes() {
-        java.lang.Object ref = contextId_;
+          getIdBytes() {
+        java.lang.Object ref = id_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          contextId_ = b;
+          id_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-       * @param value The contextId to set.
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setContextId(
+      public Builder setId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        contextId_ = value;
+        id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearContextId() {
-        contextId_ = getDefaultInstance().getContextId();
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string context_id = 1 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for contextId to set.
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
-      public Builder setContextIdBytes(
+      public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        contextId_ = value;
+        id_ = value;
         bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object transactionId_ = "";
+      /**
+       * <code>string transaction_id = 2 [(.validate.rules) = { ... }</code>
+       * @return The transactionId.
+       */
+      public java.lang.String getTransactionId() {
+        java.lang.Object ref = transactionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transactionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string transaction_id = 2 [(.validate.rules) = { ... }</code>
+       * @return The bytes for transactionId.
+       */
+      public com.google.protobuf.ByteString
+          getTransactionIdBytes() {
+        java.lang.Object ref = transactionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transactionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string transaction_id = 2 [(.validate.rules) = { ... }</code>
+       * @param value The transactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transactionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string transaction_id = 2 [(.validate.rules) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransactionId() {
+        transactionId_ = getDefaultInstance().getTransactionId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string transaction_id = 2 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for transactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transactionId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private java.lang.Object entityId_ = "";
       /**
-       * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+       * <code>string entity_id = 3 [(.validate.rules) = { ... }</code>
        * @return The entityId.
        */
       public java.lang.String getEntityId() {
@@ -845,7 +993,7 @@ public final class ContextDomainTableDetail {
         }
       }
       /**
-       * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+       * <code>string entity_id = 3 [(.validate.rules) = { ... }</code>
        * @return The bytes for entityId.
        */
       public com.google.protobuf.ByteString
@@ -862,7 +1010,7 @@ public final class ContextDomainTableDetail {
         }
       }
       /**
-       * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+       * <code>string entity_id = 3 [(.validate.rules) = { ... }</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -870,22 +1018,22 @@ public final class ContextDomainTableDetail {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         entityId_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+       * <code>string entity_id = 3 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
         entityId_ = getDefaultInstance().getEntityId();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+       * <code>string entity_id = 3 [(.validate.rules) = { ... }</code>
        * @param value The bytes for entityId to set.
        * @return This builder for chaining.
        */
@@ -894,14 +1042,14 @@ public final class ContextDomainTableDetail {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         entityId_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private java.lang.Object entityTable_ = "";
       /**
-       * <code>string entity_table = 3 [(.validate.rules) = { ... }</code>
+       * <code>string entity_table = 4 [(.validate.rules) = { ... }</code>
        * @return The entityTable.
        */
       public java.lang.String getEntityTable() {
@@ -917,7 +1065,7 @@ public final class ContextDomainTableDetail {
         }
       }
       /**
-       * <code>string entity_table = 3 [(.validate.rules) = { ... }</code>
+       * <code>string entity_table = 4 [(.validate.rules) = { ... }</code>
        * @return The bytes for entityTable.
        */
       public com.google.protobuf.ByteString
@@ -934,7 +1082,7 @@ public final class ContextDomainTableDetail {
         }
       }
       /**
-       * <code>string entity_table = 3 [(.validate.rules) = { ... }</code>
+       * <code>string entity_table = 4 [(.validate.rules) = { ... }</code>
        * @param value The entityTable to set.
        * @return This builder for chaining.
        */
@@ -942,22 +1090,22 @@ public final class ContextDomainTableDetail {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         entityTable_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>string entity_table = 3 [(.validate.rules) = { ... }</code>
+       * <code>string entity_table = 4 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityTable() {
         entityTable_ = getDefaultInstance().getEntityTable();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>string entity_table = 3 [(.validate.rules) = { ... }</code>
+       * <code>string entity_table = 4 [(.validate.rules) = { ... }</code>
        * @param value The bytes for entityTable to set.
        * @return This builder for chaining.
        */
@@ -966,32 +1114,32 @@ public final class ContextDomainTableDetail {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         entityTable_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
 
       private int operation_ = 0;
       /**
-       * <code>.contextdomain_table.Operation operation = 4 [(.validate.rules) = { ... }</code>
+       * <code>.contextdomain_table.Operation operation = 5 [(.validate.rules) = { ... }</code>
        * @return The enum numeric value on the wire for operation.
        */
       @java.lang.Override public int getOperationValue() {
         return operation_;
       }
       /**
-       * <code>.contextdomain_table.Operation operation = 4 [(.validate.rules) = { ... }</code>
+       * <code>.contextdomain_table.Operation operation = 5 [(.validate.rules) = { ... }</code>
        * @param value The enum numeric value on the wire for operation to set.
        * @return This builder for chaining.
        */
       public Builder setOperationValue(int value) {
         operation_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.contextdomain_table.Operation operation = 4 [(.validate.rules) = { ... }</code>
+       * <code>.contextdomain_table.Operation operation = 5 [(.validate.rules) = { ... }</code>
        * @return The operation.
        */
       @java.lang.Override
@@ -1000,7 +1148,7 @@ public final class ContextDomainTableDetail {
         return result == null ? com.soustify.contextdomain_table.ContextDomainTableDetail.Operation.UNRECOGNIZED : result;
       }
       /**
-       * <code>.contextdomain_table.Operation operation = 4 [(.validate.rules) = { ... }</code>
+       * <code>.contextdomain_table.Operation operation = 5 [(.validate.rules) = { ... }</code>
        * @param value The operation to set.
        * @return This builder for chaining.
        */
@@ -1008,17 +1156,17 @@ public final class ContextDomainTableDetail {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         operation_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.contextdomain_table.Operation operation = 4 [(.validate.rules) = { ... }</code>
+       * <code>.contextdomain_table.Operation operation = 5 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearOperation() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         operation_ = 0;
         onChanged();
         return this;
@@ -1105,19 +1253,20 @@ public final class ContextDomainTableDetail {
       "textdomain_table\032\013input.proto\032\014output.pr" +
       "oto\032\016validate.proto\032\037google/protobuf/tim" +
       "estamp.proto\032\034google/protobuf/struct.pro" +
-      "to\"\274\001\n\037ContextDomainTableDetailRequest\022\034" +
-      "\n\ncontext_id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\033\n\tentity_i" +
-      "d\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\035\n\014entity_table\030\003 \001(\tB" +
-      "\007\372B\004r\002\020\n\022?\n\toperation\030\004 \001(\0162\036.contextdom" +
-      "ain_table.OperationB\014\372B\t\202\001\006\030\000\030\001\030\002*/\n\tOpe" +
-      "ration\022\n\n\006INSERT\020\000\022\n\n\006UPDATE\020\001\022\n\n\006DELETE" +
-      "\020\0022\204\001\n\037ContextDomainTableDetailService\022a" +
-      "\n\006Create\0224.contextdomain_table.ContextDo" +
-      "mainTableDetailRequest\032\037.output.Persiste" +
-      "nceDataResponse(\001Bz\n com.soustify.contex" +
-      "tdomain_tableZVgithub.com/soustify/data-" +
-      "gateway-buffer-go/pkg/contextdomain_tabl" +
-      "e;contextdomain_tableb\006proto3"
+      "to\"\326\001\n\037ContextDomainTableDetailRequest\022\024" +
+      "\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022 \n\016transaction_id\030\002" +
+      " \001(\tB\010\372B\005r\003\260\001\001\022\033\n\tentity_id\030\003 \001(\tB\010\372B\005r\003" +
+      "\260\001\001\022\035\n\014entity_table\030\004 \001(\tB\007\372B\004r\002\020\n\022?\n\top" +
+      "eration\030\005 \001(\0162\036.contextdomain_table.Oper" +
+      "ationB\014\372B\t\202\001\006\030\000\030\001\030\002*/\n\tOperation\022\n\n\006INSE" +
+      "RT\020\000\022\n\n\006UPDATE\020\001\022\n\n\006DELETE\020\0022\204\001\n\037Context" +
+      "DomainTableDetailService\022a\n\006Create\0224.con" +
+      "textdomain_table.ContextDomainTableDetai" +
+      "lRequest\032\037.output.PersistenceDataRespons" +
+      "e(\001Bz\n com.soustify.contextdomain_tableZ" +
+      "Vgithub.com/soustify/data-gateway-buffer" +
+      "-go/pkg/contextdomain_table;contextdomai" +
+      "n_tableb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1133,7 +1282,7 @@ public final class ContextDomainTableDetail {
     internal_static_contextdomain_table_ContextDomainTableDetailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_contextdomain_table_ContextDomainTableDetailRequest_descriptor,
-        new java.lang.String[] { "ContextId", "EntityId", "EntityTable", "Operation", });
+        new java.lang.String[] { "Id", "TransactionId", "EntityId", "EntityTable", "Operation", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);
