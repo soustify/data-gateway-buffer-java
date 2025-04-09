@@ -46,6 +46,37 @@ public final class ContextDomainTransactionServiceGrpc {
     return getCreateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
+      com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse> getFindOneMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "FindOne",
+      requestType = com.soustify.input.Input.UUIDRequest.class,
+      responseType = com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
+      com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse> getFindOneMethod() {
+    io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse> getFindOneMethod;
+    if ((getFindOneMethod = ContextDomainTransactionServiceGrpc.getFindOneMethod) == null) {
+      synchronized (ContextDomainTransactionServiceGrpc.class) {
+        if ((getFindOneMethod = ContextDomainTransactionServiceGrpc.getFindOneMethod) == null) {
+          ContextDomainTransactionServiceGrpc.getFindOneMethod = getFindOneMethod =
+              io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FindOne"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.soustify.input.Input.UUIDRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ContextDomainTransactionServiceMethodDescriptorSupplier("FindOne"))
+              .build();
+        }
+      }
+    }
+    return getFindOneMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +131,13 @@ public final class ContextDomainTransactionServiceGrpc {
         io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getCreateMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void findOne(com.soustify.input.Input.UUIDRequest request,
+        io.grpc.stub.StreamObserver<com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindOneMethod(), responseObserver);
+    }
   }
 
   /**
@@ -136,6 +174,14 @@ public final class ContextDomainTransactionServiceGrpc {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), responseObserver);
     }
+
+    /**
+     */
+    public void findOne(com.soustify.input.Input.UUIDRequest request,
+        io.grpc.stub.StreamObserver<com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getFindOneMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -152,6 +198,13 @@ public final class ContextDomainTransactionServiceGrpc {
     protected ContextDomainTransactionServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ContextDomainTransactionServiceBlockingStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse findOne(com.soustify.input.Input.UUIDRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFindOneMethod(), getCallOptions(), request);
     }
   }
 
@@ -170,9 +223,18 @@ public final class ContextDomainTransactionServiceGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ContextDomainTransactionServiceFutureStub(channel, callOptions);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse> findOne(
+        com.soustify.input.Input.UUIDRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getFindOneMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_CREATE = 0;
+  private static final int METHODID_FIND_ONE = 0;
+  private static final int METHODID_CREATE = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -191,6 +253,10 @@ public final class ContextDomainTransactionServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_FIND_ONE:
+          serviceImpl.findOne((com.soustify.input.Input.UUIDRequest) request,
+              (io.grpc.stub.StreamObserver<com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -219,6 +285,13 @@ public final class ContextDomainTransactionServiceGrpc {
               com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionRequest,
               com.soustify.output.Output.PersistenceDataResponse>(
                 service, METHODID_CREATE)))
+        .addMethod(
+          getFindOneMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.soustify.input.Input.UUIDRequest,
+              com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse>(
+                service, METHODID_FIND_ONE)))
         .build();
   }
 
@@ -268,6 +341,7 @@ public final class ContextDomainTransactionServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ContextDomainTransactionServiceFileDescriptorSupplier())
               .addMethod(getCreateMethod())
+              .addMethod(getFindOneMethod())
               .build();
         }
       }

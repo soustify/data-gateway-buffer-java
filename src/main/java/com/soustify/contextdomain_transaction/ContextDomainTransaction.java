@@ -865,11 +865,867 @@ public final class ContextDomainTransaction {
 
   }
 
+  public interface ContextDomainTransactionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:contextdomain_transaction.ContextDomainTransactionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string user_id = 2;</code>
+     * @return The userId.
+     */
+    java.lang.String getUserId();
+    /**
+     * <code>string user_id = 2;</code>
+     * @return The bytes for userId.
+     */
+    com.google.protobuf.ByteString
+        getUserIdBytes();
+
+    /**
+     * <code>string user_pool = 3;</code>
+     * @return The userPool.
+     */
+    java.lang.String getUserPool();
+    /**
+     * <code>string user_pool = 3;</code>
+     * @return The bytes for userPool.
+     */
+    com.google.protobuf.ByteString
+        getUserPoolBytes();
+  }
+  /**
+   * Protobuf type {@code contextdomain_transaction.ContextDomainTransactionResponse}
+   */
+  public static final class ContextDomainTransactionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:contextdomain_transaction.ContextDomainTransactionResponse)
+      ContextDomainTransactionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContextDomainTransactionResponse.newBuilder() to construct.
+    private ContextDomainTransactionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContextDomainTransactionResponse() {
+      id_ = "";
+      userId_ = "";
+      userPool_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContextDomainTransactionResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.soustify.contextdomain_transaction.ContextDomainTransaction.internal_static_contextdomain_transaction_ContextDomainTransactionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.soustify.contextdomain_transaction.ContextDomainTransaction.internal_static_contextdomain_transaction_ContextDomainTransactionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse.class, com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USER_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userId_ = "";
+    /**
+     * <code>string user_id = 2;</code>
+     * @return The userId.
+     */
+    @java.lang.Override
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string user_id = 2;</code>
+     * @return The bytes for userId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USER_POOL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userPool_ = "";
+    /**
+     * <code>string user_pool = 3;</code>
+     * @return The userPool.
+     */
+    @java.lang.Override
+    public java.lang.String getUserPool() {
+      java.lang.Object ref = userPool_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userPool_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string user_pool = 3;</code>
+     * @return The bytes for userPool.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserPoolBytes() {
+      java.lang.Object ref = userPool_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userPool_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userPool_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userPool_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userPool_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userPool_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse)) {
+        return super.equals(obj);
+      }
+      com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse other = (com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getUserId()
+          .equals(other.getUserId())) return false;
+      if (!getUserPool()
+          .equals(other.getUserPool())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUserId().hashCode();
+      hash = (37 * hash) + USER_POOL_FIELD_NUMBER;
+      hash = (53 * hash) + getUserPool().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code contextdomain_transaction.ContextDomainTransactionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:contextdomain_transaction.ContextDomainTransactionResponse)
+        com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.soustify.contextdomain_transaction.ContextDomainTransaction.internal_static_contextdomain_transaction_ContextDomainTransactionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.soustify.contextdomain_transaction.ContextDomainTransaction.internal_static_contextdomain_transaction_ContextDomainTransactionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse.class, com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse.Builder.class);
+      }
+
+      // Construct using com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        userId_ = "";
+        userPool_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.soustify.contextdomain_transaction.ContextDomainTransaction.internal_static_contextdomain_transaction_ContextDomainTransactionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse getDefaultInstanceForType() {
+        return com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse build() {
+        com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse buildPartial() {
+        com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse result = new com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.userId_ = userId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.userPool_ = userPool_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse) {
+          return mergeFrom((com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse other) {
+        if (other == com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getUserId().isEmpty()) {
+          userId_ = other.userId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getUserPool().isEmpty()) {
+          userPool_ = other.userPool_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                userId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                userPool_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userId_ = "";
+      /**
+       * <code>string user_id = 2;</code>
+       * @return The userId.
+       */
+      public java.lang.String getUserId() {
+        java.lang.Object ref = userId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 2;</code>
+       * @return The bytes for userId.
+       */
+      public com.google.protobuf.ByteString
+          getUserIdBytes() {
+        java.lang.Object ref = userId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 2;</code>
+       * @param value The userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserId() {
+        userId_ = getDefaultInstance().getUserId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 2;</code>
+       * @param value The bytes for userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userPool_ = "";
+      /**
+       * <code>string user_pool = 3;</code>
+       * @return The userPool.
+       */
+      public java.lang.String getUserPool() {
+        java.lang.Object ref = userPool_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userPool_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string user_pool = 3;</code>
+       * @return The bytes for userPool.
+       */
+      public com.google.protobuf.ByteString
+          getUserPoolBytes() {
+        java.lang.Object ref = userPool_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userPool_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string user_pool = 3;</code>
+       * @param value The userPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserPool(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userPool_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_pool = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserPool() {
+        userPool_ = getDefaultInstance().getUserPool();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_pool = 3;</code>
+       * @param value The bytes for userPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserPoolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userPool_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:contextdomain_transaction.ContextDomainTransactionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:contextdomain_transaction.ContextDomainTransactionResponse)
+    private static final com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse();
+    }
+
+    public static com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContextDomainTransactionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ContextDomainTransactionResponse>() {
+      @java.lang.Override
+      public ContextDomainTransactionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContextDomainTransactionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContextDomainTransactionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_contextdomain_transaction_ContextDomainTransactionRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_contextdomain_transaction_ContextDomainTransactionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_contextdomain_transaction_ContextDomainTransactionResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_contextdomain_transaction_ContextDomainTransactionResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -885,15 +1741,19 @@ public final class ContextDomainTransaction {
       "f/timestamp.proto\032\034google/protobuf/struc" +
       "t.proto\"n\n\037ContextDomainTransactionReque" +
       "st\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\031\n\007user_id\030\002 \001(" +
-      "\tB\010\372B\005r\003\260\001\001\022\032\n\tuser_pool\030\003 \001(\tB\007\372B\004r\002\020\n2" +
-      "\212\001\n\037ContextDomainTransactionService\022g\n\006C" +
-      "reate\022:.contextdomain_transaction.Contex" +
-      "tDomainTransactionRequest\032\037.output.Persi" +
-      "stenceDataResponse(\001B\214\001\n&com.soustify.co" +
-      "ntextdomain_transactionZbgithub.com/sous" +
-      "tify/data-gateway-buffer-go/pkg/contextd" +
-      "omain_transaction;contextdomain_transact" +
-      "ionb\006proto3"
+      "\tB\010\372B\005r\003\260\001\001\022\032\n\tuser_pool\030\003 \001(\tB\007\372B\004r\002\020\n\"" +
+      "R\n ContextDomainTransactionResponse\022\n\n\002i" +
+      "d\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\021\n\tuser_pool\030\003 " +
+      "\001(\t2\346\001\n\037ContextDomainTransactionService\022" +
+      "g\n\006Create\022:.contextdomain_transaction.Co" +
+      "ntextDomainTransactionRequest\032\037.output.P" +
+      "ersistenceDataResponse(\001\022Z\n\007FindOne\022\022.in" +
+      "put.UUIDRequest\032;.contextdomain_transact" +
+      "ion.ContextDomainTransactionResponseB\214\001\n" +
+      "&com.soustify.contextdomain_transactionZ" +
+      "bgithub.com/soustify/data-gateway-buffer" +
+      "-go/pkg/contextdomain_transaction;contex" +
+      "tdomain_transactionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -909,6 +1769,12 @@ public final class ContextDomainTransaction {
     internal_static_contextdomain_transaction_ContextDomainTransactionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_contextdomain_transaction_ContextDomainTransactionRequest_descriptor,
+        new java.lang.String[] { "Id", "UserId", "UserPool", });
+    internal_static_contextdomain_transaction_ContextDomainTransactionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_contextdomain_transaction_ContextDomainTransactionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_contextdomain_transaction_ContextDomainTransactionResponse_descriptor,
         new java.lang.String[] { "Id", "UserId", "UserPool", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

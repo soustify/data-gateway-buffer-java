@@ -9,6 +9,7 @@ public class ContextDomainTransactionValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
 		if (clazz.equals(com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionRequest.class)) return new ContextDomainTransactionRequestValidator();
+		if (clazz.equals(com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse.class)) return new ContextDomainTransactionResponseValidator();
 		return null;
 	}
 
@@ -33,6 +34,30 @@ public class ContextDomainTransactionValidator {
 			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_transaction.ContextDomainTransactionRequest.user_id", proto.getUserId());
 	
 			io.envoyproxy.pgv.StringValidation.minLength(".contextdomain_transaction.ContextDomainTransactionRequest.user_pool", proto.getUserPool(), 10);
+	
+	
+	}
+}
+/**
+	 * Validates {@code ContextDomainTransactionResponse} protobuf objects.
+	 */
+	public static class ContextDomainTransactionResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse> {
+		
+	
+		
+	
+		
+	
+	
+	
+
+	public void assertValid(com.soustify.contextdomain_transaction.ContextDomainTransaction.ContextDomainTransactionResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	// no validation rules for Id
+
+	// no validation rules for UserId
+
+	// no validation rules for UserPool
+
 	
 	
 	}
