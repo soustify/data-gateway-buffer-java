@@ -9,6 +9,7 @@ public class ContextDomainTableDetailValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
 		if (clazz.equals(com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest.class)) return new RegistryEntityAuditRequestValidator();
+		if (clazz.equals(com.soustify.contextdomain_table.ContextDomainTableDetail.Changes.class)) return new ChangesValidator();
 		if (clazz.equals(com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest.class)) return new ContextDomainTableDetailRequestValidator();
 		return null;
 	}
@@ -39,6 +40,30 @@ public class ContextDomainTableDetailValidator {
 	}
 }
 /**
+	 * Validates {@code Changes} protobuf objects.
+	 */
+	public static class ChangesValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.contextdomain_table.ContextDomainTableDetail.Changes> {
+		
+	
+		
+	
+		
+	
+	
+	
+
+	public void assertValid(com.soustify.contextdomain_table.ContextDomainTableDetail.Changes proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	// no validation rules for Field
+
+	// no validation rules for Old
+
+	// no validation rules for New
+
+	
+	
+	}
+}
+/**
 	 * Validates {@code ContextDomainTableDetailRequest} protobuf objects.
 	 */
 	public static class ContextDomainTableDetailRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest> {
@@ -58,8 +83,6 @@ public class ContextDomainTableDetailValidator {
 		};
 	
 		
-		
-		
 	
 	
 	
@@ -76,14 +99,10 @@ public class ContextDomainTableDetailValidator {
 	
 			io.envoyproxy.pgv.CollectiveValidation.in(".contextdomain_table.ContextDomainTableDetailRequest.operation", proto.getOperation(), OPERATION__IN);
 	
-			io.envoyproxy.pgv.MapValidation.min(".contextdomain_table.ContextDomainTableDetailRequest.metadata", proto.getMetadataMap(), 1);
-			io.envoyproxy.pgv.MapValidation.validateParts(proto.getMetadataMap().keySet(), key -> {
+			io.envoyproxy.pgv.RepeatedValidation.forEach(proto.getMetadataList(), item -> {
 				
-			io.envoyproxy.pgv.StringValidation.minLength(".contextdomain_table.ContextDomainTableDetailRequest.metadata", key, 1);
-			});
-			io.envoyproxy.pgv.MapValidation.validateParts(proto.getMetadataMap().values(), value -> {
-				
-			io.envoyproxy.pgv.StringValidation.minLength(".contextdomain_table.ContextDomainTableDetailRequest.metadata", value, 1);
+			// Validate metadata
+			if (true) index.validatorFor(item).assertValid(item);
 			});
 	
 	
