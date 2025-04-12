@@ -193,6 +193,40 @@ public final class ContextDomainTableDetail {
      * @return The operation.
      */
     com.soustify.contextdomain_table.ContextDomainTableDetail.Operation getOperation();
+
+    /**
+     * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+     */
+    int getMetadataCount();
+    /**
+     * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+     */
+    boolean containsMetadata(
+        java.lang.String key);
+    /**
+     * Use {@link #getMetadataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getMetadata();
+    /**
+     * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getMetadataMap();
+    /**
+     * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+     */
+    /* nullable */
+java.lang.String getMetadataOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+     */
+    java.lang.String getMetadataOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code contextdomain_table.ContextDomainTableDetailRequest}
@@ -231,6 +265,18 @@ public final class ContextDomainTableDetail {
       return com.soustify.contextdomain_table.ContextDomainTableDetail.internal_static_contextdomain_table_ContextDomainTableDetailRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 6:
+          return internalGetMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -413,6 +459,85 @@ public final class ContextDomainTableDetail {
       return result == null ? com.soustify.contextdomain_table.ContextDomainTableDetail.Operation.UNRECOGNIZED : result;
     }
 
+    public static final int METADATA_FIELD_NUMBER = 6;
+    private static final class MetadataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.soustify.contextdomain_table.ContextDomainTableDetail.internal_static_contextdomain_table_ContextDomainTableDetailRequest_MetadataEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> metadata_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetMetadata() {
+      if (metadata_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MetadataDefaultEntryHolder.defaultEntry);
+      }
+      return metadata_;
+    }
+    public int getMetadataCount() {
+      return internalGetMetadata().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public boolean containsMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetMetadata().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMetadataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+      return getMetadataMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+      return internalGetMetadata().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+java.lang.String getMetadataOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMetadata().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.lang.String getMetadataOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMetadata().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -442,6 +567,12 @@ public final class ContextDomainTableDetail {
       if (operation_ != com.soustify.contextdomain_table.ContextDomainTableDetail.Operation.INSERT.getNumber()) {
         output.writeEnum(5, operation_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetMetadata(),
+          MetadataDefaultEntryHolder.defaultEntry,
+          6);
       getUnknownFields().writeTo(output);
     }
 
@@ -467,6 +598,16 @@ public final class ContextDomainTableDetail {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, operation_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetMetadata().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, metadata__);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -491,6 +632,8 @@ public final class ContextDomainTableDetail {
       if (!getEntityTable()
           .equals(other.getEntityTable())) return false;
       if (operation_ != other.operation_) return false;
+      if (!internalGetMetadata().equals(
+          other.internalGetMetadata())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -512,6 +655,10 @@ public final class ContextDomainTableDetail {
       hash = (53 * hash) + getEntityTable().hashCode();
       hash = (37 * hash) + OPERATION_FIELD_NUMBER;
       hash = (53 * hash) + operation_;
+      if (!internalGetMetadata().getMap().isEmpty()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMetadata().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -619,6 +766,28 @@ public final class ContextDomainTableDetail {
         return com.soustify.contextdomain_table.ContextDomainTableDetail.internal_static_contextdomain_table_ContextDomainTableDetailRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetMutableMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -646,6 +815,7 @@ public final class ContextDomainTableDetail {
         entityId_ = "";
         entityTable_ = "";
         operation_ = 0;
+        internalGetMutableMetadata().clear();
         return this;
       }
 
@@ -693,6 +863,10 @@ public final class ContextDomainTableDetail {
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.operation_ = operation_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.metadata_ = internalGetMetadata();
+          result.metadata_.makeImmutable();
         }
       }
 
@@ -763,6 +937,9 @@ public final class ContextDomainTableDetail {
         if (other.operation_ != 0) {
           setOperationValue(other.getOperationValue());
         }
+        internalGetMutableMetadata().mergeFrom(
+            other.internalGetMetadata());
+        bitField0_ |= 0x00000020;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -814,6 +991,15 @@ public final class ContextDomainTableDetail {
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
+              case 50: {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metadata__ = input.readMessage(
+                    MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMetadata().getMutableMap().put(
+                    metadata__.getKey(), metadata__.getValue());
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1171,6 +1357,133 @@ public final class ContextDomainTableDetail {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> metadata_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+          internalGetMetadata() {
+        if (metadata_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        return metadata_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+          internalGetMutableMetadata() {
+        if (metadata_ == null) {
+          metadata_ = com.google.protobuf.MapField.newMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        if (!metadata_.isMutable()) {
+          metadata_ = metadata_.copy();
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return metadata_;
+      }
+      public int getMetadataCount() {
+        return internalGetMetadata().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+       */
+      @java.lang.Override
+      public boolean containsMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetMetadata().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+        return getMetadataMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+        return internalGetMetadata().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          /* nullable */
+java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+       */
+      @java.lang.Override
+      public java.lang.String getMetadataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        internalGetMutableMetadata().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+       */
+      public Builder removeMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableMetadata().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+          getMutableMetadata() {
+        bitField0_ |= 0x00000020;
+        return internalGetMutableMetadata().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+       */
+      public Builder putMetadata(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMetadata().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 6 [(.validate.rules) = { ... }</code>
+       */
+      public Builder putAllMetadata(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableMetadata().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000020;
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1240,6 +1553,11 @@ public final class ContextDomainTableDetail {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_contextdomain_table_ContextDomainTableDetailRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_contextdomain_table_ContextDomainTableDetailRequest_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_contextdomain_table_ContextDomainTableDetailRequest_MetadataEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1253,20 +1571,24 @@ public final class ContextDomainTableDetail {
       "textdomain_table\032\013input.proto\032\014output.pr" +
       "oto\032\016validate.proto\032\037google/protobuf/tim" +
       "estamp.proto\032\034google/protobuf/struct.pro" +
-      "to\"\326\001\n\037ContextDomainTableDetailRequest\022\024" +
+      "to\"\363\002\n\037ContextDomainTableDetailRequest\022\024" +
       "\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022 \n\016transaction_id\030\002" +
       " \001(\tB\010\372B\005r\003\260\001\001\022\033\n\tentity_id\030\003 \001(\tB\010\372B\005r\003" +
       "\260\001\001\022\035\n\014entity_table\030\004 \001(\tB\007\372B\004r\002\020\n\022?\n\top" +
       "eration\030\005 \001(\0162\036.contextdomain_table.Oper" +
-      "ationB\014\372B\t\202\001\006\030\000\030\001\030\002*/\n\tOperation\022\n\n\006INSE" +
-      "RT\020\000\022\n\n\006UPDATE\020\001\022\n\n\006DELETE\020\0022\204\001\n\037Context" +
-      "DomainTableDetailService\022a\n\006Create\0224.con" +
-      "textdomain_table.ContextDomainTableDetai" +
-      "lRequest\032\037.output.PersistenceDataRespons" +
-      "e(\001Bz\n com.soustify.contextdomain_tableZ" +
-      "Vgithub.com/soustify/data-gateway-buffer" +
-      "-go/pkg/contextdomain_table;contextdomai" +
-      "n_tableb\006proto3"
+      "ationB\014\372B\t\202\001\006\030\000\030\001\030\002\022j\n\010metadata\030\006 \003(\0132B." +
+      "contextdomain_table.ContextDomainTableDe" +
+      "tailRequest.MetadataEntryB\024\372B\021\232\001\016\010\001\"\004r\002\020" +
+      "\001*\004r\002\020\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001*/\n\tOperation\022\n\n\006INSERT\020" +
+      "\000\022\n\n\006UPDATE\020\001\022\n\n\006DELETE\020\0022\204\001\n\037ContextDom" +
+      "ainTableDetailService\022a\n\006Create\0224.contex" +
+      "tdomain_table.ContextDomainTableDetailRe" +
+      "quest\032\037.output.PersistenceDataResponse(\001" +
+      "Bz\n com.soustify.contextdomain_tableZVgi" +
+      "thub.com/soustify/data-gateway-buffer-go" +
+      "/pkg/contextdomain_table;contextdomain_t" +
+      "ableb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1282,7 +1604,13 @@ public final class ContextDomainTableDetail {
     internal_static_contextdomain_table_ContextDomainTableDetailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_contextdomain_table_ContextDomainTableDetailRequest_descriptor,
-        new java.lang.String[] { "Id", "TransactionId", "EntityId", "EntityTable", "Operation", });
+        new java.lang.String[] { "Id", "TransactionId", "EntityId", "EntityTable", "Operation", "Metadata", });
+    internal_static_contextdomain_table_ContextDomainTableDetailRequest_MetadataEntry_descriptor =
+      internal_static_contextdomain_table_ContextDomainTableDetailRequest_descriptor.getNestedTypes().get(0);
+    internal_static_contextdomain_table_ContextDomainTableDetailRequest_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_contextdomain_table_ContextDomainTableDetailRequest_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);

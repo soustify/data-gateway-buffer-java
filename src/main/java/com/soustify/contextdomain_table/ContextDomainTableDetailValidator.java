@@ -32,6 +32,10 @@ public class ContextDomainTableDetailValidator {
 			com.soustify.contextdomain_table.ContextDomainTableDetail.Operation.forNumber(2),
 		};
 	
+		
+		
+		
+	
 	
 	
 
@@ -46,6 +50,16 @@ public class ContextDomainTableDetailValidator {
 			io.envoyproxy.pgv.StringValidation.minLength(".contextdomain_table.ContextDomainTableDetailRequest.entity_table", proto.getEntityTable(), 10);
 	
 			io.envoyproxy.pgv.CollectiveValidation.in(".contextdomain_table.ContextDomainTableDetailRequest.operation", proto.getOperation(), OPERATION__IN);
+	
+			io.envoyproxy.pgv.MapValidation.min(".contextdomain_table.ContextDomainTableDetailRequest.metadata", proto.getMetadataMap(), 1);
+			io.envoyproxy.pgv.MapValidation.validateParts(proto.getMetadataMap().keySet(), key -> {
+				
+			io.envoyproxy.pgv.StringValidation.minLength(".contextdomain_table.ContextDomainTableDetailRequest.metadata", key, 1);
+			});
+			io.envoyproxy.pgv.MapValidation.validateParts(proto.getMetadataMap().values(), value -> {
+				
+			io.envoyproxy.pgv.StringValidation.minLength(".contextdomain_table.ContextDomainTableDetailRequest.metadata", value, 1);
+			});
 	
 	
 	}
