@@ -46,6 +46,37 @@ public final class ContextDomainTableDetailServiceGrpc {
     return getCreateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest,
+      com.soustify.output.Output.PersistenceDataResponse> getRegisterDetailsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RegisterDetails",
+      requestType = com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest.class,
+      responseType = com.soustify.output.Output.PersistenceDataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest,
+      com.soustify.output.Output.PersistenceDataResponse> getRegisterDetailsMethod() {
+    io.grpc.MethodDescriptor<com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest, com.soustify.output.Output.PersistenceDataResponse> getRegisterDetailsMethod;
+    if ((getRegisterDetailsMethod = ContextDomainTableDetailServiceGrpc.getRegisterDetailsMethod) == null) {
+      synchronized (ContextDomainTableDetailServiceGrpc.class) {
+        if ((getRegisterDetailsMethod = ContextDomainTableDetailServiceGrpc.getRegisterDetailsMethod) == null) {
+          ContextDomainTableDetailServiceGrpc.getRegisterDetailsMethod = getRegisterDetailsMethod =
+              io.grpc.MethodDescriptor.<com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisterDetails"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.soustify.output.Output.PersistenceDataResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ContextDomainTableDetailServiceMethodDescriptorSupplier("RegisterDetails"))
+              .build();
+        }
+      }
+    }
+    return getRegisterDetailsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +131,13 @@ public final class ContextDomainTableDetailServiceGrpc {
         io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getCreateMethod(), responseObserver);
     }
+
+    /**
+     */
+    default io.grpc.stub.StreamObserver<com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest> registerDetails(
+        io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getRegisterDetailsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -135,6 +173,14 @@ public final class ContextDomainTableDetailServiceGrpc {
         io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest> registerDetails(
+        io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getRegisterDetailsMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -173,6 +219,7 @@ public final class ContextDomainTableDetailServiceGrpc {
   }
 
   private static final int METHODID_CREATE = 0;
+  private static final int METHODID_REGISTER_DETAILS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -204,6 +251,9 @@ public final class ContextDomainTableDetailServiceGrpc {
         case METHODID_CREATE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.create(
               (io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse>) responseObserver);
+        case METHODID_REGISTER_DETAILS:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.registerDetails(
+              (io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -219,6 +269,13 @@ public final class ContextDomainTableDetailServiceGrpc {
               com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest,
               com.soustify.output.Output.PersistenceDataResponse>(
                 service, METHODID_CREATE)))
+        .addMethod(
+          getRegisterDetailsMethod(),
+          io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+            new MethodHandlers<
+              com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest,
+              com.soustify.output.Output.PersistenceDataResponse>(
+                service, METHODID_REGISTER_DETAILS)))
         .build();
   }
 
@@ -268,6 +325,7 @@ public final class ContextDomainTableDetailServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ContextDomainTableDetailServiceFileDescriptorSupplier())
               .addMethod(getCreateMethod())
+              .addMethod(getRegisterDetailsMethod())
               .build();
         }
       }

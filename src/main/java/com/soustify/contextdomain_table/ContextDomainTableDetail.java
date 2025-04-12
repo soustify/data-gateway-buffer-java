@@ -131,6 +131,857 @@ public final class ContextDomainTableDetail {
     // @@protoc_insertion_point(enum_scope:contextdomain_table.Operation)
   }
 
+  public interface RegistryEntityAuditRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:contextdomain_table.RegistryEntityAuditRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string entity_table = 1;</code>
+     * @return The entityTable.
+     */
+    java.lang.String getEntityTable();
+    /**
+     * <code>string entity_table = 1;</code>
+     * @return The bytes for entityTable.
+     */
+    com.google.protobuf.ByteString
+        getEntityTableBytes();
+
+    /**
+     * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+     * @return The entityId.
+     */
+    java.lang.String getEntityId();
+    /**
+     * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+     * @return The bytes for entityId.
+     */
+    com.google.protobuf.ByteString
+        getEntityIdBytes();
+
+    /**
+     * <code>string context_detail_id = 3 [(.validate.rules) = { ... }</code>
+     * @return The contextDetailId.
+     */
+    java.lang.String getContextDetailId();
+    /**
+     * <code>string context_detail_id = 3 [(.validate.rules) = { ... }</code>
+     * @return The bytes for contextDetailId.
+     */
+    com.google.protobuf.ByteString
+        getContextDetailIdBytes();
+  }
+  /**
+   * Protobuf type {@code contextdomain_table.RegistryEntityAuditRequest}
+   */
+  public static final class RegistryEntityAuditRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:contextdomain_table.RegistryEntityAuditRequest)
+      RegistryEntityAuditRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegistryEntityAuditRequest.newBuilder() to construct.
+    private RegistryEntityAuditRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegistryEntityAuditRequest() {
+      entityTable_ = "";
+      entityId_ = "";
+      contextDetailId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegistryEntityAuditRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.soustify.contextdomain_table.ContextDomainTableDetail.internal_static_contextdomain_table_RegistryEntityAuditRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.soustify.contextdomain_table.ContextDomainTableDetail.internal_static_contextdomain_table_RegistryEntityAuditRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest.class, com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest.Builder.class);
+    }
+
+    public static final int ENTITY_TABLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object entityTable_ = "";
+    /**
+     * <code>string entity_table = 1;</code>
+     * @return The entityTable.
+     */
+    @java.lang.Override
+    public java.lang.String getEntityTable() {
+      java.lang.Object ref = entityTable_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        entityTable_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string entity_table = 1;</code>
+     * @return The bytes for entityTable.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEntityTableBytes() {
+      java.lang.Object ref = entityTable_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        entityTable_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTITY_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object entityId_ = "";
+    /**
+     * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+     * @return The entityId.
+     */
+    @java.lang.Override
+    public java.lang.String getEntityId() {
+      java.lang.Object ref = entityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        entityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+     * @return The bytes for entityId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEntityIdBytes() {
+      java.lang.Object ref = entityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        entityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTEXT_DETAIL_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contextDetailId_ = "";
+    /**
+     * <code>string context_detail_id = 3 [(.validate.rules) = { ... }</code>
+     * @return The contextDetailId.
+     */
+    @java.lang.Override
+    public java.lang.String getContextDetailId() {
+      java.lang.Object ref = contextDetailId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contextDetailId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string context_detail_id = 3 [(.validate.rules) = { ... }</code>
+     * @return The bytes for contextDetailId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContextDetailIdBytes() {
+      java.lang.Object ref = contextDetailId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contextDetailId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityTable_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entityTable_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, entityId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contextDetailId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, contextDetailId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityTable_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, entityTable_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, entityId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contextDetailId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, contextDetailId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest)) {
+        return super.equals(obj);
+      }
+      com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest other = (com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest) obj;
+
+      if (!getEntityTable()
+          .equals(other.getEntityTable())) return false;
+      if (!getEntityId()
+          .equals(other.getEntityId())) return false;
+      if (!getContextDetailId()
+          .equals(other.getContextDetailId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENTITY_TABLE_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityTable().hashCode();
+      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityId().hashCode();
+      hash = (37 * hash) + CONTEXT_DETAIL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getContextDetailId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code contextdomain_table.RegistryEntityAuditRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:contextdomain_table.RegistryEntityAuditRequest)
+        com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.soustify.contextdomain_table.ContextDomainTableDetail.internal_static_contextdomain_table_RegistryEntityAuditRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.soustify.contextdomain_table.ContextDomainTableDetail.internal_static_contextdomain_table_RegistryEntityAuditRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest.class, com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest.Builder.class);
+      }
+
+      // Construct using com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        entityTable_ = "";
+        entityId_ = "";
+        contextDetailId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.soustify.contextdomain_table.ContextDomainTableDetail.internal_static_contextdomain_table_RegistryEntityAuditRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest getDefaultInstanceForType() {
+        return com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest build() {
+        com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest buildPartial() {
+        com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest result = new com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entityTable_ = entityTable_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.entityId_ = entityId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.contextDetailId_ = contextDetailId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest) {
+          return mergeFrom((com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest other) {
+        if (other == com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest.getDefaultInstance()) return this;
+        if (!other.getEntityTable().isEmpty()) {
+          entityTable_ = other.entityTable_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getEntityId().isEmpty()) {
+          entityId_ = other.entityId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getContextDetailId().isEmpty()) {
+          contextDetailId_ = other.contextDetailId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                entityTable_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                entityId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                contextDetailId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object entityTable_ = "";
+      /**
+       * <code>string entity_table = 1;</code>
+       * @return The entityTable.
+       */
+      public java.lang.String getEntityTable() {
+        java.lang.Object ref = entityTable_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          entityTable_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string entity_table = 1;</code>
+       * @return The bytes for entityTable.
+       */
+      public com.google.protobuf.ByteString
+          getEntityTableBytes() {
+        java.lang.Object ref = entityTable_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          entityTable_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string entity_table = 1;</code>
+       * @param value The entityTable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityTable(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        entityTable_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string entity_table = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityTable() {
+        entityTable_ = getDefaultInstance().getEntityTable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string entity_table = 1;</code>
+       * @param value The bytes for entityTable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityTableBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        entityTable_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object entityId_ = "";
+      /**
+       * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+       * @return The entityId.
+       */
+      public java.lang.String getEntityId() {
+        java.lang.Object ref = entityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          entityId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+       * @return The bytes for entityId.
+       */
+      public com.google.protobuf.ByteString
+          getEntityIdBytes() {
+        java.lang.Object ref = entityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          entityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+       * @param value The entityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        entityId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityId() {
+        entityId_ = getDefaultInstance().getEntityId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string entity_id = 2 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for entityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        entityId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contextDetailId_ = "";
+      /**
+       * <code>string context_detail_id = 3 [(.validate.rules) = { ... }</code>
+       * @return The contextDetailId.
+       */
+      public java.lang.String getContextDetailId() {
+        java.lang.Object ref = contextDetailId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contextDetailId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string context_detail_id = 3 [(.validate.rules) = { ... }</code>
+       * @return The bytes for contextDetailId.
+       */
+      public com.google.protobuf.ByteString
+          getContextDetailIdBytes() {
+        java.lang.Object ref = contextDetailId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contextDetailId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string context_detail_id = 3 [(.validate.rules) = { ... }</code>
+       * @param value The contextDetailId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContextDetailId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contextDetailId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string context_detail_id = 3 [(.validate.rules) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContextDetailId() {
+        contextDetailId_ = getDefaultInstance().getContextDetailId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string context_detail_id = 3 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for contextDetailId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContextDetailIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contextDetailId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:contextdomain_table.RegistryEntityAuditRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:contextdomain_table.RegistryEntityAuditRequest)
+    private static final com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest();
+    }
+
+    public static com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegistryEntityAuditRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RegistryEntityAuditRequest>() {
+      @java.lang.Override
+      public RegistryEntityAuditRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegistryEntityAuditRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegistryEntityAuditRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ContextDomainTableDetailRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:contextdomain_table.ContextDomainTableDetailRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -1549,6 +2400,11 @@ java.lang.String defaultValue) {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_contextdomain_table_RegistryEntityAuditRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_contextdomain_table_RegistryEntityAuditRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_contextdomain_table_ContextDomainTableDetailRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -1571,24 +2427,29 @@ java.lang.String defaultValue) {
       "textdomain_table\032\013input.proto\032\014output.pr" +
       "oto\032\016validate.proto\032\037google/protobuf/tim" +
       "estamp.proto\032\034google/protobuf/struct.pro" +
-      "to\"\363\002\n\037ContextDomainTableDetailRequest\022\024" +
-      "\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022 \n\016transaction_id\030\002" +
-      " \001(\tB\010\372B\005r\003\260\001\001\022\033\n\tentity_id\030\003 \001(\tB\010\372B\005r\003" +
-      "\260\001\001\022\035\n\014entity_table\030\004 \001(\tB\007\372B\004r\002\020\n\022?\n\top" +
-      "eration\030\005 \001(\0162\036.contextdomain_table.Oper" +
-      "ationB\014\372B\t\202\001\006\030\000\030\001\030\002\022j\n\010metadata\030\006 \003(\0132B." +
-      "contextdomain_table.ContextDomainTableDe" +
-      "tailRequest.MetadataEntryB\024\372B\021\232\001\016\010\001\"\004r\002\020" +
-      "\001*\004r\002\020\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001*/\n\tOperation\022\n\n\006INSERT\020" +
-      "\000\022\n\n\006UPDATE\020\001\022\n\n\006DELETE\020\0022\204\001\n\037ContextDom" +
-      "ainTableDetailService\022a\n\006Create\0224.contex" +
-      "tdomain_table.ContextDomainTableDetailRe" +
-      "quest\032\037.output.PersistenceDataResponse(\001" +
-      "Bz\n com.soustify.contextdomain_tableZVgi" +
-      "thub.com/soustify/data-gateway-buffer-go" +
-      "/pkg/contextdomain_table;contextdomain_t" +
-      "ableb\006proto3"
+      "to\"t\n\032RegistryEntityAuditRequest\022\024\n\014enti" +
+      "ty_table\030\001 \001(\t\022\033\n\tentity_id\030\002 \001(\tB\010\372B\005r\003" +
+      "\260\001\001\022#\n\021context_detail_id\030\003 \001(\tB\010\372B\005r\003\260\001\001" +
+      "\"\363\002\n\037ContextDomainTableDetailRequest\022\024\n\002" +
+      "id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022 \n\016transaction_id\030\002 \001" +
+      "(\tB\010\372B\005r\003\260\001\001\022\033\n\tentity_id\030\003 \001(\tB\010\372B\005r\003\260\001" +
+      "\001\022\035\n\014entity_table\030\004 \001(\tB\007\372B\004r\002\020\n\022?\n\toper" +
+      "ation\030\005 \001(\0162\036.contextdomain_table.Operat" +
+      "ionB\014\372B\t\202\001\006\030\000\030\001\030\002\022j\n\010metadata\030\006 \003(\0132B.co" +
+      "ntextdomain_table.ContextDomainTableDeta" +
+      "ilRequest.MetadataEntryB\024\372B\021\232\001\016\010\001\"\004r\002\020\001*" +
+      "\004r\002\020\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001*/\n\tOperation\022\n\n\006INSERT\020\000\022" +
+      "\n\n\006UPDATE\020\001\022\n\n\006DELETE\020\0022\353\001\n\037ContextDomai" +
+      "nTableDetailService\022a\n\006Create\0224.contextd" +
+      "omain_table.ContextDomainTableDetailRequ" +
+      "est\032\037.output.PersistenceDataResponse(\001\022e" +
+      "\n\017RegisterDetails\022/.contextdomain_table." +
+      "RegistryEntityAuditRequest\032\037.output.Pers" +
+      "istenceDataResponse(\001Bz\n com.soustify.co" +
+      "ntextdomain_tableZVgithub.com/soustify/d" +
+      "ata-gateway-buffer-go/pkg/contextdomain_" +
+      "table;contextdomain_tableb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1599,8 +2460,14 @@ java.lang.String defaultValue) {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.StructProto.getDescriptor(),
         });
-    internal_static_contextdomain_table_ContextDomainTableDetailRequest_descriptor =
+    internal_static_contextdomain_table_RegistryEntityAuditRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_contextdomain_table_RegistryEntityAuditRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_contextdomain_table_RegistryEntityAuditRequest_descriptor,
+        new java.lang.String[] { "EntityTable", "EntityId", "ContextDetailId", });
+    internal_static_contextdomain_table_ContextDomainTableDetailRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_contextdomain_table_ContextDomainTableDetailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_contextdomain_table_ContextDomainTableDetailRequest_descriptor,

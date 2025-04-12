@@ -8,11 +8,36 @@ package com.soustify.contextdomain_table;
 public class ContextDomainTableDetailValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
+		if (clazz.equals(com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest.class)) return new RegistryEntityAuditRequestValidator();
 		if (clazz.equals(com.soustify.contextdomain_table.ContextDomainTableDetail.ContextDomainTableDetailRequest.class)) return new ContextDomainTableDetailRequestValidator();
 		return null;
 	}
 
 
+/**
+	 * Validates {@code RegistryEntityAuditRequest} protobuf objects.
+	 */
+	public static class RegistryEntityAuditRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest> {
+		
+	
+		
+	
+		
+	
+	
+	
+
+	public void assertValid(com.soustify.contextdomain_table.ContextDomainTableDetail.RegistryEntityAuditRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	// no validation rules for EntityTable
+
+	
+			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_table.RegistryEntityAuditRequest.entity_id", proto.getEntityId());
+	
+			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_table.RegistryEntityAuditRequest.context_detail_id", proto.getContextDetailId());
+	
+	
+	}
+}
 /**
 	 * Validates {@code ContextDomainTableDetailRequest} protobuf objects.
 	 */
