@@ -51,6 +51,13 @@ public class ExampleValidator {
 	
 		
 	
+		
+		private final com.soustify.input.Input.StatusRequest[] EN_STATUS__IN = new com.soustify.input.Input.StatusRequest[]{
+			com.soustify.input.Input.StatusRequest.forNumber(0),
+			com.soustify.input.Input.StatusRequest.forNumber(1),
+			com.soustify.input.Input.StatusRequest.forNumber(2),
+		};
+	
 	
 	
 
@@ -92,6 +99,8 @@ public class ExampleValidator {
 			if (proto.hasMetadata()) index.validatorFor(proto.getMetadata()).assertValid(proto.getMetadata());
 	// no validation rules for Public
 
+	
+			io.envoyproxy.pgv.CollectiveValidation.in(".example.ExampleRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
 	
 	}

@@ -95,7 +95,7 @@ public class ContextDomainTableDetailValidator {
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".contextdomain_table.ContextDomainTableDetailRequest.entity_id", proto.getEntityId());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".contextdomain_table.ContextDomainTableDetailRequest.entity_table", proto.getEntityTable(), 10);
+			io.envoyproxy.pgv.StringValidation.minLength(".contextdomain_table.ContextDomainTableDetailRequest.entity_table", proto.getEntityTable(), 1);
 	
 			io.envoyproxy.pgv.CollectiveValidation.in(".contextdomain_table.ContextDomainTableDetailRequest.operation", proto.getOperation(), OPERATION__IN);
 	

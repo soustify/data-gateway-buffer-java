@@ -14,114 +14,6 @@ public final class Example {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  /**
-   * Protobuf enum {@code example.StatusEnumResponse}
-   */
-  public enum StatusEnumResponse
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>ENABLED = 0;</code>
-     */
-    ENABLED(0),
-    /**
-     * <code>DISABLED = 1;</code>
-     */
-    DISABLED(1),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>ENABLED = 0;</code>
-     */
-    public static final int ENABLED_VALUE = 0;
-    /**
-     * <code>DISABLED = 1;</code>
-     */
-    public static final int DISABLED_VALUE = 1;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static StatusEnumResponse valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static StatusEnumResponse forNumber(int value) {
-      switch (value) {
-        case 0: return ENABLED;
-        case 1: return DISABLED;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<StatusEnumResponse>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        StatusEnumResponse> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<StatusEnumResponse>() {
-            public StatusEnumResponse findValueByNumber(int number) {
-              return StatusEnumResponse.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.soustify.example.Example.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final StatusEnumResponse[] VALUES = values();
-
-    public static StatusEnumResponse valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private StatusEnumResponse(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:example.StatusEnumResponse)
-  }
-
   public interface ExampleRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:example.ExampleRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -282,6 +174,17 @@ public final class Example {
      * @return The public.
      */
     boolean getPublic();
+
+    /**
+     * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
+     * @return The enum numeric value on the wire for enStatus.
+     */
+    int getEnStatusValue();
+    /**
+     * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
+     * @return The enStatus.
+     */
+    com.soustify.input.Input.StatusRequest getEnStatus();
   }
   /**
    * Protobuf type {@code example.ExampleRequest}
@@ -303,6 +206,7 @@ public final class Example {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       email_ = "";
       phone_ = "";
+      enStatus_ = 0;
     }
 
     @java.lang.Override
@@ -707,6 +611,24 @@ public final class Example {
       return public_;
     }
 
+    public static final int EN_STATUS_FIELD_NUMBER = 15;
+    private int enStatus_ = 0;
+    /**
+     * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
+     * @return The enum numeric value on the wire for enStatus.
+     */
+    @java.lang.Override public int getEnStatusValue() {
+      return enStatus_;
+    }
+    /**
+     * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
+     * @return The enStatus.
+     */
+    @java.lang.Override public com.soustify.input.Input.StatusRequest getEnStatus() {
+      com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
+      return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -762,6 +684,9 @@ public final class Example {
       }
       if (public_ != false) {
         output.writeBool(14, public_);
+      }
+      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
+        output.writeEnum(15, enStatus_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -826,6 +751,10 @@ public final class Example {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, public_);
       }
+      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(15, enStatus_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -878,6 +807,7 @@ public final class Example {
       }
       if (getPublic()
           != other.getPublic()) return false;
+      if (enStatus_ != other.enStatus_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -927,6 +857,8 @@ public final class Example {
       hash = (37 * hash) + PUBLIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPublic());
+      hash = (37 * hash) + EN_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + enStatus_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1079,6 +1011,7 @@ public final class Example {
           metadataBuilder_ = null;
         }
         public_ = false;
+        enStatus_ = 0;
         return this;
       }
 
@@ -1163,6 +1096,9 @@ public final class Example {
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.public_ = public_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.enStatus_ = enStatus_;
         }
       }
 
@@ -1271,6 +1207,9 @@ public final class Example {
         if (other.getPublic() != false) {
           setPublic(other.getPublic());
         }
+        if (other.enStatus_ != 0) {
+          setEnStatusValue(other.getEnStatusValue());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1372,6 +1311,11 @@ public final class Example {
                 bitField0_ |= 0x00002000;
                 break;
               } // case 112
+              case 120: {
+                enStatus_ = input.readEnum();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 120
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2322,6 +2266,59 @@ public final class Example {
         onChanged();
         return this;
       }
+
+      private int enStatus_ = 0;
+      /**
+       * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
+       * @return The enum numeric value on the wire for enStatus.
+       */
+      @java.lang.Override public int getEnStatusValue() {
+        return enStatus_;
+      }
+      /**
+       * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
+       * @param value The enum numeric value on the wire for enStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnStatusValue(int value) {
+        enStatus_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
+       * @return The enStatus.
+       */
+      @java.lang.Override
+      public com.soustify.input.Input.StatusRequest getEnStatus() {
+        com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
+        return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
+       * @param value The enStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnStatus(com.soustify.input.Input.StatusRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00004000;
+        enStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnStatus() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        enStatus_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2593,15 +2590,15 @@ public final class Example {
     com.google.protobuf.TimestampOrBuilder getLastLoginOrBuilder();
 
     /**
-     * <code>.example.StatusEnumResponse status = 18;</code>
+     * <code>.output.StatusResponse status = 18;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.example.StatusEnumResponse status = 18;</code>
+     * <code>.output.StatusResponse status = 18;</code>
      * @return The status.
      */
-    com.soustify.example.Example.StatusEnumResponse getStatus();
+    com.soustify.output.Output.StatusResponse getStatus();
   }
   /**
    * Protobuf type {@code example.ExampleResponse}
@@ -3109,19 +3106,19 @@ public final class Example {
     public static final int STATUS_FIELD_NUMBER = 18;
     private int status_ = 0;
     /**
-     * <code>.example.StatusEnumResponse status = 18;</code>
+     * <code>.output.StatusResponse status = 18;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.example.StatusEnumResponse status = 18;</code>
+     * <code>.output.StatusResponse status = 18;</code>
      * @return The status.
      */
-    @java.lang.Override public com.soustify.example.Example.StatusEnumResponse getStatus() {
-      com.soustify.example.Example.StatusEnumResponse result = com.soustify.example.Example.StatusEnumResponse.forNumber(status_);
-      return result == null ? com.soustify.example.Example.StatusEnumResponse.UNRECOGNIZED : result;
+    @java.lang.Override public com.soustify.output.Output.StatusResponse getStatus() {
+      com.soustify.output.Output.StatusResponse result = com.soustify.output.Output.StatusResponse.forNumber(status_);
+      return result == null ? com.soustify.output.Output.StatusResponse.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3189,7 +3186,7 @@ public final class Example {
       if (lastLogin_ != null) {
         output.writeMessage(17, getLastLogin());
       }
-      if (status_ != com.soustify.example.Example.StatusEnumResponse.ENABLED.getNumber()) {
+      if (status_ != com.soustify.output.Output.StatusResponse.ENABLED.getNumber()) {
         output.writeEnum(18, status_);
       }
       getUnknownFields().writeTo(output);
@@ -3267,7 +3264,7 @@ public final class Example {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getLastLogin());
       }
-      if (status_ != com.soustify.example.Example.StatusEnumResponse.ENABLED.getNumber()) {
+      if (status_ != com.soustify.output.Output.StatusResponse.ENABLED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(18, status_);
       }
@@ -5229,14 +5226,14 @@ public final class Example {
 
       private int status_ = 0;
       /**
-       * <code>.example.StatusEnumResponse status = 18;</code>
+       * <code>.output.StatusResponse status = 18;</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.example.StatusEnumResponse status = 18;</code>
+       * <code>.output.StatusResponse status = 18;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
@@ -5247,20 +5244,20 @@ public final class Example {
         return this;
       }
       /**
-       * <code>.example.StatusEnumResponse status = 18;</code>
+       * <code>.output.StatusResponse status = 18;</code>
        * @return The status.
        */
       @java.lang.Override
-      public com.soustify.example.Example.StatusEnumResponse getStatus() {
-        com.soustify.example.Example.StatusEnumResponse result = com.soustify.example.Example.StatusEnumResponse.forNumber(status_);
-        return result == null ? com.soustify.example.Example.StatusEnumResponse.UNRECOGNIZED : result;
+      public com.soustify.output.Output.StatusResponse getStatus() {
+        com.soustify.output.Output.StatusResponse result = com.soustify.output.Output.StatusResponse.forNumber(status_);
+        return result == null ? com.soustify.output.Output.StatusResponse.UNRECOGNIZED : result;
       }
       /**
-       * <code>.example.StatusEnumResponse status = 18;</code>
+       * <code>.output.StatusResponse status = 18;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(com.soustify.example.Example.StatusEnumResponse value) {
+      public Builder setStatus(com.soustify.output.Output.StatusResponse value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -5270,7 +5267,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>.example.StatusEnumResponse status = 18;</code>
+       * <code>.output.StatusResponse status = 18;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -5365,7 +5362,7 @@ public final class Example {
       "\n\rexample.proto\022\007example\032\013input.proto\032\014o" +
       "utput.proto\032\016validate.proto\032\037google/prot" +
       "obuf/timestamp.proto\032\034google/protobuf/st" +
-      "ruct.proto\"\277\003\n\016ExampleRequest\022\024\n\002id\030\001 \001(" +
+      "ruct.proto\"\366\003\n\016ExampleRequest\022\024\n\002id\030\001 \001(" +
       "\tB\010\372B\005r\003\260\001\001\022\025\n\004name\030\002 \001(\tB\007\372B\004r\002\020\001\022\034\n\013de" +
       "scription\030\003 \001(\tB\007\372B\004r\002\020\003\0227\n\tborn_date\030\004 " +
       "\001(\0132\032.google.protobuf.TimestampB\010\372B\005\262\001\002\010" +
@@ -5376,36 +5373,36 @@ public final class Example {
       "B\016\372B\013\022\t)\000\000\000\000\000\000\000\000\022\026\n\005email\030\013 \001(\tB\007\372B\004r\002`\001" +
       "\022\'\n\005phone\030\014 \001(\tB\030\372B\025r\0232\021^[0-9\\-\\+]{9,20}" +
       "$\022)\n\010metadata\030\r \001(\0132\027.google.protobuf.St" +
-      "ruct\022\016\n\006public\030\016 \001(\010\"\350\003\n\017ExampleResponse" +
-      "\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013descriptio" +
-      "n\030\003 \001(\t\022-\n\tborn_date\030\004 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022\016\n\006public\030\005 \001(\010\022\r\n\005price\030" +
-      "\006 \001(\001\022.\n\ncreated_at\030\007 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022.\n\nupdated_at\030\010 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022\020\n\010category\030\t \001(\t\022" +
-      "\014\n\004tags\030\n \003(\t\022\016\n\006rating\030\013 \001(\001\022\020\n\010quantit" +
-      "y\030\014 \001(\005\022\020\n\010discount\030\r \001(\001\022\r\n\005email\030\016 \001(\t" +
-      "\022\r\n\005phone\030\017 \001(\t\022)\n\010metadata\030\020 \001(\0132\027.goog" +
-      "le.protobuf.Struct\022.\n\nlast_login\030\021 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022+\n\006status\030\022 \001" +
-      "(\0162\033.example.StatusEnumResponse*/\n\022Statu" +
-      "sEnumResponse\022\013\n\007ENABLED\020\000\022\014\n\010DISABLED\020\001" +
-      "2\212\004\n\016ExampleService\022@\n\010Paginate\022\030.input." +
-      "PaginationRequest\032\030.example.ExampleRespo" +
-      "nse0\001\0226\n\005Count\022\026.input.FilteredRequest\032\025" +
-      ".output.CountResponse\022D\n\006Create\022\027.exampl" +
-      "e.ExampleRequest\032\037.output.PersistenceDat" +
-      "aResponse(\001\022D\n\006Update\022\027.example.ExampleR" +
-      "equest\032\037.output.PersistenceDataResponse(" +
-      "\001\022<\n\010Inactive\022\022.input.UUIDRequest\032\032.outp" +
-      "ut.StatusDataResponse(\001\022:\n\006Active\022\022.inpu" +
-      "t.UUIDRequest\032\032.output.StatusDataRespons" +
-      "e(\001\0227\n\007FindOne\022\022.input.UUIDRequest\032\030.exa" +
-      "mple.ExampleResponse\022?\n\006Delete\022\022.input.U" +
-      "UIDRequest\032\037.output.PersistenceDataRespo" +
-      "nse(\001BV\n\024com.soustify.exampleZ>github.co" +
-      "m/soustify/data-gateway-buffer-go/pkg/ex" +
-      "ample;exampleb\006proto3"
+      "ruct\022\016\n\006public\030\016 \001(\010\0225\n\ten_status\030\017 \001(\0162" +
+      "\024.input.StatusRequestB\014\372B\t\202\001\006\030\000\030\001\030\002\"\343\003\n\017" +
+      "ExampleResponse\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(" +
+      "\t\022\023\n\013description\030\003 \001(\t\022-\n\tborn_date\030\004 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022\016\n\006public\030" +
+      "\005 \001(\010\022\r\n\005price\030\006 \001(\001\022.\n\ncreated_at\030\007 \001(\013" +
+      "2\032.google.protobuf.Timestamp\022.\n\nupdated_" +
+      "at\030\010 \001(\0132\032.google.protobuf.Timestamp\022\020\n\010" +
+      "category\030\t \001(\t\022\014\n\004tags\030\n \003(\t\022\016\n\006rating\030\013" +
+      " \001(\001\022\020\n\010quantity\030\014 \001(\005\022\020\n\010discount\030\r \001(\001" +
+      "\022\r\n\005email\030\016 \001(\t\022\r\n\005phone\030\017 \001(\t\022)\n\010metada" +
+      "ta\030\020 \001(\0132\027.google.protobuf.Struct\022.\n\nlas" +
+      "t_login\030\021 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022&\n\006status\030\022 \001(\0162\026.output.StatusRespons" +
+      "e2\212\004\n\016ExampleService\022@\n\010Paginate\022\030.input" +
+      ".PaginationRequest\032\030.example.ExampleResp" +
+      "onse0\001\0226\n\005Count\022\026.input.FilteredRequest\032" +
+      "\025.output.CountResponse\022D\n\006Create\022\027.examp" +
+      "le.ExampleRequest\032\037.output.PersistenceDa" +
+      "taResponse(\001\022D\n\006Update\022\027.example.Example" +
+      "Request\032\037.output.PersistenceDataResponse" +
+      "(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032\032.out" +
+      "put.StatusDataResponse(\001\022:\n\006Active\022\022.inp" +
+      "ut.UUIDRequest\032\032.output.StatusDataRespon" +
+      "se(\001\0227\n\007FindOne\022\022.input.UUIDRequest\032\030.ex" +
+      "ample.ExampleResponse\022?\n\006Delete\022\022.input." +
+      "UUIDRequest\032\037.output.PersistenceDataResp" +
+      "onse(\001BV\n\024com.soustify.exampleZ>github.c" +
+      "om/soustify/data-gateway-buffer-go/pkg/e" +
+      "xample;exampleb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5421,7 +5418,7 @@ public final class Example {
     internal_static_example_ExampleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_example_ExampleRequest_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "BornDate", "Price", "Category", "Tags", "Rating", "Quantity", "Discount", "Email", "Phone", "Metadata", "Public", });
+        new java.lang.String[] { "Id", "Name", "Description", "BornDate", "Price", "Category", "Tags", "Rating", "Quantity", "Discount", "Email", "Phone", "Metadata", "Public", "EnStatus", });
     internal_static_example_ExampleResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_example_ExampleResponse_fieldAccessorTable = new

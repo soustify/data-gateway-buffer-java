@@ -3340,40 +3340,35 @@ public final class ContextDomainTableDetail {
   static {
     java.lang.String[] descriptorData = {
       "\n!context_domain_table_detail.proto\022\023con" +
-      "textdomain_table\032\013input.proto\032\014output.pr" +
-      "oto\032\016validate.proto\032\037google/protobuf/tim" +
-      "estamp.proto\032\034google/protobuf/struct.pro" +
-      "to\"t\n\032RegistryEntityAuditRequest\022\024\n\014enti" +
-      "ty_table\030\001 \001(\t\022\033\n\tentity_id\030\002 \001(\tB\010\372B\005r\003" +
-      "\260\001\001\022#\n\021context_detail_id\030\003 \001(\tB\010\372B\005r\003\260\001\001" +
-      "\"2\n\007Changes\022\r\n\005field\030\001 \001(\t\022\013\n\003old\030\002 \001(\t\022" +
-      "\013\n\003new\030\003 \001(\t\"\206\002\n\037ContextDomainTableDetai" +
-      "lRequest\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022 \n\016transa" +
-      "ction_id\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\033\n\tentity_id\030\003 " +
-      "\001(\tB\010\372B\005r\003\260\001\001\022\035\n\014entity_table\030\004 \001(\tB\007\372B\004" +
-      "r\002\020\n\022?\n\toperation\030\005 \001(\0162\036.contextdomain_" +
-      "table.OperationB\014\372B\t\202\001\006\030\000\030\001\030\002\022.\n\010metadat" +
-      "a\030\006 \003(\0132\034.contextdomain_table.Changes*/\n" +
-      "\tOperation\022\n\n\006INSERT\020\000\022\n\n\006UPDATE\020\001\022\n\n\006DE" +
-      "LETE\020\0022\353\001\n\037ContextDomainTableDetailServi" +
-      "ce\022a\n\006Create\0224.contextdomain_table.Conte" +
-      "xtDomainTableDetailRequest\032\037.output.Pers" +
-      "istenceDataResponse(\001\022e\n\017RegisterDetails" +
-      "\022/.contextdomain_table.RegistryEntityAud" +
-      "itRequest\032\037.output.PersistenceDataRespon" +
-      "se(\001Bz\n com.soustify.contextdomain_table" +
-      "ZVgithub.com/soustify/data-gateway-buffe" +
-      "r-go/pkg/contextdomain_table;contextdoma" +
-      "in_tableb\006proto3"
+      "textdomain_table\032\014output.proto\032\016validate" +
+      ".proto\"t\n\032RegistryEntityAuditRequest\022\024\n\014" +
+      "entity_table\030\001 \001(\t\022\033\n\tentity_id\030\002 \001(\tB\010\372" +
+      "B\005r\003\260\001\001\022#\n\021context_detail_id\030\003 \001(\tB\010\372B\005r" +
+      "\003\260\001\001\"2\n\007Changes\022\r\n\005field\030\001 \001(\t\022\013\n\003old\030\002 " +
+      "\001(\t\022\013\n\003new\030\003 \001(\t\"\206\002\n\037ContextDomainTableD" +
+      "etailRequest\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022 \n\016tr" +
+      "ansaction_id\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\033\n\tentity_i" +
+      "d\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\035\n\014entity_table\030\004 \001(\tB" +
+      "\007\372B\004r\002\020\001\022?\n\toperation\030\005 \001(\0162\036.contextdom" +
+      "ain_table.OperationB\014\372B\t\202\001\006\030\000\030\001\030\002\022.\n\010met" +
+      "adata\030\006 \003(\0132\034.contextdomain_table.Change" +
+      "s*/\n\tOperation\022\n\n\006INSERT\020\000\022\n\n\006UPDATE\020\001\022\n" +
+      "\n\006DELETE\020\0022\353\001\n\037ContextDomainTableDetailS" +
+      "ervice\022a\n\006Create\0224.contextdomain_table.C" +
+      "ontextDomainTableDetailRequest\032\037.output." +
+      "PersistenceDataResponse(\001\022e\n\017RegisterDet" +
+      "ails\022/.contextdomain_table.RegistryEntit" +
+      "yAuditRequest\032\037.output.PersistenceDataRe" +
+      "sponse(\001Bz\n com.soustify.contextdomain_t" +
+      "ableZVgithub.com/soustify/data-gateway-b" +
+      "uffer-go/pkg/contextdomain_table;context" +
+      "domain_tableb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.soustify.input.Input.getDescriptor(),
           com.soustify.output.Output.getDescriptor(),
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
         });
     internal_static_contextdomain_table_RegistryEntityAuditRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3398,11 +3393,8 @@ public final class ContextDomainTableDetail {
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.soustify.input.Input.getDescriptor();
     com.soustify.output.Output.getDescriptor();
     io.envoyproxy.pgv.validate.Validate.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
