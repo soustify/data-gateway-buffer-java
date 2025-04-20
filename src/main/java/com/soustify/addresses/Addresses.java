@@ -1400,6 +1400,17 @@ public final class Addresses {
         getIdBytes();
 
     /**
+     * <code>.output.StatusResponse status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.output.StatusResponse status = 2;</code>
+     * @return The status.
+     */
+    com.soustify.output.Output.StatusResponse getStatus();
+
+    /**
      * <code>string id_auditable = 3 [(.validate.rules) = { ... }</code>
      * @return The idAuditable.
      */
@@ -1491,6 +1502,7 @@ public final class Addresses {
     }
     private Response() {
       id_ = "";
+      status_ = 0;
       idAuditable_ = "";
       street_ = "";
       zipCode_ = "";
@@ -1560,6 +1572,24 @@ public final class Addresses {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_ = 0;
+    /**
+     * <code>.output.StatusResponse status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.output.StatusResponse status = 2;</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.soustify.output.Output.StatusResponse getStatus() {
+      com.soustify.output.Output.StatusResponse result = com.soustify.output.Output.StatusResponse.forNumber(status_);
+      return result == null ? com.soustify.output.Output.StatusResponse.UNRECOGNIZED : result;
     }
 
     public static final int ID_AUDITABLE_FIELD_NUMBER = 3;
@@ -1807,6 +1837,9 @@ public final class Addresses {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
+      if (status_ != com.soustify.output.Output.StatusResponse.ENABLED.getNumber()) {
+        output.writeEnum(2, status_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idAuditable_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, idAuditable_);
       }
@@ -1842,6 +1875,10 @@ public final class Addresses {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (status_ != com.soustify.output.Output.StatusResponse.ENABLED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idAuditable_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, idAuditable_);
@@ -1887,6 +1924,7 @@ public final class Addresses {
 
       if (!getId()
           .equals(other.getId())) return false;
+      if (status_ != other.status_) return false;
       if (!getIdAuditable()
           .equals(other.getIdAuditable())) return false;
       if (!getStreet()
@@ -1919,6 +1957,8 @@ public final class Addresses {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
       hash = (37 * hash) + ID_AUDITABLE_FIELD_NUMBER;
       hash = (53 * hash) + getIdAuditable().hashCode();
       hash = (37 * hash) + STREET_FIELD_NUMBER;
@@ -2068,6 +2108,7 @@ public final class Addresses {
         super.clear();
         bitField0_ = 0;
         id_ = "";
+        status_ = 0;
         idAuditable_ = "";
         street_ = "";
         number_ = 0D;
@@ -2113,27 +2154,30 @@ public final class Addresses {
           result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.idAuditable_ = idAuditable_;
+          result.status_ = status_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.street_ = street_;
+          result.idAuditable_ = idAuditable_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.number_ = number_;
+          result.street_ = street_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.latitude_ = latitude_;
+          result.number_ = number_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.longitude_ = longitude_;
+          result.latitude_ = latitude_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.zipCode_ = zipCode_;
+          result.longitude_ = longitude_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.complement_ = complement_;
+          result.zipCode_ = zipCode_;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.complement_ = complement_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
           result.neighborhood_ = neighborhood_;
         }
       }
@@ -2187,14 +2231,17 @@ public final class Addresses {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
         if (!other.getIdAuditable().isEmpty()) {
           idAuditable_ = other.idAuditable_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getStreet().isEmpty()) {
           street_ = other.street_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.getNumber() != 0D) {
@@ -2208,17 +2255,17 @@ public final class Addresses {
         }
         if (!other.getZipCode().isEmpty()) {
           zipCode_ = other.zipCode_;
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (!other.getComplement().isEmpty()) {
           complement_ = other.complement_;
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (!other.getNeighborhood().isEmpty()) {
           neighborhood_ = other.neighborhood_;
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2252,44 +2299,49 @@ public final class Addresses {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 16: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
               case 26: {
                 idAuditable_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 street_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 41: {
                 number_ = input.readDouble();
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000010;
                 break;
               } // case 41
               case 49: {
                 latitude_ = input.readDouble();
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000020;
                 break;
               } // case 49
               case 57: {
                 longitude_ = input.readDouble();
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000040;
                 break;
               } // case 57
               case 66: {
                 zipCode_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 complement_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000080;
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 neighborhood_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000100;
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               default: {
@@ -2381,6 +2433,59 @@ public final class Addresses {
         return this;
       }
 
+      private int status_ = 0;
+      /**
+       * <code>.output.StatusResponse status = 2;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.output.StatusResponse status = 2;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.output.StatusResponse status = 2;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.soustify.output.Output.StatusResponse getStatus() {
+        com.soustify.output.Output.StatusResponse result = com.soustify.output.Output.StatusResponse.forNumber(status_);
+        return result == null ? com.soustify.output.Output.StatusResponse.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.output.StatusResponse status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.soustify.output.Output.StatusResponse value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.output.StatusResponse status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object idAuditable_ = "";
       /**
        * <code>string id_auditable = 3 [(.validate.rules) = { ... }</code>
@@ -2424,7 +2529,7 @@ public final class Addresses {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         idAuditable_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2434,7 +2539,7 @@ public final class Addresses {
        */
       public Builder clearIdAuditable() {
         idAuditable_ = getDefaultInstance().getIdAuditable();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2448,7 +2553,7 @@ public final class Addresses {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         idAuditable_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2496,7 +2601,7 @@ public final class Addresses {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         street_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2506,7 +2611,7 @@ public final class Addresses {
        */
       public Builder clearStreet() {
         street_ = getDefaultInstance().getStreet();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -2520,7 +2625,7 @@ public final class Addresses {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         street_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2542,7 +2647,7 @@ public final class Addresses {
       public Builder setNumber(double value) {
         
         number_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2551,7 +2656,7 @@ public final class Addresses {
        * @return This builder for chaining.
        */
       public Builder clearNumber() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         number_ = 0D;
         onChanged();
         return this;
@@ -2574,7 +2679,7 @@ public final class Addresses {
       public Builder setLatitude(double value) {
         
         latitude_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2583,7 +2688,7 @@ public final class Addresses {
        * @return This builder for chaining.
        */
       public Builder clearLatitude() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         latitude_ = 0D;
         onChanged();
         return this;
@@ -2606,7 +2711,7 @@ public final class Addresses {
       public Builder setLongitude(double value) {
         
         longitude_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2615,7 +2720,7 @@ public final class Addresses {
        * @return This builder for chaining.
        */
       public Builder clearLongitude() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         longitude_ = 0D;
         onChanged();
         return this;
@@ -2664,7 +2769,7 @@ public final class Addresses {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         zipCode_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2674,7 +2779,7 @@ public final class Addresses {
        */
       public Builder clearZipCode() {
         zipCode_ = getDefaultInstance().getZipCode();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -2688,7 +2793,7 @@ public final class Addresses {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         zipCode_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2736,7 +2841,7 @@ public final class Addresses {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         complement_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2746,7 +2851,7 @@ public final class Addresses {
        */
       public Builder clearComplement() {
         complement_ = getDefaultInstance().getComplement();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -2760,7 +2865,7 @@ public final class Addresses {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         complement_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2808,7 +2913,7 @@ public final class Addresses {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         neighborhood_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2818,7 +2923,7 @@ public final class Addresses {
        */
       public Builder clearNeighborhood() {
         neighborhood_ = getDefaultInstance().getNeighborhood();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
@@ -2832,7 +2937,7 @@ public final class Addresses {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         neighborhood_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2928,7 +3033,8 @@ public final class Addresses {
       "\000\000\000\200V@)\000\000\000\000\000\200V\300@\000\022,\n\tlongitude\030\006 \001(\001B\031\372B" +
       "\026\022\024\031\000\000\000\000\000\200f@)\000\000\000\000\000\200f\300@\000\022\034\n\010zip_code\030\007 \001(" +
       "\tB\n\372B\007r\005\020\001\030\310\001\022\034\n\ncomplement\030\010 \001(\tB\010\372B\005r\003" +
-      "\030\310\001\"\241\002\n\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\036" +
+      "\030\310\001\"\311\002\n\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&" +
+      "\n\006status\030\002 \001(\0162\026.output.StatusResponse\022\036" +
       "\n\014id_auditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\006street" +
       "\030\004 \001(\tB\010\372B\005r\003\030\310\001\022\016\n\006number\030\005 \001(\001\022+\n\010lati" +
       "tude\030\006 \001(\001B\031\372B\026\022\024\031\000\000\000\000\000\200V@)\000\000\000\000\000\200V\300@\000\022,\n" +
@@ -2971,7 +3077,7 @@ public final class Addresses {
     internal_static_addresses_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_addresses_Response_descriptor,
-        new java.lang.String[] { "Id", "IdAuditable", "Street", "Number", "Latitude", "Longitude", "ZipCode", "Complement", "Neighborhood", });
+        new java.lang.String[] { "Id", "Status", "IdAuditable", "Street", "Number", "Latitude", "Longitude", "ZipCode", "Complement", "Neighborhood", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);

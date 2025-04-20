@@ -76,6 +76,8 @@ public class AddressesValidator {
 		
 	
 		
+	
+		
 		private final Double LATITUDE__LTE = 90D;
 		private final Double LATITUDE__GTE = -90D;
 	
@@ -95,6 +97,8 @@ public class AddressesValidator {
 	public void assertValid(com.soustify.addresses.Addresses.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".addresses.Response.id", proto.getId());
+	// no validation rules for Status
+
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".addresses.Response.id_auditable", proto.getIdAuditable());
 	
