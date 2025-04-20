@@ -22,6 +22,8 @@ public class PartnersAddressesValidator {
 	
 		
 	
+		
+	
 	
 	
 
@@ -30,6 +32,8 @@ public class PartnersAddressesValidator {
 			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.Request.id_partner", proto.getIdPartner());
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.Request.id_address", proto.getIdAddress());
+	
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.Request.id", proto.getId());
 	
 	
 	}

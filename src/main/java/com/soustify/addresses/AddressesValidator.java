@@ -21,10 +21,6 @@ public class AddressesValidator {
 		
 	
 		
-		private final com.soustify.input.Input.StatusRequest[] EN_STATUS__IN = new com.soustify.input.Input.StatusRequest[]{
-			com.soustify.input.Input.StatusRequest.forNumber(0),
-			com.soustify.input.Input.StatusRequest.forNumber(1),
-		};
 	
 		
 	
@@ -42,8 +38,6 @@ public class AddressesValidator {
 	
 		
 	
-		
-	
 	
 	
 
@@ -51,7 +45,7 @@ public class AddressesValidator {
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".addresses.Request.id", proto.getId());
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".addresses.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Request.neighborhood", proto.getNeighborhood(), 200);
 	
 			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Request.street", proto.getStreet(), 200);
 	// no validation rules for Number
@@ -66,8 +60,6 @@ public class AddressesValidator {
 	
 			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Request.complement", proto.getComplement(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Request.neighborhood", proto.getNeighborhood(), 200);
-	
 	
 	}
 }
@@ -75,8 +67,6 @@ public class AddressesValidator {
 	 * Validates {@code Response} protobuf objects.
 	 */
 	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.addresses.Addresses.Response> {
-		
-	
 		
 	
 		
@@ -105,8 +95,6 @@ public class AddressesValidator {
 	public void assertValid(com.soustify.addresses.Addresses.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".addresses.Response.id", proto.getId());
-	// no validation rules for Status
-
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".addresses.Response.id_auditable", proto.getIdAuditable());
 	

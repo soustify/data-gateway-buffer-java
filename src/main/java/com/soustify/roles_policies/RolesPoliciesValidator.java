@@ -50,8 +50,6 @@ public class RolesPoliciesValidator {
 	
 		
 	
-		
-	
 	
 	
 
@@ -62,8 +60,6 @@ public class RolesPoliciesValidator {
 			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Response.id_policy", proto.getIdPolicy());
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Response.id_auditable", proto.getIdAuditable());
-	// no validation rules for Status
-
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Response.id", proto.getId());
 	

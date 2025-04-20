@@ -906,23 +906,12 @@ public final class RolesPolicies {
         getIdAuditableBytes();
 
     /**
-     * <code>.output.StatusResponse status = 4;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    int getStatusValue();
-    /**
-     * <code>.output.StatusResponse status = 4;</code>
-     * @return The status.
-     */
-    com.soustify.output.Output.StatusResponse getStatus();
-
-    /**
-     * <code>string id = 5 [(.validate.rules) = { ... }</code>
+     * <code>string id = 4 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
-     * <code>string id = 5 [(.validate.rules) = { ... }</code>
+     * <code>string id = 4 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -944,7 +933,6 @@ public final class RolesPolicies {
       idRole_ = "";
       idPolicy_ = "";
       idAuditable_ = "";
-      status_ = 0;
       id_ = "";
     }
 
@@ -1090,29 +1078,11 @@ public final class RolesPolicies {
       }
     }
 
-    public static final int STATUS_FIELD_NUMBER = 4;
-    private int status_ = 0;
-    /**
-     * <code>.output.StatusResponse status = 4;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    @java.lang.Override public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <code>.output.StatusResponse status = 4;</code>
-     * @return The status.
-     */
-    @java.lang.Override public com.soustify.output.Output.StatusResponse getStatus() {
-      com.soustify.output.Output.StatusResponse result = com.soustify.output.Output.StatusResponse.forNumber(status_);
-      return result == null ? com.soustify.output.Output.StatusResponse.UNRECOGNIZED : result;
-    }
-
-    public static final int ID_FIELD_NUMBER = 5;
+    public static final int ID_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
     /**
-     * <code>string id = 5 [(.validate.rules) = { ... }</code>
+     * <code>string id = 4 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1129,7 +1099,7 @@ public final class RolesPolicies {
       }
     }
     /**
-     * <code>string id = 5 [(.validate.rules) = { ... }</code>
+     * <code>string id = 4 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -1170,11 +1140,8 @@ public final class RolesPolicies {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idAuditable_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, idAuditable_);
       }
-      if (status_ != com.soustify.output.Output.StatusResponse.ENABLED.getNumber()) {
-        output.writeEnum(4, status_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, id_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, id_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1194,12 +1161,8 @@ public final class RolesPolicies {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idAuditable_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, idAuditable_);
       }
-      if (status_ != com.soustify.output.Output.StatusResponse.ENABLED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, status_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, id_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, id_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1222,7 +1185,6 @@ public final class RolesPolicies {
           .equals(other.getIdPolicy())) return false;
       if (!getIdAuditable()
           .equals(other.getIdAuditable())) return false;
-      if (status_ != other.status_) return false;
       if (!getId()
           .equals(other.getId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1242,8 +1204,6 @@ public final class RolesPolicies {
       hash = (53 * hash) + getIdPolicy().hashCode();
       hash = (37 * hash) + ID_AUDITABLE_FIELD_NUMBER;
       hash = (53 * hash) + getIdAuditable().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -1378,7 +1338,6 @@ public final class RolesPolicies {
         idRole_ = "";
         idPolicy_ = "";
         idAuditable_ = "";
-        status_ = 0;
         id_ = "";
         return this;
       }
@@ -1423,9 +1382,6 @@ public final class RolesPolicies {
           result.idAuditable_ = idAuditable_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.status_ = status_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.id_ = id_;
         }
       }
@@ -1489,12 +1445,9 @@ public final class RolesPolicies {
           bitField0_ |= 0x00000004;
           onChanged();
         }
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
-        }
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1538,16 +1491,11 @@ public final class RolesPolicies {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 32: {
-                status_ = input.readEnum();
+              case 34: {
+                id_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 32
-              case 42: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1781,62 +1729,9 @@ public final class RolesPolicies {
         return this;
       }
 
-      private int status_ = 0;
-      /**
-       * <code>.output.StatusResponse status = 4;</code>
-       * @return The enum numeric value on the wire for status.
-       */
-      @java.lang.Override public int getStatusValue() {
-        return status_;
-      }
-      /**
-       * <code>.output.StatusResponse status = 4;</code>
-       * @param value The enum numeric value on the wire for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusValue(int value) {
-        status_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.output.StatusResponse status = 4;</code>
-       * @return The status.
-       */
-      @java.lang.Override
-      public com.soustify.output.Output.StatusResponse getStatus() {
-        com.soustify.output.Output.StatusResponse result = com.soustify.output.Output.StatusResponse.forNumber(status_);
-        return result == null ? com.soustify.output.Output.StatusResponse.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.output.StatusResponse status = 4;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(com.soustify.output.Output.StatusResponse value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000008;
-        status_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.output.StatusResponse status = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        status_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object id_ = "";
       /**
-       * <code>string id = 5 [(.validate.rules) = { ... }</code>
+       * <code>string id = 4 [(.validate.rules) = { ... }</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -1852,7 +1747,7 @@ public final class RolesPolicies {
         }
       }
       /**
-       * <code>string id = 5 [(.validate.rules) = { ... }</code>
+       * <code>string id = 4 [(.validate.rules) = { ... }</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -1869,7 +1764,7 @@ public final class RolesPolicies {
         }
       }
       /**
-       * <code>string id = 5 [(.validate.rules) = { ... }</code>
+       * <code>string id = 4 [(.validate.rules) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -1877,22 +1772,22 @@ public final class RolesPolicies {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         id_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 5 [(.validate.rules) = { ... }</code>
+       * <code>string id = 4 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
         id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 5 [(.validate.rules) = { ... }</code>
+       * <code>string id = 4 [(.validate.rules) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -1901,7 +1796,7 @@ public final class RolesPolicies {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         id_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1993,27 +1888,25 @@ public final class RolesPolicies {
       "o\032\037google/protobuf/timestamp.proto\"W\n\007Re" +
       "quest\022\031\n\007id_role\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\033\n\tid_p" +
       "olicy\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\024\n\002id\030\003 \001(\tB\010\372B\005r\003" +
-      "\260\001\001\"\240\001\n\010Response\022\031\n\007id_role\030\001 \001(\tB\010\372B\005r\003" +
-      "\260\001\001\022\033\n\tid_policy\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\036\n\014id_a" +
-      "uditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\004 \001(\016" +
-      "2\026.output.StatusResponse\022\024\n\002id\030\005 \001(\tB\010\372B" +
-      "\005r\003\260\001\0012\203\004\n\007Service\022@\n\010Paginate\022\030.input.P" +
-      "aginationRequest\032\030.roles_policies.Respon" +
-      "se0\001\0226\n\005Count\022\026.input.FilteredRequest\032\025." +
-      "output.CountResponse\022D\n\006Create\022\027.roles_p" +
-      "olicies.Request\032\037.output.PersistenceData" +
-      "Response(\001\022D\n\006Update\022\027.roles_policies.Re" +
-      "quest\032\037.output.PersistenceDataResponse(\001" +
-      "\022<\n\010Inactive\022\022.input.UUIDRequest\032\032.outpu" +
-      "t.StatusDataResponse(\001\022:\n\006Active\022\022.input" +
-      ".UUIDRequest\032\032.output.StatusDataResponse" +
-      "(\001\0227\n\007FindOne\022\022.input.UUIDRequest\032\030.role" +
-      "s_policies.Response\022?\n\006Delete\022\022.input.UU" +
-      "IDRequest\032\037.output.PersistenceDataRespon" +
-      "se(\001Bk\n\033com.soustify.roles_policiesZLgit" +
-      "hub.com/soustify/data-gateway-buffer-go/" +
-      "pkg/roles_policies;roles_policiesb\006proto" +
-      "3"
+      "\260\001\001\"x\n\010Response\022\031\n\007id_role\030\001 \001(\tB\010\372B\005r\003\260" +
+      "\001\001\022\033\n\tid_policy\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\036\n\014id_au" +
+      "ditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\024\n\002id\030\004 \001(\tB\010\372B\005" +
+      "r\003\260\001\0012\203\004\n\007Service\022@\n\010Paginate\022\030.input.Pa" +
+      "ginationRequest\032\030.roles_policies.Respons" +
+      "e0\001\0226\n\005Count\022\026.input.FilteredRequest\032\025.o" +
+      "utput.CountResponse\022D\n\006Create\022\027.roles_po" +
+      "licies.Request\032\037.output.PersistenceDataR" +
+      "esponse(\001\022D\n\006Update\022\027.roles_policies.Req" +
+      "uest\032\037.output.PersistenceDataResponse(\001\022" +
+      "<\n\010Inactive\022\022.input.UUIDRequest\032\032.output" +
+      ".StatusDataResponse(\001\022:\n\006Active\022\022.input." +
+      "UUIDRequest\032\032.output.StatusDataResponse(" +
+      "\001\0227\n\007FindOne\022\022.input.UUIDRequest\032\030.roles" +
+      "_policies.Response\022?\n\006Delete\022\022.input.UUI" +
+      "DRequest\032\037.output.PersistenceDataRespons" +
+      "e(\001Bk\n\033com.soustify.roles_policiesZLgith" +
+      "ub.com/soustify/data-gateway-buffer-go/p" +
+      "kg/roles_policies;roles_policiesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2034,7 +1927,7 @@ public final class RolesPolicies {
     internal_static_roles_policies_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_roles_policies_Response_descriptor,
-        new java.lang.String[] { "IdRole", "IdPolicy", "IdAuditable", "Status", "Id", });
+        new java.lang.String[] { "IdRole", "IdPolicy", "IdAuditable", "Id", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);

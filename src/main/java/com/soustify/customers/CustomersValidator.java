@@ -21,12 +21,6 @@ public class CustomersValidator {
 		
 	
 		
-		private final com.soustify.input.Input.StatusRequest[] EN_STATUS__IN = new com.soustify.input.Input.StatusRequest[]{
-			com.soustify.input.Input.StatusRequest.forNumber(0),
-			com.soustify.input.Input.StatusRequest.forNumber(1),
-		};
-	
-		
 	
 		
 	
@@ -40,8 +34,6 @@ public class CustomersValidator {
 	public void assertValid(com.soustify.customers.Customers.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".customers.Request.id", proto.getId());
-	
-			io.envoyproxy.pgv.CollectiveValidation.in(".customers.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
 			io.envoyproxy.pgv.StringValidation.minLength(".customers.Request.name", proto.getName(), 1);
 			io.envoyproxy.pgv.StringValidation.maxLength(".customers.Request.name", proto.getName(), 200);

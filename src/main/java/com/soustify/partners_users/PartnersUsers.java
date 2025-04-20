@@ -31,17 +31,6 @@ public final class PartnersUsers {
         getIdBytes();
 
     /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    int getEnStatusValue();
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    com.soustify.input.Input.StatusRequest getEnStatus();
-
-    /**
      * <code>string id_partner = 3 [(.validate.rules) = { ... }</code>
      * @return The idPartner.
      */
@@ -109,7 +98,6 @@ public final class PartnersUsers {
     }
     private Request() {
       id_ = "";
-      enStatus_ = 0;
       idPartner_ = "";
       name_ = "";
       username_ = "";
@@ -178,24 +166,6 @@ public final class PartnersUsers {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int EN_STATUS_FIELD_NUMBER = 2;
-    private int enStatus_ = 0;
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    @java.lang.Override public int getEnStatusValue() {
-      return enStatus_;
-    }
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    @java.lang.Override public com.soustify.input.Input.StatusRequest getEnStatus() {
-      com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-      return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
     }
 
     public static final int ID_PARTNER_FIELD_NUMBER = 3;
@@ -382,9 +352,6 @@ public final class PartnersUsers {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        output.writeEnum(2, enStatus_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPartner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, idPartner_);
       }
@@ -411,10 +378,6 @@ public final class PartnersUsers {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, enStatus_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPartner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, idPartner_);
@@ -449,7 +412,6 @@ public final class PartnersUsers {
 
       if (!getId()
           .equals(other.getId())) return false;
-      if (enStatus_ != other.enStatus_) return false;
       if (!getIdPartner()
           .equals(other.getIdPartner())) return false;
       if (!getName()
@@ -473,8 +435,6 @@ public final class PartnersUsers {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + EN_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + enStatus_;
       hash = (37 * hash) + ID_PARTNER_FIELD_NUMBER;
       hash = (53 * hash) + getIdPartner().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
@@ -616,7 +576,6 @@ public final class PartnersUsers {
         super.clear();
         bitField0_ = 0;
         id_ = "";
-        enStatus_ = 0;
         idPartner_ = "";
         name_ = "";
         username_ = "";
@@ -659,21 +618,18 @@ public final class PartnersUsers {
           result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.enStatus_ = enStatus_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.idPartner_ = idPartner_;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.name_ = name_;
         }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.username_ = username_;
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.enabled_ = enabled_;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.idCognito_ = idCognito_;
         }
       }
@@ -727,22 +683,19 @@ public final class PartnersUsers {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (other.enStatus_ != 0) {
-          setEnStatusValue(other.getEnStatusValue());
-        }
         if (!other.getIdPartner().isEmpty()) {
           idPartner_ = other.idPartner_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.getEnabled() != false) {
@@ -750,7 +703,7 @@ public final class PartnersUsers {
         }
         if (!other.getIdCognito().isEmpty()) {
           idCognito_ = other.idCognito_;
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -784,34 +737,29 @@ public final class PartnersUsers {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 16: {
-                enStatus_ = input.readEnum();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
               case 26: {
                 idPartner_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000002;
                 break;
               } // case 26
               case 34: {
                 name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000004;
                 break;
               } // case 34
               case 40: {
                 enabled_ = input.readBool();
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 50: {
                 idCognito_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 username_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000008;
                 break;
               } // case 58
               default: {
@@ -903,59 +851,6 @@ public final class PartnersUsers {
         return this;
       }
 
-      private int enStatus_ = 0;
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enum numeric value on the wire for enStatus.
-       */
-      @java.lang.Override public int getEnStatusValue() {
-        return enStatus_;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enum numeric value on the wire for enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatusValue(int value) {
-        enStatus_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enStatus.
-       */
-      @java.lang.Override
-      public com.soustify.input.Input.StatusRequest getEnStatus() {
-        com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-        return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatus(com.soustify.input.Input.StatusRequest value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        enStatus_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEnStatus() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        enStatus_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object idPartner_ = "";
       /**
        * <code>string id_partner = 3 [(.validate.rules) = { ... }</code>
@@ -999,7 +894,7 @@ public final class PartnersUsers {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         idPartner_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1009,7 +904,7 @@ public final class PartnersUsers {
        */
       public Builder clearIdPartner() {
         idPartner_ = getDefaultInstance().getIdPartner();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1023,7 +918,7 @@ public final class PartnersUsers {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         idPartner_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1071,7 +966,7 @@ public final class PartnersUsers {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         name_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1081,7 +976,7 @@ public final class PartnersUsers {
        */
       public Builder clearName() {
         name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1095,7 +990,7 @@ public final class PartnersUsers {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         name_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1143,7 +1038,7 @@ public final class PartnersUsers {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         username_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1153,7 +1048,7 @@ public final class PartnersUsers {
        */
       public Builder clearUsername() {
         username_ = getDefaultInstance().getUsername();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1167,7 +1062,7 @@ public final class PartnersUsers {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         username_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1189,7 +1084,7 @@ public final class PartnersUsers {
       public Builder setEnabled(boolean value) {
         
         enabled_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1198,7 +1093,7 @@ public final class PartnersUsers {
        * @return This builder for chaining.
        */
       public Builder clearEnabled() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         enabled_ = false;
         onChanged();
         return this;
@@ -1247,7 +1142,7 @@ public final class PartnersUsers {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         idCognito_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1257,7 +1152,7 @@ public final class PartnersUsers {
        */
       public Builder clearIdCognito() {
         idCognito_ = getDefaultInstance().getIdCognito();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -1271,7 +1166,7 @@ public final class PartnersUsers {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         idCognito_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2833,35 +2728,33 @@ public final class PartnersUsers {
     java.lang.String[] descriptorData = {
       "\n\024partners_users.proto\022\016partners_users\032\013" +
       "input.proto\032\014output.proto\032\016validate.prot" +
-      "o\032\037google/protobuf/timestamp.proto\"\333\001\n\007R" +
-      "equest\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_statu" +
-      "s\030\002 \001(\0162\024.input.StatusRequestB\n\372B\007\202\001\004\030\000\030" +
-      "\001\022\036\n\nid_partner\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\030\n\004nam" +
-      "e\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\034\n\010username\030\007 \001(\tB\n\372" +
-      "B\007r\005\020\001\030\310\001\022\017\n\007enabled\030\005 \001(\010\022\034\n\nid_cognito" +
-      "\030\006 \001(\tB\010\372B\005r\003\260\001\001\"\357\001\n\010Response\022\024\n\002id\030\001 \001(" +
-      "\tB\010\372B\005r\003\260\001\001\022\036\n\nid_partner\030\002 \001(\tB\n\372B\007r\005\020\001" +
-      "\030\310\001\022\030\n\004name\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\034\n\010usernam" +
-      "e\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\017\n\007enabled\030\005 \001(\010\022\034\n\n" +
-      "id_cognito\030\006 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\007 \001" +
-      "(\0162\026.output.StatusResponse\022\036\n\014id_auditab" +
-      "le\030\010 \001(\tB\010\372B\005r\003\260\001\0012\203\004\n\007Service\022@\n\010Pagina" +
-      "te\022\030.input.PaginationRequest\032\030.partners_" +
-      "users.Response0\001\0226\n\005Count\022\026.input.Filter" +
-      "edRequest\032\025.output.CountResponse\022D\n\006Crea" +
-      "te\022\027.partners_users.Request\032\037.output.Per" +
-      "sistenceDataResponse(\001\022D\n\006Update\022\027.partn" +
-      "ers_users.Request\032\037.output.PersistenceDa" +
-      "taResponse(\001\022<\n\010Inactive\022\022.input.UUIDReq" +
-      "uest\032\032.output.StatusDataResponse(\001\022:\n\006Ac" +
-      "tive\022\022.input.UUIDRequest\032\032.output.Status" +
-      "DataResponse(\001\0227\n\007FindOne\022\022.input.UUIDRe" +
-      "quest\032\030.partners_users.Response\022?\n\006Delet" +
-      "e\022\022.input.UUIDRequest\032\037.output.Persisten" +
-      "ceDataResponse(\001Bk\n\033com.soustify.partner" +
-      "s_usersZLgithub.com/soustify/data-gatewa" +
-      "y-buffer-go/pkg/partners_users;partners_" +
-      "usersb\006proto3"
+      "o\032\037google/protobuf/timestamp.proto\"\246\001\n\007R" +
+      "equest\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\036\n\nid_partn" +
+      "er\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\030\n\004name\030\004 \001(\tB\n\372B\007r" +
+      "\005\020\001\030\310\001\022\034\n\010username\030\007 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\017\n\007" +
+      "enabled\030\005 \001(\010\022\034\n\nid_cognito\030\006 \001(\tB\010\372B\005r\003" +
+      "\260\001\001\"\357\001\n\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\036" +
+      "\n\nid_partner\030\002 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\030\n\004name\030\003" +
+      " \001(\tB\n\372B\007r\005\020\001\030\310\001\022\034\n\010username\030\004 \001(\tB\n\372B\007r" +
+      "\005\020\001\030\310\001\022\017\n\007enabled\030\005 \001(\010\022\034\n\nid_cognito\030\006 " +
+      "\001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\007 \001(\0162\026.output.S" +
+      "tatusResponse\022\036\n\014id_auditable\030\010 \001(\tB\010\372B\005" +
+      "r\003\260\001\0012\203\004\n\007Service\022@\n\010Paginate\022\030.input.Pa" +
+      "ginationRequest\032\030.partners_users.Respons" +
+      "e0\001\0226\n\005Count\022\026.input.FilteredRequest\032\025.o" +
+      "utput.CountResponse\022D\n\006Create\022\027.partners" +
+      "_users.Request\032\037.output.PersistenceDataR" +
+      "esponse(\001\022D\n\006Update\022\027.partners_users.Req" +
+      "uest\032\037.output.PersistenceDataResponse(\001\022" +
+      "<\n\010Inactive\022\022.input.UUIDRequest\032\032.output" +
+      ".StatusDataResponse(\001\022:\n\006Active\022\022.input." +
+      "UUIDRequest\032\032.output.StatusDataResponse(" +
+      "\001\0227\n\007FindOne\022\022.input.UUIDRequest\032\030.partn" +
+      "ers_users.Response\022?\n\006Delete\022\022.input.UUI" +
+      "DRequest\032\037.output.PersistenceDataRespons" +
+      "e(\001Bk\n\033com.soustify.partners_usersZLgith" +
+      "ub.com/soustify/data-gateway-buffer-go/p" +
+      "kg/partners_users;partners_usersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2876,7 +2769,7 @@ public final class PartnersUsers {
     internal_static_partners_users_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_partners_users_Request_descriptor,
-        new java.lang.String[] { "Id", "EnStatus", "IdPartner", "Name", "Username", "Enabled", "IdCognito", });
+        new java.lang.String[] { "Id", "IdPartner", "Name", "Username", "Enabled", "IdCognito", });
     internal_static_partners_users_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_partners_users_Response_fieldAccessorTable = new

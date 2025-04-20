@@ -31,17 +31,6 @@ public final class Partners {
         getIdBytes();
 
     /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    int getEnStatusValue();
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    com.soustify.input.Input.StatusRequest getEnStatus();
-
-    /**
      * <code>string name = 3 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
@@ -54,28 +43,16 @@ public final class Partners {
         getNameBytes();
 
     /**
-     * <code>string document = 4 [(.validate.rules) = { ... }</code>
+     * <code>string document = 2 [(.validate.rules) = { ... }</code>
      * @return The document.
      */
     java.lang.String getDocument();
     /**
-     * <code>string document = 4 [(.validate.rules) = { ... }</code>
+     * <code>string document = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for document.
      */
     com.google.protobuf.ByteString
         getDocumentBytes();
-
-    /**
-     * <code>string id_document_type = 5 [(.validate.rules) = { ... }</code>
-     * @return The idDocumentType.
-     */
-    java.lang.String getIdDocumentType();
-    /**
-     * <code>string id_document_type = 5 [(.validate.rules) = { ... }</code>
-     * @return The bytes for idDocumentType.
-     */
-    com.google.protobuf.ByteString
-        getIdDocumentTypeBytes();
   }
   /**
    * Protobuf type {@code partners.Request}
@@ -91,10 +68,8 @@ public final class Partners {
     }
     private Request() {
       id_ = "";
-      enStatus_ = 0;
       name_ = "";
       document_ = "";
-      idDocumentType_ = "";
     }
 
     @java.lang.Override
@@ -161,24 +136,6 @@ public final class Partners {
       }
     }
 
-    public static final int EN_STATUS_FIELD_NUMBER = 2;
-    private int enStatus_ = 0;
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    @java.lang.Override public int getEnStatusValue() {
-      return enStatus_;
-    }
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    @java.lang.Override public com.soustify.input.Input.StatusRequest getEnStatus() {
-      com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-      return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-    }
-
     public static final int NAME_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -218,11 +175,11 @@ public final class Partners {
       }
     }
 
-    public static final int DOCUMENT_FIELD_NUMBER = 4;
+    public static final int DOCUMENT_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object document_ = "";
     /**
-     * <code>string document = 4 [(.validate.rules) = { ... }</code>
+     * <code>string document = 2 [(.validate.rules) = { ... }</code>
      * @return The document.
      */
     @java.lang.Override
@@ -239,7 +196,7 @@ public final class Partners {
       }
     }
     /**
-     * <code>string document = 4 [(.validate.rules) = { ... }</code>
+     * <code>string document = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for document.
      */
     @java.lang.Override
@@ -251,45 +208,6 @@ public final class Partners {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         document_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ID_DOCUMENT_TYPE_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object idDocumentType_ = "";
-    /**
-     * <code>string id_document_type = 5 [(.validate.rules) = { ... }</code>
-     * @return The idDocumentType.
-     */
-    @java.lang.Override
-    public java.lang.String getIdDocumentType() {
-      java.lang.Object ref = idDocumentType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        idDocumentType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id_document_type = 5 [(.validate.rules) = { ... }</code>
-     * @return The bytes for idDocumentType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdDocumentTypeBytes() {
-      java.lang.Object ref = idDocumentType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        idDocumentType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -313,17 +231,11 @@ public final class Partners {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        output.writeEnum(2, enStatus_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(document_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, document_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(document_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, document_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idDocumentType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, idDocumentType_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -337,18 +249,11 @@ public final class Partners {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, enStatus_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(document_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, document_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(document_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, document_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idDocumentType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, idDocumentType_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -367,13 +272,10 @@ public final class Partners {
 
       if (!getId()
           .equals(other.getId())) return false;
-      if (enStatus_ != other.enStatus_) return false;
       if (!getName()
           .equals(other.getName())) return false;
       if (!getDocument()
           .equals(other.getDocument())) return false;
-      if (!getIdDocumentType()
-          .equals(other.getIdDocumentType())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -387,14 +289,10 @@ public final class Partners {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + EN_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + enStatus_;
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DOCUMENT_FIELD_NUMBER;
       hash = (53 * hash) + getDocument().hashCode();
-      hash = (37 * hash) + ID_DOCUMENT_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getIdDocumentType().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -525,10 +423,8 @@ public final class Partners {
         super.clear();
         bitField0_ = 0;
         id_ = "";
-        enStatus_ = 0;
         name_ = "";
         document_ = "";
-        idDocumentType_ = "";
         return this;
       }
 
@@ -566,16 +462,10 @@ public final class Partners {
           result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.enStatus_ = enStatus_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.name_ = name_;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.document_ = document_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.idDocumentType_ = idDocumentType_;
         }
       }
 
@@ -628,22 +518,14 @@ public final class Partners {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (other.enStatus_ != 0) {
-          setEnStatusValue(other.getEnStatusValue());
-        }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getDocument().isEmpty()) {
           document_ = other.document_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        if (!other.getIdDocumentType().isEmpty()) {
-          idDocumentType_ = other.idDocumentType_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -677,26 +559,16 @@ public final class Partners {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 16: {
-                enStatus_ = input.readEnum();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 26: {
-                name_ = input.readStringRequireUtf8();
+              case 18: {
+                document_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
+              } // case 18
+              case 26: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
               } // case 26
-              case 34: {
-                document_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
-                idDocumentType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -786,59 +658,6 @@ public final class Partners {
         return this;
       }
 
-      private int enStatus_ = 0;
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enum numeric value on the wire for enStatus.
-       */
-      @java.lang.Override public int getEnStatusValue() {
-        return enStatus_;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enum numeric value on the wire for enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatusValue(int value) {
-        enStatus_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enStatus.
-       */
-      @java.lang.Override
-      public com.soustify.input.Input.StatusRequest getEnStatus() {
-        com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-        return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatus(com.soustify.input.Input.StatusRequest value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        enStatus_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEnStatus() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        enStatus_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 3 [(.validate.rules) = { ... }</code>
@@ -882,7 +701,7 @@ public final class Partners {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         name_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -892,7 +711,7 @@ public final class Partners {
        */
       public Builder clearName() {
         name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -906,14 +725,14 @@ public final class Partners {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         name_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private java.lang.Object document_ = "";
       /**
-       * <code>string document = 4 [(.validate.rules) = { ... }</code>
+       * <code>string document = 2 [(.validate.rules) = { ... }</code>
        * @return The document.
        */
       public java.lang.String getDocument() {
@@ -929,7 +748,7 @@ public final class Partners {
         }
       }
       /**
-       * <code>string document = 4 [(.validate.rules) = { ... }</code>
+       * <code>string document = 2 [(.validate.rules) = { ... }</code>
        * @return The bytes for document.
        */
       public com.google.protobuf.ByteString
@@ -946,7 +765,7 @@ public final class Partners {
         }
       }
       /**
-       * <code>string document = 4 [(.validate.rules) = { ... }</code>
+       * <code>string document = 2 [(.validate.rules) = { ... }</code>
        * @param value The document to set.
        * @return This builder for chaining.
        */
@@ -954,22 +773,22 @@ public final class Partners {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         document_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string document = 4 [(.validate.rules) = { ... }</code>
+       * <code>string document = 2 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDocument() {
         document_ = getDefaultInstance().getDocument();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string document = 4 [(.validate.rules) = { ... }</code>
+       * <code>string document = 2 [(.validate.rules) = { ... }</code>
        * @param value The bytes for document to set.
        * @return This builder for chaining.
        */
@@ -978,79 +797,7 @@ public final class Partners {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         document_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object idDocumentType_ = "";
-      /**
-       * <code>string id_document_type = 5 [(.validate.rules) = { ... }</code>
-       * @return The idDocumentType.
-       */
-      public java.lang.String getIdDocumentType() {
-        java.lang.Object ref = idDocumentType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          idDocumentType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id_document_type = 5 [(.validate.rules) = { ... }</code>
-       * @return The bytes for idDocumentType.
-       */
-      public com.google.protobuf.ByteString
-          getIdDocumentTypeBytes() {
-        java.lang.Object ref = idDocumentType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          idDocumentType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id_document_type = 5 [(.validate.rules) = { ... }</code>
-       * @param value The idDocumentType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdDocumentType(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        idDocumentType_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id_document_type = 5 [(.validate.rules) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIdDocumentType() {
-        idDocumentType_ = getDefaultInstance().getIdDocumentType();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id_document_type = 5 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for idDocumentType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdDocumentTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        idDocumentType_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2391,31 +2138,29 @@ public final class Partners {
     java.lang.String[] descriptorData = {
       "\n\016partners.proto\022\010partners\032\013input.proto\032" +
       "\014output.proto\032\016validate.proto\032\037google/pr" +
-      "otobuf/timestamp.proto\"\256\001\n\007Request\022\024\n\002id" +
-      "\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001(\0162\024.in" +
-      "put.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n\004name\030\003 " +
-      "\001(\tB\n\372B\007r\005\020\001\030\310\001\022\032\n\010document\030\004 \001(\tB\010\372B\005r\003" +
-      "\030\310\001\022\"\n\020id_document_type\030\005 \001(\tB\010\372B\005r\003\260\001\001\"" +
-      "\302\001\n\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006st" +
-      "atus\030\002 \001(\0162\026.output.StatusResponse\022\036\n\014id" +
-      "_auditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\004 \001(\t" +
-      "B\n\372B\007r\005\020\001\030\310\001\022\032\n\010document\030\005 \001(\tB\010\372B\005r\003\030\310\001" +
-      "\022\"\n\020id_document_type\030\006 \001(\tB\010\372B\005r\003\260\001\0012\353\003\n" +
-      "\007Service\022:\n\010Paginate\022\030.input.PaginationR" +
-      "equest\032\022.partners.Response0\001\0226\n\005Count\022\026." +
-      "input.FilteredRequest\032\025.output.CountResp" +
-      "onse\022>\n\006Create\022\021.partners.Request\032\037.outp" +
-      "ut.PersistenceDataResponse(\001\022>\n\006Update\022\021" +
-      ".partners.Request\032\037.output.PersistenceDa" +
-      "taResponse(\001\022<\n\010Inactive\022\022.input.UUIDReq" +
-      "uest\032\032.output.StatusDataResponse(\001\022:\n\006Ac" +
-      "tive\022\022.input.UUIDRequest\032\032.output.Status" +
-      "DataResponse(\001\0221\n\007FindOne\022\022.input.UUIDRe" +
-      "quest\032\022.partners.Response\022?\n\006Delete\022\022.in" +
-      "put.UUIDRequest\032\037.output.PersistenceData" +
-      "Response(\001BY\n\025com.soustify.partnersZ@git" +
-      "hub.com/soustify/data-gateway-buffer-go/" +
-      "pkg/partners;partnersb\006proto3"
+      "otobuf/timestamp.proto\"U\n\007Request\022\024\n\002id\030" +
+      "\001 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\003 \001(\tB\n\372B\007r\005\020\001\030\310" +
+      "\001\022\032\n\010document\030\002 \001(\tB\010\372B\005r\003\030\310\001\"\302\001\n\010Respon" +
+      "se\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 \001(\016" +
+      "2\026.output.StatusResponse\022\036\n\014id_auditable" +
+      "\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\004 \001(\tB\n\372B\007r\005\020\001\030" +
+      "\310\001\022\032\n\010document\030\005 \001(\tB\010\372B\005r\003\030\310\001\022\"\n\020id_doc" +
+      "ument_type\030\006 \001(\tB\010\372B\005r\003\260\001\0012\353\003\n\007Service\022:" +
+      "\n\010Paginate\022\030.input.PaginationRequest\032\022.p" +
+      "artners.Response0\001\0226\n\005Count\022\026.input.Filt" +
+      "eredRequest\032\025.output.CountResponse\022>\n\006Cr" +
+      "eate\022\021.partners.Request\032\037.output.Persist" +
+      "enceDataResponse(\001\022>\n\006Update\022\021.partners." +
+      "Request\032\037.output.PersistenceDataResponse" +
+      "(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032\032.out" +
+      "put.StatusDataResponse(\001\022:\n\006Active\022\022.inp" +
+      "ut.UUIDRequest\032\032.output.StatusDataRespon" +
+      "se(\001\0221\n\007FindOne\022\022.input.UUIDRequest\032\022.pa" +
+      "rtners.Response\022?\n\006Delete\022\022.input.UUIDRe" +
+      "quest\032\037.output.PersistenceDataResponse(\001" +
+      "BY\n\025com.soustify.partnersZ@github.com/so" +
+      "ustify/data-gateway-buffer-go/pkg/partne" +
+      "rs;partnersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2430,7 +2175,7 @@ public final class Partners {
     internal_static_partners_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_partners_Request_descriptor,
-        new java.lang.String[] { "Id", "EnStatus", "Name", "Document", "IdDocumentType", });
+        new java.lang.String[] { "Id", "Name", "Document", });
     internal_static_partners_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_partners_Response_fieldAccessorTable = new

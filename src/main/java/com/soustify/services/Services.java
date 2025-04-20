@@ -19,15 +19,16 @@ public final class Services {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.input.StatusRequest en_status = 1 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The id.
      */
-    int getEnStatusValue();
+    java.lang.String getId();
     /**
-     * <code>.input.StatusRequest en_status = 1 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
      */
-    com.soustify.input.Input.StatusRequest getEnStatus();
+    com.google.protobuf.ByteString
+        getIdBytes();
 
     /**
      * <code>string name = 2 [(.validate.rules) = { ... }</code>
@@ -66,7 +67,7 @@ public final class Services {
       super(builder);
     }
     private Request() {
-      enStatus_ = 0;
+      id_ = "";
       name_ = "";
       description_ = "";
     }
@@ -96,22 +97,43 @@ public final class Services {
               com.soustify.services.Services.Request.class, com.soustify.services.Services.Request.Builder.class);
     }
 
-    public static final int EN_STATUS_FIELD_NUMBER = 1;
-    private int enStatus_ = 0;
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
-     * <code>.input.StatusRequest en_status = 1 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The id.
      */
-    @java.lang.Override public int getEnStatusValue() {
-      return enStatus_;
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
     }
     /**
-     * <code>.input.StatusRequest en_status = 1 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
      */
-    @java.lang.Override public com.soustify.input.Input.StatusRequest getEnStatus() {
-      com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-      return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
@@ -206,8 +228,8 @@ public final class Services {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        output.writeEnum(1, enStatus_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
@@ -224,9 +246,8 @@ public final class Services {
       if (size != -1) return size;
 
       size = 0;
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, enStatus_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
@@ -249,7 +270,8 @@ public final class Services {
       }
       com.soustify.services.Services.Request other = (com.soustify.services.Services.Request) obj;
 
-      if (enStatus_ != other.enStatus_) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
       if (!getDescription()
@@ -265,8 +287,8 @@ public final class Services {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + EN_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + enStatus_;
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
@@ -400,7 +422,7 @@ public final class Services {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        enStatus_ = 0;
+        id_ = "";
         name_ = "";
         description_ = "";
         return this;
@@ -437,7 +459,7 @@ public final class Services {
       private void buildPartial0(com.soustify.services.Services.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.enStatus_ = enStatus_;
+          result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.name_ = name_;
@@ -491,8 +513,10 @@ public final class Services {
 
       public Builder mergeFrom(com.soustify.services.Services.Request other) {
         if (other == com.soustify.services.Services.Request.getDefaultInstance()) return this;
-        if (other.enStatus_ != 0) {
-          setEnStatusValue(other.getEnStatusValue());
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
@@ -530,11 +554,11 @@ public final class Services {
               case 0:
                 done = true;
                 break;
-              case 8: {
-                enStatus_ = input.readEnum();
+              case 10: {
+                id_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 8
+              } // case 10
               case 18: {
                 name_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
@@ -562,55 +586,74 @@ public final class Services {
       }
       private int bitField0_;
 
-      private int enStatus_ = 0;
+      private java.lang.Object id_ = "";
       /**
-       * <code>.input.StatusRequest en_status = 1 [(.validate.rules) = { ... }</code>
-       * @return The enum numeric value on the wire for enStatus.
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @return The id.
        */
-      @java.lang.Override public int getEnStatusValue() {
-        return enStatus_;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 1 [(.validate.rules) = { ... }</code>
-       * @param value The enum numeric value on the wire for enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatusValue(int value) {
-        enStatus_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 1 [(.validate.rules) = { ... }</code>
-       * @return The enStatus.
-       */
-      @java.lang.Override
-      public com.soustify.input.Input.StatusRequest getEnStatus() {
-        com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-        return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 1 [(.validate.rules) = { ... }</code>
-       * @param value The enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatus(com.soustify.input.Input.StatusRequest value) {
-        if (value == null) {
-          throw new NullPointerException();
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
+      }
+      /**
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
         bitField0_ |= 0x00000001;
-        enStatus_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.input.StatusRequest en_status = 1 [(.validate.rules) = { ... }</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearEnStatus() {
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
         bitField0_ = (bitField0_ & ~0x00000001);
-        enStatus_ = 0;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1947,29 +1990,28 @@ public final class Services {
     java.lang.String[] descriptorData = {
       "\n\016services.proto\022\010services\032\013input.proto\032" +
       "\014output.proto\032\016validate.proto\032\037google/pr" +
-      "otobuf/timestamp.proto\"y\n\007Request\0223\n\ten_" +
-      "status\030\001 \001(\0162\024.input.StatusRequestB\n\372B\007\202" +
-      "\001\004\030\000\030\001\022\030\n\004name\030\002 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\037\n\013desc" +
-      "ription\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\"\243\001\n\010Response\022\024" +
-      "\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\002 \001(\tB\n\372B\007r" +
-      "\005\020\001\030\310\001\022\037\n\013description\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\022" +
-      "\036\n\014id_auditable\030\004 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006statu" +
-      "s\030\005 \001(\0162\026.output.StatusResponse2\353\003\n\007Serv" +
-      "ice\022:\n\010Paginate\022\030.input.PaginationReques" +
-      "t\032\022.services.Response0\001\0226\n\005Count\022\026.input" +
-      ".FilteredRequest\032\025.output.CountResponse\022" +
-      ">\n\006Create\022\021.services.Request\032\037.output.Pe" +
-      "rsistenceDataResponse(\001\022>\n\006Update\022\021.serv" +
-      "ices.Request\032\037.output.PersistenceDataRes" +
-      "ponse(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032" +
-      "\032.output.StatusDataResponse(\001\022:\n\006Active\022" +
-      "\022.input.UUIDRequest\032\032.output.StatusDataR" +
-      "esponse(\001\0221\n\007FindOne\022\022.input.UUIDRequest" +
-      "\032\022.services.Response\022?\n\006Delete\022\022.input.U" +
-      "UIDRequest\032\037.output.PersistenceDataRespo" +
-      "nse(\001BY\n\025com.soustify.servicesZ@github.c" +
-      "om/soustify/data-gateway-buffer-go/pkg/s" +
-      "ervices;servicesb\006proto3"
+      "otobuf/timestamp.proto\"Z\n\007Request\022\024\n\002id\030" +
+      "\001 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\002 \001(\tB\n\372B\007r\005\020\001\030\310" +
+      "\001\022\037\n\013description\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\"\243\001\n\010R" +
+      "esponse\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\002 " +
+      "\001(\tB\n\372B\007r\005\020\001\030\310\001\022\037\n\013description\030\003 \001(\tB\n\372B" +
+      "\007r\005\020\001\030\310\001\022\036\n\014id_auditable\030\004 \001(\tB\010\372B\005r\003\260\001\001" +
+      "\022&\n\006status\030\005 \001(\0162\026.output.StatusResponse" +
+      "2\353\003\n\007Service\022:\n\010Paginate\022\030.input.Paginat" +
+      "ionRequest\032\022.services.Response0\001\0226\n\005Coun" +
+      "t\022\026.input.FilteredRequest\032\025.output.Count" +
+      "Response\022>\n\006Create\022\021.services.Request\032\037." +
+      "output.PersistenceDataResponse(\001\022>\n\006Upda" +
+      "te\022\021.services.Request\032\037.output.Persisten" +
+      "ceDataResponse(\001\022<\n\010Inactive\022\022.input.UUI" +
+      "DRequest\032\032.output.StatusDataResponse(\001\022:" +
+      "\n\006Active\022\022.input.UUIDRequest\032\032.output.St" +
+      "atusDataResponse(\001\0221\n\007FindOne\022\022.input.UU" +
+      "IDRequest\032\022.services.Response\022?\n\006Delete\022" +
+      "\022.input.UUIDRequest\032\037.output.Persistence" +
+      "DataResponse(\001BY\n\025com.soustify.servicesZ" +
+      "@github.com/soustify/data-gateway-buffer" +
+      "-go/pkg/services;servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1984,7 +2026,7 @@ public final class Services {
     internal_static_services_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_Request_descriptor,
-        new java.lang.String[] { "EnStatus", "Name", "Description", });
+        new java.lang.String[] { "Id", "Name", "Description", });
     internal_static_services_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_services_Response_fieldAccessorTable = new

@@ -31,17 +31,6 @@ public final class CategoriesServices {
         getIdBytes();
 
     /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    int getEnStatusValue();
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    com.soustify.input.Input.StatusRequest getEnStatus();
-
-    /**
      * <code>string id_category = 3 [(.validate.rules) = { ... }</code>
      * @return The idCategory.
      */
@@ -54,12 +43,12 @@ public final class CategoriesServices {
         getIdCategoryBytes();
 
     /**
-     * <code>string id_service = 4 [(.validate.rules) = { ... }</code>
+     * <code>string id_service = 2 [(.validate.rules) = { ... }</code>
      * @return The idService.
      */
     java.lang.String getIdService();
     /**
-     * <code>string id_service = 4 [(.validate.rules) = { ... }</code>
+     * <code>string id_service = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for idService.
      */
     com.google.protobuf.ByteString
@@ -79,7 +68,6 @@ public final class CategoriesServices {
     }
     private Request() {
       id_ = "";
-      enStatus_ = 0;
       idCategory_ = "";
       idService_ = "";
     }
@@ -148,24 +136,6 @@ public final class CategoriesServices {
       }
     }
 
-    public static final int EN_STATUS_FIELD_NUMBER = 2;
-    private int enStatus_ = 0;
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    @java.lang.Override public int getEnStatusValue() {
-      return enStatus_;
-    }
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    @java.lang.Override public com.soustify.input.Input.StatusRequest getEnStatus() {
-      com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-      return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-    }
-
     public static final int ID_CATEGORY_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object idCategory_ = "";
@@ -205,11 +175,11 @@ public final class CategoriesServices {
       }
     }
 
-    public static final int ID_SERVICE_FIELD_NUMBER = 4;
+    public static final int ID_SERVICE_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object idService_ = "";
     /**
-     * <code>string id_service = 4 [(.validate.rules) = { ... }</code>
+     * <code>string id_service = 2 [(.validate.rules) = { ... }</code>
      * @return The idService.
      */
     @java.lang.Override
@@ -226,7 +196,7 @@ public final class CategoriesServices {
       }
     }
     /**
-     * <code>string id_service = 4 [(.validate.rules) = { ... }</code>
+     * <code>string id_service = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for idService.
      */
     @java.lang.Override
@@ -261,14 +231,11 @@ public final class CategoriesServices {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        output.writeEnum(2, enStatus_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idService_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, idService_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idCategory_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, idCategory_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idService_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, idService_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -282,15 +249,11 @@ public final class CategoriesServices {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, enStatus_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idService_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, idService_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idCategory_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, idCategory_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idService_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, idService_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -309,7 +272,6 @@ public final class CategoriesServices {
 
       if (!getId()
           .equals(other.getId())) return false;
-      if (enStatus_ != other.enStatus_) return false;
       if (!getIdCategory()
           .equals(other.getIdCategory())) return false;
       if (!getIdService()
@@ -327,8 +289,6 @@ public final class CategoriesServices {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + EN_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + enStatus_;
       hash = (37 * hash) + ID_CATEGORY_FIELD_NUMBER;
       hash = (53 * hash) + getIdCategory().hashCode();
       hash = (37 * hash) + ID_SERVICE_FIELD_NUMBER;
@@ -463,7 +423,6 @@ public final class CategoriesServices {
         super.clear();
         bitField0_ = 0;
         id_ = "";
-        enStatus_ = 0;
         idCategory_ = "";
         idService_ = "";
         return this;
@@ -503,12 +462,9 @@ public final class CategoriesServices {
           result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.enStatus_ = enStatus_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.idCategory_ = idCategory_;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.idService_ = idService_;
         }
       }
@@ -562,17 +518,14 @@ public final class CategoriesServices {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (other.enStatus_ != 0) {
-          setEnStatusValue(other.getEnStatusValue());
-        }
         if (!other.getIdCategory().isEmpty()) {
           idCategory_ = other.idCategory_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getIdService().isEmpty()) {
           idService_ = other.idService_;
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -606,21 +559,16 @@ public final class CategoriesServices {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 16: {
-                enStatus_ = input.readEnum();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 26: {
-                idCategory_ = input.readStringRequireUtf8();
+              case 18: {
+                idService_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 26
-              case 34: {
-                idService_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
+              } // case 18
+              case 26: {
+                idCategory_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
                 break;
-              } // case 34
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -710,59 +658,6 @@ public final class CategoriesServices {
         return this;
       }
 
-      private int enStatus_ = 0;
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enum numeric value on the wire for enStatus.
-       */
-      @java.lang.Override public int getEnStatusValue() {
-        return enStatus_;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enum numeric value on the wire for enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatusValue(int value) {
-        enStatus_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enStatus.
-       */
-      @java.lang.Override
-      public com.soustify.input.Input.StatusRequest getEnStatus() {
-        com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-        return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatus(com.soustify.input.Input.StatusRequest value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        enStatus_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEnStatus() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        enStatus_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object idCategory_ = "";
       /**
        * <code>string id_category = 3 [(.validate.rules) = { ... }</code>
@@ -806,7 +701,7 @@ public final class CategoriesServices {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         idCategory_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -816,7 +711,7 @@ public final class CategoriesServices {
        */
       public Builder clearIdCategory() {
         idCategory_ = getDefaultInstance().getIdCategory();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -830,14 +725,14 @@ public final class CategoriesServices {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         idCategory_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private java.lang.Object idService_ = "";
       /**
-       * <code>string id_service = 4 [(.validate.rules) = { ... }</code>
+       * <code>string id_service = 2 [(.validate.rules) = { ... }</code>
        * @return The idService.
        */
       public java.lang.String getIdService() {
@@ -853,7 +748,7 @@ public final class CategoriesServices {
         }
       }
       /**
-       * <code>string id_service = 4 [(.validate.rules) = { ... }</code>
+       * <code>string id_service = 2 [(.validate.rules) = { ... }</code>
        * @return The bytes for idService.
        */
       public com.google.protobuf.ByteString
@@ -870,7 +765,7 @@ public final class CategoriesServices {
         }
       }
       /**
-       * <code>string id_service = 4 [(.validate.rules) = { ... }</code>
+       * <code>string id_service = 2 [(.validate.rules) = { ... }</code>
        * @param value The idService to set.
        * @return This builder for chaining.
        */
@@ -878,22 +773,22 @@ public final class CategoriesServices {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         idService_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string id_service = 4 [(.validate.rules) = { ... }</code>
+       * <code>string id_service = 2 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearIdService() {
         idService_ = getDefaultInstance().getIdService();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string id_service = 4 [(.validate.rules) = { ... }</code>
+       * <code>string id_service = 2 [(.validate.rules) = { ... }</code>
        * @param value The bytes for idService to set.
        * @return This builder for chaining.
        */
@@ -902,7 +797,7 @@ public final class CategoriesServices {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         idService_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2096,31 +1991,30 @@ public final class CategoriesServices {
       "\n\031categories_services.proto\022\023categories_" +
       "services\032\013input.proto\032\014output.proto\032\016val" +
       "idate.proto\032\037google/protobuf/timestamp.p" +
-      "roto\"\221\001\n\007Request\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223" +
-      "\n\ten_status\030\002 \001(\0162\024.input.StatusRequestB" +
-      "\n\372B\007\202\001\004\030\000\030\001\022\035\n\013id_category\030\003 \001(\tB\010\372B\005r\003\260" +
-      "\001\001\022\034\n\nid_service\030\004 \001(\tB\010\372B\005r\003\260\001\001\"\245\001\n\010Res" +
-      "ponse\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 " +
-      "\001(\0162\026.output.StatusResponse\022\036\n\014id_audita" +
-      "ble\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\035\n\013id_category\030\004 \001(\t" +
-      "B\010\372B\005r\003\260\001\001\022\034\n\nid_service\030\005 \001(\tB\010\372B\005r\003\260\001\001" +
-      "2\227\004\n\007Service\022E\n\010Paginate\022\030.input.Paginat" +
-      "ionRequest\032\035.categories_services.Respons" +
-      "e0\001\0226\n\005Count\022\026.input.FilteredRequest\032\025.o" +
-      "utput.CountResponse\022I\n\006Create\022\034.categori" +
-      "es_services.Request\032\037.output.Persistence" +
-      "DataResponse(\001\022I\n\006Update\022\034.categories_se" +
-      "rvices.Request\032\037.output.PersistenceDataR" +
-      "esponse(\001\022<\n\010Inactive\022\022.input.UUIDReques" +
-      "t\032\032.output.StatusDataResponse(\001\022:\n\006Activ" +
-      "e\022\022.input.UUIDRequest\032\032.output.StatusDat" +
-      "aResponse(\001\022<\n\007FindOne\022\022.input.UUIDReque" +
-      "st\032\035.categories_services.Response\022?\n\006Del" +
-      "ete\022\022.input.UUIDRequest\032\037.output.Persist" +
-      "enceDataResponse(\001Bz\n com.soustify.categ" +
-      "ories_servicesZVgithub.com/soustify/data" +
-      "-gateway-buffer-go/pkg/categories_servic" +
-      "es;categories_servicesb\006proto3"
+      "roto\"\\\n\007Request\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\035\n" +
+      "\013id_category\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\034\n\nid_servi" +
+      "ce\030\002 \001(\tB\010\372B\005r\003\260\001\001\"\245\001\n\010Response\022\024\n\002id\030\001 " +
+      "\001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 \001(\0162\026.output.S" +
+      "tatusResponse\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005" +
+      "r\003\260\001\001\022\035\n\013id_category\030\004 \001(\tB\010\372B\005r\003\260\001\001\022\034\n\n" +
+      "id_service\030\005 \001(\tB\010\372B\005r\003\260\001\0012\227\004\n\007Service\022E" +
+      "\n\010Paginate\022\030.input.PaginationRequest\032\035.c" +
+      "ategories_services.Response0\001\0226\n\005Count\022\026" +
+      ".input.FilteredRequest\032\025.output.CountRes" +
+      "ponse\022I\n\006Create\022\034.categories_services.Re" +
+      "quest\032\037.output.PersistenceDataResponse(\001" +
+      "\022I\n\006Update\022\034.categories_services.Request" +
+      "\032\037.output.PersistenceDataResponse(\001\022<\n\010I" +
+      "nactive\022\022.input.UUIDRequest\032\032.output.Sta" +
+      "tusDataResponse(\001\022:\n\006Active\022\022.input.UUID" +
+      "Request\032\032.output.StatusDataResponse(\001\022<\n" +
+      "\007FindOne\022\022.input.UUIDRequest\032\035.categorie" +
+      "s_services.Response\022?\n\006Delete\022\022.input.UU" +
+      "IDRequest\032\037.output.PersistenceDataRespon" +
+      "se(\001Bz\n com.soustify.categories_services" +
+      "ZVgithub.com/soustify/data-gateway-buffe" +
+      "r-go/pkg/categories_services;categories_" +
+      "servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2135,7 +2029,7 @@ public final class CategoriesServices {
     internal_static_categories_services_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_categories_services_Request_descriptor,
-        new java.lang.String[] { "Id", "EnStatus", "IdCategory", "IdService", });
+        new java.lang.String[] { "Id", "IdCategory", "IdService", });
     internal_static_categories_services_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_categories_services_Response_fieldAccessorTable = new

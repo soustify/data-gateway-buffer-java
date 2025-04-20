@@ -41,6 +41,18 @@ public final class PartnersCategories {
      */
     com.google.protobuf.ByteString
         getIdCategoryBytes();
+
+    /**
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
   }
   /**
    * Protobuf type {@code partners_categories.Request}
@@ -57,6 +69,7 @@ public final class PartnersCategories {
     private Request() {
       idPartner_ = "";
       idCategory_ = "";
+      id_ = "";
     }
 
     @java.lang.Override
@@ -162,6 +175,45 @@ public final class PartnersCategories {
       }
     }
 
+    public static final int ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -182,6 +234,9 @@ public final class PartnersCategories {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idCategory_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, idCategory_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -196,6 +251,9 @@ public final class PartnersCategories {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idCategory_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, idCategory_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -216,6 +274,8 @@ public final class PartnersCategories {
           .equals(other.getIdPartner())) return false;
       if (!getIdCategory()
           .equals(other.getIdCategory())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -231,6 +291,8 @@ public final class PartnersCategories {
       hash = (53 * hash) + getIdPartner().hashCode();
       hash = (37 * hash) + ID_CATEGORY_FIELD_NUMBER;
       hash = (53 * hash) + getIdCategory().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -362,6 +424,7 @@ public final class PartnersCategories {
         bitField0_ = 0;
         idPartner_ = "";
         idCategory_ = "";
+        id_ = "";
         return this;
       }
 
@@ -400,6 +463,9 @@ public final class PartnersCategories {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.idCategory_ = idCategory_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.id_ = id_;
         }
       }
 
@@ -457,6 +523,11 @@ public final class PartnersCategories {
           bitField0_ |= 0x00000002;
           onChanged();
         }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -493,6 +564,11 @@ public final class PartnersCategories {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -650,6 +726,78 @@ public final class PartnersCategories {
         checkByteStringIsUtf8(value);
         idCategory_ = value;
         bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1695,29 +1843,29 @@ public final class PartnersCategories {
       "\n\031partners_categories.proto\022\023partners_ca" +
       "tegories\032\013input.proto\032\014output.proto\032\016val" +
       "idate.proto\032\037google/protobuf/timestamp.p" +
-      "roto\"F\n\007Request\022\034\n\nid_partner\030\001 \001(\tB\010\372B\005" +
-      "r\003\260\001\001\022\035\n\013id_category\030\002 \001(\tB\010\372B\005r\003\260\001\001\"\205\001\n" +
-      "\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006statu" +
-      "s\030\004 \001(\0162\026.output.StatusResponse\022\034\n\nid_pa" +
-      "rtner\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\035\n\013id_category\030\002 \001" +
-      "(\tB\010\372B\005r\003\260\001\0012\227\004\n\007Service\022E\n\010Paginate\022\030.i" +
-      "nput.PaginationRequest\032\035.partners_catego" +
-      "ries.Response0\001\0226\n\005Count\022\026.input.Filtere" +
-      "dRequest\032\025.output.CountResponse\022I\n\006Creat" +
-      "e\022\034.partners_categories.Request\032\037.output" +
-      ".PersistenceDataResponse(\001\022I\n\006Update\022\034.p" +
-      "artners_categories.Request\032\037.output.Pers" +
-      "istenceDataResponse(\001\022<\n\010Inactive\022\022.inpu" +
-      "t.UUIDRequest\032\032.output.StatusDataRespons" +
-      "e(\001\022:\n\006Active\022\022.input.UUIDRequest\032\032.outp" +
-      "ut.StatusDataResponse(\001\022<\n\007FindOne\022\022.inp" +
-      "ut.UUIDRequest\032\035.partners_categories.Res" +
-      "ponse\022?\n\006Delete\022\022.input.UUIDRequest\032\037.ou" +
-      "tput.PersistenceDataResponse(\001Bz\n com.so" +
-      "ustify.partners_categoriesZVgithub.com/s" +
-      "oustify/data-gateway-buffer-go/pkg/partn" +
-      "ers_categories;partners_categoriesb\006prot" +
-      "o3"
+      "roto\"\\\n\007Request\022\034\n\nid_partner\030\001 \001(\tB\010\372B\005" +
+      "r\003\260\001\001\022\035\n\013id_category\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\024\n\002" +
+      "id\030\003 \001(\tB\010\372B\005r\003\260\001\001\"\205\001\n\010Response\022\024\n\002id\030\001 " +
+      "\001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\004 \001(\0162\026.output.S" +
+      "tatusResponse\022\034\n\nid_partner\030\003 \001(\tB\010\372B\005r\003" +
+      "\260\001\001\022\035\n\013id_category\030\002 \001(\tB\010\372B\005r\003\260\001\0012\227\004\n\007S" +
+      "ervice\022E\n\010Paginate\022\030.input.PaginationReq" +
+      "uest\032\035.partners_categories.Response0\001\0226\n" +
+      "\005Count\022\026.input.FilteredRequest\032\025.output." +
+      "CountResponse\022I\n\006Create\022\034.partners_categ" +
+      "ories.Request\032\037.output.PersistenceDataRe" +
+      "sponse(\001\022I\n\006Update\022\034.partners_categories" +
+      ".Request\032\037.output.PersistenceDataRespons" +
+      "e(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032\032.ou" +
+      "tput.StatusDataResponse(\001\022:\n\006Active\022\022.in" +
+      "put.UUIDRequest\032\032.output.StatusDataRespo" +
+      "nse(\001\022<\n\007FindOne\022\022.input.UUIDRequest\032\035.p" +
+      "artners_categories.Response\022?\n\006Delete\022\022." +
+      "input.UUIDRequest\032\037.output.PersistenceDa" +
+      "taResponse(\001Bz\n com.soustify.partners_ca" +
+      "tegoriesZVgithub.com/soustify/data-gatew" +
+      "ay-buffer-go/pkg/partners_categories;par" +
+      "tners_categoriesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1732,7 +1880,7 @@ public final class PartnersCategories {
     internal_static_partners_categories_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_partners_categories_Request_descriptor,
-        new java.lang.String[] { "IdPartner", "IdCategory", });
+        new java.lang.String[] { "IdPartner", "IdCategory", "Id", });
     internal_static_partners_categories_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_partners_categories_Response_fieldAccessorTable = new

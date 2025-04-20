@@ -31,17 +31,6 @@ public final class Contacts {
         getIdBytes();
 
     /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    int getEnStatusValue();
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    com.soustify.input.Input.StatusRequest getEnStatus();
-
-    /**
      * <code>string type = 3 [(.validate.rules) = { ... }</code>
      * @return The type.
      */
@@ -54,12 +43,12 @@ public final class Contacts {
         getTypeBytes();
 
     /**
-     * <code>string value = 4 [(.validate.rules) = { ... }</code>
+     * <code>string value = 2 [(.validate.rules) = { ... }</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
-     * <code>string value = 4 [(.validate.rules) = { ... }</code>
+     * <code>string value = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for value.
      */
     com.google.protobuf.ByteString
@@ -79,7 +68,6 @@ public final class Contacts {
     }
     private Request() {
       id_ = "";
-      enStatus_ = 0;
       type_ = "";
       value_ = "";
     }
@@ -148,24 +136,6 @@ public final class Contacts {
       }
     }
 
-    public static final int EN_STATUS_FIELD_NUMBER = 2;
-    private int enStatus_ = 0;
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    @java.lang.Override public int getEnStatusValue() {
-      return enStatus_;
-    }
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    @java.lang.Override public com.soustify.input.Input.StatusRequest getEnStatus() {
-      com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-      return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-    }
-
     public static final int TYPE_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object type_ = "";
@@ -205,11 +175,11 @@ public final class Contacts {
       }
     }
 
-    public static final int VALUE_FIELD_NUMBER = 4;
+    public static final int VALUE_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object value_ = "";
     /**
-     * <code>string value = 4 [(.validate.rules) = { ... }</code>
+     * <code>string value = 2 [(.validate.rules) = { ... }</code>
      * @return The value.
      */
     @java.lang.Override
@@ -226,7 +196,7 @@ public final class Contacts {
       }
     }
     /**
-     * <code>string value = 4 [(.validate.rules) = { ... }</code>
+     * <code>string value = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for value.
      */
     @java.lang.Override
@@ -261,14 +231,11 @@ public final class Contacts {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        output.writeEnum(2, enStatus_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, value_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -282,15 +249,11 @@ public final class Contacts {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, enStatus_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, value_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -309,7 +272,6 @@ public final class Contacts {
 
       if (!getId()
           .equals(other.getId())) return false;
-      if (enStatus_ != other.enStatus_) return false;
       if (!getType()
           .equals(other.getType())) return false;
       if (!getValue()
@@ -327,8 +289,6 @@ public final class Contacts {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + EN_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + enStatus_;
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
       hash = (37 * hash) + VALUE_FIELD_NUMBER;
@@ -463,7 +423,6 @@ public final class Contacts {
         super.clear();
         bitField0_ = 0;
         id_ = "";
-        enStatus_ = 0;
         type_ = "";
         value_ = "";
         return this;
@@ -503,12 +462,9 @@ public final class Contacts {
           result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.enStatus_ = enStatus_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.type_ = type_;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.value_ = value_;
         }
       }
@@ -562,17 +518,14 @@ public final class Contacts {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (other.enStatus_ != 0) {
-          setEnStatusValue(other.getEnStatusValue());
-        }
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getValue().isEmpty()) {
           value_ = other.value_;
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -606,21 +559,16 @@ public final class Contacts {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 16: {
-                enStatus_ = input.readEnum();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 26: {
-                type_ = input.readStringRequireUtf8();
+              case 18: {
+                value_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 26
-              case 34: {
-                value_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
+              } // case 18
+              case 26: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
                 break;
-              } // case 34
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -710,59 +658,6 @@ public final class Contacts {
         return this;
       }
 
-      private int enStatus_ = 0;
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enum numeric value on the wire for enStatus.
-       */
-      @java.lang.Override public int getEnStatusValue() {
-        return enStatus_;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enum numeric value on the wire for enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatusValue(int value) {
-        enStatus_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enStatus.
-       */
-      @java.lang.Override
-      public com.soustify.input.Input.StatusRequest getEnStatus() {
-        com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-        return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatus(com.soustify.input.Input.StatusRequest value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        enStatus_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEnStatus() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        enStatus_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 3 [(.validate.rules) = { ... }</code>
@@ -806,7 +701,7 @@ public final class Contacts {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         type_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -816,7 +711,7 @@ public final class Contacts {
        */
       public Builder clearType() {
         type_ = getDefaultInstance().getType();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -830,14 +725,14 @@ public final class Contacts {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         type_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private java.lang.Object value_ = "";
       /**
-       * <code>string value = 4 [(.validate.rules) = { ... }</code>
+       * <code>string value = 2 [(.validate.rules) = { ... }</code>
        * @return The value.
        */
       public java.lang.String getValue() {
@@ -853,7 +748,7 @@ public final class Contacts {
         }
       }
       /**
-       * <code>string value = 4 [(.validate.rules) = { ... }</code>
+       * <code>string value = 2 [(.validate.rules) = { ... }</code>
        * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
@@ -870,7 +765,7 @@ public final class Contacts {
         }
       }
       /**
-       * <code>string value = 4 [(.validate.rules) = { ... }</code>
+       * <code>string value = 2 [(.validate.rules) = { ... }</code>
        * @param value The value to set.
        * @return This builder for chaining.
        */
@@ -878,22 +773,22 @@ public final class Contacts {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         value_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string value = 4 [(.validate.rules) = { ... }</code>
+       * <code>string value = 2 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearValue() {
         value_ = getDefaultInstance().getValue();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string value = 4 [(.validate.rules) = { ... }</code>
+       * <code>string value = 2 [(.validate.rules) = { ... }</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.
        */
@@ -902,7 +797,7 @@ public final class Contacts {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         value_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2095,29 +1990,28 @@ public final class Contacts {
     java.lang.String[] descriptorData = {
       "\n\016contacts.proto\022\010contacts\032\013input.proto\032" +
       "\014output.proto\032\016validate.proto\032\037google/pr" +
-      "otobuf/timestamp.proto\"\211\001\n\007Request\022\024\n\002id" +
-      "\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001(\0162\024.in" +
-      "put.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n\004type\030\003 " +
-      "\001(\tB\n\372B\007r\005\020\001\030\310\001\022\031\n\005value\030\004 \001(\tB\n\372B\007r\005\020\001\030" +
-      "\310\001\"\235\001\n\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n" +
-      "\006status\030\002 \001(\0162\026.output.StatusResponse\022\036\n" +
-      "\014id_auditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004type\030\004 " +
-      "\001(\tB\n\372B\007r\005\020\001\030\310\001\022\031\n\005value\030\005 \001(\tB\n\372B\007r\005\020\001\030" +
-      "\310\0012\353\003\n\007Service\022:\n\010Paginate\022\030.input.Pagin" +
-      "ationRequest\032\022.contacts.Response0\001\0226\n\005Co" +
-      "unt\022\026.input.FilteredRequest\032\025.output.Cou" +
-      "ntResponse\022>\n\006Create\022\021.contacts.Request\032" +
-      "\037.output.PersistenceDataResponse(\001\022>\n\006Up" +
-      "date\022\021.contacts.Request\032\037.output.Persist" +
-      "enceDataResponse(\001\022<\n\010Inactive\022\022.input.U" +
-      "UIDRequest\032\032.output.StatusDataResponse(\001" +
-      "\022:\n\006Active\022\022.input.UUIDRequest\032\032.output." +
-      "StatusDataResponse(\001\0221\n\007FindOne\022\022.input." +
-      "UUIDRequest\032\022.contacts.Response\022?\n\006Delet" +
-      "e\022\022.input.UUIDRequest\032\037.output.Persisten" +
-      "ceDataResponse(\001BY\n\025com.soustify.contact" +
-      "sZ@github.com/soustify/data-gateway-buff" +
-      "er-go/pkg/contacts;contactsb\006proto3"
+      "otobuf/timestamp.proto\"T\n\007Request\022\024\n\002id\030" +
+      "\001 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004type\030\003 \001(\tB\n\372B\007r\005\020\001\030\310" +
+      "\001\022\031\n\005value\030\002 \001(\tB\n\372B\007r\005\020\001\030\310\001\"\235\001\n\010Respons" +
+      "e\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 \001(\0162" +
+      "\026.output.StatusResponse\022\036\n\014id_auditable\030" +
+      "\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004type\030\004 \001(\tB\n\372B\007r\005\020\001\030\310" +
+      "\001\022\031\n\005value\030\005 \001(\tB\n\372B\007r\005\020\001\030\310\0012\353\003\n\007Service" +
+      "\022:\n\010Paginate\022\030.input.PaginationRequest\032\022" +
+      ".contacts.Response0\001\0226\n\005Count\022\026.input.Fi" +
+      "lteredRequest\032\025.output.CountResponse\022>\n\006" +
+      "Create\022\021.contacts.Request\032\037.output.Persi" +
+      "stenceDataResponse(\001\022>\n\006Update\022\021.contact" +
+      "s.Request\032\037.output.PersistenceDataRespon" +
+      "se(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032\032.o" +
+      "utput.StatusDataResponse(\001\022:\n\006Active\022\022.i" +
+      "nput.UUIDRequest\032\032.output.StatusDataResp" +
+      "onse(\001\0221\n\007FindOne\022\022.input.UUIDRequest\032\022." +
+      "contacts.Response\022?\n\006Delete\022\022.input.UUID" +
+      "Request\032\037.output.PersistenceDataResponse" +
+      "(\001BY\n\025com.soustify.contactsZ@github.com/" +
+      "soustify/data-gateway-buffer-go/pkg/cont" +
+      "acts;contactsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2132,7 +2026,7 @@ public final class Contacts {
     internal_static_contacts_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_contacts_Request_descriptor,
-        new java.lang.String[] { "Id", "EnStatus", "Type", "Value", });
+        new java.lang.String[] { "Id", "Type", "Value", });
     internal_static_contacts_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_contacts_Response_fieldAccessorTable = new

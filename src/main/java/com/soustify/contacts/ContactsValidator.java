@@ -21,12 +21,6 @@ public class ContactsValidator {
 		
 	
 		
-		private final com.soustify.input.Input.StatusRequest[] EN_STATUS__IN = new com.soustify.input.Input.StatusRequest[]{
-			com.soustify.input.Input.StatusRequest.forNumber(0),
-			com.soustify.input.Input.StatusRequest.forNumber(1),
-		};
-	
-		
 	
 		
 	
@@ -36,8 +30,6 @@ public class ContactsValidator {
 	public void assertValid(com.soustify.contacts.Contacts.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".contacts.Request.id", proto.getId());
-	
-			io.envoyproxy.pgv.CollectiveValidation.in(".contacts.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
 			io.envoyproxy.pgv.StringValidation.minLength(".contacts.Request.type", proto.getType(), 1);
 			io.envoyproxy.pgv.StringValidation.maxLength(".contacts.Request.type", proto.getType(), 200);

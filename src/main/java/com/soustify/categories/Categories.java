@@ -31,23 +31,12 @@ public final class Categories {
         getIdBytes();
 
     /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    int getEnStatusValue();
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    com.soustify.input.Input.StatusRequest getEnStatus();
-
-    /**
-     * <code>string name = 3 [(.validate.rules) = { ... }</code>
+     * <code>string name = 2 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 3 [(.validate.rules) = { ... }</code>
+     * <code>string name = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -67,7 +56,6 @@ public final class Categories {
     }
     private Request() {
       id_ = "";
-      enStatus_ = 0;
       name_ = "";
     }
 
@@ -135,29 +123,11 @@ public final class Categories {
       }
     }
 
-    public static final int EN_STATUS_FIELD_NUMBER = 2;
-    private int enStatus_ = 0;
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    @java.lang.Override public int getEnStatusValue() {
-      return enStatus_;
-    }
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    @java.lang.Override public com.soustify.input.Input.StatusRequest getEnStatus() {
-      com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-      return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-    }
-
-    public static final int NAME_FIELD_NUMBER = 3;
+    public static final int NAME_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
     /**
-     * <code>string name = 3 [(.validate.rules) = { ... }</code>
+     * <code>string name = 2 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     @java.lang.Override
@@ -174,7 +144,7 @@ public final class Categories {
       }
     }
     /**
-     * <code>string name = 3 [(.validate.rules) = { ... }</code>
+     * <code>string name = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -209,11 +179,8 @@ public final class Categories {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        output.writeEnum(2, enStatus_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -227,12 +194,8 @@ public final class Categories {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, enStatus_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -251,7 +214,6 @@ public final class Categories {
 
       if (!getId()
           .equals(other.getId())) return false;
-      if (enStatus_ != other.enStatus_) return false;
       if (!getName()
           .equals(other.getName())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -267,8 +229,6 @@ public final class Categories {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + EN_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + enStatus_;
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -401,7 +361,6 @@ public final class Categories {
         super.clear();
         bitField0_ = 0;
         id_ = "";
-        enStatus_ = 0;
         name_ = "";
         return this;
       }
@@ -440,9 +399,6 @@ public final class Categories {
           result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.enStatus_ = enStatus_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.name_ = name_;
         }
       }
@@ -496,12 +452,9 @@ public final class Categories {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (other.enStatus_ != 0) {
-          setEnStatusValue(other.getEnStatusValue());
-        }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -535,16 +488,11 @@ public final class Categories {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 16: {
-                enStatus_ = input.readEnum();
+              case 18: {
+                name_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 16
-              case 26: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -634,62 +582,9 @@ public final class Categories {
         return this;
       }
 
-      private int enStatus_ = 0;
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enum numeric value on the wire for enStatus.
-       */
-      @java.lang.Override public int getEnStatusValue() {
-        return enStatus_;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enum numeric value on the wire for enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatusValue(int value) {
-        enStatus_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enStatus.
-       */
-      @java.lang.Override
-      public com.soustify.input.Input.StatusRequest getEnStatus() {
-        com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-        return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatus(com.soustify.input.Input.StatusRequest value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        enStatus_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEnStatus() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        enStatus_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 3 [(.validate.rules) = { ... }</code>
+       * <code>string name = 2 [(.validate.rules) = { ... }</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -705,7 +600,7 @@ public final class Categories {
         }
       }
       /**
-       * <code>string name = 3 [(.validate.rules) = { ... }</code>
+       * <code>string name = 2 [(.validate.rules) = { ... }</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -722,7 +617,7 @@ public final class Categories {
         }
       }
       /**
-       * <code>string name = 3 [(.validate.rules) = { ... }</code>
+       * <code>string name = 2 [(.validate.rules) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -730,22 +625,22 @@ public final class Categories {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         name_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 3 [(.validate.rules) = { ... }</code>
+       * <code>string name = 2 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
         name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 3 [(.validate.rules) = { ... }</code>
+       * <code>string name = 2 [(.validate.rules) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -754,7 +649,7 @@ public final class Categories {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         name_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1799,28 +1694,27 @@ public final class Categories {
     java.lang.String[] descriptorData = {
       "\n\020categories.proto\022\ncategories\032\013input.pr" +
       "oto\032\014output.proto\032\016validate.proto\032\037googl" +
-      "e/protobuf/timestamp.proto\"n\n\007Request\022\024\n" +
-      "\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001(\0162\024" +
-      ".input.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n\004name" +
-      "\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\"\202\001\n\010Response\022\024\n\002id\030\001 " +
-      "\001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 \001(\0162\026.output.S" +
-      "tatusResponse\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005" +
-      "r\003\260\001\001\022\030\n\004name\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\0012\363\003\n\007Serv" +
-      "ice\022<\n\010Paginate\022\030.input.PaginationReques" +
-      "t\032\024.categories.Response0\001\0226\n\005Count\022\026.inp" +
-      "ut.FilteredRequest\032\025.output.CountRespons" +
-      "e\022@\n\006Create\022\023.categories.Request\032\037.outpu" +
-      "t.PersistenceDataResponse(\001\022@\n\006Update\022\023." +
-      "categories.Request\032\037.output.PersistenceD" +
-      "ataResponse(\001\022<\n\010Inactive\022\022.input.UUIDRe" +
-      "quest\032\032.output.StatusDataResponse(\001\022:\n\006A" +
-      "ctive\022\022.input.UUIDRequest\032\032.output.Statu" +
-      "sDataResponse(\001\0223\n\007FindOne\022\022.input.UUIDR" +
-      "equest\032\024.categories.Response\022?\n\006Delete\022\022" +
-      ".input.UUIDRequest\032\037.output.PersistenceD" +
-      "ataResponse(\001B_\n\027com.soustify.categories" +
-      "ZDgithub.com/soustify/data-gateway-buffe" +
-      "r-go/pkg/categories;categoriesb\006proto3"
+      "e/protobuf/timestamp.proto\"9\n\007Request\022\024\n" +
+      "\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\002 \001(\tB\n\372B\007r\005" +
+      "\020\001\030\310\001\"\202\001\n\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001" +
+      "\022&\n\006status\030\002 \001(\0162\026.output.StatusResponse" +
+      "\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name" +
+      "\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\0012\363\003\n\007Service\022<\n\010Pagina" +
+      "te\022\030.input.PaginationRequest\032\024.categorie" +
+      "s.Response0\001\0226\n\005Count\022\026.input.FilteredRe" +
+      "quest\032\025.output.CountResponse\022@\n\006Create\022\023" +
+      ".categories.Request\032\037.output.Persistence" +
+      "DataResponse(\001\022@\n\006Update\022\023.categories.Re" +
+      "quest\032\037.output.PersistenceDataResponse(\001" +
+      "\022<\n\010Inactive\022\022.input.UUIDRequest\032\032.outpu" +
+      "t.StatusDataResponse(\001\022:\n\006Active\022\022.input" +
+      ".UUIDRequest\032\032.output.StatusDataResponse" +
+      "(\001\0223\n\007FindOne\022\022.input.UUIDRequest\032\024.cate" +
+      "gories.Response\022?\n\006Delete\022\022.input.UUIDRe" +
+      "quest\032\037.output.PersistenceDataResponse(\001" +
+      "B_\n\027com.soustify.categoriesZDgithub.com/" +
+      "soustify/data-gateway-buffer-go/pkg/cate" +
+      "gories;categoriesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1835,7 +1729,7 @@ public final class Categories {
     internal_static_categories_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_categories_Request_descriptor,
-        new java.lang.String[] { "Id", "EnStatus", "Name", });
+        new java.lang.String[] { "Id", "Name", });
     internal_static_categories_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_categories_Response_fieldAccessorTable = new

@@ -174,17 +174,6 @@ public final class Example {
      * @return The public.
      */
     boolean getPublic();
-
-    /**
-     * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    int getEnStatusValue();
-    /**
-     * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    com.soustify.input.Input.StatusRequest getEnStatus();
   }
   /**
    * Protobuf type {@code example.Request}
@@ -206,7 +195,6 @@ public final class Example {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       email_ = "";
       phone_ = "";
-      enStatus_ = 0;
     }
 
     @java.lang.Override
@@ -611,24 +599,6 @@ public final class Example {
       return public_;
     }
 
-    public static final int EN_STATUS_FIELD_NUMBER = 15;
-    private int enStatus_ = 0;
-    /**
-     * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    @java.lang.Override public int getEnStatusValue() {
-      return enStatus_;
-    }
-    /**
-     * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    @java.lang.Override public com.soustify.input.Input.StatusRequest getEnStatus() {
-      com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-      return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -684,9 +654,6 @@ public final class Example {
       }
       if (public_ != false) {
         output.writeBool(14, public_);
-      }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        output.writeEnum(15, enStatus_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -751,10 +718,6 @@ public final class Example {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, public_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(15, enStatus_);
-      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -807,7 +770,6 @@ public final class Example {
       }
       if (getPublic()
           != other.getPublic()) return false;
-      if (enStatus_ != other.enStatus_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -857,8 +819,6 @@ public final class Example {
       hash = (37 * hash) + PUBLIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPublic());
-      hash = (37 * hash) + EN_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + enStatus_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1011,7 +971,6 @@ public final class Example {
           metadataBuilder_ = null;
         }
         public_ = false;
-        enStatus_ = 0;
         return this;
       }
 
@@ -1096,9 +1055,6 @@ public final class Example {
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.public_ = public_;
-        }
-        if (((from_bitField0_ & 0x00004000) != 0)) {
-          result.enStatus_ = enStatus_;
         }
       }
 
@@ -1207,9 +1163,6 @@ public final class Example {
         if (other.getPublic() != false) {
           setPublic(other.getPublic());
         }
-        if (other.enStatus_ != 0) {
-          setEnStatusValue(other.getEnStatusValue());
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1311,11 +1264,6 @@ public final class Example {
                 bitField0_ |= 0x00002000;
                 break;
               } // case 112
-              case 120: {
-                enStatus_ = input.readEnum();
-                bitField0_ |= 0x00004000;
-                break;
-              } // case 120
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2263,59 +2211,6 @@ public final class Example {
       public Builder clearPublic() {
         bitField0_ = (bitField0_ & ~0x00002000);
         public_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int enStatus_ = 0;
-      /**
-       * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
-       * @return The enum numeric value on the wire for enStatus.
-       */
-      @java.lang.Override public int getEnStatusValue() {
-        return enStatus_;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
-       * @param value The enum numeric value on the wire for enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatusValue(int value) {
-        enStatus_ = value;
-        bitField0_ |= 0x00004000;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
-       * @return The enStatus.
-       */
-      @java.lang.Override
-      public com.soustify.input.Input.StatusRequest getEnStatus() {
-        com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-        return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
-       * @param value The enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatus(com.soustify.input.Input.StatusRequest value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00004000;
-        enStatus_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 15 [(.validate.rules) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEnStatus() {
-        bitField0_ = (bitField0_ & ~0x00004000);
-        enStatus_ = 0;
         onChanged();
         return this;
       }
@@ -5118,7 +5013,7 @@ public final class Example {
       "\n\rexample.proto\022\007example\032\013input.proto\032\014o" +
       "utput.proto\032\016validate.proto\032\037google/prot" +
       "obuf/timestamp.proto\032\034google/protobuf/st" +
-      "ruct.proto\"\357\003\n\007Request\022\024\n\002id\030\001 \001(\tB\010\372B\005r" +
+      "ruct.proto\"\270\003\n\007Request\022\024\n\002id\030\001 \001(\tB\010\372B\005r" +
       "\003\260\001\001\022\025\n\004name\030\002 \001(\tB\007\372B\004r\002\020\001\022\034\n\013descripti" +
       "on\030\003 \001(\tB\007\372B\004r\002\020\003\0227\n\tborn_date\030\004 \001(\0132\032.g" +
       "oogle.protobuf.TimestampB\010\372B\005\262\001\002\010\001\022\035\n\005pr" +
@@ -5129,33 +5024,32 @@ public final class Example {
       ")\000\000\000\000\000\000\000\000\022\026\n\005email\030\013 \001(\tB\007\372B\004r\002`\001\022\'\n\005pho" +
       "ne\030\014 \001(\tB\030\372B\025r\0232\021^[0-9\\-\\+]{9,20}$\022)\n\010me" +
       "tadata\030\r \001(\0132\027.google.protobuf.Struct\022\016\n" +
-      "\006public\030\016 \001(\010\0225\n\ten_status\030\017 \001(\0162\024.input" +
-      ".StatusRequestB\014\372B\t\202\001\006\030\000\030\001\030\002\"\222\003\n\010Respons" +
-      "e\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013descripti" +
-      "on\030\003 \001(\t\022-\n\tborn_date\030\004 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022\016\n\006public\030\005 \001(\010\022\r\n\005price" +
-      "\030\006 \001(\001\022)\n\010metadata\030\007 \001(\0132\027.google.protob" +
-      "uf.Struct\022.\n\nlast_login\030\010 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022\020\n\010category\030\t \001(\t\022\014\n\004t" +
-      "ags\030\n \003(\t\022\016\n\006rating\030\013 \001(\001\022\020\n\010quantity\030\014 " +
-      "\001(\005\022\020\n\010discount\030\r \001(\001\022\r\n\005email\030\016 \001(\t\022\r\n\005" +
-      "phone\030\017 \001(\t\022&\n\006status\030\022 \001(\0162\026.output.Sta" +
-      "tusResponse\022\024\n\014id_auditable\030\023 \001(\t2\347\003\n\007Se" +
-      "rvice\0229\n\010Paginate\022\030.input.PaginationRequ" +
-      "est\032\021.example.Response0\001\0226\n\005Count\022\026.inpu" +
-      "t.FilteredRequest\032\025.output.CountResponse" +
-      "\022=\n\006Create\022\020.example.Request\032\037.output.Pe" +
-      "rsistenceDataResponse(\001\022=\n\006Update\022\020.exam" +
-      "ple.Request\032\037.output.PersistenceDataResp" +
-      "onse(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032\032" +
-      ".output.StatusDataResponse(\001\022:\n\006Active\022\022" +
-      ".input.UUIDRequest\032\032.output.StatusDataRe" +
-      "sponse(\001\0220\n\007FindOne\022\022.input.UUIDRequest\032" +
-      "\021.example.Response\022?\n\006Delete\022\022.input.UUI" +
-      "DRequest\032\037.output.PersistenceDataRespons" +
-      "e(\001BV\n\024com.soustify.exampleZ>github.com/" +
-      "soustify/data-gateway-buffer-go/pkg/exam" +
-      "ple;exampleb\006proto3"
+      "\006public\030\016 \001(\010\"\222\003\n\010Response\022\n\n\002id\030\001 \001(\t\022\014" +
+      "\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022-\n\tbor" +
+      "n_date\030\004 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\016\n\006public\030\005 \001(\010\022\r\n\005price\030\006 \001(\001\022)\n\010metad" +
+      "ata\030\007 \001(\0132\027.google.protobuf.Struct\022.\n\nla" +
+      "st_login\030\010 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022\020\n\010category\030\t \001(\t\022\014\n\004tags\030\n \003(\t\022\016\n\006ra" +
+      "ting\030\013 \001(\001\022\020\n\010quantity\030\014 \001(\005\022\020\n\010discount" +
+      "\030\r \001(\001\022\r\n\005email\030\016 \001(\t\022\r\n\005phone\030\017 \001(\t\022&\n\006" +
+      "status\030\022 \001(\0162\026.output.StatusResponse\022\024\n\014" +
+      "id_auditable\030\023 \001(\t2\347\003\n\007Service\0229\n\010Pagina" +
+      "te\022\030.input.PaginationRequest\032\021.example.R" +
+      "esponse0\001\0226\n\005Count\022\026.input.FilteredReque" +
+      "st\032\025.output.CountResponse\022=\n\006Create\022\020.ex" +
+      "ample.Request\032\037.output.PersistenceDataRe" +
+      "sponse(\001\022=\n\006Update\022\020.example.Request\032\037.o" +
+      "utput.PersistenceDataResponse(\001\022<\n\010Inact" +
+      "ive\022\022.input.UUIDRequest\032\032.output.StatusD" +
+      "ataResponse(\001\022:\n\006Active\022\022.input.UUIDRequ" +
+      "est\032\032.output.StatusDataResponse(\001\0220\n\007Fin" +
+      "dOne\022\022.input.UUIDRequest\032\021.example.Respo" +
+      "nse\022?\n\006Delete\022\022.input.UUIDRequest\032\037.outp" +
+      "ut.PersistenceDataResponse(\001BV\n\024com.sous" +
+      "tify.exampleZ>github.com/soustify/data-g" +
+      "ateway-buffer-go/pkg/example;exampleb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5171,7 +5065,7 @@ public final class Example {
     internal_static_example_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_example_Request_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "BornDate", "Price", "Category", "Tags", "Rating", "Quantity", "Discount", "Email", "Phone", "Metadata", "Public", "EnStatus", });
+        new java.lang.String[] { "Id", "Name", "Description", "BornDate", "Price", "Category", "Tags", "Rating", "Quantity", "Discount", "Email", "Phone", "Metadata", "Public", });
     internal_static_example_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_example_Response_fieldAccessorTable = new

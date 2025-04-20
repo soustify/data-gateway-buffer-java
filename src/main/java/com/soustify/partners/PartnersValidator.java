@@ -21,14 +21,6 @@ public class PartnersValidator {
 		
 	
 		
-		private final com.soustify.input.Input.StatusRequest[] EN_STATUS__IN = new com.soustify.input.Input.StatusRequest[]{
-			com.soustify.input.Input.StatusRequest.forNumber(0),
-			com.soustify.input.Input.StatusRequest.forNumber(1),
-		};
-	
-		
-	
-		
 	
 		
 	
@@ -39,14 +31,10 @@ public class PartnersValidator {
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".partners.Request.id", proto.getId());
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".partners.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
-	
 			io.envoyproxy.pgv.StringValidation.minLength(".partners.Request.name", proto.getName(), 1);
 			io.envoyproxy.pgv.StringValidation.maxLength(".partners.Request.name", proto.getName(), 200);
 	
 			io.envoyproxy.pgv.StringValidation.maxLength(".partners.Request.document", proto.getDocument(), 200);
-	
-			io.envoyproxy.pgv.StringValidation.uuid(".partners.Request.id_document_type", proto.getIdDocumentType());
 	
 	
 	}

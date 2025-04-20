@@ -22,6 +22,8 @@ public class PartnersCategoriesValidator {
 	
 		
 	
+		
+	
 	
 	
 
@@ -30,6 +32,8 @@ public class PartnersCategoriesValidator {
 			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.Request.id_partner", proto.getIdPartner());
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.Request.id_category", proto.getIdCategory());
+	
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.Request.id", proto.getId());
 	
 	
 	}

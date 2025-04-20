@@ -31,17 +31,6 @@ public final class Customers {
         getIdBytes();
 
     /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    int getEnStatusValue();
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    com.soustify.input.Input.StatusRequest getEnStatus();
-
-    /**
      * <code>string name = 3 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
@@ -78,12 +67,12 @@ public final class Customers {
         getEmailBytes();
 
     /**
-     * <code>string id_cognito = 6 [(.validate.rules) = { ... }</code>
+     * <code>string id_cognito = 2 [(.validate.rules) = { ... }</code>
      * @return The idCognito.
      */
     java.lang.String getIdCognito();
     /**
-     * <code>string id_cognito = 6 [(.validate.rules) = { ... }</code>
+     * <code>string id_cognito = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for idCognito.
      */
     com.google.protobuf.ByteString
@@ -103,7 +92,6 @@ public final class Customers {
     }
     private Request() {
       id_ = "";
-      enStatus_ = 0;
       name_ = "";
       surname_ = "";
       email_ = "";
@@ -172,24 +160,6 @@ public final class Customers {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int EN_STATUS_FIELD_NUMBER = 2;
-    private int enStatus_ = 0;
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enum numeric value on the wire for enStatus.
-     */
-    @java.lang.Override public int getEnStatusValue() {
-      return enStatus_;
-    }
-    /**
-     * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-     * @return The enStatus.
-     */
-    @java.lang.Override public com.soustify.input.Input.StatusRequest getEnStatus() {
-      com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-      return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
     }
 
     public static final int NAME_FIELD_NUMBER = 3;
@@ -309,11 +279,11 @@ public final class Customers {
       }
     }
 
-    public static final int ID_COGNITO_FIELD_NUMBER = 6;
+    public static final int ID_COGNITO_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object idCognito_ = "";
     /**
-     * <code>string id_cognito = 6 [(.validate.rules) = { ... }</code>
+     * <code>string id_cognito = 2 [(.validate.rules) = { ... }</code>
      * @return The idCognito.
      */
     @java.lang.Override
@@ -330,7 +300,7 @@ public final class Customers {
       }
     }
     /**
-     * <code>string id_cognito = 6 [(.validate.rules) = { ... }</code>
+     * <code>string id_cognito = 2 [(.validate.rules) = { ... }</code>
      * @return The bytes for idCognito.
      */
     @java.lang.Override
@@ -365,8 +335,8 @@ public final class Customers {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        output.writeEnum(2, enStatus_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idCognito_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, idCognito_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
@@ -376,9 +346,6 @@ public final class Customers {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, email_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idCognito_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, idCognito_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -392,9 +359,8 @@ public final class Customers {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (enStatus_ != com.soustify.input.Input.StatusRequest.ENABLED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, enStatus_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idCognito_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, idCognito_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
@@ -404,9 +370,6 @@ public final class Customers {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, email_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idCognito_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, idCognito_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -425,7 +388,6 @@ public final class Customers {
 
       if (!getId()
           .equals(other.getId())) return false;
-      if (enStatus_ != other.enStatus_) return false;
       if (!getName()
           .equals(other.getName())) return false;
       if (!getSurname()
@@ -447,8 +409,6 @@ public final class Customers {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + EN_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + enStatus_;
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + SURNAME_FIELD_NUMBER;
@@ -587,7 +547,6 @@ public final class Customers {
         super.clear();
         bitField0_ = 0;
         id_ = "";
-        enStatus_ = 0;
         name_ = "";
         surname_ = "";
         email_ = "";
@@ -629,18 +588,15 @@ public final class Customers {
           result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.enStatus_ = enStatus_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.name_ = name_;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.surname_ = surname_;
         }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.email_ = email_;
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.idCognito_ = idCognito_;
         }
       }
@@ -694,27 +650,24 @@ public final class Customers {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (other.enStatus_ != 0) {
-          setEnStatusValue(other.getEnStatusValue());
-        }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getSurname().isEmpty()) {
           surname_ = other.surname_;
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getEmail().isEmpty()) {
           email_ = other.email_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getIdCognito().isEmpty()) {
           idCognito_ = other.idCognito_;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -748,31 +701,26 @@ public final class Customers {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 16: {
-                enStatus_ = input.readEnum();
-                bitField0_ |= 0x00000002;
+              case 18: {
+                idCognito_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
                 break;
-              } // case 16
+              } // case 18
               case 26: {
                 name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000002;
                 break;
               } // case 26
               case 34: {
                 surname_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000004;
                 break;
               } // case 34
               case 42: {
                 email_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000008;
                 break;
               } // case 42
-              case 50: {
-                idCognito_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -862,59 +810,6 @@ public final class Customers {
         return this;
       }
 
-      private int enStatus_ = 0;
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enum numeric value on the wire for enStatus.
-       */
-      @java.lang.Override public int getEnStatusValue() {
-        return enStatus_;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enum numeric value on the wire for enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatusValue(int value) {
-        enStatus_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return The enStatus.
-       */
-      @java.lang.Override
-      public com.soustify.input.Input.StatusRequest getEnStatus() {
-        com.soustify.input.Input.StatusRequest result = com.soustify.input.Input.StatusRequest.forNumber(enStatus_);
-        return result == null ? com.soustify.input.Input.StatusRequest.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @param value The enStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnStatus(com.soustify.input.Input.StatusRequest value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        enStatus_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.input.StatusRequest en_status = 2 [(.validate.rules) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEnStatus() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        enStatus_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 3 [(.validate.rules) = { ... }</code>
@@ -958,7 +853,7 @@ public final class Customers {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         name_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -968,7 +863,7 @@ public final class Customers {
        */
       public Builder clearName() {
         name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -982,7 +877,7 @@ public final class Customers {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         name_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1030,7 +925,7 @@ public final class Customers {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         surname_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1040,7 +935,7 @@ public final class Customers {
        */
       public Builder clearSurname() {
         surname_ = getDefaultInstance().getSurname();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1054,7 +949,7 @@ public final class Customers {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         surname_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1102,7 +997,7 @@ public final class Customers {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         email_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1112,7 +1007,7 @@ public final class Customers {
        */
       public Builder clearEmail() {
         email_ = getDefaultInstance().getEmail();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1126,14 +1021,14 @@ public final class Customers {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         email_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
 
       private java.lang.Object idCognito_ = "";
       /**
-       * <code>string id_cognito = 6 [(.validate.rules) = { ... }</code>
+       * <code>string id_cognito = 2 [(.validate.rules) = { ... }</code>
        * @return The idCognito.
        */
       public java.lang.String getIdCognito() {
@@ -1149,7 +1044,7 @@ public final class Customers {
         }
       }
       /**
-       * <code>string id_cognito = 6 [(.validate.rules) = { ... }</code>
+       * <code>string id_cognito = 2 [(.validate.rules) = { ... }</code>
        * @return The bytes for idCognito.
        */
       public com.google.protobuf.ByteString
@@ -1166,7 +1061,7 @@ public final class Customers {
         }
       }
       /**
-       * <code>string id_cognito = 6 [(.validate.rules) = { ... }</code>
+       * <code>string id_cognito = 2 [(.validate.rules) = { ... }</code>
        * @param value The idCognito to set.
        * @return This builder for chaining.
        */
@@ -1174,22 +1069,22 @@ public final class Customers {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         idCognito_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>string id_cognito = 6 [(.validate.rules) = { ... }</code>
+       * <code>string id_cognito = 2 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearIdCognito() {
         idCognito_ = getDefaultInstance().getIdCognito();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
       /**
-       * <code>string id_cognito = 6 [(.validate.rules) = { ... }</code>
+       * <code>string id_cognito = 2 [(.validate.rules) = { ... }</code>
        * @param value The bytes for idCognito to set.
        * @return This builder for chaining.
        */
@@ -1198,7 +1093,7 @@ public final class Customers {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         idCognito_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2687,33 +2582,31 @@ public final class Customers {
     java.lang.String[] descriptorData = {
       "\n\017customers.proto\022\tcustomers\032\013input.prot" +
       "o\032\014output.proto\032\016validate.proto\032\037google/" +
-      "protobuf/timestamp.proto\"\304\001\n\007Request\022\024\n\002" +
-      "id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001(\0162\024." +
-      "input.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n\004name\030" +
-      "\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\033\n\007surname\030\004 \001(\tB\n\372B\007r" +
-      "\005\020\001\030\310\001\022\031\n\005email\030\005 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\034\n\nid_" +
-      "cognito\030\006 \001(\tB\010\372B\005r\003\260\001\001\"\330\001\n\010Response\022\024\n\002" +
-      "id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 \001(\0162\026.out" +
-      "put.StatusResponse\022\036\n\014id_auditable\030\003 \001(\t" +
-      "B\010\372B\005r\003\260\001\001\022\030\n\004name\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\033\n\007" +
-      "surname\030\005 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\031\n\005email\030\006 \001(\t" +
-      "B\n\372B\007r\005\020\001\030\310\001\022\034\n\nid_cognito\030\007 \001(\tB\010\372B\005r\003\260" +
-      "\001\0012\357\003\n\007Service\022;\n\010Paginate\022\030.input.Pagin" +
-      "ationRequest\032\023.customers.Response0\001\0226\n\005C" +
-      "ount\022\026.input.FilteredRequest\032\025.output.Co" +
-      "untResponse\022?\n\006Create\022\022.customers.Reques" +
-      "t\032\037.output.PersistenceDataResponse(\001\022?\n\006" +
-      "Update\022\022.customers.Request\032\037.output.Pers" +
-      "istenceDataResponse(\001\022<\n\010Inactive\022\022.inpu" +
-      "t.UUIDRequest\032\032.output.StatusDataRespons" +
-      "e(\001\022:\n\006Active\022\022.input.UUIDRequest\032\032.outp" +
-      "ut.StatusDataResponse(\001\0222\n\007FindOne\022\022.inp" +
-      "ut.UUIDRequest\032\023.customers.Response\022?\n\006D" +
-      "elete\022\022.input.UUIDRequest\032\037.output.Persi" +
-      "stenceDataResponse(\001B\\\n\026com.soustify.cus" +
-      "tomersZBgithub.com/soustify/data-gateway" +
-      "-buffer-go/pkg/customers;customersb\006prot" +
-      "o3"
+      "protobuf/timestamp.proto\"\217\001\n\007Request\022\024\n\002" +
+      "id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\003 \001(\tB\n\372B\007r\005\020" +
+      "\001\030\310\001\022\033\n\007surname\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\031\n\005ema" +
+      "il\030\005 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\034\n\nid_cognito\030\002 \001(\t" +
+      "B\010\372B\005r\003\260\001\001\"\330\001\n\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005" +
+      "r\003\260\001\001\022&\n\006status\030\002 \001(\0162\026.output.StatusRes" +
+      "ponse\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n" +
+      "\004name\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\033\n\007surname\030\005 \001(\t" +
+      "B\n\372B\007r\005\020\001\030\310\001\022\031\n\005email\030\006 \001(\tB\n\372B\007r\005\020\001\030\310\001\022" +
+      "\034\n\nid_cognito\030\007 \001(\tB\010\372B\005r\003\260\001\0012\357\003\n\007Servic" +
+      "e\022;\n\010Paginate\022\030.input.PaginationRequest\032" +
+      "\023.customers.Response0\001\0226\n\005Count\022\026.input." +
+      "FilteredRequest\032\025.output.CountResponse\022?" +
+      "\n\006Create\022\022.customers.Request\032\037.output.Pe" +
+      "rsistenceDataResponse(\001\022?\n\006Update\022\022.cust" +
+      "omers.Request\032\037.output.PersistenceDataRe" +
+      "sponse(\001\022<\n\010Inactive\022\022.input.UUIDRequest" +
+      "\032\032.output.StatusDataResponse(\001\022:\n\006Active" +
+      "\022\022.input.UUIDRequest\032\032.output.StatusData" +
+      "Response(\001\0222\n\007FindOne\022\022.input.UUIDReques" +
+      "t\032\023.customers.Response\022?\n\006Delete\022\022.input" +
+      ".UUIDRequest\032\037.output.PersistenceDataRes" +
+      "ponse(\001B\\\n\026com.soustify.customersZBgithu" +
+      "b.com/soustify/data-gateway-buffer-go/pk" +
+      "g/customers;customersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2728,7 +2621,7 @@ public final class Customers {
     internal_static_customers_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_customers_Request_descriptor,
-        new java.lang.String[] { "Id", "EnStatus", "Name", "Surname", "Email", "IdCognito", });
+        new java.lang.String[] { "Id", "Name", "Surname", "Email", "IdCognito", });
     internal_static_customers_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_customers_Response_fieldAccessorTable = new
