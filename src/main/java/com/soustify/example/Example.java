@@ -2451,34 +2451,34 @@ public final class Example {
     double getPrice();
 
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
-     * @return Whether the createdAt field is set.
+     * <code>.google.protobuf.Struct metadata = 7;</code>
+     * @return Whether the metadata field is set.
      */
-    boolean hasCreatedAt();
+    boolean hasMetadata();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
-     * @return The createdAt.
+     * <code>.google.protobuf.Struct metadata = 7;</code>
+     * @return The metadata.
      */
-    com.google.protobuf.Timestamp getCreatedAt();
+    com.google.protobuf.Struct getMetadata();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * <code>.google.protobuf.Struct metadata = 7;</code>
      */
-    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+    com.google.protobuf.StructOrBuilder getMetadataOrBuilder();
 
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
-     * @return Whether the updatedAt field is set.
+     * <code>.google.protobuf.Timestamp last_login = 8;</code>
+     * @return Whether the lastLogin field is set.
      */
-    boolean hasUpdatedAt();
+    boolean hasLastLogin();
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
-     * @return The updatedAt.
+     * <code>.google.protobuf.Timestamp last_login = 8;</code>
+     * @return The lastLogin.
      */
-    com.google.protobuf.Timestamp getUpdatedAt();
+    com.google.protobuf.Timestamp getLastLogin();
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp last_login = 8;</code>
      */
-    com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
+    com.google.protobuf.TimestampOrBuilder getLastLoginOrBuilder();
 
     /**
      * <code>string category = 9;</code>
@@ -2560,36 +2560,6 @@ public final class Example {
         getPhoneBytes();
 
     /**
-     * <code>.google.protobuf.Struct metadata = 16;</code>
-     * @return Whether the metadata field is set.
-     */
-    boolean hasMetadata();
-    /**
-     * <code>.google.protobuf.Struct metadata = 16;</code>
-     * @return The metadata.
-     */
-    com.google.protobuf.Struct getMetadata();
-    /**
-     * <code>.google.protobuf.Struct metadata = 16;</code>
-     */
-    com.google.protobuf.StructOrBuilder getMetadataOrBuilder();
-
-    /**
-     * <code>.google.protobuf.Timestamp last_login = 17;</code>
-     * @return Whether the lastLogin field is set.
-     */
-    boolean hasLastLogin();
-    /**
-     * <code>.google.protobuf.Timestamp last_login = 17;</code>
-     * @return The lastLogin.
-     */
-    com.google.protobuf.Timestamp getLastLogin();
-    /**
-     * <code>.google.protobuf.Timestamp last_login = 17;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getLastLoginOrBuilder();
-
-    /**
      * <code>.output.StatusResponse status = 18;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -2599,6 +2569,18 @@ public final class Example {
      * @return The status.
      */
     com.soustify.output.Output.StatusResponse getStatus();
+
+    /**
+     * <code>string id_auditable = 19;</code>
+     * @return The idAuditable.
+     */
+    java.lang.String getIdAuditable();
+    /**
+     * <code>string id_auditable = 19;</code>
+     * @return The bytes for idAuditable.
+     */
+    com.google.protobuf.ByteString
+        getIdAuditableBytes();
   }
   /**
    * Protobuf type {@code example.Response}
@@ -2621,6 +2603,7 @@ public final class Example {
       email_ = "";
       phone_ = "";
       status_ = 0;
+      idAuditable_ = "";
     }
 
     @java.lang.Override
@@ -2813,56 +2796,56 @@ public final class Example {
       return price_;
     }
 
-    public static final int CREATED_AT_FIELD_NUMBER = 7;
-    private com.google.protobuf.Timestamp createdAt_;
+    public static final int METADATA_FIELD_NUMBER = 7;
+    private com.google.protobuf.Struct metadata_;
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
-     * @return Whether the createdAt field is set.
+     * <code>.google.protobuf.Struct metadata = 7;</code>
+     * @return Whether the metadata field is set.
      */
     @java.lang.Override
-    public boolean hasCreatedAt() {
-      return createdAt_ != null;
+    public boolean hasMetadata() {
+      return metadata_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
-     * @return The createdAt.
+     * <code>.google.protobuf.Struct metadata = 7;</code>
+     * @return The metadata.
      */
     @java.lang.Override
-    public com.google.protobuf.Timestamp getCreatedAt() {
-      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    public com.google.protobuf.Struct getMetadata() {
+      return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * <code>.google.protobuf.Struct metadata = 7;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
-      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    public com.google.protobuf.StructOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
     }
 
-    public static final int UPDATED_AT_FIELD_NUMBER = 8;
-    private com.google.protobuf.Timestamp updatedAt_;
+    public static final int LAST_LOGIN_FIELD_NUMBER = 8;
+    private com.google.protobuf.Timestamp lastLogin_;
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
-     * @return Whether the updatedAt field is set.
+     * <code>.google.protobuf.Timestamp last_login = 8;</code>
+     * @return Whether the lastLogin field is set.
      */
     @java.lang.Override
-    public boolean hasUpdatedAt() {
-      return updatedAt_ != null;
+    public boolean hasLastLogin() {
+      return lastLogin_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
-     * @return The updatedAt.
+     * <code>.google.protobuf.Timestamp last_login = 8;</code>
+     * @return The lastLogin.
      */
     @java.lang.Override
-    public com.google.protobuf.Timestamp getUpdatedAt() {
-      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    public com.google.protobuf.Timestamp getLastLogin() {
+      return lastLogin_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastLogin_;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp last_login = 8;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
-      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    public com.google.protobuf.TimestampOrBuilder getLastLoginOrBuilder() {
+      return lastLogin_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastLogin_;
     }
 
     public static final int CATEGORY_FIELD_NUMBER = 9;
@@ -3051,58 +3034,6 @@ public final class Example {
       }
     }
 
-    public static final int METADATA_FIELD_NUMBER = 16;
-    private com.google.protobuf.Struct metadata_;
-    /**
-     * <code>.google.protobuf.Struct metadata = 16;</code>
-     * @return Whether the metadata field is set.
-     */
-    @java.lang.Override
-    public boolean hasMetadata() {
-      return metadata_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Struct metadata = 16;</code>
-     * @return The metadata.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Struct getMetadata() {
-      return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
-    }
-    /**
-     * <code>.google.protobuf.Struct metadata = 16;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getMetadataOrBuilder() {
-      return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
-    }
-
-    public static final int LAST_LOGIN_FIELD_NUMBER = 17;
-    private com.google.protobuf.Timestamp lastLogin_;
-    /**
-     * <code>.google.protobuf.Timestamp last_login = 17;</code>
-     * @return Whether the lastLogin field is set.
-     */
-    @java.lang.Override
-    public boolean hasLastLogin() {
-      return lastLogin_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_login = 17;</code>
-     * @return The lastLogin.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getLastLogin() {
-      return lastLogin_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastLogin_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_login = 17;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getLastLoginOrBuilder() {
-      return lastLogin_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastLogin_;
-    }
-
     public static final int STATUS_FIELD_NUMBER = 18;
     private int status_ = 0;
     /**
@@ -3119,6 +3050,45 @@ public final class Example {
     @java.lang.Override public com.soustify.output.Output.StatusResponse getStatus() {
       com.soustify.output.Output.StatusResponse result = com.soustify.output.Output.StatusResponse.forNumber(status_);
       return result == null ? com.soustify.output.Output.StatusResponse.UNRECOGNIZED : result;
+    }
+
+    public static final int ID_AUDITABLE_FIELD_NUMBER = 19;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object idAuditable_ = "";
+    /**
+     * <code>string id_auditable = 19;</code>
+     * @return The idAuditable.
+     */
+    @java.lang.Override
+    public java.lang.String getIdAuditable() {
+      java.lang.Object ref = idAuditable_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        idAuditable_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id_auditable = 19;</code>
+     * @return The bytes for idAuditable.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdAuditableBytes() {
+      java.lang.Object ref = idAuditable_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        idAuditable_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3153,11 +3123,11 @@ public final class Example {
       if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
         output.writeDouble(6, price_);
       }
-      if (createdAt_ != null) {
-        output.writeMessage(7, getCreatedAt());
+      if (metadata_ != null) {
+        output.writeMessage(7, getMetadata());
       }
-      if (updatedAt_ != null) {
-        output.writeMessage(8, getUpdatedAt());
+      if (lastLogin_ != null) {
+        output.writeMessage(8, getLastLogin());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, category_);
@@ -3180,14 +3150,11 @@ public final class Example {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, phone_);
       }
-      if (metadata_ != null) {
-        output.writeMessage(16, getMetadata());
-      }
-      if (lastLogin_ != null) {
-        output.writeMessage(17, getLastLogin());
-      }
       if (status_ != com.soustify.output.Output.StatusResponse.ENABLED.getNumber()) {
         output.writeEnum(18, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idAuditable_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, idAuditable_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3219,13 +3186,13 @@ public final class Example {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(6, price_);
       }
-      if (createdAt_ != null) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getCreatedAt());
+          .computeMessageSize(7, getMetadata());
       }
-      if (updatedAt_ != null) {
+      if (lastLogin_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getUpdatedAt());
+          .computeMessageSize(8, getLastLogin());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, category_);
@@ -3256,17 +3223,12 @@ public final class Example {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, phone_);
       }
-      if (metadata_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(16, getMetadata());
-      }
-      if (lastLogin_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(17, getLastLogin());
-      }
       if (status_ != com.soustify.output.Output.StatusResponse.ENABLED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(18, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idAuditable_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, idAuditable_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3299,15 +3261,15 @@ public final class Example {
       if (java.lang.Double.doubleToLongBits(getPrice())
           != java.lang.Double.doubleToLongBits(
               other.getPrice())) return false;
-      if (hasCreatedAt() != other.hasCreatedAt()) return false;
-      if (hasCreatedAt()) {
-        if (!getCreatedAt()
-            .equals(other.getCreatedAt())) return false;
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
       }
-      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
-      if (hasUpdatedAt()) {
-        if (!getUpdatedAt()
-            .equals(other.getUpdatedAt())) return false;
+      if (hasLastLogin() != other.hasLastLogin()) return false;
+      if (hasLastLogin()) {
+        if (!getLastLogin()
+            .equals(other.getLastLogin())) return false;
       }
       if (!getCategory()
           .equals(other.getCategory())) return false;
@@ -3325,17 +3287,9 @@ public final class Example {
           .equals(other.getEmail())) return false;
       if (!getPhone()
           .equals(other.getPhone())) return false;
-      if (hasMetadata() != other.hasMetadata()) return false;
-      if (hasMetadata()) {
-        if (!getMetadata()
-            .equals(other.getMetadata())) return false;
-      }
-      if (hasLastLogin() != other.hasLastLogin()) return false;
-      if (hasLastLogin()) {
-        if (!getLastLogin()
-            .equals(other.getLastLogin())) return false;
-      }
       if (status_ != other.status_) return false;
+      if (!getIdAuditable()
+          .equals(other.getIdAuditable())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3363,13 +3317,13 @@ public final class Example {
       hash = (37 * hash) + PRICE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getPrice()));
-      if (hasCreatedAt()) {
-        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
-        hash = (53 * hash) + getCreatedAt().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
       }
-      if (hasUpdatedAt()) {
-        hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
-        hash = (53 * hash) + getUpdatedAt().hashCode();
+      if (hasLastLogin()) {
+        hash = (37 * hash) + LAST_LOGIN_FIELD_NUMBER;
+        hash = (53 * hash) + getLastLogin().hashCode();
       }
       hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
       hash = (53 * hash) + getCategory().hashCode();
@@ -3389,16 +3343,10 @@ public final class Example {
       hash = (53 * hash) + getEmail().hashCode();
       hash = (37 * hash) + PHONE_FIELD_NUMBER;
       hash = (53 * hash) + getPhone().hashCode();
-      if (hasMetadata()) {
-        hash = (37 * hash) + METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getMetadata().hashCode();
-      }
-      if (hasLastLogin()) {
-        hash = (37 * hash) + LAST_LOGIN_FIELD_NUMBER;
-        hash = (53 * hash) + getLastLogin().hashCode();
-      }
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + ID_AUDITABLE_FIELD_NUMBER;
+      hash = (53 * hash) + getIdAuditable().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3538,24 +3486,6 @@ public final class Example {
         }
         public_ = false;
         price_ = 0D;
-        createdAt_ = null;
-        if (createdAtBuilder_ != null) {
-          createdAtBuilder_.dispose();
-          createdAtBuilder_ = null;
-        }
-        updatedAt_ = null;
-        if (updatedAtBuilder_ != null) {
-          updatedAtBuilder_.dispose();
-          updatedAtBuilder_ = null;
-        }
-        category_ = "";
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000200);
-        rating_ = 0D;
-        quantity_ = 0;
-        discount_ = 0D;
-        email_ = "";
-        phone_ = "";
         metadata_ = null;
         if (metadataBuilder_ != null) {
           metadataBuilder_.dispose();
@@ -3566,7 +3496,16 @@ public final class Example {
           lastLoginBuilder_.dispose();
           lastLoginBuilder_ = null;
         }
+        category_ = "";
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        rating_ = 0D;
+        quantity_ = 0;
+        discount_ = 0D;
+        email_ = "";
+        phone_ = "";
         status_ = 0;
+        idAuditable_ = "";
         return this;
       }
 
@@ -3630,14 +3569,14 @@ public final class Example {
           result.price_ = price_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.createdAt_ = createdAtBuilder_ == null
-              ? createdAt_
-              : createdAtBuilder_.build();
+          result.metadata_ = metadataBuilder_ == null
+              ? metadata_
+              : metadataBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.updatedAt_ = updatedAtBuilder_ == null
-              ? updatedAt_
-              : updatedAtBuilder_.build();
+          result.lastLogin_ = lastLoginBuilder_ == null
+              ? lastLogin_
+              : lastLoginBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.category_ = category_;
@@ -3658,17 +3597,10 @@ public final class Example {
           result.phone_ = phone_;
         }
         if (((from_bitField0_ & 0x00008000) != 0)) {
-          result.metadata_ = metadataBuilder_ == null
-              ? metadata_
-              : metadataBuilder_.build();
+          result.status_ = status_;
         }
         if (((from_bitField0_ & 0x00010000) != 0)) {
-          result.lastLogin_ = lastLoginBuilder_ == null
-              ? lastLogin_
-              : lastLoginBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00020000) != 0)) {
-          result.status_ = status_;
+          result.idAuditable_ = idAuditable_;
         }
       }
 
@@ -3740,11 +3672,11 @@ public final class Example {
         if (other.getPrice() != 0D) {
           setPrice(other.getPrice());
         }
-        if (other.hasCreatedAt()) {
-          mergeCreatedAt(other.getCreatedAt());
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
         }
-        if (other.hasUpdatedAt()) {
-          mergeUpdatedAt(other.getUpdatedAt());
+        if (other.hasLastLogin()) {
+          mergeLastLogin(other.getLastLogin());
         }
         if (!other.getCategory().isEmpty()) {
           category_ = other.category_;
@@ -3780,14 +3712,13 @@ public final class Example {
           bitField0_ |= 0x00004000;
           onChanged();
         }
-        if (other.hasMetadata()) {
-          mergeMetadata(other.getMetadata());
-        }
-        if (other.hasLastLogin()) {
-          mergeLastLogin(other.getLastLogin());
-        }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (!other.getIdAuditable().isEmpty()) {
+          idAuditable_ = other.idAuditable_;
+          bitField0_ |= 0x00010000;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3849,14 +3780,14 @@ public final class Example {
               } // case 49
               case 58: {
                 input.readMessage(
-                    getCreatedAtFieldBuilder().getBuilder(),
+                    getMetadataFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
-                    getUpdatedAtFieldBuilder().getBuilder(),
+                    getLastLoginFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000080;
                 break;
@@ -3897,25 +3828,16 @@ public final class Example {
                 bitField0_ |= 0x00004000;
                 break;
               } // case 122
-              case 130: {
-                input.readMessage(
-                    getMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00008000;
-                break;
-              } // case 130
-              case 138: {
-                input.readMessage(
-                    getLastLoginFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00010000;
-                break;
-              } // case 138
               case 144: {
                 status_ = input.readEnum();
-                bitField0_ |= 0x00020000;
+                bitField0_ |= 0x00008000;
                 break;
               } // case 144
+              case 154: {
+                idAuditable_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 154
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4332,242 +4254,242 @@ public final class Example {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.Struct metadata_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> metadataBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp created_at = 7;</code>
-       * @return Whether the createdAt field is set.
+       * <code>.google.protobuf.Struct metadata = 7;</code>
+       * @return Whether the metadata field is set.
        */
-      public boolean hasCreatedAt() {
+      public boolean hasMetadata() {
         return ((bitField0_ & 0x00000040) != 0);
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 7;</code>
-       * @return The createdAt.
+       * <code>.google.protobuf.Struct metadata = 7;</code>
+       * @return The metadata.
        */
-      public com.google.protobuf.Timestamp getCreatedAt() {
-        if (createdAtBuilder_ == null) {
-          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+      public com.google.protobuf.Struct getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
         } else {
-          return createdAtBuilder_.getMessage();
+          return metadataBuilder_.getMessage();
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 7;</code>
+       * <code>.google.protobuf.Struct metadata = 7;</code>
        */
-      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
-        if (createdAtBuilder_ == null) {
+      public Builder setMetadata(com.google.protobuf.Struct value) {
+        if (metadataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          createdAt_ = value;
+          metadata_ = value;
         } else {
-          createdAtBuilder_.setMessage(value);
+          metadataBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 7;</code>
+       * <code>.google.protobuf.Struct metadata = 7;</code>
        */
-      public Builder setCreatedAt(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (createdAtBuilder_ == null) {
-          createdAt_ = builderForValue.build();
+      public Builder setMetadata(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
         } else {
-          createdAtBuilder_.setMessage(builderForValue.build());
+          metadataBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 7;</code>
+       * <code>.google.protobuf.Struct metadata = 7;</code>
        */
-      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
-        if (createdAtBuilder_ == null) {
+      public Builder mergeMetadata(com.google.protobuf.Struct value) {
+        if (metadataBuilder_ == null) {
           if (((bitField0_ & 0x00000040) != 0) &&
-            createdAt_ != null &&
-            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getCreatedAtBuilder().mergeFrom(value);
+            metadata_ != null &&
+            metadata_ != com.google.protobuf.Struct.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
           } else {
-            createdAt_ = value;
+            metadata_ = value;
           }
         } else {
-          createdAtBuilder_.mergeFrom(value);
+          metadataBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 7;</code>
+       * <code>.google.protobuf.Struct metadata = 7;</code>
        */
-      public Builder clearCreatedAt() {
+      public Builder clearMetadata() {
         bitField0_ = (bitField0_ & ~0x00000040);
-        createdAt_ = null;
-        if (createdAtBuilder_ != null) {
-          createdAtBuilder_.dispose();
-          createdAtBuilder_ = null;
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 7;</code>
+       * <code>.google.protobuf.Struct metadata = 7;</code>
        */
-      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+      public com.google.protobuf.Struct.Builder getMetadataBuilder() {
         bitField0_ |= 0x00000040;
         onChanged();
-        return getCreatedAtFieldBuilder().getBuilder();
+        return getMetadataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 7;</code>
+       * <code>.google.protobuf.Struct metadata = 7;</code>
        */
-      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
-        if (createdAtBuilder_ != null) {
-          return createdAtBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.StructOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
         } else {
-          return createdAt_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+          return metadata_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : metadata_;
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 7;</code>
+       * <code>.google.protobuf.Struct metadata = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getCreatedAtFieldBuilder() {
-        if (createdAtBuilder_ == null) {
-          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getCreatedAt(),
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getMetadata(),
                   getParentForChildren(),
                   isClean());
-          createdAt_ = null;
+          metadata_ = null;
         }
-        return createdAtBuilder_;
+        return metadataBuilder_;
       }
 
-      private com.google.protobuf.Timestamp updatedAt_;
+      private com.google.protobuf.Timestamp lastLogin_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastLoginBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
-       * @return Whether the updatedAt field is set.
+       * <code>.google.protobuf.Timestamp last_login = 8;</code>
+       * @return Whether the lastLogin field is set.
        */
-      public boolean hasUpdatedAt() {
+      public boolean hasLastLogin() {
         return ((bitField0_ & 0x00000080) != 0);
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
-       * @return The updatedAt.
+       * <code>.google.protobuf.Timestamp last_login = 8;</code>
+       * @return The lastLogin.
        */
-      public com.google.protobuf.Timestamp getUpdatedAt() {
-        if (updatedAtBuilder_ == null) {
-          return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+      public com.google.protobuf.Timestamp getLastLogin() {
+        if (lastLoginBuilder_ == null) {
+          return lastLogin_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastLogin_;
         } else {
-          return updatedAtBuilder_.getMessage();
+          return lastLoginBuilder_.getMessage();
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp last_login = 8;</code>
        */
-      public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
-        if (updatedAtBuilder_ == null) {
+      public Builder setLastLogin(com.google.protobuf.Timestamp value) {
+        if (lastLoginBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          updatedAt_ = value;
+          lastLogin_ = value;
         } else {
-          updatedAtBuilder_.setMessage(value);
+          lastLoginBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp last_login = 8;</code>
        */
-      public Builder setUpdatedAt(
+      public Builder setLastLogin(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (updatedAtBuilder_ == null) {
-          updatedAt_ = builderForValue.build();
+        if (lastLoginBuilder_ == null) {
+          lastLogin_ = builderForValue.build();
         } else {
-          updatedAtBuilder_.setMessage(builderForValue.build());
+          lastLoginBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp last_login = 8;</code>
        */
-      public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
-        if (updatedAtBuilder_ == null) {
+      public Builder mergeLastLogin(com.google.protobuf.Timestamp value) {
+        if (lastLoginBuilder_ == null) {
           if (((bitField0_ & 0x00000080) != 0) &&
-            updatedAt_ != null &&
-            updatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getUpdatedAtBuilder().mergeFrom(value);
+            lastLogin_ != null &&
+            lastLogin_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getLastLoginBuilder().mergeFrom(value);
           } else {
-            updatedAt_ = value;
+            lastLogin_ = value;
           }
         } else {
-          updatedAtBuilder_.mergeFrom(value);
+          lastLoginBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp last_login = 8;</code>
        */
-      public Builder clearUpdatedAt() {
+      public Builder clearLastLogin() {
         bitField0_ = (bitField0_ & ~0x00000080);
-        updatedAt_ = null;
-        if (updatedAtBuilder_ != null) {
-          updatedAtBuilder_.dispose();
-          updatedAtBuilder_ = null;
+        lastLogin_ = null;
+        if (lastLoginBuilder_ != null) {
+          lastLoginBuilder_.dispose();
+          lastLoginBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp last_login = 8;</code>
        */
-      public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
+      public com.google.protobuf.Timestamp.Builder getLastLoginBuilder() {
         bitField0_ |= 0x00000080;
         onChanged();
-        return getUpdatedAtFieldBuilder().getBuilder();
+        return getLastLoginFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp last_login = 8;</code>
        */
-      public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
-        if (updatedAtBuilder_ != null) {
-          return updatedAtBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.TimestampOrBuilder getLastLoginOrBuilder() {
+        if (lastLoginBuilder_ != null) {
+          return lastLoginBuilder_.getMessageOrBuilder();
         } else {
-          return updatedAt_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+          return lastLogin_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastLogin_;
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp last_login = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getUpdatedAtFieldBuilder() {
-        if (updatedAtBuilder_ == null) {
-          updatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getLastLoginFieldBuilder() {
+        if (lastLoginBuilder_ == null) {
+          lastLoginBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getUpdatedAt(),
+                  getLastLogin(),
                   getParentForChildren(),
                   isClean());
-          updatedAt_ = null;
+          lastLogin_ = null;
         }
-        return updatedAtBuilder_;
+        return lastLoginBuilder_;
       }
 
       private java.lang.Object category_ = "";
@@ -4986,244 +4908,6 @@ public final class Example {
         return this;
       }
 
-      private com.google.protobuf.Struct metadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> metadataBuilder_;
-      /**
-       * <code>.google.protobuf.Struct metadata = 16;</code>
-       * @return Whether the metadata field is set.
-       */
-      public boolean hasMetadata() {
-        return ((bitField0_ & 0x00008000) != 0);
-      }
-      /**
-       * <code>.google.protobuf.Struct metadata = 16;</code>
-       * @return The metadata.
-       */
-      public com.google.protobuf.Struct getMetadata() {
-        if (metadataBuilder_ == null) {
-          return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
-        } else {
-          return metadataBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Struct metadata = 16;</code>
-       */
-      public Builder setMetadata(com.google.protobuf.Struct value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          metadata_ = value;
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00008000;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Struct metadata = 16;</code>
-       */
-      public Builder setMetadata(
-          com.google.protobuf.Struct.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          metadata_ = builderForValue.build();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00008000;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Struct metadata = 16;</code>
-       */
-      public Builder mergeMetadata(com.google.protobuf.Struct value) {
-        if (metadataBuilder_ == null) {
-          if (((bitField0_ & 0x00008000) != 0) &&
-            metadata_ != null &&
-            metadata_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getMetadataBuilder().mergeFrom(value);
-          } else {
-            metadata_ = value;
-          }
-        } else {
-          metadataBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00008000;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Struct metadata = 16;</code>
-       */
-      public Builder clearMetadata() {
-        bitField0_ = (bitField0_ & ~0x00008000);
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Struct metadata = 16;</code>
-       */
-      public com.google.protobuf.Struct.Builder getMetadataBuilder() {
-        bitField0_ |= 0x00008000;
-        onChanged();
-        return getMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Struct metadata = 16;</code>
-       */
-      public com.google.protobuf.StructOrBuilder getMetadataOrBuilder() {
-        if (metadataBuilder_ != null) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          return metadata_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : metadata_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Struct metadata = 16;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          metadata_ = null;
-        }
-        return metadataBuilder_;
-      }
-
-      private com.google.protobuf.Timestamp lastLogin_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastLoginBuilder_;
-      /**
-       * <code>.google.protobuf.Timestamp last_login = 17;</code>
-       * @return Whether the lastLogin field is set.
-       */
-      public boolean hasLastLogin() {
-        return ((bitField0_ & 0x00010000) != 0);
-      }
-      /**
-       * <code>.google.protobuf.Timestamp last_login = 17;</code>
-       * @return The lastLogin.
-       */
-      public com.google.protobuf.Timestamp getLastLogin() {
-        if (lastLoginBuilder_ == null) {
-          return lastLogin_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastLogin_;
-        } else {
-          return lastLoginBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp last_login = 17;</code>
-       */
-      public Builder setLastLogin(com.google.protobuf.Timestamp value) {
-        if (lastLoginBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          lastLogin_ = value;
-        } else {
-          lastLoginBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00010000;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp last_login = 17;</code>
-       */
-      public Builder setLastLogin(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (lastLoginBuilder_ == null) {
-          lastLogin_ = builderForValue.build();
-        } else {
-          lastLoginBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00010000;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp last_login = 17;</code>
-       */
-      public Builder mergeLastLogin(com.google.protobuf.Timestamp value) {
-        if (lastLoginBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) != 0) &&
-            lastLogin_ != null &&
-            lastLogin_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getLastLoginBuilder().mergeFrom(value);
-          } else {
-            lastLogin_ = value;
-          }
-        } else {
-          lastLoginBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00010000;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp last_login = 17;</code>
-       */
-      public Builder clearLastLogin() {
-        bitField0_ = (bitField0_ & ~0x00010000);
-        lastLogin_ = null;
-        if (lastLoginBuilder_ != null) {
-          lastLoginBuilder_.dispose();
-          lastLoginBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp last_login = 17;</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getLastLoginBuilder() {
-        bitField0_ |= 0x00010000;
-        onChanged();
-        return getLastLoginFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp last_login = 17;</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getLastLoginOrBuilder() {
-        if (lastLoginBuilder_ != null) {
-          return lastLoginBuilder_.getMessageOrBuilder();
-        } else {
-          return lastLogin_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : lastLogin_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp last_login = 17;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getLastLoginFieldBuilder() {
-        if (lastLoginBuilder_ == null) {
-          lastLoginBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getLastLogin(),
-                  getParentForChildren(),
-                  isClean());
-          lastLogin_ = null;
-        }
-        return lastLoginBuilder_;
-      }
-
       private int status_ = 0;
       /**
        * <code>.output.StatusResponse status = 18;</code>
@@ -5239,7 +4923,7 @@ public final class Example {
        */
       public Builder setStatusValue(int value) {
         status_ = value;
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -5261,7 +4945,7 @@ public final class Example {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00008000;
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -5271,8 +4955,80 @@ public final class Example {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object idAuditable_ = "";
+      /**
+       * <code>string id_auditable = 19;</code>
+       * @return The idAuditable.
+       */
+      public java.lang.String getIdAuditable() {
+        java.lang.Object ref = idAuditable_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          idAuditable_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id_auditable = 19;</code>
+       * @return The bytes for idAuditable.
+       */
+      public com.google.protobuf.ByteString
+          getIdAuditableBytes() {
+        java.lang.Object ref = idAuditable_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          idAuditable_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id_auditable = 19;</code>
+       * @param value The idAuditable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdAuditable(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        idAuditable_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id_auditable = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdAuditable() {
+        idAuditable_ = getDefaultInstance().getIdAuditable();
+        bitField0_ = (bitField0_ & ~0x00010000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id_auditable = 19;</code>
+       * @param value The bytes for idAuditable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdAuditableBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        idAuditable_ = value;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
@@ -5374,34 +5130,32 @@ public final class Example {
       "ne\030\014 \001(\tB\030\372B\025r\0232\021^[0-9\\-\\+]{9,20}$\022)\n\010me" +
       "tadata\030\r \001(\0132\027.google.protobuf.Struct\022\016\n" +
       "\006public\030\016 \001(\010\0225\n\ten_status\030\017 \001(\0162\024.input" +
-      ".StatusRequestB\014\372B\t\202\001\006\030\000\030\001\030\002\"\334\003\n\010Respons" +
+      ".StatusRequestB\014\372B\t\202\001\006\030\000\030\001\030\002\"\222\003\n\010Respons" +
       "e\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013descripti" +
       "on\030\003 \001(\t\022-\n\tborn_date\030\004 \001(\0132\032.google.pro" +
       "tobuf.Timestamp\022\016\n\006public\030\005 \001(\010\022\r\n\005price" +
-      "\030\006 \001(\001\022.\n\ncreated_at\030\007 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022.\n\nupdated_at\030\010 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022\020\n\010category\030\t \001(\t" +
-      "\022\014\n\004tags\030\n \003(\t\022\016\n\006rating\030\013 \001(\001\022\020\n\010quanti" +
-      "ty\030\014 \001(\005\022\020\n\010discount\030\r \001(\001\022\r\n\005email\030\016 \001(" +
-      "\t\022\r\n\005phone\030\017 \001(\t\022)\n\010metadata\030\020 \001(\0132\027.goo" +
-      "gle.protobuf.Struct\022.\n\nlast_login\030\021 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022&\n\006status\030\022 " +
-      "\001(\0162\026.output.StatusResponse2\347\003\n\007Service\022" +
-      "9\n\010Paginate\022\030.input.PaginationRequest\032\021." +
-      "example.Response0\001\0226\n\005Count\022\026.input.Filt" +
-      "eredRequest\032\025.output.CountResponse\022=\n\006Cr" +
-      "eate\022\020.example.Request\032\037.output.Persiste" +
-      "nceDataResponse(\001\022=\n\006Update\022\020.example.Re" +
-      "quest\032\037.output.PersistenceDataResponse(\001" +
-      "\022<\n\010Inactive\022\022.input.UUIDRequest\032\032.outpu" +
-      "t.StatusDataResponse(\001\022:\n\006Active\022\022.input" +
-      ".UUIDRequest\032\032.output.StatusDataResponse" +
-      "(\001\0220\n\007FindOne\022\022.input.UUIDRequest\032\021.exam" +
-      "ple.Response\022?\n\006Delete\022\022.input.UUIDReque" +
-      "st\032\037.output.PersistenceDataResponse(\001BV\n" +
-      "\024com.soustify.exampleZ>github.com/sousti" +
-      "fy/data-gateway-buffer-go/pkg/example;ex" +
-      "ampleb\006proto3"
+      "\030\006 \001(\001\022)\n\010metadata\030\007 \001(\0132\027.google.protob" +
+      "uf.Struct\022.\n\nlast_login\030\010 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022\020\n\010category\030\t \001(\t\022\014\n\004t" +
+      "ags\030\n \003(\t\022\016\n\006rating\030\013 \001(\001\022\020\n\010quantity\030\014 " +
+      "\001(\005\022\020\n\010discount\030\r \001(\001\022\r\n\005email\030\016 \001(\t\022\r\n\005" +
+      "phone\030\017 \001(\t\022&\n\006status\030\022 \001(\0162\026.output.Sta" +
+      "tusResponse\022\024\n\014id_auditable\030\023 \001(\t2\347\003\n\007Se" +
+      "rvice\0229\n\010Paginate\022\030.input.PaginationRequ" +
+      "est\032\021.example.Response0\001\0226\n\005Count\022\026.inpu" +
+      "t.FilteredRequest\032\025.output.CountResponse" +
+      "\022=\n\006Create\022\020.example.Request\032\037.output.Pe" +
+      "rsistenceDataResponse(\001\022=\n\006Update\022\020.exam" +
+      "ple.Request\032\037.output.PersistenceDataResp" +
+      "onse(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032\032" +
+      ".output.StatusDataResponse(\001\022:\n\006Active\022\022" +
+      ".input.UUIDRequest\032\032.output.StatusDataRe" +
+      "sponse(\001\0220\n\007FindOne\022\022.input.UUIDRequest\032" +
+      "\021.example.Response\022?\n\006Delete\022\022.input.UUI" +
+      "DRequest\032\037.output.PersistenceDataRespons" +
+      "e(\001BV\n\024com.soustify.exampleZ>github.com/" +
+      "soustify/data-gateway-buffer-go/pkg/exam" +
+      "ple;exampleb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5423,7 +5177,7 @@ public final class Example {
     internal_static_example_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_example_Response_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "BornDate", "Public", "Price", "CreatedAt", "UpdatedAt", "Category", "Tags", "Rating", "Quantity", "Discount", "Email", "Phone", "Metadata", "LastLogin", "Status", });
+        new java.lang.String[] { "Id", "Name", "Description", "BornDate", "Public", "Price", "Metadata", "LastLogin", "Category", "Tags", "Rating", "Quantity", "Discount", "Email", "Phone", "Status", "IdAuditable", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);

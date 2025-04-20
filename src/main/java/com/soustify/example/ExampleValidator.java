@@ -143,8 +143,6 @@ public class ExampleValidator {
 	
 		
 	
-		
-	
 	
 	
 
@@ -163,11 +161,11 @@ public class ExampleValidator {
 	// no validation rules for Price
 
 	
-			// Validate created_at
-			if (proto.hasCreatedAt()) index.validatorFor(proto.getCreatedAt()).assertValid(proto.getCreatedAt());
+			// Validate metadata
+			if (proto.hasMetadata()) index.validatorFor(proto.getMetadata()).assertValid(proto.getMetadata());
 	
-			// Validate updated_at
-			if (proto.hasUpdatedAt()) index.validatorFor(proto.getUpdatedAt()).assertValid(proto.getUpdatedAt());
+			// Validate last_login
+			if (proto.hasLastLogin()) index.validatorFor(proto.getLastLogin()).assertValid(proto.getLastLogin());
 	// no validation rules for Category
 
 	
@@ -185,13 +183,9 @@ public class ExampleValidator {
 
 	// no validation rules for Phone
 
-	
-			// Validate metadata
-			if (proto.hasMetadata()) index.validatorFor(proto.getMetadata()).assertValid(proto.getMetadata());
-	
-			// Validate last_login
-			if (proto.hasLastLogin()) index.validatorFor(proto.getLastLogin()).assertValid(proto.getLastLogin());
 	// no validation rules for Status
+
+	// no validation rules for IdAuditable
 
 	
 	
