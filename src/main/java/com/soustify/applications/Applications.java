@@ -14,8 +14,8 @@ public final class Applications {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface ApplicationsRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:applications.ApplicationsRequest)
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:applications.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -54,18 +54,18 @@ public final class Applications {
         getNameBytes();
   }
   /**
-   * Protobuf type {@code applications.ApplicationsRequest}
+   * Protobuf type {@code applications.Request}
    */
-  public static final class ApplicationsRequest extends
+  public static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:applications.ApplicationsRequest)
-      ApplicationsRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:applications.Request)
+      RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ApplicationsRequest.newBuilder() to construct.
-    private ApplicationsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ApplicationsRequest() {
+    private Request() {
       id_ = "";
       enStatus_ = 0;
       name_ = "";
@@ -75,7 +75,7 @@ public final class Applications {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new ApplicationsRequest();
+      return new Request();
     }
 
     @java.lang.Override
@@ -85,15 +85,15 @@ public final class Applications {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.applications.Applications.internal_static_applications_ApplicationsRequest_descriptor;
+      return com.soustify.applications.Applications.internal_static_applications_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.applications.Applications.internal_static_applications_ApplicationsRequest_fieldAccessorTable
+      return com.soustify.applications.Applications.internal_static_applications_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.applications.Applications.ApplicationsRequest.class, com.soustify.applications.Applications.ApplicationsRequest.Builder.class);
+              com.soustify.applications.Applications.Request.class, com.soustify.applications.Applications.Request.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -244,10 +244,10 @@ public final class Applications {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.applications.Applications.ApplicationsRequest)) {
+      if (!(obj instanceof com.soustify.applications.Applications.Request)) {
         return super.equals(obj);
       }
-      com.soustify.applications.Applications.ApplicationsRequest other = (com.soustify.applications.Applications.ApplicationsRequest) obj;
+      com.soustify.applications.Applications.Request other = (com.soustify.applications.Applications.Request) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -276,69 +276,69 @@ public final class Applications {
       return hash;
     }
 
-    public static com.soustify.applications.Applications.ApplicationsRequest parseFrom(
+    public static com.soustify.applications.Applications.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.applications.Applications.ApplicationsRequest parseFrom(
+    public static com.soustify.applications.Applications.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.applications.Applications.ApplicationsRequest parseFrom(
+    public static com.soustify.applications.Applications.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.applications.Applications.ApplicationsRequest parseFrom(
+    public static com.soustify.applications.Applications.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.applications.Applications.ApplicationsRequest parseFrom(byte[] data)
+    public static com.soustify.applications.Applications.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.applications.Applications.ApplicationsRequest parseFrom(
+    public static com.soustify.applications.Applications.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.applications.Applications.ApplicationsRequest parseFrom(java.io.InputStream input)
+    public static com.soustify.applications.Applications.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.applications.Applications.ApplicationsRequest parseFrom(
+    public static com.soustify.applications.Applications.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.applications.Applications.ApplicationsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.applications.Applications.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.applications.Applications.ApplicationsRequest parseDelimitedFrom(
+    public static com.soustify.applications.Applications.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.applications.Applications.ApplicationsRequest parseFrom(
+    public static com.soustify.applications.Applications.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.applications.Applications.ApplicationsRequest parseFrom(
+    public static com.soustify.applications.Applications.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -351,7 +351,7 @@ public final class Applications {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.applications.Applications.ApplicationsRequest prototype) {
+    public static Builder newBuilder(com.soustify.applications.Applications.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -367,26 +367,26 @@ public final class Applications {
       return builder;
     }
     /**
-     * Protobuf type {@code applications.ApplicationsRequest}
+     * Protobuf type {@code applications.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:applications.ApplicationsRequest)
-        com.soustify.applications.Applications.ApplicationsRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:applications.Request)
+        com.soustify.applications.Applications.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.applications.Applications.internal_static_applications_ApplicationsRequest_descriptor;
+        return com.soustify.applications.Applications.internal_static_applications_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.applications.Applications.internal_static_applications_ApplicationsRequest_fieldAccessorTable
+        return com.soustify.applications.Applications.internal_static_applications_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.applications.Applications.ApplicationsRequest.class, com.soustify.applications.Applications.ApplicationsRequest.Builder.class);
+                com.soustify.applications.Applications.Request.class, com.soustify.applications.Applications.Request.Builder.class);
       }
 
-      // Construct using com.soustify.applications.Applications.ApplicationsRequest.newBuilder()
+      // Construct using com.soustify.applications.Applications.Request.newBuilder()
       private Builder() {
 
       }
@@ -409,17 +409,17 @@ public final class Applications {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.applications.Applications.internal_static_applications_ApplicationsRequest_descriptor;
+        return com.soustify.applications.Applications.internal_static_applications_Request_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.applications.Applications.ApplicationsRequest getDefaultInstanceForType() {
-        return com.soustify.applications.Applications.ApplicationsRequest.getDefaultInstance();
+      public com.soustify.applications.Applications.Request getDefaultInstanceForType() {
+        return com.soustify.applications.Applications.Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.applications.Applications.ApplicationsRequest build() {
-        com.soustify.applications.Applications.ApplicationsRequest result = buildPartial();
+      public com.soustify.applications.Applications.Request build() {
+        com.soustify.applications.Applications.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -427,14 +427,14 @@ public final class Applications {
       }
 
       @java.lang.Override
-      public com.soustify.applications.Applications.ApplicationsRequest buildPartial() {
-        com.soustify.applications.Applications.ApplicationsRequest result = new com.soustify.applications.Applications.ApplicationsRequest(this);
+      public com.soustify.applications.Applications.Request buildPartial() {
+        com.soustify.applications.Applications.Request result = new com.soustify.applications.Applications.Request(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.applications.Applications.ApplicationsRequest result) {
+      private void buildPartial0(com.soustify.applications.Applications.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -481,16 +481,16 @@ public final class Applications {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.applications.Applications.ApplicationsRequest) {
-          return mergeFrom((com.soustify.applications.Applications.ApplicationsRequest)other);
+        if (other instanceof com.soustify.applications.Applications.Request) {
+          return mergeFrom((com.soustify.applications.Applications.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.applications.Applications.ApplicationsRequest other) {
-        if (other == com.soustify.applications.Applications.ApplicationsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.applications.Applications.Request other) {
+        if (other == com.soustify.applications.Applications.Request.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -771,23 +771,23 @@ public final class Applications {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:applications.ApplicationsRequest)
+      // @@protoc_insertion_point(builder_scope:applications.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:applications.ApplicationsRequest)
-    private static final com.soustify.applications.Applications.ApplicationsRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:applications.Request)
+    private static final com.soustify.applications.Applications.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.applications.Applications.ApplicationsRequest();
+      DEFAULT_INSTANCE = new com.soustify.applications.Applications.Request();
     }
 
-    public static com.soustify.applications.Applications.ApplicationsRequest getDefaultInstance() {
+    public static com.soustify.applications.Applications.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ApplicationsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ApplicationsRequest>() {
+    private static final com.google.protobuf.Parser<Request>
+        PARSER = new com.google.protobuf.AbstractParser<Request>() {
       @java.lang.Override
-      public ApplicationsRequest parsePartialFrom(
+      public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -806,24 +806,24 @@ public final class Applications {
       }
     };
 
-    public static com.google.protobuf.Parser<ApplicationsRequest> parser() {
+    public static com.google.protobuf.Parser<Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ApplicationsRequest> getParserForType() {
+    public com.google.protobuf.Parser<Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.applications.Applications.ApplicationsRequest getDefaultInstanceForType() {
+    public com.soustify.applications.Applications.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface ApplicationsResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:applications.ApplicationsResponse)
+  public interface ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:applications.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -874,18 +874,18 @@ public final class Applications {
         getNameBytes();
   }
   /**
-   * Protobuf type {@code applications.ApplicationsResponse}
+   * Protobuf type {@code applications.Response}
    */
-  public static final class ApplicationsResponse extends
+  public static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:applications.ApplicationsResponse)
-      ApplicationsResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:applications.Response)
+      ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ApplicationsResponse.newBuilder() to construct.
-    private ApplicationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Response.newBuilder() to construct.
+    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ApplicationsResponse() {
+    private Response() {
       id_ = "";
       status_ = 0;
       idAuditable_ = "";
@@ -896,7 +896,7 @@ public final class Applications {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new ApplicationsResponse();
+      return new Response();
     }
 
     @java.lang.Override
@@ -906,15 +906,15 @@ public final class Applications {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.applications.Applications.internal_static_applications_ApplicationsResponse_descriptor;
+      return com.soustify.applications.Applications.internal_static_applications_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.applications.Applications.internal_static_applications_ApplicationsResponse_fieldAccessorTable
+      return com.soustify.applications.Applications.internal_static_applications_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.applications.Applications.ApplicationsResponse.class, com.soustify.applications.Applications.ApplicationsResponse.Builder.class);
+              com.soustify.applications.Applications.Response.class, com.soustify.applications.Applications.Response.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1110,10 +1110,10 @@ public final class Applications {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.applications.Applications.ApplicationsResponse)) {
+      if (!(obj instanceof com.soustify.applications.Applications.Response)) {
         return super.equals(obj);
       }
-      com.soustify.applications.Applications.ApplicationsResponse other = (com.soustify.applications.Applications.ApplicationsResponse) obj;
+      com.soustify.applications.Applications.Response other = (com.soustify.applications.Applications.Response) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1146,69 +1146,69 @@ public final class Applications {
       return hash;
     }
 
-    public static com.soustify.applications.Applications.ApplicationsResponse parseFrom(
+    public static com.soustify.applications.Applications.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.applications.Applications.ApplicationsResponse parseFrom(
+    public static com.soustify.applications.Applications.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.applications.Applications.ApplicationsResponse parseFrom(
+    public static com.soustify.applications.Applications.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.applications.Applications.ApplicationsResponse parseFrom(
+    public static com.soustify.applications.Applications.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.applications.Applications.ApplicationsResponse parseFrom(byte[] data)
+    public static com.soustify.applications.Applications.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.applications.Applications.ApplicationsResponse parseFrom(
+    public static com.soustify.applications.Applications.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.applications.Applications.ApplicationsResponse parseFrom(java.io.InputStream input)
+    public static com.soustify.applications.Applications.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.applications.Applications.ApplicationsResponse parseFrom(
+    public static com.soustify.applications.Applications.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.applications.Applications.ApplicationsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.applications.Applications.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.applications.Applications.ApplicationsResponse parseDelimitedFrom(
+    public static com.soustify.applications.Applications.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.applications.Applications.ApplicationsResponse parseFrom(
+    public static com.soustify.applications.Applications.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.applications.Applications.ApplicationsResponse parseFrom(
+    public static com.soustify.applications.Applications.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1221,7 +1221,7 @@ public final class Applications {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.applications.Applications.ApplicationsResponse prototype) {
+    public static Builder newBuilder(com.soustify.applications.Applications.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1237,26 +1237,26 @@ public final class Applications {
       return builder;
     }
     /**
-     * Protobuf type {@code applications.ApplicationsResponse}
+     * Protobuf type {@code applications.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:applications.ApplicationsResponse)
-        com.soustify.applications.Applications.ApplicationsResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:applications.Response)
+        com.soustify.applications.Applications.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.applications.Applications.internal_static_applications_ApplicationsResponse_descriptor;
+        return com.soustify.applications.Applications.internal_static_applications_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.applications.Applications.internal_static_applications_ApplicationsResponse_fieldAccessorTable
+        return com.soustify.applications.Applications.internal_static_applications_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.applications.Applications.ApplicationsResponse.class, com.soustify.applications.Applications.ApplicationsResponse.Builder.class);
+                com.soustify.applications.Applications.Response.class, com.soustify.applications.Applications.Response.Builder.class);
       }
 
-      // Construct using com.soustify.applications.Applications.ApplicationsResponse.newBuilder()
+      // Construct using com.soustify.applications.Applications.Response.newBuilder()
       private Builder() {
 
       }
@@ -1280,17 +1280,17 @@ public final class Applications {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.applications.Applications.internal_static_applications_ApplicationsResponse_descriptor;
+        return com.soustify.applications.Applications.internal_static_applications_Response_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.applications.Applications.ApplicationsResponse getDefaultInstanceForType() {
-        return com.soustify.applications.Applications.ApplicationsResponse.getDefaultInstance();
+      public com.soustify.applications.Applications.Response getDefaultInstanceForType() {
+        return com.soustify.applications.Applications.Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.applications.Applications.ApplicationsResponse build() {
-        com.soustify.applications.Applications.ApplicationsResponse result = buildPartial();
+      public com.soustify.applications.Applications.Response build() {
+        com.soustify.applications.Applications.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1298,14 +1298,14 @@ public final class Applications {
       }
 
       @java.lang.Override
-      public com.soustify.applications.Applications.ApplicationsResponse buildPartial() {
-        com.soustify.applications.Applications.ApplicationsResponse result = new com.soustify.applications.Applications.ApplicationsResponse(this);
+      public com.soustify.applications.Applications.Response buildPartial() {
+        com.soustify.applications.Applications.Response result = new com.soustify.applications.Applications.Response(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.applications.Applications.ApplicationsResponse result) {
+      private void buildPartial0(com.soustify.applications.Applications.Response result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -1355,16 +1355,16 @@ public final class Applications {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.applications.Applications.ApplicationsResponse) {
-          return mergeFrom((com.soustify.applications.Applications.ApplicationsResponse)other);
+        if (other instanceof com.soustify.applications.Applications.Response) {
+          return mergeFrom((com.soustify.applications.Applications.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.applications.Applications.ApplicationsResponse other) {
-        if (other == com.soustify.applications.Applications.ApplicationsResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.applications.Applications.Response other) {
+        if (other == com.soustify.applications.Applications.Response.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -1727,23 +1727,23 @@ public final class Applications {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:applications.ApplicationsResponse)
+      // @@protoc_insertion_point(builder_scope:applications.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:applications.ApplicationsResponse)
-    private static final com.soustify.applications.Applications.ApplicationsResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:applications.Response)
+    private static final com.soustify.applications.Applications.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.applications.Applications.ApplicationsResponse();
+      DEFAULT_INSTANCE = new com.soustify.applications.Applications.Response();
     }
 
-    public static com.soustify.applications.Applications.ApplicationsResponse getDefaultInstance() {
+    public static com.soustify.applications.Applications.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ApplicationsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ApplicationsResponse>() {
+    private static final com.google.protobuf.Parser<Response>
+        PARSER = new com.google.protobuf.AbstractParser<Response>() {
       @java.lang.Override
-      public ApplicationsResponse parsePartialFrom(
+      public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1762,32 +1762,32 @@ public final class Applications {
       }
     };
 
-    public static com.google.protobuf.Parser<ApplicationsResponse> parser() {
+    public static com.google.protobuf.Parser<Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ApplicationsResponse> getParserForType() {
+    public com.google.protobuf.Parser<Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.applications.Applications.ApplicationsResponse getDefaultInstanceForType() {
+    public com.soustify.applications.Applications.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_applications_ApplicationsRequest_descriptor;
+    internal_static_applications_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_applications_ApplicationsRequest_fieldAccessorTable;
+      internal_static_applications_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_applications_ApplicationsResponse_descriptor;
+    internal_static_applications_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_applications_ApplicationsResponse_fieldAccessorTable;
+      internal_static_applications_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1799,31 +1799,29 @@ public final class Applications {
     java.lang.String[] descriptorData = {
       "\n\022applications.proto\022\014applications\032\013inpu" +
       "t.proto\032\014output.proto\032\016validate.proto\032\037g" +
-      "oogle/protobuf/timestamp.proto\"z\n\023Applic" +
-      "ationsRequest\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\te" +
-      "n_status\030\002 \001(\0162\024.input.StatusRequestB\n\372B" +
-      "\007\202\001\004\030\000\030\001\022\030\n\004name\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\"\216\001\n\024A" +
-      "pplicationsResponse\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001" +
-      "\001\022&\n\006status\030\002 \001(\0162\026.output.StatusRespons" +
-      "e\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004nam" +
-      "e\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\0012\267\004\n\023ApplicationsServ" +
-      "ice\022J\n\010Paginate\022\030.input.PaginationReques" +
-      "t\032\".applications.ApplicationsResponse0\001\022" +
-      "6\n\005Count\022\026.input.FilteredRequest\032\025.outpu" +
-      "t.CountResponse\022N\n\006Create\022!.applications" +
-      ".ApplicationsRequest\032\037.output.Persistenc" +
-      "eDataResponse(\001\022N\n\006Update\022!.applications" +
-      ".ApplicationsRequest\032\037.output.Persistenc" +
-      "eDataResponse(\001\022<\n\010Inactive\022\022.input.UUID" +
-      "Request\032\032.output.StatusDataResponse(\001\022:\n" +
-      "\006Active\022\022.input.UUIDRequest\032\032.output.Sta" +
-      "tusDataResponse(\001\022A\n\007FindOne\022\022.input.UUI" +
-      "DRequest\032\".applications.ApplicationsResp" +
-      "onse\022?\n\006Delete\022\022.input.UUIDRequest\032\037.out" +
-      "put.PersistenceDataResponse(\001Be\n\031com.sou" +
-      "stify.applicationsZHgithub.com/soustify/" +
-      "data-gateway-buffer-go/pkg/applications;" +
-      "applicationsb\006proto3"
+      "oogle/protobuf/timestamp.proto\"n\n\007Reques" +
+      "t\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001" +
+      "(\0162\024.input.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n\004" +
+      "name\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\"\202\001\n\010Response\022\024\n\002i" +
+      "d\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 \001(\0162\026.outp" +
+      "ut.StatusResponse\022\036\n\014id_auditable\030\003 \001(\tB" +
+      "\010\372B\005r\003\260\001\001\022\030\n\004name\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\0012\373\003\n\007" +
+      "Service\022>\n\010Paginate\022\030.input.PaginationRe" +
+      "quest\032\026.applications.Response0\001\0226\n\005Count" +
+      "\022\026.input.FilteredRequest\032\025.output.CountR" +
+      "esponse\022B\n\006Create\022\025.applications.Request" +
+      "\032\037.output.PersistenceDataResponse(\001\022B\n\006U" +
+      "pdate\022\025.applications.Request\032\037.output.Pe" +
+      "rsistenceDataResponse(\001\022<\n\010Inactive\022\022.in" +
+      "put.UUIDRequest\032\032.output.StatusDataRespo" +
+      "nse(\001\022:\n\006Active\022\022.input.UUIDRequest\032\032.ou" +
+      "tput.StatusDataResponse(\001\0225\n\007FindOne\022\022.i" +
+      "nput.UUIDRequest\032\026.applications.Response" +
+      "\022?\n\006Delete\022\022.input.UUIDRequest\032\037.output." +
+      "PersistenceDataResponse(\001Be\n\031com.soustif" +
+      "y.applicationsZHgithub.com/soustify/data" +
+      "-gateway-buffer-go/pkg/applications;appl" +
+      "icationsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1833,17 +1831,17 @@ public final class Applications {
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_applications_ApplicationsRequest_descriptor =
+    internal_static_applications_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_applications_ApplicationsRequest_fieldAccessorTable = new
+    internal_static_applications_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_applications_ApplicationsRequest_descriptor,
+        internal_static_applications_Request_descriptor,
         new java.lang.String[] { "Id", "EnStatus", "Name", });
-    internal_static_applications_ApplicationsResponse_descriptor =
+    internal_static_applications_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_applications_ApplicationsResponse_fieldAccessorTable = new
+    internal_static_applications_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_applications_ApplicationsResponse_descriptor,
+        internal_static_applications_Response_descriptor,
         new java.lang.String[] { "Id", "Status", "IdAuditable", "Name", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

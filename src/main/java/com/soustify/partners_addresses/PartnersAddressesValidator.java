@@ -8,16 +8,16 @@ package com.soustify.partners_addresses;
 public class PartnersAddressesValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.partners_addresses.PartnersAddresses.PartnersAddressesRequest.class)) return new PartnersAddressesRequestValidator();
-		if (clazz.equals(com.soustify.partners_addresses.PartnersAddresses.PartnersAddressesResponse.class)) return new PartnersAddressesResponseValidator();
+		if (clazz.equals(com.soustify.partners_addresses.PartnersAddresses.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.partners_addresses.PartnersAddresses.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code PartnersAddressesRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class PartnersAddressesRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.partners_addresses.PartnersAddresses.PartnersAddressesRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.partners_addresses.PartnersAddresses.Request> {
 		
 	
 		
@@ -25,19 +25,19 @@ public class PartnersAddressesValidator {
 	
 	
 
-	public void assertValid(com.soustify.partners_addresses.PartnersAddresses.PartnersAddressesRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.partners_addresses.PartnersAddresses.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.PartnersAddressesRequest.id_partner", proto.getIdPartner());
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.Request.id_partner", proto.getIdPartner());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.PartnersAddressesRequest.id_address", proto.getIdAddress());
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.Request.id_address", proto.getIdAddress());
 	
 	
 	}
 }
 /**
-	 * Validates {@code PartnersAddressesResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class PartnersAddressesResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.partners_addresses.PartnersAddresses.PartnersAddressesResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.partners_addresses.PartnersAddresses.Response> {
 		
 	
 		
@@ -49,15 +49,15 @@ public class PartnersAddressesValidator {
 	
 	
 
-	public void assertValid(com.soustify.partners_addresses.PartnersAddresses.PartnersAddressesResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.partners_addresses.PartnersAddresses.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.PartnersAddressesResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.Response.id", proto.getId());
 	// no validation rules for Status
 
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.PartnersAddressesResponse.id_partner", proto.getIdPartner());
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.Response.id_partner", proto.getIdPartner());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.PartnersAddressesResponse.id_address", proto.getIdAddress());
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_addresses.Response.id_address", proto.getIdAddress());
 	
 	
 	}

@@ -8,16 +8,16 @@ package com.soustify.services;
 public class ServicesValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.services.Services.ServicesRequest.class)) return new ServicesRequestValidator();
-		if (clazz.equals(com.soustify.services.Services.ServicesResponse.class)) return new ServicesResponseValidator();
+		if (clazz.equals(com.soustify.services.Services.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.services.Services.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code ServicesRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class ServicesRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.services.Services.ServicesRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.services.Services.Request> {
 		
 		private final com.soustify.input.Input.StatusRequest[] EN_STATUS__IN = new com.soustify.input.Input.StatusRequest[]{
 			com.soustify.input.Input.StatusRequest.forNumber(0),
@@ -31,23 +31,23 @@ public class ServicesValidator {
 	
 	
 
-	public void assertValid(com.soustify.services.Services.ServicesRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.services.Services.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".services.ServicesRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.CollectiveValidation.in(".services.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".services.ServicesRequest.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".services.ServicesRequest.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".services.Request.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".services.Request.name", proto.getName(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".services.ServicesRequest.description", proto.getDescription(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".services.ServicesRequest.description", proto.getDescription(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".services.Request.description", proto.getDescription(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".services.Request.description", proto.getDescription(), 200);
 	
 	
 	}
 }
 /**
-	 * Validates {@code ServicesResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class ServicesResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.services.Services.ServicesResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.services.Services.Response> {
 		
 	
 		
@@ -61,17 +61,17 @@ public class ServicesValidator {
 	
 	
 
-	public void assertValid(com.soustify.services.Services.ServicesResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.services.Services.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".services.ServicesResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".services.Response.id", proto.getId());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".services.ServicesResponse.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".services.ServicesResponse.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".services.Response.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".services.Response.name", proto.getName(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".services.ServicesResponse.description", proto.getDescription(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".services.ServicesResponse.description", proto.getDescription(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".services.Response.description", proto.getDescription(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".services.Response.description", proto.getDescription(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".services.ServicesResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".services.Response.id_auditable", proto.getIdAuditable());
 	// no validation rules for Status
 
 	

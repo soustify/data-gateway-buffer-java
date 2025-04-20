@@ -1,4 +1,4 @@
-package com.soustify.admin_users;
+package com.soustify.categories_services;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -6,39 +6,39 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.57.2)",
-    comments = "Source: admin_users.proto")
+    comments = "Source: categories_services.proto")
 @io.grpc.stub.annotations.GrpcGenerated
-public final class AdminUsersServiceGrpc {
+public final class ServiceGrpc {
 
-  private AdminUsersServiceGrpc() {}
+  private ServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "admin_users.AdminUsersService";
+  public static final java.lang.String SERVICE_NAME = "categories_services.Service";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.soustify.input.Input.PaginationRequest,
-      com.soustify.admin_users.AdminUsers.AdminUsersResponse> getPaginateMethod;
+      com.soustify.categories_services.CategoriesServices.Response> getPaginateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Paginate",
       requestType = com.soustify.input.Input.PaginationRequest.class,
-      responseType = com.soustify.admin_users.AdminUsers.AdminUsersResponse.class,
+      responseType = com.soustify.categories_services.CategoriesServices.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.PaginationRequest,
-      com.soustify.admin_users.AdminUsers.AdminUsersResponse> getPaginateMethod() {
-    io.grpc.MethodDescriptor<com.soustify.input.Input.PaginationRequest, com.soustify.admin_users.AdminUsers.AdminUsersResponse> getPaginateMethod;
-    if ((getPaginateMethod = AdminUsersServiceGrpc.getPaginateMethod) == null) {
-      synchronized (AdminUsersServiceGrpc.class) {
-        if ((getPaginateMethod = AdminUsersServiceGrpc.getPaginateMethod) == null) {
-          AdminUsersServiceGrpc.getPaginateMethod = getPaginateMethod =
-              io.grpc.MethodDescriptor.<com.soustify.input.Input.PaginationRequest, com.soustify.admin_users.AdminUsers.AdminUsersResponse>newBuilder()
+      com.soustify.categories_services.CategoriesServices.Response> getPaginateMethod() {
+    io.grpc.MethodDescriptor<com.soustify.input.Input.PaginationRequest, com.soustify.categories_services.CategoriesServices.Response> getPaginateMethod;
+    if ((getPaginateMethod = ServiceGrpc.getPaginateMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getPaginateMethod = ServiceGrpc.getPaginateMethod) == null) {
+          ServiceGrpc.getPaginateMethod = getPaginateMethod =
+              io.grpc.MethodDescriptor.<com.soustify.input.Input.PaginationRequest, com.soustify.categories_services.CategoriesServices.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Paginate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.input.Input.PaginationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.admin_users.AdminUsers.AdminUsersResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AdminUsersServiceMethodDescriptorSupplier("Paginate"))
+                  com.soustify.categories_services.CategoriesServices.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Paginate"))
               .build();
         }
       }
@@ -57,10 +57,10 @@ public final class AdminUsersServiceGrpc {
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.FilteredRequest,
       com.soustify.output.Output.CountResponse> getCountMethod() {
     io.grpc.MethodDescriptor<com.soustify.input.Input.FilteredRequest, com.soustify.output.Output.CountResponse> getCountMethod;
-    if ((getCountMethod = AdminUsersServiceGrpc.getCountMethod) == null) {
-      synchronized (AdminUsersServiceGrpc.class) {
-        if ((getCountMethod = AdminUsersServiceGrpc.getCountMethod) == null) {
-          AdminUsersServiceGrpc.getCountMethod = getCountMethod =
+    if ((getCountMethod = ServiceGrpc.getCountMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getCountMethod = ServiceGrpc.getCountMethod) == null) {
+          ServiceGrpc.getCountMethod = getCountMethod =
               io.grpc.MethodDescriptor.<com.soustify.input.Input.FilteredRequest, com.soustify.output.Output.CountResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Count"))
@@ -69,7 +69,7 @@ public final class AdminUsersServiceGrpc {
                   com.soustify.input.Input.FilteredRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.CountResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AdminUsersServiceMethodDescriptorSupplier("Count"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Count"))
               .build();
         }
       }
@@ -77,30 +77,30 @@ public final class AdminUsersServiceGrpc {
     return getCountMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.soustify.admin_users.AdminUsers.AdminUsersRequest,
+  private static volatile io.grpc.MethodDescriptor<com.soustify.categories_services.CategoriesServices.Request,
       com.soustify.output.Output.PersistenceDataResponse> getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Create",
-      requestType = com.soustify.admin_users.AdminUsers.AdminUsersRequest.class,
+      requestType = com.soustify.categories_services.CategoriesServices.Request.class,
       responseType = com.soustify.output.Output.PersistenceDataResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<com.soustify.admin_users.AdminUsers.AdminUsersRequest,
+  public static io.grpc.MethodDescriptor<com.soustify.categories_services.CategoriesServices.Request,
       com.soustify.output.Output.PersistenceDataResponse> getCreateMethod() {
-    io.grpc.MethodDescriptor<com.soustify.admin_users.AdminUsers.AdminUsersRequest, com.soustify.output.Output.PersistenceDataResponse> getCreateMethod;
-    if ((getCreateMethod = AdminUsersServiceGrpc.getCreateMethod) == null) {
-      synchronized (AdminUsersServiceGrpc.class) {
-        if ((getCreateMethod = AdminUsersServiceGrpc.getCreateMethod) == null) {
-          AdminUsersServiceGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<com.soustify.admin_users.AdminUsers.AdminUsersRequest, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
+    io.grpc.MethodDescriptor<com.soustify.categories_services.CategoriesServices.Request, com.soustify.output.Output.PersistenceDataResponse> getCreateMethod;
+    if ((getCreateMethod = ServiceGrpc.getCreateMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getCreateMethod = ServiceGrpc.getCreateMethod) == null) {
+          ServiceGrpc.getCreateMethod = getCreateMethod =
+              io.grpc.MethodDescriptor.<com.soustify.categories_services.CategoriesServices.Request, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.admin_users.AdminUsers.AdminUsersRequest.getDefaultInstance()))
+                  com.soustify.categories_services.CategoriesServices.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.PersistenceDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AdminUsersServiceMethodDescriptorSupplier("Create"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Create"))
               .build();
         }
       }
@@ -108,30 +108,30 @@ public final class AdminUsersServiceGrpc {
     return getCreateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.soustify.admin_users.AdminUsers.AdminUsersRequest,
+  private static volatile io.grpc.MethodDescriptor<com.soustify.categories_services.CategoriesServices.Request,
       com.soustify.output.Output.PersistenceDataResponse> getUpdateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Update",
-      requestType = com.soustify.admin_users.AdminUsers.AdminUsersRequest.class,
+      requestType = com.soustify.categories_services.CategoriesServices.Request.class,
       responseType = com.soustify.output.Output.PersistenceDataResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<com.soustify.admin_users.AdminUsers.AdminUsersRequest,
+  public static io.grpc.MethodDescriptor<com.soustify.categories_services.CategoriesServices.Request,
       com.soustify.output.Output.PersistenceDataResponse> getUpdateMethod() {
-    io.grpc.MethodDescriptor<com.soustify.admin_users.AdminUsers.AdminUsersRequest, com.soustify.output.Output.PersistenceDataResponse> getUpdateMethod;
-    if ((getUpdateMethod = AdminUsersServiceGrpc.getUpdateMethod) == null) {
-      synchronized (AdminUsersServiceGrpc.class) {
-        if ((getUpdateMethod = AdminUsersServiceGrpc.getUpdateMethod) == null) {
-          AdminUsersServiceGrpc.getUpdateMethod = getUpdateMethod =
-              io.grpc.MethodDescriptor.<com.soustify.admin_users.AdminUsers.AdminUsersRequest, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
+    io.grpc.MethodDescriptor<com.soustify.categories_services.CategoriesServices.Request, com.soustify.output.Output.PersistenceDataResponse> getUpdateMethod;
+    if ((getUpdateMethod = ServiceGrpc.getUpdateMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getUpdateMethod = ServiceGrpc.getUpdateMethod) == null) {
+          ServiceGrpc.getUpdateMethod = getUpdateMethod =
+              io.grpc.MethodDescriptor.<com.soustify.categories_services.CategoriesServices.Request, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.admin_users.AdminUsers.AdminUsersRequest.getDefaultInstance()))
+                  com.soustify.categories_services.CategoriesServices.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.PersistenceDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AdminUsersServiceMethodDescriptorSupplier("Update"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Update"))
               .build();
         }
       }
@@ -150,10 +150,10 @@ public final class AdminUsersServiceGrpc {
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
       com.soustify.output.Output.StatusDataResponse> getInactiveMethod() {
     io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.StatusDataResponse> getInactiveMethod;
-    if ((getInactiveMethod = AdminUsersServiceGrpc.getInactiveMethod) == null) {
-      synchronized (AdminUsersServiceGrpc.class) {
-        if ((getInactiveMethod = AdminUsersServiceGrpc.getInactiveMethod) == null) {
-          AdminUsersServiceGrpc.getInactiveMethod = getInactiveMethod =
+    if ((getInactiveMethod = ServiceGrpc.getInactiveMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getInactiveMethod = ServiceGrpc.getInactiveMethod) == null) {
+          ServiceGrpc.getInactiveMethod = getInactiveMethod =
               io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.StatusDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Inactive"))
@@ -162,7 +162,7 @@ public final class AdminUsersServiceGrpc {
                   com.soustify.input.Input.UUIDRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.StatusDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AdminUsersServiceMethodDescriptorSupplier("Inactive"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Inactive"))
               .build();
         }
       }
@@ -181,10 +181,10 @@ public final class AdminUsersServiceGrpc {
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
       com.soustify.output.Output.StatusDataResponse> getActiveMethod() {
     io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.StatusDataResponse> getActiveMethod;
-    if ((getActiveMethod = AdminUsersServiceGrpc.getActiveMethod) == null) {
-      synchronized (AdminUsersServiceGrpc.class) {
-        if ((getActiveMethod = AdminUsersServiceGrpc.getActiveMethod) == null) {
-          AdminUsersServiceGrpc.getActiveMethod = getActiveMethod =
+    if ((getActiveMethod = ServiceGrpc.getActiveMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getActiveMethod = ServiceGrpc.getActiveMethod) == null) {
+          ServiceGrpc.getActiveMethod = getActiveMethod =
               io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.StatusDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Active"))
@@ -193,7 +193,7 @@ public final class AdminUsersServiceGrpc {
                   com.soustify.input.Input.UUIDRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.StatusDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AdminUsersServiceMethodDescriptorSupplier("Active"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Active"))
               .build();
         }
       }
@@ -202,29 +202,29 @@ public final class AdminUsersServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
-      com.soustify.admin_users.AdminUsers.AdminUsersResponse> getFindOneMethod;
+      com.soustify.categories_services.CategoriesServices.Response> getFindOneMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "FindOne",
       requestType = com.soustify.input.Input.UUIDRequest.class,
-      responseType = com.soustify.admin_users.AdminUsers.AdminUsersResponse.class,
+      responseType = com.soustify.categories_services.CategoriesServices.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
-      com.soustify.admin_users.AdminUsers.AdminUsersResponse> getFindOneMethod() {
-    io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.admin_users.AdminUsers.AdminUsersResponse> getFindOneMethod;
-    if ((getFindOneMethod = AdminUsersServiceGrpc.getFindOneMethod) == null) {
-      synchronized (AdminUsersServiceGrpc.class) {
-        if ((getFindOneMethod = AdminUsersServiceGrpc.getFindOneMethod) == null) {
-          AdminUsersServiceGrpc.getFindOneMethod = getFindOneMethod =
-              io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.admin_users.AdminUsers.AdminUsersResponse>newBuilder()
+      com.soustify.categories_services.CategoriesServices.Response> getFindOneMethod() {
+    io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.categories_services.CategoriesServices.Response> getFindOneMethod;
+    if ((getFindOneMethod = ServiceGrpc.getFindOneMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getFindOneMethod = ServiceGrpc.getFindOneMethod) == null) {
+          ServiceGrpc.getFindOneMethod = getFindOneMethod =
+              io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.categories_services.CategoriesServices.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FindOne"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.input.Input.UUIDRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.admin_users.AdminUsers.AdminUsersResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AdminUsersServiceMethodDescriptorSupplier("FindOne"))
+                  com.soustify.categories_services.CategoriesServices.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("FindOne"))
               .build();
         }
       }
@@ -243,10 +243,10 @@ public final class AdminUsersServiceGrpc {
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
       com.soustify.output.Output.PersistenceDataResponse> getDeleteMethod() {
     io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.PersistenceDataResponse> getDeleteMethod;
-    if ((getDeleteMethod = AdminUsersServiceGrpc.getDeleteMethod) == null) {
-      synchronized (AdminUsersServiceGrpc.class) {
-        if ((getDeleteMethod = AdminUsersServiceGrpc.getDeleteMethod) == null) {
-          AdminUsersServiceGrpc.getDeleteMethod = getDeleteMethod =
+    if ((getDeleteMethod = ServiceGrpc.getDeleteMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getDeleteMethod = ServiceGrpc.getDeleteMethod) == null) {
+          ServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
@@ -255,7 +255,7 @@ public final class AdminUsersServiceGrpc {
                   com.soustify.input.Input.UUIDRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.PersistenceDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AdminUsersServiceMethodDescriptorSupplier("Delete"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Delete"))
               .build();
         }
       }
@@ -266,45 +266,45 @@ public final class AdminUsersServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static AdminUsersServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AdminUsersServiceStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AdminUsersServiceStub>() {
+  public static ServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ServiceStub>() {
         @java.lang.Override
-        public AdminUsersServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AdminUsersServiceStub(channel, callOptions);
+        public ServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ServiceStub(channel, callOptions);
         }
       };
-    return AdminUsersServiceStub.newStub(factory, channel);
+    return ServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static AdminUsersServiceBlockingStub newBlockingStub(
+  public static ServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AdminUsersServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AdminUsersServiceBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<ServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ServiceBlockingStub>() {
         @java.lang.Override
-        public AdminUsersServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AdminUsersServiceBlockingStub(channel, callOptions);
+        public ServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ServiceBlockingStub(channel, callOptions);
         }
       };
-    return AdminUsersServiceBlockingStub.newStub(factory, channel);
+    return ServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static AdminUsersServiceFutureStub newFutureStub(
+  public static ServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AdminUsersServiceFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AdminUsersServiceFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<ServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ServiceFutureStub>() {
         @java.lang.Override
-        public AdminUsersServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AdminUsersServiceFutureStub(channel, callOptions);
+        public ServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ServiceFutureStub(channel, callOptions);
         }
       };
-    return AdminUsersServiceFutureStub.newStub(factory, channel);
+    return ServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -314,7 +314,7 @@ public final class AdminUsersServiceGrpc {
     /**
      */
     default void paginate(com.soustify.input.Input.PaginationRequest request,
-        io.grpc.stub.StreamObserver<com.soustify.admin_users.AdminUsers.AdminUsersResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.categories_services.CategoriesServices.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPaginateMethod(), responseObserver);
     }
 
@@ -327,14 +327,14 @@ public final class AdminUsersServiceGrpc {
 
     /**
      */
-    default io.grpc.stub.StreamObserver<com.soustify.admin_users.AdminUsers.AdminUsersRequest> create(
+    default io.grpc.stub.StreamObserver<com.soustify.categories_services.CategoriesServices.Request> create(
         io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getCreateMethod(), responseObserver);
     }
 
     /**
      */
-    default io.grpc.stub.StreamObserver<com.soustify.admin_users.AdminUsers.AdminUsersRequest> update(
+    default io.grpc.stub.StreamObserver<com.soustify.categories_services.CategoriesServices.Request> update(
         io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getUpdateMethod(), responseObserver);
     }
@@ -356,7 +356,7 @@ public final class AdminUsersServiceGrpc {
     /**
      */
     default void findOne(com.soustify.input.Input.UUIDRequest request,
-        io.grpc.stub.StreamObserver<com.soustify.admin_users.AdminUsers.AdminUsersResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.categories_services.CategoriesServices.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindOneMethod(), responseObserver);
     }
 
@@ -369,36 +369,36 @@ public final class AdminUsersServiceGrpc {
   }
 
   /**
-   * Base class for the server implementation of the service AdminUsersService.
+   * Base class for the server implementation of the service Service.
    */
-  public static abstract class AdminUsersServiceImplBase
+  public static abstract class ServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return AdminUsersServiceGrpc.bindService(this);
+      return ServiceGrpc.bindService(this);
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service AdminUsersService.
+   * A stub to allow clients to do asynchronous rpc calls to service Service.
    */
-  public static final class AdminUsersServiceStub
-      extends io.grpc.stub.AbstractAsyncStub<AdminUsersServiceStub> {
-    private AdminUsersServiceStub(
+  public static final class ServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ServiceStub> {
+    private ServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdminUsersServiceStub build(
+    protected ServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new AdminUsersServiceStub(channel, callOptions);
+      return new ServiceStub(channel, callOptions);
     }
 
     /**
      */
     public void paginate(com.soustify.input.Input.PaginationRequest request,
-        io.grpc.stub.StreamObserver<com.soustify.admin_users.AdminUsers.AdminUsersResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.categories_services.CategoriesServices.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getPaginateMethod(), getCallOptions()), request, responseObserver);
     }
@@ -413,7 +413,7 @@ public final class AdminUsersServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.soustify.admin_users.AdminUsers.AdminUsersRequest> create(
+    public io.grpc.stub.StreamObserver<com.soustify.categories_services.CategoriesServices.Request> create(
         io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), responseObserver);
@@ -421,7 +421,7 @@ public final class AdminUsersServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.soustify.admin_users.AdminUsers.AdminUsersRequest> update(
+    public io.grpc.stub.StreamObserver<com.soustify.categories_services.CategoriesServices.Request> update(
         io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), responseObserver);
@@ -446,7 +446,7 @@ public final class AdminUsersServiceGrpc {
     /**
      */
     public void findOne(com.soustify.input.Input.UUIDRequest request,
-        io.grpc.stub.StreamObserver<com.soustify.admin_users.AdminUsers.AdminUsersResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.categories_services.CategoriesServices.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getFindOneMethod(), getCallOptions()), request, responseObserver);
     }
@@ -461,24 +461,24 @@ public final class AdminUsersServiceGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service AdminUsersService.
+   * A stub to allow clients to do synchronous rpc calls to service Service.
    */
-  public static final class AdminUsersServiceBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<AdminUsersServiceBlockingStub> {
-    private AdminUsersServiceBlockingStub(
+  public static final class ServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ServiceBlockingStub> {
+    private ServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdminUsersServiceBlockingStub build(
+    protected ServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new AdminUsersServiceBlockingStub(channel, callOptions);
+      return new ServiceBlockingStub(channel, callOptions);
     }
 
     /**
      */
-    public java.util.Iterator<com.soustify.admin_users.AdminUsers.AdminUsersResponse> paginate(
+    public java.util.Iterator<com.soustify.categories_services.CategoriesServices.Response> paginate(
         com.soustify.input.Input.PaginationRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getPaginateMethod(), getCallOptions(), request);
@@ -493,26 +493,26 @@ public final class AdminUsersServiceGrpc {
 
     /**
      */
-    public com.soustify.admin_users.AdminUsers.AdminUsersResponse findOne(com.soustify.input.Input.UUIDRequest request) {
+    public com.soustify.categories_services.CategoriesServices.Response findOne(com.soustify.input.Input.UUIDRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getFindOneMethod(), getCallOptions(), request);
     }
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service AdminUsersService.
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Service.
    */
-  public static final class AdminUsersServiceFutureStub
-      extends io.grpc.stub.AbstractFutureStub<AdminUsersServiceFutureStub> {
-    private AdminUsersServiceFutureStub(
+  public static final class ServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ServiceFutureStub> {
+    private ServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdminUsersServiceFutureStub build(
+    protected ServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new AdminUsersServiceFutureStub(channel, callOptions);
+      return new ServiceFutureStub(channel, callOptions);
     }
 
     /**
@@ -525,7 +525,7 @@ public final class AdminUsersServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.soustify.admin_users.AdminUsers.AdminUsersResponse> findOne(
+    public com.google.common.util.concurrent.ListenableFuture<com.soustify.categories_services.CategoriesServices.Response> findOne(
         com.soustify.input.Input.UUIDRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getFindOneMethod(), getCallOptions()), request);
@@ -560,7 +560,7 @@ public final class AdminUsersServiceGrpc {
       switch (methodId) {
         case METHODID_PAGINATE:
           serviceImpl.paginate((com.soustify.input.Input.PaginationRequest) request,
-              (io.grpc.stub.StreamObserver<com.soustify.admin_users.AdminUsers.AdminUsersResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.soustify.categories_services.CategoriesServices.Response>) responseObserver);
           break;
         case METHODID_COUNT:
           serviceImpl.count((com.soustify.input.Input.FilteredRequest) request,
@@ -568,7 +568,7 @@ public final class AdminUsersServiceGrpc {
           break;
         case METHODID_FIND_ONE:
           serviceImpl.findOne((com.soustify.input.Input.UUIDRequest) request,
-              (io.grpc.stub.StreamObserver<com.soustify.admin_users.AdminUsers.AdminUsersResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.soustify.categories_services.CategoriesServices.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -608,7 +608,7 @@ public final class AdminUsersServiceGrpc {
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
               com.soustify.input.Input.PaginationRequest,
-              com.soustify.admin_users.AdminUsers.AdminUsersResponse>(
+              com.soustify.categories_services.CategoriesServices.Response>(
                 service, METHODID_PAGINATE)))
         .addMethod(
           getCountMethod(),
@@ -621,14 +621,14 @@ public final class AdminUsersServiceGrpc {
           getCreateMethod(),
           io.grpc.stub.ServerCalls.asyncClientStreamingCall(
             new MethodHandlers<
-              com.soustify.admin_users.AdminUsers.AdminUsersRequest,
+              com.soustify.categories_services.CategoriesServices.Request,
               com.soustify.output.Output.PersistenceDataResponse>(
                 service, METHODID_CREATE)))
         .addMethod(
           getUpdateMethod(),
           io.grpc.stub.ServerCalls.asyncClientStreamingCall(
             new MethodHandlers<
-              com.soustify.admin_users.AdminUsers.AdminUsersRequest,
+              com.soustify.categories_services.CategoriesServices.Request,
               com.soustify.output.Output.PersistenceDataResponse>(
                 service, METHODID_UPDATE)))
         .addMethod(
@@ -650,7 +650,7 @@ public final class AdminUsersServiceGrpc {
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.soustify.input.Input.UUIDRequest,
-              com.soustify.admin_users.AdminUsers.AdminUsersResponse>(
+              com.soustify.categories_services.CategoriesServices.Response>(
                 service, METHODID_FIND_ONE)))
         .addMethod(
           getDeleteMethod(),
@@ -662,32 +662,32 @@ public final class AdminUsersServiceGrpc {
         .build();
   }
 
-  private static abstract class AdminUsersServiceBaseDescriptorSupplier
+  private static abstract class ServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    AdminUsersServiceBaseDescriptorSupplier() {}
+    ServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.soustify.admin_users.AdminUsers.getDescriptor();
+      return com.soustify.categories_services.CategoriesServices.getDescriptor();
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("AdminUsersService");
+      return getFileDescriptor().findServiceByName("Service");
     }
   }
 
-  private static final class AdminUsersServiceFileDescriptorSupplier
-      extends AdminUsersServiceBaseDescriptorSupplier {
-    AdminUsersServiceFileDescriptorSupplier() {}
+  private static final class ServiceFileDescriptorSupplier
+      extends ServiceBaseDescriptorSupplier {
+    ServiceFileDescriptorSupplier() {}
   }
 
-  private static final class AdminUsersServiceMethodDescriptorSupplier
-      extends AdminUsersServiceBaseDescriptorSupplier
+  private static final class ServiceMethodDescriptorSupplier
+      extends ServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final java.lang.String methodName;
 
-    AdminUsersServiceMethodDescriptorSupplier(java.lang.String methodName) {
+    ServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -702,11 +702,11 @@ public final class AdminUsersServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (AdminUsersServiceGrpc.class) {
+      synchronized (ServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new AdminUsersServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new ServiceFileDescriptorSupplier())
               .addMethod(getPaginateMethod())
               .addMethod(getCountMethod())
               .addMethod(getCreateMethod())

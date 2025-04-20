@@ -8,16 +8,16 @@ package com.soustify.partners_categories;
 public class PartnersCategoriesValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest.class)) return new PartnersCategoriesRequestValidator();
-		if (clazz.equals(com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse.class)) return new PartnersCategoriesResponseValidator();
+		if (clazz.equals(com.soustify.partners_categories.PartnersCategories.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.partners_categories.PartnersCategories.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code PartnersCategoriesRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class PartnersCategoriesRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.partners_categories.PartnersCategories.Request> {
 		
 	
 		
@@ -25,19 +25,19 @@ public class PartnersCategoriesValidator {
 	
 	
 
-	public void assertValid(com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.partners_categories.PartnersCategories.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.PartnersCategoriesRequest.id_partner", proto.getIdPartner());
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.Request.id_partner", proto.getIdPartner());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.PartnersCategoriesRequest.id_category", proto.getIdCategory());
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.Request.id_category", proto.getIdCategory());
 	
 	
 	}
 }
 /**
-	 * Validates {@code PartnersCategoriesResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class PartnersCategoriesResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.partners_categories.PartnersCategories.Response> {
 		
 	
 		
@@ -49,15 +49,15 @@ public class PartnersCategoriesValidator {
 	
 	
 
-	public void assertValid(com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.partners_categories.PartnersCategories.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.PartnersCategoriesResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.Response.id", proto.getId());
 	// no validation rules for Status
 
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.PartnersCategoriesResponse.id_partner", proto.getIdPartner());
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.Response.id_partner", proto.getIdPartner());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.PartnersCategoriesResponse.id_category", proto.getIdCategory());
+			io.envoyproxy.pgv.StringValidation.uuid(".partners_categories.Response.id_category", proto.getIdCategory());
 	
 	
 	}

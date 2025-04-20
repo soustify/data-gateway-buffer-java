@@ -14,8 +14,8 @@ public final class Roles {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface RolesRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:roles.RolesRequest)
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:roles.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -42,18 +42,18 @@ public final class Roles {
         getNameBytes();
   }
   /**
-   * Protobuf type {@code roles.RolesRequest}
+   * Protobuf type {@code roles.Request}
    */
-  public static final class RolesRequest extends
+  public static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:roles.RolesRequest)
-      RolesRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:roles.Request)
+      RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use RolesRequest.newBuilder() to construct.
-    private RolesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private RolesRequest() {
+    private Request() {
       enStatus_ = 0;
       name_ = "";
     }
@@ -62,7 +62,7 @@ public final class Roles {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new RolesRequest();
+      return new Request();
     }
 
     @java.lang.Override
@@ -72,15 +72,15 @@ public final class Roles {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.roles.Roles.internal_static_roles_RolesRequest_descriptor;
+      return com.soustify.roles.Roles.internal_static_roles_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.roles.Roles.internal_static_roles_RolesRequest_fieldAccessorTable
+      return com.soustify.roles.Roles.internal_static_roles_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.roles.Roles.RolesRequest.class, com.soustify.roles.Roles.RolesRequest.Builder.class);
+              com.soustify.roles.Roles.Request.class, com.soustify.roles.Roles.Request.Builder.class);
     }
 
     public static final int EN_STATUS_FIELD_NUMBER = 1;
@@ -186,10 +186,10 @@ public final class Roles {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.roles.Roles.RolesRequest)) {
+      if (!(obj instanceof com.soustify.roles.Roles.Request)) {
         return super.equals(obj);
       }
-      com.soustify.roles.Roles.RolesRequest other = (com.soustify.roles.Roles.RolesRequest) obj;
+      com.soustify.roles.Roles.Request other = (com.soustify.roles.Roles.Request) obj;
 
       if (enStatus_ != other.enStatus_) return false;
       if (!getName()
@@ -214,69 +214,69 @@ public final class Roles {
       return hash;
     }
 
-    public static com.soustify.roles.Roles.RolesRequest parseFrom(
+    public static com.soustify.roles.Roles.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.roles.Roles.RolesRequest parseFrom(
+    public static com.soustify.roles.Roles.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.roles.Roles.RolesRequest parseFrom(
+    public static com.soustify.roles.Roles.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.roles.Roles.RolesRequest parseFrom(
+    public static com.soustify.roles.Roles.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.roles.Roles.RolesRequest parseFrom(byte[] data)
+    public static com.soustify.roles.Roles.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.roles.Roles.RolesRequest parseFrom(
+    public static com.soustify.roles.Roles.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.roles.Roles.RolesRequest parseFrom(java.io.InputStream input)
+    public static com.soustify.roles.Roles.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.roles.Roles.RolesRequest parseFrom(
+    public static com.soustify.roles.Roles.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.roles.Roles.RolesRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.roles.Roles.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.roles.Roles.RolesRequest parseDelimitedFrom(
+    public static com.soustify.roles.Roles.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.roles.Roles.RolesRequest parseFrom(
+    public static com.soustify.roles.Roles.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.roles.Roles.RolesRequest parseFrom(
+    public static com.soustify.roles.Roles.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -289,7 +289,7 @@ public final class Roles {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.roles.Roles.RolesRequest prototype) {
+    public static Builder newBuilder(com.soustify.roles.Roles.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -305,26 +305,26 @@ public final class Roles {
       return builder;
     }
     /**
-     * Protobuf type {@code roles.RolesRequest}
+     * Protobuf type {@code roles.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:roles.RolesRequest)
-        com.soustify.roles.Roles.RolesRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:roles.Request)
+        com.soustify.roles.Roles.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.roles.Roles.internal_static_roles_RolesRequest_descriptor;
+        return com.soustify.roles.Roles.internal_static_roles_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.roles.Roles.internal_static_roles_RolesRequest_fieldAccessorTable
+        return com.soustify.roles.Roles.internal_static_roles_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.roles.Roles.RolesRequest.class, com.soustify.roles.Roles.RolesRequest.Builder.class);
+                com.soustify.roles.Roles.Request.class, com.soustify.roles.Roles.Request.Builder.class);
       }
 
-      // Construct using com.soustify.roles.Roles.RolesRequest.newBuilder()
+      // Construct using com.soustify.roles.Roles.Request.newBuilder()
       private Builder() {
 
       }
@@ -346,17 +346,17 @@ public final class Roles {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.roles.Roles.internal_static_roles_RolesRequest_descriptor;
+        return com.soustify.roles.Roles.internal_static_roles_Request_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.roles.Roles.RolesRequest getDefaultInstanceForType() {
-        return com.soustify.roles.Roles.RolesRequest.getDefaultInstance();
+      public com.soustify.roles.Roles.Request getDefaultInstanceForType() {
+        return com.soustify.roles.Roles.Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.roles.Roles.RolesRequest build() {
-        com.soustify.roles.Roles.RolesRequest result = buildPartial();
+      public com.soustify.roles.Roles.Request build() {
+        com.soustify.roles.Roles.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -364,14 +364,14 @@ public final class Roles {
       }
 
       @java.lang.Override
-      public com.soustify.roles.Roles.RolesRequest buildPartial() {
-        com.soustify.roles.Roles.RolesRequest result = new com.soustify.roles.Roles.RolesRequest(this);
+      public com.soustify.roles.Roles.Request buildPartial() {
+        com.soustify.roles.Roles.Request result = new com.soustify.roles.Roles.Request(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.roles.Roles.RolesRequest result) {
+      private void buildPartial0(com.soustify.roles.Roles.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.enStatus_ = enStatus_;
@@ -415,16 +415,16 @@ public final class Roles {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.roles.Roles.RolesRequest) {
-          return mergeFrom((com.soustify.roles.Roles.RolesRequest)other);
+        if (other instanceof com.soustify.roles.Roles.Request) {
+          return mergeFrom((com.soustify.roles.Roles.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.roles.Roles.RolesRequest other) {
-        if (other == com.soustify.roles.Roles.RolesRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.roles.Roles.Request other) {
+        if (other == com.soustify.roles.Roles.Request.getDefaultInstance()) return this;
         if (other.enStatus_ != 0) {
           setEnStatusValue(other.getEnStatusValue());
         }
@@ -623,23 +623,23 @@ public final class Roles {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:roles.RolesRequest)
+      // @@protoc_insertion_point(builder_scope:roles.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:roles.RolesRequest)
-    private static final com.soustify.roles.Roles.RolesRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:roles.Request)
+    private static final com.soustify.roles.Roles.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.roles.Roles.RolesRequest();
+      DEFAULT_INSTANCE = new com.soustify.roles.Roles.Request();
     }
 
-    public static com.soustify.roles.Roles.RolesRequest getDefaultInstance() {
+    public static com.soustify.roles.Roles.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RolesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RolesRequest>() {
+    private static final com.google.protobuf.Parser<Request>
+        PARSER = new com.google.protobuf.AbstractParser<Request>() {
       @java.lang.Override
-      public RolesRequest parsePartialFrom(
+      public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -658,24 +658,24 @@ public final class Roles {
       }
     };
 
-    public static com.google.protobuf.Parser<RolesRequest> parser() {
+    public static com.google.protobuf.Parser<Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<RolesRequest> getParserForType() {
+    public com.google.protobuf.Parser<Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.roles.Roles.RolesRequest getDefaultInstanceForType() {
+    public com.soustify.roles.Roles.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface RolesResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:roles.RolesResponse)
+  public interface ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:roles.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -726,18 +726,18 @@ public final class Roles {
     com.soustify.output.Output.StatusResponse getStatus();
   }
   /**
-   * Protobuf type {@code roles.RolesResponse}
+   * Protobuf type {@code roles.Response}
    */
-  public static final class RolesResponse extends
+  public static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:roles.RolesResponse)
-      RolesResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:roles.Response)
+      ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use RolesResponse.newBuilder() to construct.
-    private RolesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Response.newBuilder() to construct.
+    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private RolesResponse() {
+    private Response() {
       id_ = "";
       name_ = "";
       idAuditable_ = "";
@@ -748,7 +748,7 @@ public final class Roles {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new RolesResponse();
+      return new Response();
     }
 
     @java.lang.Override
@@ -758,15 +758,15 @@ public final class Roles {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.roles.Roles.internal_static_roles_RolesResponse_descriptor;
+      return com.soustify.roles.Roles.internal_static_roles_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.roles.Roles.internal_static_roles_RolesResponse_fieldAccessorTable
+      return com.soustify.roles.Roles.internal_static_roles_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.roles.Roles.RolesResponse.class, com.soustify.roles.Roles.RolesResponse.Builder.class);
+              com.soustify.roles.Roles.Response.class, com.soustify.roles.Roles.Response.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -962,10 +962,10 @@ public final class Roles {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.roles.Roles.RolesResponse)) {
+      if (!(obj instanceof com.soustify.roles.Roles.Response)) {
         return super.equals(obj);
       }
-      com.soustify.roles.Roles.RolesResponse other = (com.soustify.roles.Roles.RolesResponse) obj;
+      com.soustify.roles.Roles.Response other = (com.soustify.roles.Roles.Response) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -998,69 +998,69 @@ public final class Roles {
       return hash;
     }
 
-    public static com.soustify.roles.Roles.RolesResponse parseFrom(
+    public static com.soustify.roles.Roles.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.roles.Roles.RolesResponse parseFrom(
+    public static com.soustify.roles.Roles.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.roles.Roles.RolesResponse parseFrom(
+    public static com.soustify.roles.Roles.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.roles.Roles.RolesResponse parseFrom(
+    public static com.soustify.roles.Roles.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.roles.Roles.RolesResponse parseFrom(byte[] data)
+    public static com.soustify.roles.Roles.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.roles.Roles.RolesResponse parseFrom(
+    public static com.soustify.roles.Roles.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.roles.Roles.RolesResponse parseFrom(java.io.InputStream input)
+    public static com.soustify.roles.Roles.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.roles.Roles.RolesResponse parseFrom(
+    public static com.soustify.roles.Roles.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.roles.Roles.RolesResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.roles.Roles.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.roles.Roles.RolesResponse parseDelimitedFrom(
+    public static com.soustify.roles.Roles.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.roles.Roles.RolesResponse parseFrom(
+    public static com.soustify.roles.Roles.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.roles.Roles.RolesResponse parseFrom(
+    public static com.soustify.roles.Roles.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1073,7 +1073,7 @@ public final class Roles {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.roles.Roles.RolesResponse prototype) {
+    public static Builder newBuilder(com.soustify.roles.Roles.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1089,26 +1089,26 @@ public final class Roles {
       return builder;
     }
     /**
-     * Protobuf type {@code roles.RolesResponse}
+     * Protobuf type {@code roles.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:roles.RolesResponse)
-        com.soustify.roles.Roles.RolesResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:roles.Response)
+        com.soustify.roles.Roles.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.roles.Roles.internal_static_roles_RolesResponse_descriptor;
+        return com.soustify.roles.Roles.internal_static_roles_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.roles.Roles.internal_static_roles_RolesResponse_fieldAccessorTable
+        return com.soustify.roles.Roles.internal_static_roles_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.roles.Roles.RolesResponse.class, com.soustify.roles.Roles.RolesResponse.Builder.class);
+                com.soustify.roles.Roles.Response.class, com.soustify.roles.Roles.Response.Builder.class);
       }
 
-      // Construct using com.soustify.roles.Roles.RolesResponse.newBuilder()
+      // Construct using com.soustify.roles.Roles.Response.newBuilder()
       private Builder() {
 
       }
@@ -1132,17 +1132,17 @@ public final class Roles {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.roles.Roles.internal_static_roles_RolesResponse_descriptor;
+        return com.soustify.roles.Roles.internal_static_roles_Response_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.roles.Roles.RolesResponse getDefaultInstanceForType() {
-        return com.soustify.roles.Roles.RolesResponse.getDefaultInstance();
+      public com.soustify.roles.Roles.Response getDefaultInstanceForType() {
+        return com.soustify.roles.Roles.Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.roles.Roles.RolesResponse build() {
-        com.soustify.roles.Roles.RolesResponse result = buildPartial();
+      public com.soustify.roles.Roles.Response build() {
+        com.soustify.roles.Roles.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1150,14 +1150,14 @@ public final class Roles {
       }
 
       @java.lang.Override
-      public com.soustify.roles.Roles.RolesResponse buildPartial() {
-        com.soustify.roles.Roles.RolesResponse result = new com.soustify.roles.Roles.RolesResponse(this);
+      public com.soustify.roles.Roles.Response buildPartial() {
+        com.soustify.roles.Roles.Response result = new com.soustify.roles.Roles.Response(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.roles.Roles.RolesResponse result) {
+      private void buildPartial0(com.soustify.roles.Roles.Response result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -1207,16 +1207,16 @@ public final class Roles {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.roles.Roles.RolesResponse) {
-          return mergeFrom((com.soustify.roles.Roles.RolesResponse)other);
+        if (other instanceof com.soustify.roles.Roles.Response) {
+          return mergeFrom((com.soustify.roles.Roles.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.roles.Roles.RolesResponse other) {
-        if (other == com.soustify.roles.Roles.RolesResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.roles.Roles.Response other) {
+        if (other == com.soustify.roles.Roles.Response.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -1579,23 +1579,23 @@ public final class Roles {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:roles.RolesResponse)
+      // @@protoc_insertion_point(builder_scope:roles.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:roles.RolesResponse)
-    private static final com.soustify.roles.Roles.RolesResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:roles.Response)
+    private static final com.soustify.roles.Roles.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.roles.Roles.RolesResponse();
+      DEFAULT_INSTANCE = new com.soustify.roles.Roles.Response();
     }
 
-    public static com.soustify.roles.Roles.RolesResponse getDefaultInstance() {
+    public static com.soustify.roles.Roles.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RolesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<RolesResponse>() {
+    private static final com.google.protobuf.Parser<Response>
+        PARSER = new com.google.protobuf.AbstractParser<Response>() {
       @java.lang.Override
-      public RolesResponse parsePartialFrom(
+      public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1614,32 +1614,32 @@ public final class Roles {
       }
     };
 
-    public static com.google.protobuf.Parser<RolesResponse> parser() {
+    public static com.google.protobuf.Parser<Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<RolesResponse> getParserForType() {
+    public com.google.protobuf.Parser<Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.roles.Roles.RolesResponse getDefaultInstanceForType() {
+    public com.soustify.roles.Roles.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_roles_RolesRequest_descriptor;
+    internal_static_roles_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_roles_RolesRequest_fieldAccessorTable;
+      internal_static_roles_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_roles_RolesResponse_descriptor;
+    internal_static_roles_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_roles_RolesResponse_fieldAccessorTable;
+      internal_static_roles_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1651,28 +1651,27 @@ public final class Roles {
     java.lang.String[] descriptorData = {
       "\n\013roles.proto\022\005roles\032\013input.proto\032\014outpu" +
       "t.proto\032\016validate.proto\032\037google/protobuf" +
-      "/timestamp.proto\"]\n\014RolesRequest\0223\n\ten_s" +
-      "tatus\030\001 \001(\0162\024.input.StatusRequestB\n\372B\007\202\001" +
-      "\004\030\000\030\001\022\030\n\004name\030\002 \001(\tB\n\372B\007r\005\020\001\030\310\001\"\207\001\n\rRole" +
-      "sResponse\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030" +
-      "\002 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\036\n\014id_auditable\030\003 \001(\tB" +
-      "\010\372B\005r\003\260\001\001\022&\n\006status\030\004 \001(\0162\026.output.Statu" +
-      "sResponse2\370\003\n\014RolesService\022<\n\010Paginate\022\030" +
-      ".input.PaginationRequest\032\024.roles.RolesRe" +
-      "sponse0\001\0226\n\005Count\022\026.input.FilteredReques" +
-      "t\032\025.output.CountResponse\022@\n\006Create\022\023.rol" +
-      "es.RolesRequest\032\037.output.PersistenceData" +
-      "Response(\001\022@\n\006Update\022\023.roles.RolesReques" +
-      "t\032\037.output.PersistenceDataResponse(\001\022<\n\010" +
-      "Inactive\022\022.input.UUIDRequest\032\032.output.St" +
-      "atusDataResponse(\001\022:\n\006Active\022\022.input.UUI" +
-      "DRequest\032\032.output.StatusDataResponse(\001\0223" +
-      "\n\007FindOne\022\022.input.UUIDRequest\032\024.roles.Ro" +
-      "lesResponse\022?\n\006Delete\022\022.input.UUIDReques" +
-      "t\032\037.output.PersistenceDataResponse(\001BP\n\022" +
-      "com.soustify.rolesZ:github.com/soustify/" +
-      "data-gateway-buffer-go/pkg/roles;rolesb\006" +
-      "proto3"
+      "/timestamp.proto\"X\n\007Request\0223\n\ten_status" +
+      "\030\001 \001(\0162\024.input.StatusRequestB\n\372B\007\202\001\004\030\000\030\001" +
+      "\022\030\n\004name\030\002 \001(\tB\n\372B\007r\005\020\001\030\310\001\"\202\001\n\010Response\022" +
+      "\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\002 \001(\tB\n\372B\007" +
+      "r\005\020\001\030\310\001\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022" +
+      "&\n\006status\030\004 \001(\0162\026.output.StatusResponse2" +
+      "\337\003\n\007Service\0227\n\010Paginate\022\030.input.Paginati" +
+      "onRequest\032\017.roles.Response0\001\0226\n\005Count\022\026." +
+      "input.FilteredRequest\032\025.output.CountResp" +
+      "onse\022;\n\006Create\022\016.roles.Request\032\037.output." +
+      "PersistenceDataResponse(\001\022;\n\006Update\022\016.ro" +
+      "les.Request\032\037.output.PersistenceDataResp" +
+      "onse(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032\032" +
+      ".output.StatusDataResponse(\001\022:\n\006Active\022\022" +
+      ".input.UUIDRequest\032\032.output.StatusDataRe" +
+      "sponse(\001\022.\n\007FindOne\022\022.input.UUIDRequest\032" +
+      "\017.roles.Response\022?\n\006Delete\022\022.input.UUIDR" +
+      "equest\032\037.output.PersistenceDataResponse(" +
+      "\001BP\n\022com.soustify.rolesZ:github.com/sous" +
+      "tify/data-gateway-buffer-go/pkg/roles;ro" +
+      "lesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1682,17 +1681,17 @@ public final class Roles {
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_roles_RolesRequest_descriptor =
+    internal_static_roles_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_roles_RolesRequest_fieldAccessorTable = new
+    internal_static_roles_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_roles_RolesRequest_descriptor,
+        internal_static_roles_Request_descriptor,
         new java.lang.String[] { "EnStatus", "Name", });
-    internal_static_roles_RolesResponse_descriptor =
+    internal_static_roles_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_roles_RolesResponse_fieldAccessorTable = new
+    internal_static_roles_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_roles_RolesResponse_descriptor,
+        internal_static_roles_Response_descriptor,
         new java.lang.String[] { "Id", "Name", "IdAuditable", "Status", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

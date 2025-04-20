@@ -8,16 +8,16 @@ package com.soustify.contacts;
 public class ContactsValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.contacts.Contacts.ContactsRequest.class)) return new ContactsRequestValidator();
-		if (clazz.equals(com.soustify.contacts.Contacts.ContactsResponse.class)) return new ContactsResponseValidator();
+		if (clazz.equals(com.soustify.contacts.Contacts.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.contacts.Contacts.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code ContactsRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class ContactsRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.contacts.Contacts.ContactsRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.contacts.Contacts.Request> {
 		
 	
 		
@@ -33,25 +33,25 @@ public class ContactsValidator {
 	
 	
 
-	public void assertValid(com.soustify.contacts.Contacts.ContactsRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.contacts.Contacts.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".contacts.ContactsRequest.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".contacts.Request.id", proto.getId());
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".contacts.ContactsRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.CollectiveValidation.in(".contacts.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".contacts.ContactsRequest.type", proto.getType(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".contacts.ContactsRequest.type", proto.getType(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".contacts.Request.type", proto.getType(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".contacts.Request.type", proto.getType(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".contacts.ContactsRequest.value", proto.getValue(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".contacts.ContactsRequest.value", proto.getValue(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".contacts.Request.value", proto.getValue(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".contacts.Request.value", proto.getValue(), 200);
 	
 	
 	}
 }
 /**
-	 * Validates {@code ContactsResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class ContactsResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.contacts.Contacts.ContactsResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.contacts.Contacts.Response> {
 		
 	
 		
@@ -65,19 +65,19 @@ public class ContactsValidator {
 	
 	
 
-	public void assertValid(com.soustify.contacts.Contacts.ContactsResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.contacts.Contacts.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".contacts.ContactsResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".contacts.Response.id", proto.getId());
 	// no validation rules for Status
 
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".contacts.ContactsResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".contacts.Response.id_auditable", proto.getIdAuditable());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".contacts.ContactsResponse.type", proto.getType(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".contacts.ContactsResponse.type", proto.getType(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".contacts.Response.type", proto.getType(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".contacts.Response.type", proto.getType(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".contacts.ContactsResponse.value", proto.getValue(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".contacts.ContactsResponse.value", proto.getValue(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".contacts.Response.value", proto.getValue(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".contacts.Response.value", proto.getValue(), 200);
 	
 	
 	}

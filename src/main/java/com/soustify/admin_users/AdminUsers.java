@@ -14,8 +14,8 @@ public final class AdminUsers {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface AdminUsersRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:admin_users.AdminUsersRequest)
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:admin_users.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -90,18 +90,18 @@ public final class AdminUsers {
         getIdRoleApplicationBytes();
   }
   /**
-   * Protobuf type {@code admin_users.AdminUsersRequest}
+   * Protobuf type {@code admin_users.Request}
    */
-  public static final class AdminUsersRequest extends
+  public static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:admin_users.AdminUsersRequest)
-      AdminUsersRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:admin_users.Request)
+      RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AdminUsersRequest.newBuilder() to construct.
-    private AdminUsersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AdminUsersRequest() {
+    private Request() {
       id_ = "";
       enStatus_ = 0;
       name_ = "";
@@ -114,7 +114,7 @@ public final class AdminUsers {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AdminUsersRequest();
+      return new Request();
     }
 
     @java.lang.Override
@@ -124,15 +124,15 @@ public final class AdminUsers {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.admin_users.AdminUsers.internal_static_admin_users_AdminUsersRequest_descriptor;
+      return com.soustify.admin_users.AdminUsers.internal_static_admin_users_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.admin_users.AdminUsers.internal_static_admin_users_AdminUsersRequest_fieldAccessorTable
+      return com.soustify.admin_users.AdminUsers.internal_static_admin_users_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.admin_users.AdminUsers.AdminUsersRequest.class, com.soustify.admin_users.AdminUsers.AdminUsersRequest.Builder.class);
+              com.soustify.admin_users.AdminUsers.Request.class, com.soustify.admin_users.AdminUsers.Request.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -418,10 +418,10 @@ public final class AdminUsers {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.admin_users.AdminUsers.AdminUsersRequest)) {
+      if (!(obj instanceof com.soustify.admin_users.AdminUsers.Request)) {
         return super.equals(obj);
       }
-      com.soustify.admin_users.AdminUsers.AdminUsersRequest other = (com.soustify.admin_users.AdminUsers.AdminUsersRequest) obj;
+      com.soustify.admin_users.AdminUsers.Request other = (com.soustify.admin_users.AdminUsers.Request) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -462,69 +462,69 @@ public final class AdminUsers {
       return hash;
     }
 
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseFrom(byte[] data)
+    public static com.soustify.admin_users.AdminUsers.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseFrom(java.io.InputStream input)
+    public static com.soustify.admin_users.AdminUsers.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.admin_users.AdminUsers.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseDelimitedFrom(
+    public static com.soustify.admin_users.AdminUsers.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -537,7 +537,7 @@ public final class AdminUsers {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.admin_users.AdminUsers.AdminUsersRequest prototype) {
+    public static Builder newBuilder(com.soustify.admin_users.AdminUsers.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -553,26 +553,26 @@ public final class AdminUsers {
       return builder;
     }
     /**
-     * Protobuf type {@code admin_users.AdminUsersRequest}
+     * Protobuf type {@code admin_users.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:admin_users.AdminUsersRequest)
-        com.soustify.admin_users.AdminUsers.AdminUsersRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:admin_users.Request)
+        com.soustify.admin_users.AdminUsers.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_AdminUsersRequest_descriptor;
+        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_AdminUsersRequest_fieldAccessorTable
+        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.admin_users.AdminUsers.AdminUsersRequest.class, com.soustify.admin_users.AdminUsers.AdminUsersRequest.Builder.class);
+                com.soustify.admin_users.AdminUsers.Request.class, com.soustify.admin_users.AdminUsers.Request.Builder.class);
       }
 
-      // Construct using com.soustify.admin_users.AdminUsers.AdminUsersRequest.newBuilder()
+      // Construct using com.soustify.admin_users.AdminUsers.Request.newBuilder()
       private Builder() {
 
       }
@@ -598,17 +598,17 @@ public final class AdminUsers {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_AdminUsersRequest_descriptor;
+        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_Request_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.admin_users.AdminUsers.AdminUsersRequest getDefaultInstanceForType() {
-        return com.soustify.admin_users.AdminUsers.AdminUsersRequest.getDefaultInstance();
+      public com.soustify.admin_users.AdminUsers.Request getDefaultInstanceForType() {
+        return com.soustify.admin_users.AdminUsers.Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.admin_users.AdminUsers.AdminUsersRequest build() {
-        com.soustify.admin_users.AdminUsers.AdminUsersRequest result = buildPartial();
+      public com.soustify.admin_users.AdminUsers.Request build() {
+        com.soustify.admin_users.AdminUsers.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -616,14 +616,14 @@ public final class AdminUsers {
       }
 
       @java.lang.Override
-      public com.soustify.admin_users.AdminUsers.AdminUsersRequest buildPartial() {
-        com.soustify.admin_users.AdminUsers.AdminUsersRequest result = new com.soustify.admin_users.AdminUsers.AdminUsersRequest(this);
+      public com.soustify.admin_users.AdminUsers.Request buildPartial() {
+        com.soustify.admin_users.AdminUsers.Request result = new com.soustify.admin_users.AdminUsers.Request(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.admin_users.AdminUsers.AdminUsersRequest result) {
+      private void buildPartial0(com.soustify.admin_users.AdminUsers.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -679,16 +679,16 @@ public final class AdminUsers {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.admin_users.AdminUsers.AdminUsersRequest) {
-          return mergeFrom((com.soustify.admin_users.AdminUsers.AdminUsersRequest)other);
+        if (other instanceof com.soustify.admin_users.AdminUsers.Request) {
+          return mergeFrom((com.soustify.admin_users.AdminUsers.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.admin_users.AdminUsers.AdminUsersRequest other) {
-        if (other == com.soustify.admin_users.AdminUsers.AdminUsersRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.admin_users.AdminUsers.Request other) {
+        if (other == com.soustify.admin_users.AdminUsers.Request.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -1215,23 +1215,23 @@ public final class AdminUsers {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:admin_users.AdminUsersRequest)
+      // @@protoc_insertion_point(builder_scope:admin_users.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:admin_users.AdminUsersRequest)
-    private static final com.soustify.admin_users.AdminUsers.AdminUsersRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:admin_users.Request)
+    private static final com.soustify.admin_users.AdminUsers.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.admin_users.AdminUsers.AdminUsersRequest();
+      DEFAULT_INSTANCE = new com.soustify.admin_users.AdminUsers.Request();
     }
 
-    public static com.soustify.admin_users.AdminUsers.AdminUsersRequest getDefaultInstance() {
+    public static com.soustify.admin_users.AdminUsers.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AdminUsersRequest>
-        PARSER = new com.google.protobuf.AbstractParser<AdminUsersRequest>() {
+    private static final com.google.protobuf.Parser<Request>
+        PARSER = new com.google.protobuf.AbstractParser<Request>() {
       @java.lang.Override
-      public AdminUsersRequest parsePartialFrom(
+      public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1250,24 +1250,24 @@ public final class AdminUsers {
       }
     };
 
-    public static com.google.protobuf.Parser<AdminUsersRequest> parser() {
+    public static com.google.protobuf.Parser<Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AdminUsersRequest> getParserForType() {
+    public com.google.protobuf.Parser<Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.admin_users.AdminUsers.AdminUsersRequest getDefaultInstanceForType() {
+    public com.soustify.admin_users.AdminUsers.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AdminUsersResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:admin_users.AdminUsersResponse)
+  public interface ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:admin_users.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1354,18 +1354,18 @@ public final class AdminUsers {
         getIdRoleApplicationBytes();
   }
   /**
-   * Protobuf type {@code admin_users.AdminUsersResponse}
+   * Protobuf type {@code admin_users.Response}
    */
-  public static final class AdminUsersResponse extends
+  public static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:admin_users.AdminUsersResponse)
-      AdminUsersResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:admin_users.Response)
+      ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AdminUsersResponse.newBuilder() to construct.
-    private AdminUsersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Response.newBuilder() to construct.
+    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AdminUsersResponse() {
+    private Response() {
       id_ = "";
       status_ = 0;
       idAuditable_ = "";
@@ -1379,7 +1379,7 @@ public final class AdminUsers {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AdminUsersResponse();
+      return new Response();
     }
 
     @java.lang.Override
@@ -1389,15 +1389,15 @@ public final class AdminUsers {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.admin_users.AdminUsers.internal_static_admin_users_AdminUsersResponse_descriptor;
+      return com.soustify.admin_users.AdminUsers.internal_static_admin_users_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.admin_users.AdminUsers.internal_static_admin_users_AdminUsersResponse_fieldAccessorTable
+      return com.soustify.admin_users.AdminUsers.internal_static_admin_users_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.admin_users.AdminUsers.AdminUsersResponse.class, com.soustify.admin_users.AdminUsers.AdminUsersResponse.Builder.class);
+              com.soustify.admin_users.AdminUsers.Response.class, com.soustify.admin_users.AdminUsers.Response.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1728,10 +1728,10 @@ public final class AdminUsers {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.admin_users.AdminUsers.AdminUsersResponse)) {
+      if (!(obj instanceof com.soustify.admin_users.AdminUsers.Response)) {
         return super.equals(obj);
       }
-      com.soustify.admin_users.AdminUsers.AdminUsersResponse other = (com.soustify.admin_users.AdminUsers.AdminUsersResponse) obj;
+      com.soustify.admin_users.AdminUsers.Response other = (com.soustify.admin_users.AdminUsers.Response) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1776,69 +1776,69 @@ public final class AdminUsers {
       return hash;
     }
 
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseFrom(byte[] data)
+    public static com.soustify.admin_users.AdminUsers.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseFrom(java.io.InputStream input)
+    public static com.soustify.admin_users.AdminUsers.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.admin_users.AdminUsers.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseDelimitedFrom(
+    public static com.soustify.admin_users.AdminUsers.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse parseFrom(
+    public static com.soustify.admin_users.AdminUsers.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1851,7 +1851,7 @@ public final class AdminUsers {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.admin_users.AdminUsers.AdminUsersResponse prototype) {
+    public static Builder newBuilder(com.soustify.admin_users.AdminUsers.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1867,26 +1867,26 @@ public final class AdminUsers {
       return builder;
     }
     /**
-     * Protobuf type {@code admin_users.AdminUsersResponse}
+     * Protobuf type {@code admin_users.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:admin_users.AdminUsersResponse)
-        com.soustify.admin_users.AdminUsers.AdminUsersResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:admin_users.Response)
+        com.soustify.admin_users.AdminUsers.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_AdminUsersResponse_descriptor;
+        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_AdminUsersResponse_fieldAccessorTable
+        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.admin_users.AdminUsers.AdminUsersResponse.class, com.soustify.admin_users.AdminUsers.AdminUsersResponse.Builder.class);
+                com.soustify.admin_users.AdminUsers.Response.class, com.soustify.admin_users.AdminUsers.Response.Builder.class);
       }
 
-      // Construct using com.soustify.admin_users.AdminUsers.AdminUsersResponse.newBuilder()
+      // Construct using com.soustify.admin_users.AdminUsers.Response.newBuilder()
       private Builder() {
 
       }
@@ -1913,17 +1913,17 @@ public final class AdminUsers {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_AdminUsersResponse_descriptor;
+        return com.soustify.admin_users.AdminUsers.internal_static_admin_users_Response_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.admin_users.AdminUsers.AdminUsersResponse getDefaultInstanceForType() {
-        return com.soustify.admin_users.AdminUsers.AdminUsersResponse.getDefaultInstance();
+      public com.soustify.admin_users.AdminUsers.Response getDefaultInstanceForType() {
+        return com.soustify.admin_users.AdminUsers.Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.admin_users.AdminUsers.AdminUsersResponse build() {
-        com.soustify.admin_users.AdminUsers.AdminUsersResponse result = buildPartial();
+      public com.soustify.admin_users.AdminUsers.Response build() {
+        com.soustify.admin_users.AdminUsers.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1931,14 +1931,14 @@ public final class AdminUsers {
       }
 
       @java.lang.Override
-      public com.soustify.admin_users.AdminUsers.AdminUsersResponse buildPartial() {
-        com.soustify.admin_users.AdminUsers.AdminUsersResponse result = new com.soustify.admin_users.AdminUsers.AdminUsersResponse(this);
+      public com.soustify.admin_users.AdminUsers.Response buildPartial() {
+        com.soustify.admin_users.AdminUsers.Response result = new com.soustify.admin_users.AdminUsers.Response(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.admin_users.AdminUsers.AdminUsersResponse result) {
+      private void buildPartial0(com.soustify.admin_users.AdminUsers.Response result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -1997,16 +1997,16 @@ public final class AdminUsers {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.admin_users.AdminUsers.AdminUsersResponse) {
-          return mergeFrom((com.soustify.admin_users.AdminUsers.AdminUsersResponse)other);
+        if (other instanceof com.soustify.admin_users.AdminUsers.Response) {
+          return mergeFrom((com.soustify.admin_users.AdminUsers.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.admin_users.AdminUsers.AdminUsersResponse other) {
-        if (other == com.soustify.admin_users.AdminUsers.AdminUsersResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.admin_users.AdminUsers.Response other) {
+        if (other == com.soustify.admin_users.AdminUsers.Response.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -2615,23 +2615,23 @@ public final class AdminUsers {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:admin_users.AdminUsersResponse)
+      // @@protoc_insertion_point(builder_scope:admin_users.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:admin_users.AdminUsersResponse)
-    private static final com.soustify.admin_users.AdminUsers.AdminUsersResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:admin_users.Response)
+    private static final com.soustify.admin_users.AdminUsers.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.admin_users.AdminUsers.AdminUsersResponse();
+      DEFAULT_INSTANCE = new com.soustify.admin_users.AdminUsers.Response();
     }
 
-    public static com.soustify.admin_users.AdminUsers.AdminUsersResponse getDefaultInstance() {
+    public static com.soustify.admin_users.AdminUsers.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AdminUsersResponse>
-        PARSER = new com.google.protobuf.AbstractParser<AdminUsersResponse>() {
+    private static final com.google.protobuf.Parser<Response>
+        PARSER = new com.google.protobuf.AbstractParser<Response>() {
       @java.lang.Override
-      public AdminUsersResponse parsePartialFrom(
+      public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2650,32 +2650,32 @@ public final class AdminUsers {
       }
     };
 
-    public static com.google.protobuf.Parser<AdminUsersResponse> parser() {
+    public static com.google.protobuf.Parser<Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AdminUsersResponse> getParserForType() {
+    public com.google.protobuf.Parser<Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.admin_users.AdminUsers.AdminUsersResponse getDefaultInstanceForType() {
+    public com.soustify.admin_users.AdminUsers.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_admin_users_AdminUsersRequest_descriptor;
+    internal_static_admin_users_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_admin_users_AdminUsersRequest_fieldAccessorTable;
+      internal_static_admin_users_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_admin_users_AdminUsersResponse_descriptor;
+    internal_static_admin_users_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_admin_users_AdminUsersResponse_fieldAccessorTable;
+      internal_static_admin_users_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2687,35 +2687,33 @@ public final class AdminUsers {
     java.lang.String[] descriptorData = {
       "\n\021admin_users.proto\022\013admin_users\032\013input." +
       "proto\032\014output.proto\032\016validate.proto\032\037goo" +
-      "gle/protobuf/timestamp.proto\"\327\001\n\021AdminUs" +
-      "ersRequest\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_s" +
-      "tatus\030\002 \001(\0162\024.input.StatusRequestB\n\372B\007\202\001" +
-      "\004\030\000\030\001\022\030\n\004name\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\026\n\005email" +
-      "\030\004 \001(\tB\007\372B\004r\002`\001\022\036\n\nid_cognito\030\005 \001(\tB\n\372B\007" +
-      "r\005\020\001\030\310\001\022%\n\023id_role_application\030\006 \001(\tB\010\372B" +
-      "\005r\003\260\001\001\"\353\001\n\022AdminUsersResponse\022\024\n\002id\030\001 \001(" +
-      "\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 \001(\0162\026.output.Sta" +
-      "tusResponse\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005r\003" +
-      "\260\001\001\022\030\n\004name\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\026\n\005email\030\005" +
-      " \001(\tB\007\372B\004r\002`\001\022\036\n\nid_cognito\030\006 \001(\tB\n\372B\007r\005" +
-      "\020\001\030\310\001\022%\n\023id_role_application\030\007 \001(\tB\010\372B\005r" +
-      "\003\260\001\0012\251\004\n\021AdminUsersService\022G\n\010Paginate\022\030" +
-      ".input.PaginationRequest\032\037.admin_users.A" +
-      "dminUsersResponse0\001\0226\n\005Count\022\026.input.Fil" +
-      "teredRequest\032\025.output.CountResponse\022K\n\006C" +
-      "reate\022\036.admin_users.AdminUsersRequest\032\037." +
-      "output.PersistenceDataResponse(\001\022K\n\006Upda" +
-      "te\022\036.admin_users.AdminUsersRequest\032\037.out" +
-      "put.PersistenceDataResponse(\001\022<\n\010Inactiv" +
+      "gle/protobuf/timestamp.proto\"\315\001\n\007Request" +
+      "\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001(" +
+      "\0162\024.input.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n\004n" +
+      "ame\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\026\n\005email\030\004 \001(\tB\007\372B" +
+      "\004r\002`\001\022\036\n\nid_cognito\030\005 \001(\tB\n\372B\007r\005\020\001\030\310\001\022%\n" +
+      "\023id_role_application\030\006 \001(\tB\010\372B\005r\003\260\001\001\"\341\001\n" +
+      "\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006statu" +
+      "s\030\002 \001(\0162\026.output.StatusResponse\022\036\n\014id_au" +
+      "ditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\004 \001(\tB\n\372" +
+      "B\007r\005\020\001\030\310\001\022\026\n\005email\030\005 \001(\tB\007\372B\004r\002`\001\022\036\n\nid_" +
+      "cognito\030\006 \001(\tB\n\372B\007r\005\020\001\030\310\001\022%\n\023id_role_app" +
+      "lication\030\007 \001(\tB\010\372B\005r\003\260\001\0012\367\003\n\007Service\022=\n\010" +
+      "Paginate\022\030.input.PaginationRequest\032\025.adm" +
+      "in_users.Response0\001\0226\n\005Count\022\026.input.Fil" +
+      "teredRequest\032\025.output.CountResponse\022A\n\006C" +
+      "reate\022\024.admin_users.Request\032\037.output.Per" +
+      "sistenceDataResponse(\001\022A\n\006Update\022\024.admin" +
+      "_users.Request\032\037.output.PersistenceDataR" +
+      "esponse(\001\022<\n\010Inactive\022\022.input.UUIDReques" +
+      "t\032\032.output.StatusDataResponse(\001\022:\n\006Activ" +
       "e\022\022.input.UUIDRequest\032\032.output.StatusDat" +
-      "aResponse(\001\022:\n\006Active\022\022.input.UUIDReques" +
-      "t\032\032.output.StatusDataResponse(\001\022>\n\007FindO" +
-      "ne\022\022.input.UUIDRequest\032\037.admin_users.Adm" +
-      "inUsersResponse\022?\n\006Delete\022\022.input.UUIDRe" +
-      "quest\032\037.output.PersistenceDataResponse(\001" +
-      "Bb\n\030com.soustify.admin_usersZFgithub.com" +
-      "/soustify/data-gateway-buffer-go/pkg/adm" +
-      "in_users;admin_usersb\006proto3"
+      "aResponse(\001\0224\n\007FindOne\022\022.input.UUIDReque" +
+      "st\032\025.admin_users.Response\022?\n\006Delete\022\022.in" +
+      "put.UUIDRequest\032\037.output.PersistenceData" +
+      "Response(\001Bb\n\030com.soustify.admin_usersZF" +
+      "github.com/soustify/data-gateway-buffer-" +
+      "go/pkg/admin_users;admin_usersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2725,17 +2723,17 @@ public final class AdminUsers {
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_admin_users_AdminUsersRequest_descriptor =
+    internal_static_admin_users_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_admin_users_AdminUsersRequest_fieldAccessorTable = new
+    internal_static_admin_users_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_admin_users_AdminUsersRequest_descriptor,
+        internal_static_admin_users_Request_descriptor,
         new java.lang.String[] { "Id", "EnStatus", "Name", "Email", "IdCognito", "IdRoleApplication", });
-    internal_static_admin_users_AdminUsersResponse_descriptor =
+    internal_static_admin_users_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_admin_users_AdminUsersResponse_fieldAccessorTable = new
+    internal_static_admin_users_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_admin_users_AdminUsersResponse_descriptor,
+        internal_static_admin_users_Response_descriptor,
         new java.lang.String[] { "Id", "Status", "IdAuditable", "Name", "Email", "IdCognito", "IdRoleApplication", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

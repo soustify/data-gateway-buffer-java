@@ -8,16 +8,16 @@ package com.soustify.addresses;
 public class AddressesValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.addresses.Addresses.AddressesRequest.class)) return new AddressesRequestValidator();
-		if (clazz.equals(com.soustify.addresses.Addresses.AddressesResponse.class)) return new AddressesResponseValidator();
+		if (clazz.equals(com.soustify.addresses.Addresses.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.addresses.Addresses.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code AddressesRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class AddressesRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.addresses.Addresses.AddressesRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.addresses.Addresses.Request> {
 		
 	
 		
@@ -47,34 +47,34 @@ public class AddressesValidator {
 	
 	
 
-	public void assertValid(com.soustify.addresses.Addresses.AddressesRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.addresses.Addresses.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".addresses.AddressesRequest.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".addresses.Request.id", proto.getId());
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".addresses.AddressesRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.CollectiveValidation.in(".addresses.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
-			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.AddressesRequest.street", proto.getStreet(), 200);
+			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Request.street", proto.getStreet(), 200);
 	// no validation rules for Number
 
 	
-			io.envoyproxy.pgv.ComparativeValidation.range(".addresses.AddressesRequest.latitude", proto.getLatitude(), null, LATITUDE__LTE, null, LATITUDE__GTE, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.range(".addresses.Request.latitude", proto.getLatitude(), null, LATITUDE__LTE, null, LATITUDE__GTE, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.ComparativeValidation.range(".addresses.AddressesRequest.longitude", proto.getLongitude(), null, LONGITUDE__LTE, null, LONGITUDE__GTE, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.range(".addresses.Request.longitude", proto.getLongitude(), null, LONGITUDE__LTE, null, LONGITUDE__GTE, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".addresses.AddressesRequest.zip_code", proto.getZipCode(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.AddressesRequest.zip_code", proto.getZipCode(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".addresses.Request.zip_code", proto.getZipCode(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Request.zip_code", proto.getZipCode(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.AddressesRequest.complement", proto.getComplement(), 200);
+			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Request.complement", proto.getComplement(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.AddressesRequest.neighborhood", proto.getNeighborhood(), 200);
+			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Request.neighborhood", proto.getNeighborhood(), 200);
 	
 	
 	}
 }
 /**
-	 * Validates {@code AddressesResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class AddressesResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.addresses.Addresses.AddressesResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.addresses.Addresses.Response> {
 		
 	
 		
@@ -102,28 +102,28 @@ public class AddressesValidator {
 	
 	
 
-	public void assertValid(com.soustify.addresses.Addresses.AddressesResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.addresses.Addresses.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".addresses.AddressesResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".addresses.Response.id", proto.getId());
 	// no validation rules for Status
 
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".addresses.AddressesResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".addresses.Response.id_auditable", proto.getIdAuditable());
 	
-			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.AddressesResponse.street", proto.getStreet(), 200);
+			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Response.street", proto.getStreet(), 200);
 	// no validation rules for Number
 
 	
-			io.envoyproxy.pgv.ComparativeValidation.range(".addresses.AddressesResponse.latitude", proto.getLatitude(), null, LATITUDE__LTE, null, LATITUDE__GTE, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.range(".addresses.Response.latitude", proto.getLatitude(), null, LATITUDE__LTE, null, LATITUDE__GTE, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.ComparativeValidation.range(".addresses.AddressesResponse.longitude", proto.getLongitude(), null, LONGITUDE__LTE, null, LONGITUDE__GTE, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.range(".addresses.Response.longitude", proto.getLongitude(), null, LONGITUDE__LTE, null, LONGITUDE__GTE, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".addresses.AddressesResponse.zip_code", proto.getZipCode(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.AddressesResponse.zip_code", proto.getZipCode(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".addresses.Response.zip_code", proto.getZipCode(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Response.zip_code", proto.getZipCode(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.AddressesResponse.complement", proto.getComplement(), 200);
+			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Response.complement", proto.getComplement(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.AddressesResponse.neighborhood", proto.getNeighborhood(), 200);
+			io.envoyproxy.pgv.StringValidation.maxLength(".addresses.Response.neighborhood", proto.getNeighborhood(), 200);
 	
 	
 	}

@@ -1,4 +1,4 @@
-package com.soustify.categories;
+package com.soustify.roles_policies;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -6,39 +6,39 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.57.2)",
-    comments = "Source: categories.proto")
+    comments = "Source: roles_policies.proto")
 @io.grpc.stub.annotations.GrpcGenerated
-public final class CategoriesServiceGrpc {
+public final class ServiceGrpc {
 
-  private CategoriesServiceGrpc() {}
+  private ServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "categories.CategoriesService";
+  public static final java.lang.String SERVICE_NAME = "roles_policies.Service";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.soustify.input.Input.PaginationRequest,
-      com.soustify.categories.Categories.CategoriesResponse> getPaginateMethod;
+      com.soustify.roles_policies.RolesPolicies.Response> getPaginateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Paginate",
       requestType = com.soustify.input.Input.PaginationRequest.class,
-      responseType = com.soustify.categories.Categories.CategoriesResponse.class,
+      responseType = com.soustify.roles_policies.RolesPolicies.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.PaginationRequest,
-      com.soustify.categories.Categories.CategoriesResponse> getPaginateMethod() {
-    io.grpc.MethodDescriptor<com.soustify.input.Input.PaginationRequest, com.soustify.categories.Categories.CategoriesResponse> getPaginateMethod;
-    if ((getPaginateMethod = CategoriesServiceGrpc.getPaginateMethod) == null) {
-      synchronized (CategoriesServiceGrpc.class) {
-        if ((getPaginateMethod = CategoriesServiceGrpc.getPaginateMethod) == null) {
-          CategoriesServiceGrpc.getPaginateMethod = getPaginateMethod =
-              io.grpc.MethodDescriptor.<com.soustify.input.Input.PaginationRequest, com.soustify.categories.Categories.CategoriesResponse>newBuilder()
+      com.soustify.roles_policies.RolesPolicies.Response> getPaginateMethod() {
+    io.grpc.MethodDescriptor<com.soustify.input.Input.PaginationRequest, com.soustify.roles_policies.RolesPolicies.Response> getPaginateMethod;
+    if ((getPaginateMethod = ServiceGrpc.getPaginateMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getPaginateMethod = ServiceGrpc.getPaginateMethod) == null) {
+          ServiceGrpc.getPaginateMethod = getPaginateMethod =
+              io.grpc.MethodDescriptor.<com.soustify.input.Input.PaginationRequest, com.soustify.roles_policies.RolesPolicies.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Paginate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.input.Input.PaginationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.categories.Categories.CategoriesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CategoriesServiceMethodDescriptorSupplier("Paginate"))
+                  com.soustify.roles_policies.RolesPolicies.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Paginate"))
               .build();
         }
       }
@@ -57,10 +57,10 @@ public final class CategoriesServiceGrpc {
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.FilteredRequest,
       com.soustify.output.Output.CountResponse> getCountMethod() {
     io.grpc.MethodDescriptor<com.soustify.input.Input.FilteredRequest, com.soustify.output.Output.CountResponse> getCountMethod;
-    if ((getCountMethod = CategoriesServiceGrpc.getCountMethod) == null) {
-      synchronized (CategoriesServiceGrpc.class) {
-        if ((getCountMethod = CategoriesServiceGrpc.getCountMethod) == null) {
-          CategoriesServiceGrpc.getCountMethod = getCountMethod =
+    if ((getCountMethod = ServiceGrpc.getCountMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getCountMethod = ServiceGrpc.getCountMethod) == null) {
+          ServiceGrpc.getCountMethod = getCountMethod =
               io.grpc.MethodDescriptor.<com.soustify.input.Input.FilteredRequest, com.soustify.output.Output.CountResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Count"))
@@ -69,7 +69,7 @@ public final class CategoriesServiceGrpc {
                   com.soustify.input.Input.FilteredRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.CountResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CategoriesServiceMethodDescriptorSupplier("Count"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Count"))
               .build();
         }
       }
@@ -77,30 +77,30 @@ public final class CategoriesServiceGrpc {
     return getCountMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.soustify.categories.Categories.CategoriesRequest,
+  private static volatile io.grpc.MethodDescriptor<com.soustify.roles_policies.RolesPolicies.Request,
       com.soustify.output.Output.PersistenceDataResponse> getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Create",
-      requestType = com.soustify.categories.Categories.CategoriesRequest.class,
+      requestType = com.soustify.roles_policies.RolesPolicies.Request.class,
       responseType = com.soustify.output.Output.PersistenceDataResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<com.soustify.categories.Categories.CategoriesRequest,
+  public static io.grpc.MethodDescriptor<com.soustify.roles_policies.RolesPolicies.Request,
       com.soustify.output.Output.PersistenceDataResponse> getCreateMethod() {
-    io.grpc.MethodDescriptor<com.soustify.categories.Categories.CategoriesRequest, com.soustify.output.Output.PersistenceDataResponse> getCreateMethod;
-    if ((getCreateMethod = CategoriesServiceGrpc.getCreateMethod) == null) {
-      synchronized (CategoriesServiceGrpc.class) {
-        if ((getCreateMethod = CategoriesServiceGrpc.getCreateMethod) == null) {
-          CategoriesServiceGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<com.soustify.categories.Categories.CategoriesRequest, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
+    io.grpc.MethodDescriptor<com.soustify.roles_policies.RolesPolicies.Request, com.soustify.output.Output.PersistenceDataResponse> getCreateMethod;
+    if ((getCreateMethod = ServiceGrpc.getCreateMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getCreateMethod = ServiceGrpc.getCreateMethod) == null) {
+          ServiceGrpc.getCreateMethod = getCreateMethod =
+              io.grpc.MethodDescriptor.<com.soustify.roles_policies.RolesPolicies.Request, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.categories.Categories.CategoriesRequest.getDefaultInstance()))
+                  com.soustify.roles_policies.RolesPolicies.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.PersistenceDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CategoriesServiceMethodDescriptorSupplier("Create"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Create"))
               .build();
         }
       }
@@ -108,30 +108,30 @@ public final class CategoriesServiceGrpc {
     return getCreateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.soustify.categories.Categories.CategoriesRequest,
+  private static volatile io.grpc.MethodDescriptor<com.soustify.roles_policies.RolesPolicies.Request,
       com.soustify.output.Output.PersistenceDataResponse> getUpdateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Update",
-      requestType = com.soustify.categories.Categories.CategoriesRequest.class,
+      requestType = com.soustify.roles_policies.RolesPolicies.Request.class,
       responseType = com.soustify.output.Output.PersistenceDataResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<com.soustify.categories.Categories.CategoriesRequest,
+  public static io.grpc.MethodDescriptor<com.soustify.roles_policies.RolesPolicies.Request,
       com.soustify.output.Output.PersistenceDataResponse> getUpdateMethod() {
-    io.grpc.MethodDescriptor<com.soustify.categories.Categories.CategoriesRequest, com.soustify.output.Output.PersistenceDataResponse> getUpdateMethod;
-    if ((getUpdateMethod = CategoriesServiceGrpc.getUpdateMethod) == null) {
-      synchronized (CategoriesServiceGrpc.class) {
-        if ((getUpdateMethod = CategoriesServiceGrpc.getUpdateMethod) == null) {
-          CategoriesServiceGrpc.getUpdateMethod = getUpdateMethod =
-              io.grpc.MethodDescriptor.<com.soustify.categories.Categories.CategoriesRequest, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
+    io.grpc.MethodDescriptor<com.soustify.roles_policies.RolesPolicies.Request, com.soustify.output.Output.PersistenceDataResponse> getUpdateMethod;
+    if ((getUpdateMethod = ServiceGrpc.getUpdateMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getUpdateMethod = ServiceGrpc.getUpdateMethod) == null) {
+          ServiceGrpc.getUpdateMethod = getUpdateMethod =
+              io.grpc.MethodDescriptor.<com.soustify.roles_policies.RolesPolicies.Request, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.categories.Categories.CategoriesRequest.getDefaultInstance()))
+                  com.soustify.roles_policies.RolesPolicies.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.PersistenceDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CategoriesServiceMethodDescriptorSupplier("Update"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Update"))
               .build();
         }
       }
@@ -150,10 +150,10 @@ public final class CategoriesServiceGrpc {
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
       com.soustify.output.Output.StatusDataResponse> getInactiveMethod() {
     io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.StatusDataResponse> getInactiveMethod;
-    if ((getInactiveMethod = CategoriesServiceGrpc.getInactiveMethod) == null) {
-      synchronized (CategoriesServiceGrpc.class) {
-        if ((getInactiveMethod = CategoriesServiceGrpc.getInactiveMethod) == null) {
-          CategoriesServiceGrpc.getInactiveMethod = getInactiveMethod =
+    if ((getInactiveMethod = ServiceGrpc.getInactiveMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getInactiveMethod = ServiceGrpc.getInactiveMethod) == null) {
+          ServiceGrpc.getInactiveMethod = getInactiveMethod =
               io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.StatusDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Inactive"))
@@ -162,7 +162,7 @@ public final class CategoriesServiceGrpc {
                   com.soustify.input.Input.UUIDRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.StatusDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CategoriesServiceMethodDescriptorSupplier("Inactive"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Inactive"))
               .build();
         }
       }
@@ -181,10 +181,10 @@ public final class CategoriesServiceGrpc {
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
       com.soustify.output.Output.StatusDataResponse> getActiveMethod() {
     io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.StatusDataResponse> getActiveMethod;
-    if ((getActiveMethod = CategoriesServiceGrpc.getActiveMethod) == null) {
-      synchronized (CategoriesServiceGrpc.class) {
-        if ((getActiveMethod = CategoriesServiceGrpc.getActiveMethod) == null) {
-          CategoriesServiceGrpc.getActiveMethod = getActiveMethod =
+    if ((getActiveMethod = ServiceGrpc.getActiveMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getActiveMethod = ServiceGrpc.getActiveMethod) == null) {
+          ServiceGrpc.getActiveMethod = getActiveMethod =
               io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.StatusDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Active"))
@@ -193,7 +193,7 @@ public final class CategoriesServiceGrpc {
                   com.soustify.input.Input.UUIDRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.StatusDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CategoriesServiceMethodDescriptorSupplier("Active"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Active"))
               .build();
         }
       }
@@ -202,29 +202,29 @@ public final class CategoriesServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
-      com.soustify.categories.Categories.CategoriesResponse> getFindOneMethod;
+      com.soustify.roles_policies.RolesPolicies.Response> getFindOneMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "FindOne",
       requestType = com.soustify.input.Input.UUIDRequest.class,
-      responseType = com.soustify.categories.Categories.CategoriesResponse.class,
+      responseType = com.soustify.roles_policies.RolesPolicies.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
-      com.soustify.categories.Categories.CategoriesResponse> getFindOneMethod() {
-    io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.categories.Categories.CategoriesResponse> getFindOneMethod;
-    if ((getFindOneMethod = CategoriesServiceGrpc.getFindOneMethod) == null) {
-      synchronized (CategoriesServiceGrpc.class) {
-        if ((getFindOneMethod = CategoriesServiceGrpc.getFindOneMethod) == null) {
-          CategoriesServiceGrpc.getFindOneMethod = getFindOneMethod =
-              io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.categories.Categories.CategoriesResponse>newBuilder()
+      com.soustify.roles_policies.RolesPolicies.Response> getFindOneMethod() {
+    io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.roles_policies.RolesPolicies.Response> getFindOneMethod;
+    if ((getFindOneMethod = ServiceGrpc.getFindOneMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getFindOneMethod = ServiceGrpc.getFindOneMethod) == null) {
+          ServiceGrpc.getFindOneMethod = getFindOneMethod =
+              io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.roles_policies.RolesPolicies.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FindOne"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.input.Input.UUIDRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.soustify.categories.Categories.CategoriesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CategoriesServiceMethodDescriptorSupplier("FindOne"))
+                  com.soustify.roles_policies.RolesPolicies.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("FindOne"))
               .build();
         }
       }
@@ -243,10 +243,10 @@ public final class CategoriesServiceGrpc {
   public static io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest,
       com.soustify.output.Output.PersistenceDataResponse> getDeleteMethod() {
     io.grpc.MethodDescriptor<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.PersistenceDataResponse> getDeleteMethod;
-    if ((getDeleteMethod = CategoriesServiceGrpc.getDeleteMethod) == null) {
-      synchronized (CategoriesServiceGrpc.class) {
-        if ((getDeleteMethod = CategoriesServiceGrpc.getDeleteMethod) == null) {
-          CategoriesServiceGrpc.getDeleteMethod = getDeleteMethod =
+    if ((getDeleteMethod = ServiceGrpc.getDeleteMethod) == null) {
+      synchronized (ServiceGrpc.class) {
+        if ((getDeleteMethod = ServiceGrpc.getDeleteMethod) == null) {
+          ServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<com.soustify.input.Input.UUIDRequest, com.soustify.output.Output.PersistenceDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
@@ -255,7 +255,7 @@ public final class CategoriesServiceGrpc {
                   com.soustify.input.Input.UUIDRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.soustify.output.Output.PersistenceDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CategoriesServiceMethodDescriptorSupplier("Delete"))
+              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Delete"))
               .build();
         }
       }
@@ -266,45 +266,45 @@ public final class CategoriesServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static CategoriesServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<CategoriesServiceStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<CategoriesServiceStub>() {
+  public static ServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ServiceStub>() {
         @java.lang.Override
-        public CategoriesServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new CategoriesServiceStub(channel, callOptions);
+        public ServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ServiceStub(channel, callOptions);
         }
       };
-    return CategoriesServiceStub.newStub(factory, channel);
+    return ServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static CategoriesServiceBlockingStub newBlockingStub(
+  public static ServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<CategoriesServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<CategoriesServiceBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<ServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ServiceBlockingStub>() {
         @java.lang.Override
-        public CategoriesServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new CategoriesServiceBlockingStub(channel, callOptions);
+        public ServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ServiceBlockingStub(channel, callOptions);
         }
       };
-    return CategoriesServiceBlockingStub.newStub(factory, channel);
+    return ServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static CategoriesServiceFutureStub newFutureStub(
+  public static ServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<CategoriesServiceFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<CategoriesServiceFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<ServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ServiceFutureStub>() {
         @java.lang.Override
-        public CategoriesServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new CategoriesServiceFutureStub(channel, callOptions);
+        public ServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ServiceFutureStub(channel, callOptions);
         }
       };
-    return CategoriesServiceFutureStub.newStub(factory, channel);
+    return ServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -314,7 +314,7 @@ public final class CategoriesServiceGrpc {
     /**
      */
     default void paginate(com.soustify.input.Input.PaginationRequest request,
-        io.grpc.stub.StreamObserver<com.soustify.categories.Categories.CategoriesResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.roles_policies.RolesPolicies.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPaginateMethod(), responseObserver);
     }
 
@@ -327,14 +327,14 @@ public final class CategoriesServiceGrpc {
 
     /**
      */
-    default io.grpc.stub.StreamObserver<com.soustify.categories.Categories.CategoriesRequest> create(
+    default io.grpc.stub.StreamObserver<com.soustify.roles_policies.RolesPolicies.Request> create(
         io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getCreateMethod(), responseObserver);
     }
 
     /**
      */
-    default io.grpc.stub.StreamObserver<com.soustify.categories.Categories.CategoriesRequest> update(
+    default io.grpc.stub.StreamObserver<com.soustify.roles_policies.RolesPolicies.Request> update(
         io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getUpdateMethod(), responseObserver);
     }
@@ -356,7 +356,7 @@ public final class CategoriesServiceGrpc {
     /**
      */
     default void findOne(com.soustify.input.Input.UUIDRequest request,
-        io.grpc.stub.StreamObserver<com.soustify.categories.Categories.CategoriesResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.roles_policies.RolesPolicies.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindOneMethod(), responseObserver);
     }
 
@@ -369,36 +369,36 @@ public final class CategoriesServiceGrpc {
   }
 
   /**
-   * Base class for the server implementation of the service CategoriesService.
+   * Base class for the server implementation of the service Service.
    */
-  public static abstract class CategoriesServiceImplBase
+  public static abstract class ServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return CategoriesServiceGrpc.bindService(this);
+      return ServiceGrpc.bindService(this);
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service CategoriesService.
+   * A stub to allow clients to do asynchronous rpc calls to service Service.
    */
-  public static final class CategoriesServiceStub
-      extends io.grpc.stub.AbstractAsyncStub<CategoriesServiceStub> {
-    private CategoriesServiceStub(
+  public static final class ServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ServiceStub> {
+    private ServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CategoriesServiceStub build(
+    protected ServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new CategoriesServiceStub(channel, callOptions);
+      return new ServiceStub(channel, callOptions);
     }
 
     /**
      */
     public void paginate(com.soustify.input.Input.PaginationRequest request,
-        io.grpc.stub.StreamObserver<com.soustify.categories.Categories.CategoriesResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.roles_policies.RolesPolicies.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getPaginateMethod(), getCallOptions()), request, responseObserver);
     }
@@ -413,7 +413,7 @@ public final class CategoriesServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.soustify.categories.Categories.CategoriesRequest> create(
+    public io.grpc.stub.StreamObserver<com.soustify.roles_policies.RolesPolicies.Request> create(
         io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), responseObserver);
@@ -421,7 +421,7 @@ public final class CategoriesServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.soustify.categories.Categories.CategoriesRequest> update(
+    public io.grpc.stub.StreamObserver<com.soustify.roles_policies.RolesPolicies.Request> update(
         io.grpc.stub.StreamObserver<com.soustify.output.Output.PersistenceDataResponse> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), responseObserver);
@@ -446,7 +446,7 @@ public final class CategoriesServiceGrpc {
     /**
      */
     public void findOne(com.soustify.input.Input.UUIDRequest request,
-        io.grpc.stub.StreamObserver<com.soustify.categories.Categories.CategoriesResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.soustify.roles_policies.RolesPolicies.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getFindOneMethod(), getCallOptions()), request, responseObserver);
     }
@@ -461,24 +461,24 @@ public final class CategoriesServiceGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service CategoriesService.
+   * A stub to allow clients to do synchronous rpc calls to service Service.
    */
-  public static final class CategoriesServiceBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<CategoriesServiceBlockingStub> {
-    private CategoriesServiceBlockingStub(
+  public static final class ServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ServiceBlockingStub> {
+    private ServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CategoriesServiceBlockingStub build(
+    protected ServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new CategoriesServiceBlockingStub(channel, callOptions);
+      return new ServiceBlockingStub(channel, callOptions);
     }
 
     /**
      */
-    public java.util.Iterator<com.soustify.categories.Categories.CategoriesResponse> paginate(
+    public java.util.Iterator<com.soustify.roles_policies.RolesPolicies.Response> paginate(
         com.soustify.input.Input.PaginationRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getPaginateMethod(), getCallOptions(), request);
@@ -493,26 +493,26 @@ public final class CategoriesServiceGrpc {
 
     /**
      */
-    public com.soustify.categories.Categories.CategoriesResponse findOne(com.soustify.input.Input.UUIDRequest request) {
+    public com.soustify.roles_policies.RolesPolicies.Response findOne(com.soustify.input.Input.UUIDRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getFindOneMethod(), getCallOptions(), request);
     }
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service CategoriesService.
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Service.
    */
-  public static final class CategoriesServiceFutureStub
-      extends io.grpc.stub.AbstractFutureStub<CategoriesServiceFutureStub> {
-    private CategoriesServiceFutureStub(
+  public static final class ServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ServiceFutureStub> {
+    private ServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CategoriesServiceFutureStub build(
+    protected ServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new CategoriesServiceFutureStub(channel, callOptions);
+      return new ServiceFutureStub(channel, callOptions);
     }
 
     /**
@@ -525,7 +525,7 @@ public final class CategoriesServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.soustify.categories.Categories.CategoriesResponse> findOne(
+    public com.google.common.util.concurrent.ListenableFuture<com.soustify.roles_policies.RolesPolicies.Response> findOne(
         com.soustify.input.Input.UUIDRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getFindOneMethod(), getCallOptions()), request);
@@ -560,7 +560,7 @@ public final class CategoriesServiceGrpc {
       switch (methodId) {
         case METHODID_PAGINATE:
           serviceImpl.paginate((com.soustify.input.Input.PaginationRequest) request,
-              (io.grpc.stub.StreamObserver<com.soustify.categories.Categories.CategoriesResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.soustify.roles_policies.RolesPolicies.Response>) responseObserver);
           break;
         case METHODID_COUNT:
           serviceImpl.count((com.soustify.input.Input.FilteredRequest) request,
@@ -568,7 +568,7 @@ public final class CategoriesServiceGrpc {
           break;
         case METHODID_FIND_ONE:
           serviceImpl.findOne((com.soustify.input.Input.UUIDRequest) request,
-              (io.grpc.stub.StreamObserver<com.soustify.categories.Categories.CategoriesResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.soustify.roles_policies.RolesPolicies.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -608,7 +608,7 @@ public final class CategoriesServiceGrpc {
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
               com.soustify.input.Input.PaginationRequest,
-              com.soustify.categories.Categories.CategoriesResponse>(
+              com.soustify.roles_policies.RolesPolicies.Response>(
                 service, METHODID_PAGINATE)))
         .addMethod(
           getCountMethod(),
@@ -621,14 +621,14 @@ public final class CategoriesServiceGrpc {
           getCreateMethod(),
           io.grpc.stub.ServerCalls.asyncClientStreamingCall(
             new MethodHandlers<
-              com.soustify.categories.Categories.CategoriesRequest,
+              com.soustify.roles_policies.RolesPolicies.Request,
               com.soustify.output.Output.PersistenceDataResponse>(
                 service, METHODID_CREATE)))
         .addMethod(
           getUpdateMethod(),
           io.grpc.stub.ServerCalls.asyncClientStreamingCall(
             new MethodHandlers<
-              com.soustify.categories.Categories.CategoriesRequest,
+              com.soustify.roles_policies.RolesPolicies.Request,
               com.soustify.output.Output.PersistenceDataResponse>(
                 service, METHODID_UPDATE)))
         .addMethod(
@@ -650,7 +650,7 @@ public final class CategoriesServiceGrpc {
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.soustify.input.Input.UUIDRequest,
-              com.soustify.categories.Categories.CategoriesResponse>(
+              com.soustify.roles_policies.RolesPolicies.Response>(
                 service, METHODID_FIND_ONE)))
         .addMethod(
           getDeleteMethod(),
@@ -662,32 +662,32 @@ public final class CategoriesServiceGrpc {
         .build();
   }
 
-  private static abstract class CategoriesServiceBaseDescriptorSupplier
+  private static abstract class ServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    CategoriesServiceBaseDescriptorSupplier() {}
+    ServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.soustify.categories.Categories.getDescriptor();
+      return com.soustify.roles_policies.RolesPolicies.getDescriptor();
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("CategoriesService");
+      return getFileDescriptor().findServiceByName("Service");
     }
   }
 
-  private static final class CategoriesServiceFileDescriptorSupplier
-      extends CategoriesServiceBaseDescriptorSupplier {
-    CategoriesServiceFileDescriptorSupplier() {}
+  private static final class ServiceFileDescriptorSupplier
+      extends ServiceBaseDescriptorSupplier {
+    ServiceFileDescriptorSupplier() {}
   }
 
-  private static final class CategoriesServiceMethodDescriptorSupplier
-      extends CategoriesServiceBaseDescriptorSupplier
+  private static final class ServiceMethodDescriptorSupplier
+      extends ServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final java.lang.String methodName;
 
-    CategoriesServiceMethodDescriptorSupplier(java.lang.String methodName) {
+    ServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -702,11 +702,11 @@ public final class CategoriesServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (CategoriesServiceGrpc.class) {
+      synchronized (ServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new CategoriesServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new ServiceFileDescriptorSupplier())
               .addMethod(getPaginateMethod())
               .addMethod(getCountMethod())
               .addMethod(getCreateMethod())

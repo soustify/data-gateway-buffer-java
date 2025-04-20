@@ -14,8 +14,8 @@ public final class PartnersCategories {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface PartnersCategoriesRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:partners_categories.PartnersCategoriesRequest)
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:partners_categories.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -43,18 +43,18 @@ public final class PartnersCategories {
         getIdCategoryBytes();
   }
   /**
-   * Protobuf type {@code partners_categories.PartnersCategoriesRequest}
+   * Protobuf type {@code partners_categories.Request}
    */
-  public static final class PartnersCategoriesRequest extends
+  public static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:partners_categories.PartnersCategoriesRequest)
-      PartnersCategoriesRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:partners_categories.Request)
+      RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PartnersCategoriesRequest.newBuilder() to construct.
-    private PartnersCategoriesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PartnersCategoriesRequest() {
+    private Request() {
       idPartner_ = "";
       idCategory_ = "";
     }
@@ -63,7 +63,7 @@ public final class PartnersCategories {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PartnersCategoriesRequest();
+      return new Request();
     }
 
     @java.lang.Override
@@ -73,15 +73,15 @@ public final class PartnersCategories {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_PartnersCategoriesRequest_descriptor;
+      return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_PartnersCategoriesRequest_fieldAccessorTable
+      return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest.class, com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest.Builder.class);
+              com.soustify.partners_categories.PartnersCategories.Request.class, com.soustify.partners_categories.PartnersCategories.Request.Builder.class);
     }
 
     public static final int ID_PARTNER_FIELD_NUMBER = 1;
@@ -207,10 +207,10 @@ public final class PartnersCategories {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest)) {
+      if (!(obj instanceof com.soustify.partners_categories.PartnersCategories.Request)) {
         return super.equals(obj);
       }
-      com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest other = (com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest) obj;
+      com.soustify.partners_categories.PartnersCategories.Request other = (com.soustify.partners_categories.PartnersCategories.Request) obj;
 
       if (!getIdPartner()
           .equals(other.getIdPartner())) return false;
@@ -236,69 +236,69 @@ public final class PartnersCategories {
       return hash;
     }
 
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseFrom(byte[] data)
+    public static com.soustify.partners_categories.PartnersCategories.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseFrom(java.io.InputStream input)
+    public static com.soustify.partners_categories.PartnersCategories.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.partners_categories.PartnersCategories.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseDelimitedFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -311,7 +311,7 @@ public final class PartnersCategories {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest prototype) {
+    public static Builder newBuilder(com.soustify.partners_categories.PartnersCategories.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -327,26 +327,26 @@ public final class PartnersCategories {
       return builder;
     }
     /**
-     * Protobuf type {@code partners_categories.PartnersCategoriesRequest}
+     * Protobuf type {@code partners_categories.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:partners_categories.PartnersCategoriesRequest)
-        com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:partners_categories.Request)
+        com.soustify.partners_categories.PartnersCategories.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_PartnersCategoriesRequest_descriptor;
+        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_PartnersCategoriesRequest_fieldAccessorTable
+        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest.class, com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest.Builder.class);
+                com.soustify.partners_categories.PartnersCategories.Request.class, com.soustify.partners_categories.PartnersCategories.Request.Builder.class);
       }
 
-      // Construct using com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest.newBuilder()
+      // Construct using com.soustify.partners_categories.PartnersCategories.Request.newBuilder()
       private Builder() {
 
       }
@@ -368,17 +368,17 @@ public final class PartnersCategories {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_PartnersCategoriesRequest_descriptor;
+        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_Request_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest getDefaultInstanceForType() {
-        return com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest.getDefaultInstance();
+      public com.soustify.partners_categories.PartnersCategories.Request getDefaultInstanceForType() {
+        return com.soustify.partners_categories.PartnersCategories.Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest build() {
-        com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest result = buildPartial();
+      public com.soustify.partners_categories.PartnersCategories.Request build() {
+        com.soustify.partners_categories.PartnersCategories.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -386,14 +386,14 @@ public final class PartnersCategories {
       }
 
       @java.lang.Override
-      public com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest buildPartial() {
-        com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest result = new com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest(this);
+      public com.soustify.partners_categories.PartnersCategories.Request buildPartial() {
+        com.soustify.partners_categories.PartnersCategories.Request result = new com.soustify.partners_categories.PartnersCategories.Request(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest result) {
+      private void buildPartial0(com.soustify.partners_categories.PartnersCategories.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.idPartner_ = idPartner_;
@@ -437,16 +437,16 @@ public final class PartnersCategories {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest) {
-          return mergeFrom((com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest)other);
+        if (other instanceof com.soustify.partners_categories.PartnersCategories.Request) {
+          return mergeFrom((com.soustify.partners_categories.PartnersCategories.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest other) {
-        if (other == com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.partners_categories.PartnersCategories.Request other) {
+        if (other == com.soustify.partners_categories.PartnersCategories.Request.getDefaultInstance()) return this;
         if (!other.getIdPartner().isEmpty()) {
           idPartner_ = other.idPartner_;
           bitField0_ |= 0x00000001;
@@ -666,23 +666,23 @@ public final class PartnersCategories {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:partners_categories.PartnersCategoriesRequest)
+      // @@protoc_insertion_point(builder_scope:partners_categories.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:partners_categories.PartnersCategoriesRequest)
-    private static final com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:partners_categories.Request)
+    private static final com.soustify.partners_categories.PartnersCategories.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest();
+      DEFAULT_INSTANCE = new com.soustify.partners_categories.PartnersCategories.Request();
     }
 
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest getDefaultInstance() {
+    public static com.soustify.partners_categories.PartnersCategories.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PartnersCategoriesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<PartnersCategoriesRequest>() {
+    private static final com.google.protobuf.Parser<Request>
+        PARSER = new com.google.protobuf.AbstractParser<Request>() {
       @java.lang.Override
-      public PartnersCategoriesRequest parsePartialFrom(
+      public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -701,24 +701,24 @@ public final class PartnersCategories {
       }
     };
 
-    public static com.google.protobuf.Parser<PartnersCategoriesRequest> parser() {
+    public static com.google.protobuf.Parser<Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PartnersCategoriesRequest> getParserForType() {
+    public com.google.protobuf.Parser<Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.partners_categories.PartnersCategories.PartnersCategoriesRequest getDefaultInstanceForType() {
+    public com.soustify.partners_categories.PartnersCategories.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PartnersCategoriesResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:partners_categories.PartnersCategoriesResponse)
+  public interface ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:partners_categories.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -769,18 +769,18 @@ public final class PartnersCategories {
         getIdCategoryBytes();
   }
   /**
-   * Protobuf type {@code partners_categories.PartnersCategoriesResponse}
+   * Protobuf type {@code partners_categories.Response}
    */
-  public static final class PartnersCategoriesResponse extends
+  public static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:partners_categories.PartnersCategoriesResponse)
-      PartnersCategoriesResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:partners_categories.Response)
+      ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PartnersCategoriesResponse.newBuilder() to construct.
-    private PartnersCategoriesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Response.newBuilder() to construct.
+    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PartnersCategoriesResponse() {
+    private Response() {
       id_ = "";
       status_ = 0;
       idPartner_ = "";
@@ -791,7 +791,7 @@ public final class PartnersCategories {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PartnersCategoriesResponse();
+      return new Response();
     }
 
     @java.lang.Override
@@ -801,15 +801,15 @@ public final class PartnersCategories {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_PartnersCategoriesResponse_descriptor;
+      return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_PartnersCategoriesResponse_fieldAccessorTable
+      return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse.class, com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse.Builder.class);
+              com.soustify.partners_categories.PartnersCategories.Response.class, com.soustify.partners_categories.PartnersCategories.Response.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1005,10 +1005,10 @@ public final class PartnersCategories {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse)) {
+      if (!(obj instanceof com.soustify.partners_categories.PartnersCategories.Response)) {
         return super.equals(obj);
       }
-      com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse other = (com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse) obj;
+      com.soustify.partners_categories.PartnersCategories.Response other = (com.soustify.partners_categories.PartnersCategories.Response) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1041,69 +1041,69 @@ public final class PartnersCategories {
       return hash;
     }
 
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseFrom(byte[] data)
+    public static com.soustify.partners_categories.PartnersCategories.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseFrom(java.io.InputStream input)
+    public static com.soustify.partners_categories.PartnersCategories.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.partners_categories.PartnersCategories.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseDelimitedFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse parseFrom(
+    public static com.soustify.partners_categories.PartnersCategories.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1116,7 +1116,7 @@ public final class PartnersCategories {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse prototype) {
+    public static Builder newBuilder(com.soustify.partners_categories.PartnersCategories.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1132,26 +1132,26 @@ public final class PartnersCategories {
       return builder;
     }
     /**
-     * Protobuf type {@code partners_categories.PartnersCategoriesResponse}
+     * Protobuf type {@code partners_categories.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:partners_categories.PartnersCategoriesResponse)
-        com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:partners_categories.Response)
+        com.soustify.partners_categories.PartnersCategories.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_PartnersCategoriesResponse_descriptor;
+        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_PartnersCategoriesResponse_fieldAccessorTable
+        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse.class, com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse.Builder.class);
+                com.soustify.partners_categories.PartnersCategories.Response.class, com.soustify.partners_categories.PartnersCategories.Response.Builder.class);
       }
 
-      // Construct using com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse.newBuilder()
+      // Construct using com.soustify.partners_categories.PartnersCategories.Response.newBuilder()
       private Builder() {
 
       }
@@ -1175,17 +1175,17 @@ public final class PartnersCategories {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_PartnersCategoriesResponse_descriptor;
+        return com.soustify.partners_categories.PartnersCategories.internal_static_partners_categories_Response_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse getDefaultInstanceForType() {
-        return com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse.getDefaultInstance();
+      public com.soustify.partners_categories.PartnersCategories.Response getDefaultInstanceForType() {
+        return com.soustify.partners_categories.PartnersCategories.Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse build() {
-        com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse result = buildPartial();
+      public com.soustify.partners_categories.PartnersCategories.Response build() {
+        com.soustify.partners_categories.PartnersCategories.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1193,14 +1193,14 @@ public final class PartnersCategories {
       }
 
       @java.lang.Override
-      public com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse buildPartial() {
-        com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse result = new com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse(this);
+      public com.soustify.partners_categories.PartnersCategories.Response buildPartial() {
+        com.soustify.partners_categories.PartnersCategories.Response result = new com.soustify.partners_categories.PartnersCategories.Response(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse result) {
+      private void buildPartial0(com.soustify.partners_categories.PartnersCategories.Response result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -1250,16 +1250,16 @@ public final class PartnersCategories {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse) {
-          return mergeFrom((com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse)other);
+        if (other instanceof com.soustify.partners_categories.PartnersCategories.Response) {
+          return mergeFrom((com.soustify.partners_categories.PartnersCategories.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse other) {
-        if (other == com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.partners_categories.PartnersCategories.Response other) {
+        if (other == com.soustify.partners_categories.PartnersCategories.Response.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -1622,23 +1622,23 @@ public final class PartnersCategories {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:partners_categories.PartnersCategoriesResponse)
+      // @@protoc_insertion_point(builder_scope:partners_categories.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:partners_categories.PartnersCategoriesResponse)
-    private static final com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:partners_categories.Response)
+    private static final com.soustify.partners_categories.PartnersCategories.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse();
+      DEFAULT_INSTANCE = new com.soustify.partners_categories.PartnersCategories.Response();
     }
 
-    public static com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse getDefaultInstance() {
+    public static com.soustify.partners_categories.PartnersCategories.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PartnersCategoriesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<PartnersCategoriesResponse>() {
+    private static final com.google.protobuf.Parser<Response>
+        PARSER = new com.google.protobuf.AbstractParser<Response>() {
       @java.lang.Override
-      public PartnersCategoriesResponse parsePartialFrom(
+      public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1657,32 +1657,32 @@ public final class PartnersCategories {
       }
     };
 
-    public static com.google.protobuf.Parser<PartnersCategoriesResponse> parser() {
+    public static com.google.protobuf.Parser<Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PartnersCategoriesResponse> getParserForType() {
+    public com.google.protobuf.Parser<Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.partners_categories.PartnersCategories.PartnersCategoriesResponse getDefaultInstanceForType() {
+    public com.soustify.partners_categories.PartnersCategories.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_partners_categories_PartnersCategoriesRequest_descriptor;
+    internal_static_partners_categories_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_partners_categories_PartnersCategoriesRequest_fieldAccessorTable;
+      internal_static_partners_categories_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_partners_categories_PartnersCategoriesResponse_descriptor;
+    internal_static_partners_categories_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_partners_categories_PartnersCategoriesResponse_fieldAccessorTable;
+      internal_static_partners_categories_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1695,32 +1695,29 @@ public final class PartnersCategories {
       "\n\031partners_categories.proto\022\023partners_ca" +
       "tegories\032\013input.proto\032\014output.proto\032\016val" +
       "idate.proto\032\037google/protobuf/timestamp.p" +
-      "roto\"X\n\031PartnersCategoriesRequest\022\034\n\nid_" +
-      "partner\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\035\n\013id_category\030\002" +
-      " \001(\tB\010\372B\005r\003\260\001\001\"\227\001\n\032PartnersCategoriesRes" +
-      "ponse\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\004 " +
-      "\001(\0162\026.output.StatusResponse\022\034\n\nid_partne" +
-      "r\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\035\n\013id_category\030\002 \001(\tB\010" +
-      "\372B\005r\003\260\001\0012\361\004\n\031PartnersCategoriesService\022W" +
-      "\n\010Paginate\022\030.input.PaginationRequest\032/.p" +
-      "artners_categories.PartnersCategoriesRes" +
-      "ponse0\001\0226\n\005Count\022\026.input.FilteredRequest" +
-      "\032\025.output.CountResponse\022[\n\006Create\022..part" +
-      "ners_categories.PartnersCategoriesReques" +
-      "t\032\037.output.PersistenceDataResponse(\001\022[\n\006" +
-      "Update\022..partners_categories.PartnersCat" +
-      "egoriesRequest\032\037.output.PersistenceDataR" +
-      "esponse(\001\022<\n\010Inactive\022\022.input.UUIDReques" +
-      "t\032\032.output.StatusDataResponse(\001\022:\n\006Activ" +
-      "e\022\022.input.UUIDRequest\032\032.output.StatusDat" +
-      "aResponse(\001\022N\n\007FindOne\022\022.input.UUIDReque" +
-      "st\032/.partners_categories.PartnersCategor" +
-      "iesResponse\022?\n\006Delete\022\022.input.UUIDReques" +
-      "t\032\037.output.PersistenceDataResponse(\001Bz\n " +
-      "com.soustify.partners_categoriesZVgithub" +
-      ".com/soustify/data-gateway-buffer-go/pkg" +
-      "/partners_categories;partners_categories" +
-      "b\006proto3"
+      "roto\"F\n\007Request\022\034\n\nid_partner\030\001 \001(\tB\010\372B\005" +
+      "r\003\260\001\001\022\035\n\013id_category\030\002 \001(\tB\010\372B\005r\003\260\001\001\"\205\001\n" +
+      "\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006statu" +
+      "s\030\004 \001(\0162\026.output.StatusResponse\022\034\n\nid_pa" +
+      "rtner\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\035\n\013id_category\030\002 \001" +
+      "(\tB\010\372B\005r\003\260\001\0012\227\004\n\007Service\022E\n\010Paginate\022\030.i" +
+      "nput.PaginationRequest\032\035.partners_catego" +
+      "ries.Response0\001\0226\n\005Count\022\026.input.Filtere" +
+      "dRequest\032\025.output.CountResponse\022I\n\006Creat" +
+      "e\022\034.partners_categories.Request\032\037.output" +
+      ".PersistenceDataResponse(\001\022I\n\006Update\022\034.p" +
+      "artners_categories.Request\032\037.output.Pers" +
+      "istenceDataResponse(\001\022<\n\010Inactive\022\022.inpu" +
+      "t.UUIDRequest\032\032.output.StatusDataRespons" +
+      "e(\001\022:\n\006Active\022\022.input.UUIDRequest\032\032.outp" +
+      "ut.StatusDataResponse(\001\022<\n\007FindOne\022\022.inp" +
+      "ut.UUIDRequest\032\035.partners_categories.Res" +
+      "ponse\022?\n\006Delete\022\022.input.UUIDRequest\032\037.ou" +
+      "tput.PersistenceDataResponse(\001Bz\n com.so" +
+      "ustify.partners_categoriesZVgithub.com/s" +
+      "oustify/data-gateway-buffer-go/pkg/partn" +
+      "ers_categories;partners_categoriesb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1730,17 +1727,17 @@ public final class PartnersCategories {
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_partners_categories_PartnersCategoriesRequest_descriptor =
+    internal_static_partners_categories_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_partners_categories_PartnersCategoriesRequest_fieldAccessorTable = new
+    internal_static_partners_categories_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_partners_categories_PartnersCategoriesRequest_descriptor,
+        internal_static_partners_categories_Request_descriptor,
         new java.lang.String[] { "IdPartner", "IdCategory", });
-    internal_static_partners_categories_PartnersCategoriesResponse_descriptor =
+    internal_static_partners_categories_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_partners_categories_PartnersCategoriesResponse_fieldAccessorTable = new
+    internal_static_partners_categories_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_partners_categories_PartnersCategoriesResponse_descriptor,
+        internal_static_partners_categories_Response_descriptor,
         new java.lang.String[] { "Id", "Status", "IdPartner", "IdCategory", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

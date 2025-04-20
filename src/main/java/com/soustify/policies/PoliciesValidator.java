@@ -8,16 +8,16 @@ package com.soustify.policies;
 public class PoliciesValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.policies.Policies.PoliciesRequest.class)) return new PoliciesRequestValidator();
-		if (clazz.equals(com.soustify.policies.Policies.PoliciesResponse.class)) return new PoliciesResponseValidator();
+		if (clazz.equals(com.soustify.policies.Policies.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.policies.Policies.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code PoliciesRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class PoliciesRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.policies.Policies.PoliciesRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.policies.Policies.Request> {
 		
 	
 		
@@ -31,22 +31,22 @@ public class PoliciesValidator {
 	
 	
 
-	public void assertValid(com.soustify.policies.Policies.PoliciesRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.policies.Policies.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".policies.PoliciesRequest.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".policies.Request.id", proto.getId());
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".policies.PoliciesRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.CollectiveValidation.in(".policies.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".policies.PoliciesRequest.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".policies.PoliciesRequest.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".policies.Request.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".policies.Request.name", proto.getName(), 200);
 	
 	
 	}
 }
 /**
-	 * Validates {@code PoliciesResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class PoliciesResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.policies.Policies.PoliciesResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.policies.Policies.Response> {
 		
 	
 		
@@ -58,14 +58,14 @@ public class PoliciesValidator {
 	
 	
 
-	public void assertValid(com.soustify.policies.Policies.PoliciesResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.policies.Policies.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".policies.PoliciesResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".policies.Response.id", proto.getId());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".policies.PoliciesResponse.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".policies.PoliciesResponse.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".policies.Response.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".policies.Response.name", proto.getName(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".policies.PoliciesResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".policies.Response.id_auditable", proto.getIdAuditable());
 	// no validation rules for Status
 
 	

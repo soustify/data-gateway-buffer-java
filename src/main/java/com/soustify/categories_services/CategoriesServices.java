@@ -14,8 +14,8 @@ public final class CategoriesServices {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface CategoriesServicesRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:categories_services.CategoriesServicesRequest)
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:categories_services.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -66,18 +66,18 @@ public final class CategoriesServices {
         getIdServiceBytes();
   }
   /**
-   * Protobuf type {@code categories_services.CategoriesServicesRequest}
+   * Protobuf type {@code categories_services.Request}
    */
-  public static final class CategoriesServicesRequest extends
+  public static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:categories_services.CategoriesServicesRequest)
-      CategoriesServicesRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:categories_services.Request)
+      RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CategoriesServicesRequest.newBuilder() to construct.
-    private CategoriesServicesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CategoriesServicesRequest() {
+    private Request() {
       id_ = "";
       enStatus_ = 0;
       idCategory_ = "";
@@ -88,7 +88,7 @@ public final class CategoriesServices {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CategoriesServicesRequest();
+      return new Request();
     }
 
     @java.lang.Override
@@ -98,15 +98,15 @@ public final class CategoriesServices {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_CategoriesServicesRequest_descriptor;
+      return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_CategoriesServicesRequest_fieldAccessorTable
+      return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest.class, com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest.Builder.class);
+              com.soustify.categories_services.CategoriesServices.Request.class, com.soustify.categories_services.CategoriesServices.Request.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -302,10 +302,10 @@ public final class CategoriesServices {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest)) {
+      if (!(obj instanceof com.soustify.categories_services.CategoriesServices.Request)) {
         return super.equals(obj);
       }
-      com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest other = (com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest) obj;
+      com.soustify.categories_services.CategoriesServices.Request other = (com.soustify.categories_services.CategoriesServices.Request) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -338,69 +338,69 @@ public final class CategoriesServices {
       return hash;
     }
 
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseFrom(byte[] data)
+    public static com.soustify.categories_services.CategoriesServices.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseFrom(java.io.InputStream input)
+    public static com.soustify.categories_services.CategoriesServices.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.categories_services.CategoriesServices.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseDelimitedFrom(
+    public static com.soustify.categories_services.CategoriesServices.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -413,7 +413,7 @@ public final class CategoriesServices {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest prototype) {
+    public static Builder newBuilder(com.soustify.categories_services.CategoriesServices.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -429,26 +429,26 @@ public final class CategoriesServices {
       return builder;
     }
     /**
-     * Protobuf type {@code categories_services.CategoriesServicesRequest}
+     * Protobuf type {@code categories_services.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:categories_services.CategoriesServicesRequest)
-        com.soustify.categories_services.CategoriesServices.CategoriesServicesRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:categories_services.Request)
+        com.soustify.categories_services.CategoriesServices.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_CategoriesServicesRequest_descriptor;
+        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_CategoriesServicesRequest_fieldAccessorTable
+        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest.class, com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest.Builder.class);
+                com.soustify.categories_services.CategoriesServices.Request.class, com.soustify.categories_services.CategoriesServices.Request.Builder.class);
       }
 
-      // Construct using com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest.newBuilder()
+      // Construct using com.soustify.categories_services.CategoriesServices.Request.newBuilder()
       private Builder() {
 
       }
@@ -472,17 +472,17 @@ public final class CategoriesServices {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_CategoriesServicesRequest_descriptor;
+        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_Request_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest getDefaultInstanceForType() {
-        return com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest.getDefaultInstance();
+      public com.soustify.categories_services.CategoriesServices.Request getDefaultInstanceForType() {
+        return com.soustify.categories_services.CategoriesServices.Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest build() {
-        com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest result = buildPartial();
+      public com.soustify.categories_services.CategoriesServices.Request build() {
+        com.soustify.categories_services.CategoriesServices.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -490,14 +490,14 @@ public final class CategoriesServices {
       }
 
       @java.lang.Override
-      public com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest buildPartial() {
-        com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest result = new com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest(this);
+      public com.soustify.categories_services.CategoriesServices.Request buildPartial() {
+        com.soustify.categories_services.CategoriesServices.Request result = new com.soustify.categories_services.CategoriesServices.Request(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest result) {
+      private void buildPartial0(com.soustify.categories_services.CategoriesServices.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -547,16 +547,16 @@ public final class CategoriesServices {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest) {
-          return mergeFrom((com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest)other);
+        if (other instanceof com.soustify.categories_services.CategoriesServices.Request) {
+          return mergeFrom((com.soustify.categories_services.CategoriesServices.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest other) {
-        if (other == com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.categories_services.CategoriesServices.Request other) {
+        if (other == com.soustify.categories_services.CategoriesServices.Request.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -919,23 +919,23 @@ public final class CategoriesServices {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:categories_services.CategoriesServicesRequest)
+      // @@protoc_insertion_point(builder_scope:categories_services.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:categories_services.CategoriesServicesRequest)
-    private static final com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:categories_services.Request)
+    private static final com.soustify.categories_services.CategoriesServices.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest();
+      DEFAULT_INSTANCE = new com.soustify.categories_services.CategoriesServices.Request();
     }
 
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest getDefaultInstance() {
+    public static com.soustify.categories_services.CategoriesServices.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CategoriesServicesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CategoriesServicesRequest>() {
+    private static final com.google.protobuf.Parser<Request>
+        PARSER = new com.google.protobuf.AbstractParser<Request>() {
       @java.lang.Override
-      public CategoriesServicesRequest parsePartialFrom(
+      public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -954,24 +954,24 @@ public final class CategoriesServices {
       }
     };
 
-    public static com.google.protobuf.Parser<CategoriesServicesRequest> parser() {
+    public static com.google.protobuf.Parser<Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CategoriesServicesRequest> getParserForType() {
+    public com.google.protobuf.Parser<Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest getDefaultInstanceForType() {
+    public com.soustify.categories_services.CategoriesServices.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface CategoriesServicesResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:categories_services.CategoriesServicesResponse)
+  public interface ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:categories_services.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1034,18 +1034,18 @@ public final class CategoriesServices {
         getIdServiceBytes();
   }
   /**
-   * Protobuf type {@code categories_services.CategoriesServicesResponse}
+   * Protobuf type {@code categories_services.Response}
    */
-  public static final class CategoriesServicesResponse extends
+  public static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:categories_services.CategoriesServicesResponse)
-      CategoriesServicesResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:categories_services.Response)
+      ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CategoriesServicesResponse.newBuilder() to construct.
-    private CategoriesServicesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Response.newBuilder() to construct.
+    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CategoriesServicesResponse() {
+    private Response() {
       id_ = "";
       status_ = 0;
       idAuditable_ = "";
@@ -1057,7 +1057,7 @@ public final class CategoriesServices {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CategoriesServicesResponse();
+      return new Response();
     }
 
     @java.lang.Override
@@ -1067,15 +1067,15 @@ public final class CategoriesServices {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_CategoriesServicesResponse_descriptor;
+      return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_CategoriesServicesResponse_fieldAccessorTable
+      return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse.class, com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse.Builder.class);
+              com.soustify.categories_services.CategoriesServices.Response.class, com.soustify.categories_services.CategoriesServices.Response.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1316,10 +1316,10 @@ public final class CategoriesServices {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse)) {
+      if (!(obj instanceof com.soustify.categories_services.CategoriesServices.Response)) {
         return super.equals(obj);
       }
-      com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse other = (com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse) obj;
+      com.soustify.categories_services.CategoriesServices.Response other = (com.soustify.categories_services.CategoriesServices.Response) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1356,69 +1356,69 @@ public final class CategoriesServices {
       return hash;
     }
 
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseFrom(byte[] data)
+    public static com.soustify.categories_services.CategoriesServices.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseFrom(java.io.InputStream input)
+    public static com.soustify.categories_services.CategoriesServices.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.categories_services.CategoriesServices.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseDelimitedFrom(
+    public static com.soustify.categories_services.CategoriesServices.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse parseFrom(
+    public static com.soustify.categories_services.CategoriesServices.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1431,7 +1431,7 @@ public final class CategoriesServices {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse prototype) {
+    public static Builder newBuilder(com.soustify.categories_services.CategoriesServices.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1447,26 +1447,26 @@ public final class CategoriesServices {
       return builder;
     }
     /**
-     * Protobuf type {@code categories_services.CategoriesServicesResponse}
+     * Protobuf type {@code categories_services.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:categories_services.CategoriesServicesResponse)
-        com.soustify.categories_services.CategoriesServices.CategoriesServicesResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:categories_services.Response)
+        com.soustify.categories_services.CategoriesServices.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_CategoriesServicesResponse_descriptor;
+        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_CategoriesServicesResponse_fieldAccessorTable
+        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse.class, com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse.Builder.class);
+                com.soustify.categories_services.CategoriesServices.Response.class, com.soustify.categories_services.CategoriesServices.Response.Builder.class);
       }
 
-      // Construct using com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse.newBuilder()
+      // Construct using com.soustify.categories_services.CategoriesServices.Response.newBuilder()
       private Builder() {
 
       }
@@ -1491,17 +1491,17 @@ public final class CategoriesServices {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_CategoriesServicesResponse_descriptor;
+        return com.soustify.categories_services.CategoriesServices.internal_static_categories_services_Response_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse getDefaultInstanceForType() {
-        return com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse.getDefaultInstance();
+      public com.soustify.categories_services.CategoriesServices.Response getDefaultInstanceForType() {
+        return com.soustify.categories_services.CategoriesServices.Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse build() {
-        com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse result = buildPartial();
+      public com.soustify.categories_services.CategoriesServices.Response build() {
+        com.soustify.categories_services.CategoriesServices.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1509,14 +1509,14 @@ public final class CategoriesServices {
       }
 
       @java.lang.Override
-      public com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse buildPartial() {
-        com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse result = new com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse(this);
+      public com.soustify.categories_services.CategoriesServices.Response buildPartial() {
+        com.soustify.categories_services.CategoriesServices.Response result = new com.soustify.categories_services.CategoriesServices.Response(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse result) {
+      private void buildPartial0(com.soustify.categories_services.CategoriesServices.Response result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -1569,16 +1569,16 @@ public final class CategoriesServices {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse) {
-          return mergeFrom((com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse)other);
+        if (other instanceof com.soustify.categories_services.CategoriesServices.Response) {
+          return mergeFrom((com.soustify.categories_services.CategoriesServices.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse other) {
-        if (other == com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.categories_services.CategoriesServices.Response other) {
+        if (other == com.soustify.categories_services.CategoriesServices.Response.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -2023,23 +2023,23 @@ public final class CategoriesServices {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:categories_services.CategoriesServicesResponse)
+      // @@protoc_insertion_point(builder_scope:categories_services.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:categories_services.CategoriesServicesResponse)
-    private static final com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:categories_services.Response)
+    private static final com.soustify.categories_services.CategoriesServices.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse();
+      DEFAULT_INSTANCE = new com.soustify.categories_services.CategoriesServices.Response();
     }
 
-    public static com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse getDefaultInstance() {
+    public static com.soustify.categories_services.CategoriesServices.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CategoriesServicesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<CategoriesServicesResponse>() {
+    private static final com.google.protobuf.Parser<Response>
+        PARSER = new com.google.protobuf.AbstractParser<Response>() {
       @java.lang.Override
-      public CategoriesServicesResponse parsePartialFrom(
+      public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2058,32 +2058,32 @@ public final class CategoriesServices {
       }
     };
 
-    public static com.google.protobuf.Parser<CategoriesServicesResponse> parser() {
+    public static com.google.protobuf.Parser<Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CategoriesServicesResponse> getParserForType() {
+    public com.google.protobuf.Parser<Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse getDefaultInstanceForType() {
+    public com.soustify.categories_services.CategoriesServices.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_categories_services_CategoriesServicesRequest_descriptor;
+    internal_static_categories_services_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_categories_services_CategoriesServicesRequest_fieldAccessorTable;
+      internal_static_categories_services_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_categories_services_CategoriesServicesResponse_descriptor;
+    internal_static_categories_services_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_categories_services_CategoriesServicesResponse_fieldAccessorTable;
+      internal_static_categories_services_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2096,34 +2096,31 @@ public final class CategoriesServices {
       "\n\031categories_services.proto\022\023categories_" +
       "services\032\013input.proto\032\014output.proto\032\016val" +
       "idate.proto\032\037google/protobuf/timestamp.p" +
-      "roto\"\243\001\n\031CategoriesServicesRequest\022\024\n\002id" +
-      "\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001(\0162\024.in" +
-      "put.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\035\n\013id_cate" +
-      "gory\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\034\n\nid_service\030\004 \001(\t" +
-      "B\010\372B\005r\003\260\001\001\"\267\001\n\032CategoriesServicesRespons" +
-      "e\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 \001(\0162" +
-      "\026.output.StatusResponse\022\036\n\014id_auditable\030" +
-      "\003 \001(\tB\010\372B\005r\003\260\001\001\022\035\n\013id_category\030\004 \001(\tB\010\372B" +
-      "\005r\003\260\001\001\022\034\n\nid_service\030\005 \001(\tB\010\372B\005r\003\260\001\0012\361\004\n" +
-      "\031CategoriesServicesService\022W\n\010Paginate\022\030" +
-      ".input.PaginationRequest\032/.categories_se" +
-      "rvices.CategoriesServicesResponse0\001\0226\n\005C" +
-      "ount\022\026.input.FilteredRequest\032\025.output.Co" +
-      "untResponse\022[\n\006Create\022..categories_servi" +
-      "ces.CategoriesServicesRequest\032\037.output.P" +
-      "ersistenceDataResponse(\001\022[\n\006Update\022..cat" +
-      "egories_services.CategoriesServicesReque" +
-      "st\032\037.output.PersistenceDataResponse(\001\022<\n" +
-      "\010Inactive\022\022.input.UUIDRequest\032\032.output.S" +
-      "tatusDataResponse(\001\022:\n\006Active\022\022.input.UU" +
-      "IDRequest\032\032.output.StatusDataResponse(\001\022" +
-      "N\n\007FindOne\022\022.input.UUIDRequest\032/.categor" +
-      "ies_services.CategoriesServicesResponse\022" +
-      "?\n\006Delete\022\022.input.UUIDRequest\032\037.output.P" +
-      "ersistenceDataResponse(\001Bz\n com.soustify" +
-      ".categories_servicesZVgithub.com/soustif" +
-      "y/data-gateway-buffer-go/pkg/categories_" +
-      "services;categories_servicesb\006proto3"
+      "roto\"\221\001\n\007Request\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223" +
+      "\n\ten_status\030\002 \001(\0162\024.input.StatusRequestB" +
+      "\n\372B\007\202\001\004\030\000\030\001\022\035\n\013id_category\030\003 \001(\tB\010\372B\005r\003\260" +
+      "\001\001\022\034\n\nid_service\030\004 \001(\tB\010\372B\005r\003\260\001\001\"\245\001\n\010Res" +
+      "ponse\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 " +
+      "\001(\0162\026.output.StatusResponse\022\036\n\014id_audita" +
+      "ble\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\035\n\013id_category\030\004 \001(\t" +
+      "B\010\372B\005r\003\260\001\001\022\034\n\nid_service\030\005 \001(\tB\010\372B\005r\003\260\001\001" +
+      "2\227\004\n\007Service\022E\n\010Paginate\022\030.input.Paginat" +
+      "ionRequest\032\035.categories_services.Respons" +
+      "e0\001\0226\n\005Count\022\026.input.FilteredRequest\032\025.o" +
+      "utput.CountResponse\022I\n\006Create\022\034.categori" +
+      "es_services.Request\032\037.output.Persistence" +
+      "DataResponse(\001\022I\n\006Update\022\034.categories_se" +
+      "rvices.Request\032\037.output.PersistenceDataR" +
+      "esponse(\001\022<\n\010Inactive\022\022.input.UUIDReques" +
+      "t\032\032.output.StatusDataResponse(\001\022:\n\006Activ" +
+      "e\022\022.input.UUIDRequest\032\032.output.StatusDat" +
+      "aResponse(\001\022<\n\007FindOne\022\022.input.UUIDReque" +
+      "st\032\035.categories_services.Response\022?\n\006Del" +
+      "ete\022\022.input.UUIDRequest\032\037.output.Persist" +
+      "enceDataResponse(\001Bz\n com.soustify.categ" +
+      "ories_servicesZVgithub.com/soustify/data" +
+      "-gateway-buffer-go/pkg/categories_servic" +
+      "es;categories_servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2133,17 +2130,17 @@ public final class CategoriesServices {
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_categories_services_CategoriesServicesRequest_descriptor =
+    internal_static_categories_services_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_categories_services_CategoriesServicesRequest_fieldAccessorTable = new
+    internal_static_categories_services_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_categories_services_CategoriesServicesRequest_descriptor,
+        internal_static_categories_services_Request_descriptor,
         new java.lang.String[] { "Id", "EnStatus", "IdCategory", "IdService", });
-    internal_static_categories_services_CategoriesServicesResponse_descriptor =
+    internal_static_categories_services_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_categories_services_CategoriesServicesResponse_fieldAccessorTable = new
+    internal_static_categories_services_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_categories_services_CategoriesServicesResponse_descriptor,
+        internal_static_categories_services_Response_descriptor,
         new java.lang.String[] { "Id", "Status", "IdAuditable", "IdCategory", "IdService", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

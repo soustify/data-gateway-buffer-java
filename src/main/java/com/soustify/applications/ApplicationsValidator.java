@@ -8,16 +8,16 @@ package com.soustify.applications;
 public class ApplicationsValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.applications.Applications.ApplicationsRequest.class)) return new ApplicationsRequestValidator();
-		if (clazz.equals(com.soustify.applications.Applications.ApplicationsResponse.class)) return new ApplicationsResponseValidator();
+		if (clazz.equals(com.soustify.applications.Applications.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.applications.Applications.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code ApplicationsRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class ApplicationsRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.applications.Applications.ApplicationsRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.applications.Applications.Request> {
 		
 	
 		
@@ -31,22 +31,22 @@ public class ApplicationsValidator {
 	
 	
 
-	public void assertValid(com.soustify.applications.Applications.ApplicationsRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.applications.Applications.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".applications.ApplicationsRequest.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".applications.Request.id", proto.getId());
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".applications.ApplicationsRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.CollectiveValidation.in(".applications.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".applications.ApplicationsRequest.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".applications.ApplicationsRequest.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".applications.Request.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".applications.Request.name", proto.getName(), 200);
 	
 	
 	}
 }
 /**
-	 * Validates {@code ApplicationsResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class ApplicationsResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.applications.Applications.ApplicationsResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.applications.Applications.Response> {
 		
 	
 		
@@ -58,16 +58,16 @@ public class ApplicationsValidator {
 	
 	
 
-	public void assertValid(com.soustify.applications.Applications.ApplicationsResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.applications.Applications.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".applications.ApplicationsResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".applications.Response.id", proto.getId());
 	// no validation rules for Status
 
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".applications.ApplicationsResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".applications.Response.id_auditable", proto.getIdAuditable());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".applications.ApplicationsResponse.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".applications.ApplicationsResponse.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".applications.Response.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".applications.Response.name", proto.getName(), 200);
 	
 	
 	}

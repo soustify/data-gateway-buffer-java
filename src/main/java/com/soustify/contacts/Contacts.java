@@ -14,8 +14,8 @@ public final class Contacts {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface ContactsRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:contacts.ContactsRequest)
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:contacts.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -66,18 +66,18 @@ public final class Contacts {
         getValueBytes();
   }
   /**
-   * Protobuf type {@code contacts.ContactsRequest}
+   * Protobuf type {@code contacts.Request}
    */
-  public static final class ContactsRequest extends
+  public static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:contacts.ContactsRequest)
-      ContactsRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:contacts.Request)
+      RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ContactsRequest.newBuilder() to construct.
-    private ContactsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ContactsRequest() {
+    private Request() {
       id_ = "";
       enStatus_ = 0;
       type_ = "";
@@ -88,7 +88,7 @@ public final class Contacts {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new ContactsRequest();
+      return new Request();
     }
 
     @java.lang.Override
@@ -98,15 +98,15 @@ public final class Contacts {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.contacts.Contacts.internal_static_contacts_ContactsRequest_descriptor;
+      return com.soustify.contacts.Contacts.internal_static_contacts_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.contacts.Contacts.internal_static_contacts_ContactsRequest_fieldAccessorTable
+      return com.soustify.contacts.Contacts.internal_static_contacts_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.contacts.Contacts.ContactsRequest.class, com.soustify.contacts.Contacts.ContactsRequest.Builder.class);
+              com.soustify.contacts.Contacts.Request.class, com.soustify.contacts.Contacts.Request.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -302,10 +302,10 @@ public final class Contacts {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.contacts.Contacts.ContactsRequest)) {
+      if (!(obj instanceof com.soustify.contacts.Contacts.Request)) {
         return super.equals(obj);
       }
-      com.soustify.contacts.Contacts.ContactsRequest other = (com.soustify.contacts.Contacts.ContactsRequest) obj;
+      com.soustify.contacts.Contacts.Request other = (com.soustify.contacts.Contacts.Request) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -338,69 +338,69 @@ public final class Contacts {
       return hash;
     }
 
-    public static com.soustify.contacts.Contacts.ContactsRequest parseFrom(
+    public static com.soustify.contacts.Contacts.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.contacts.Contacts.ContactsRequest parseFrom(
+    public static com.soustify.contacts.Contacts.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.contacts.Contacts.ContactsRequest parseFrom(
+    public static com.soustify.contacts.Contacts.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.contacts.Contacts.ContactsRequest parseFrom(
+    public static com.soustify.contacts.Contacts.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.contacts.Contacts.ContactsRequest parseFrom(byte[] data)
+    public static com.soustify.contacts.Contacts.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.contacts.Contacts.ContactsRequest parseFrom(
+    public static com.soustify.contacts.Contacts.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.contacts.Contacts.ContactsRequest parseFrom(java.io.InputStream input)
+    public static com.soustify.contacts.Contacts.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.contacts.Contacts.ContactsRequest parseFrom(
+    public static com.soustify.contacts.Contacts.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.contacts.Contacts.ContactsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.contacts.Contacts.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.contacts.Contacts.ContactsRequest parseDelimitedFrom(
+    public static com.soustify.contacts.Contacts.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.contacts.Contacts.ContactsRequest parseFrom(
+    public static com.soustify.contacts.Contacts.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.contacts.Contacts.ContactsRequest parseFrom(
+    public static com.soustify.contacts.Contacts.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -413,7 +413,7 @@ public final class Contacts {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.contacts.Contacts.ContactsRequest prototype) {
+    public static Builder newBuilder(com.soustify.contacts.Contacts.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -429,26 +429,26 @@ public final class Contacts {
       return builder;
     }
     /**
-     * Protobuf type {@code contacts.ContactsRequest}
+     * Protobuf type {@code contacts.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:contacts.ContactsRequest)
-        com.soustify.contacts.Contacts.ContactsRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:contacts.Request)
+        com.soustify.contacts.Contacts.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.contacts.Contacts.internal_static_contacts_ContactsRequest_descriptor;
+        return com.soustify.contacts.Contacts.internal_static_contacts_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.contacts.Contacts.internal_static_contacts_ContactsRequest_fieldAccessorTable
+        return com.soustify.contacts.Contacts.internal_static_contacts_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.contacts.Contacts.ContactsRequest.class, com.soustify.contacts.Contacts.ContactsRequest.Builder.class);
+                com.soustify.contacts.Contacts.Request.class, com.soustify.contacts.Contacts.Request.Builder.class);
       }
 
-      // Construct using com.soustify.contacts.Contacts.ContactsRequest.newBuilder()
+      // Construct using com.soustify.contacts.Contacts.Request.newBuilder()
       private Builder() {
 
       }
@@ -472,17 +472,17 @@ public final class Contacts {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.contacts.Contacts.internal_static_contacts_ContactsRequest_descriptor;
+        return com.soustify.contacts.Contacts.internal_static_contacts_Request_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.contacts.Contacts.ContactsRequest getDefaultInstanceForType() {
-        return com.soustify.contacts.Contacts.ContactsRequest.getDefaultInstance();
+      public com.soustify.contacts.Contacts.Request getDefaultInstanceForType() {
+        return com.soustify.contacts.Contacts.Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.contacts.Contacts.ContactsRequest build() {
-        com.soustify.contacts.Contacts.ContactsRequest result = buildPartial();
+      public com.soustify.contacts.Contacts.Request build() {
+        com.soustify.contacts.Contacts.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -490,14 +490,14 @@ public final class Contacts {
       }
 
       @java.lang.Override
-      public com.soustify.contacts.Contacts.ContactsRequest buildPartial() {
-        com.soustify.contacts.Contacts.ContactsRequest result = new com.soustify.contacts.Contacts.ContactsRequest(this);
+      public com.soustify.contacts.Contacts.Request buildPartial() {
+        com.soustify.contacts.Contacts.Request result = new com.soustify.contacts.Contacts.Request(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.contacts.Contacts.ContactsRequest result) {
+      private void buildPartial0(com.soustify.contacts.Contacts.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -547,16 +547,16 @@ public final class Contacts {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.contacts.Contacts.ContactsRequest) {
-          return mergeFrom((com.soustify.contacts.Contacts.ContactsRequest)other);
+        if (other instanceof com.soustify.contacts.Contacts.Request) {
+          return mergeFrom((com.soustify.contacts.Contacts.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.contacts.Contacts.ContactsRequest other) {
-        if (other == com.soustify.contacts.Contacts.ContactsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.contacts.Contacts.Request other) {
+        if (other == com.soustify.contacts.Contacts.Request.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -919,23 +919,23 @@ public final class Contacts {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:contacts.ContactsRequest)
+      // @@protoc_insertion_point(builder_scope:contacts.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:contacts.ContactsRequest)
-    private static final com.soustify.contacts.Contacts.ContactsRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:contacts.Request)
+    private static final com.soustify.contacts.Contacts.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.contacts.Contacts.ContactsRequest();
+      DEFAULT_INSTANCE = new com.soustify.contacts.Contacts.Request();
     }
 
-    public static com.soustify.contacts.Contacts.ContactsRequest getDefaultInstance() {
+    public static com.soustify.contacts.Contacts.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ContactsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ContactsRequest>() {
+    private static final com.google.protobuf.Parser<Request>
+        PARSER = new com.google.protobuf.AbstractParser<Request>() {
       @java.lang.Override
-      public ContactsRequest parsePartialFrom(
+      public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -954,24 +954,24 @@ public final class Contacts {
       }
     };
 
-    public static com.google.protobuf.Parser<ContactsRequest> parser() {
+    public static com.google.protobuf.Parser<Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ContactsRequest> getParserForType() {
+    public com.google.protobuf.Parser<Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.contacts.Contacts.ContactsRequest getDefaultInstanceForType() {
+    public com.soustify.contacts.Contacts.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface ContactsResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:contacts.ContactsResponse)
+  public interface ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:contacts.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1034,18 +1034,18 @@ public final class Contacts {
         getValueBytes();
   }
   /**
-   * Protobuf type {@code contacts.ContactsResponse}
+   * Protobuf type {@code contacts.Response}
    */
-  public static final class ContactsResponse extends
+  public static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:contacts.ContactsResponse)
-      ContactsResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:contacts.Response)
+      ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ContactsResponse.newBuilder() to construct.
-    private ContactsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Response.newBuilder() to construct.
+    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ContactsResponse() {
+    private Response() {
       id_ = "";
       status_ = 0;
       idAuditable_ = "";
@@ -1057,7 +1057,7 @@ public final class Contacts {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new ContactsResponse();
+      return new Response();
     }
 
     @java.lang.Override
@@ -1067,15 +1067,15 @@ public final class Contacts {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.contacts.Contacts.internal_static_contacts_ContactsResponse_descriptor;
+      return com.soustify.contacts.Contacts.internal_static_contacts_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.contacts.Contacts.internal_static_contacts_ContactsResponse_fieldAccessorTable
+      return com.soustify.contacts.Contacts.internal_static_contacts_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.contacts.Contacts.ContactsResponse.class, com.soustify.contacts.Contacts.ContactsResponse.Builder.class);
+              com.soustify.contacts.Contacts.Response.class, com.soustify.contacts.Contacts.Response.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1316,10 +1316,10 @@ public final class Contacts {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.contacts.Contacts.ContactsResponse)) {
+      if (!(obj instanceof com.soustify.contacts.Contacts.Response)) {
         return super.equals(obj);
       }
-      com.soustify.contacts.Contacts.ContactsResponse other = (com.soustify.contacts.Contacts.ContactsResponse) obj;
+      com.soustify.contacts.Contacts.Response other = (com.soustify.contacts.Contacts.Response) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1356,69 +1356,69 @@ public final class Contacts {
       return hash;
     }
 
-    public static com.soustify.contacts.Contacts.ContactsResponse parseFrom(
+    public static com.soustify.contacts.Contacts.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.contacts.Contacts.ContactsResponse parseFrom(
+    public static com.soustify.contacts.Contacts.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.contacts.Contacts.ContactsResponse parseFrom(
+    public static com.soustify.contacts.Contacts.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.contacts.Contacts.ContactsResponse parseFrom(
+    public static com.soustify.contacts.Contacts.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.contacts.Contacts.ContactsResponse parseFrom(byte[] data)
+    public static com.soustify.contacts.Contacts.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.contacts.Contacts.ContactsResponse parseFrom(
+    public static com.soustify.contacts.Contacts.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.contacts.Contacts.ContactsResponse parseFrom(java.io.InputStream input)
+    public static com.soustify.contacts.Contacts.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.contacts.Contacts.ContactsResponse parseFrom(
+    public static com.soustify.contacts.Contacts.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.contacts.Contacts.ContactsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.contacts.Contacts.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.contacts.Contacts.ContactsResponse parseDelimitedFrom(
+    public static com.soustify.contacts.Contacts.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.contacts.Contacts.ContactsResponse parseFrom(
+    public static com.soustify.contacts.Contacts.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.contacts.Contacts.ContactsResponse parseFrom(
+    public static com.soustify.contacts.Contacts.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1431,7 +1431,7 @@ public final class Contacts {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.contacts.Contacts.ContactsResponse prototype) {
+    public static Builder newBuilder(com.soustify.contacts.Contacts.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1447,26 +1447,26 @@ public final class Contacts {
       return builder;
     }
     /**
-     * Protobuf type {@code contacts.ContactsResponse}
+     * Protobuf type {@code contacts.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:contacts.ContactsResponse)
-        com.soustify.contacts.Contacts.ContactsResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:contacts.Response)
+        com.soustify.contacts.Contacts.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.contacts.Contacts.internal_static_contacts_ContactsResponse_descriptor;
+        return com.soustify.contacts.Contacts.internal_static_contacts_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.contacts.Contacts.internal_static_contacts_ContactsResponse_fieldAccessorTable
+        return com.soustify.contacts.Contacts.internal_static_contacts_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.contacts.Contacts.ContactsResponse.class, com.soustify.contacts.Contacts.ContactsResponse.Builder.class);
+                com.soustify.contacts.Contacts.Response.class, com.soustify.contacts.Contacts.Response.Builder.class);
       }
 
-      // Construct using com.soustify.contacts.Contacts.ContactsResponse.newBuilder()
+      // Construct using com.soustify.contacts.Contacts.Response.newBuilder()
       private Builder() {
 
       }
@@ -1491,17 +1491,17 @@ public final class Contacts {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.contacts.Contacts.internal_static_contacts_ContactsResponse_descriptor;
+        return com.soustify.contacts.Contacts.internal_static_contacts_Response_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.contacts.Contacts.ContactsResponse getDefaultInstanceForType() {
-        return com.soustify.contacts.Contacts.ContactsResponse.getDefaultInstance();
+      public com.soustify.contacts.Contacts.Response getDefaultInstanceForType() {
+        return com.soustify.contacts.Contacts.Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.contacts.Contacts.ContactsResponse build() {
-        com.soustify.contacts.Contacts.ContactsResponse result = buildPartial();
+      public com.soustify.contacts.Contacts.Response build() {
+        com.soustify.contacts.Contacts.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1509,14 +1509,14 @@ public final class Contacts {
       }
 
       @java.lang.Override
-      public com.soustify.contacts.Contacts.ContactsResponse buildPartial() {
-        com.soustify.contacts.Contacts.ContactsResponse result = new com.soustify.contacts.Contacts.ContactsResponse(this);
+      public com.soustify.contacts.Contacts.Response buildPartial() {
+        com.soustify.contacts.Contacts.Response result = new com.soustify.contacts.Contacts.Response(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.contacts.Contacts.ContactsResponse result) {
+      private void buildPartial0(com.soustify.contacts.Contacts.Response result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -1569,16 +1569,16 @@ public final class Contacts {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.contacts.Contacts.ContactsResponse) {
-          return mergeFrom((com.soustify.contacts.Contacts.ContactsResponse)other);
+        if (other instanceof com.soustify.contacts.Contacts.Response) {
+          return mergeFrom((com.soustify.contacts.Contacts.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.contacts.Contacts.ContactsResponse other) {
-        if (other == com.soustify.contacts.Contacts.ContactsResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.contacts.Contacts.Response other) {
+        if (other == com.soustify.contacts.Contacts.Response.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -2023,23 +2023,23 @@ public final class Contacts {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:contacts.ContactsResponse)
+      // @@protoc_insertion_point(builder_scope:contacts.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:contacts.ContactsResponse)
-    private static final com.soustify.contacts.Contacts.ContactsResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:contacts.Response)
+    private static final com.soustify.contacts.Contacts.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.contacts.Contacts.ContactsResponse();
+      DEFAULT_INSTANCE = new com.soustify.contacts.Contacts.Response();
     }
 
-    public static com.soustify.contacts.Contacts.ContactsResponse getDefaultInstance() {
+    public static com.soustify.contacts.Contacts.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ContactsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ContactsResponse>() {
+    private static final com.google.protobuf.Parser<Response>
+        PARSER = new com.google.protobuf.AbstractParser<Response>() {
       @java.lang.Override
-      public ContactsResponse parsePartialFrom(
+      public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2058,32 +2058,32 @@ public final class Contacts {
       }
     };
 
-    public static com.google.protobuf.Parser<ContactsResponse> parser() {
+    public static com.google.protobuf.Parser<Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ContactsResponse> getParserForType() {
+    public com.google.protobuf.Parser<Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.contacts.Contacts.ContactsResponse getDefaultInstanceForType() {
+    public com.soustify.contacts.Contacts.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_contacts_ContactsRequest_descriptor;
+    internal_static_contacts_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_contacts_ContactsRequest_fieldAccessorTable;
+      internal_static_contacts_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_contacts_ContactsResponse_descriptor;
+    internal_static_contacts_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_contacts_ContactsResponse_fieldAccessorTable;
+      internal_static_contacts_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2095,31 +2095,29 @@ public final class Contacts {
     java.lang.String[] descriptorData = {
       "\n\016contacts.proto\022\010contacts\032\013input.proto\032" +
       "\014output.proto\032\016validate.proto\032\037google/pr" +
-      "otobuf/timestamp.proto\"\221\001\n\017ContactsReque" +
-      "st\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 " +
-      "\001(\0162\024.input.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n" +
-      "\004type\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\031\n\005value\030\004 \001(\tB\n" +
-      "\372B\007r\005\020\001\030\310\001\"\245\001\n\020ContactsResponse\022\024\n\002id\030\001 " +
-      "\001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 \001(\0162\026.output.S" +
-      "tatusResponse\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005" +
-      "r\003\260\001\001\022\030\n\004type\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\031\n\005value" +
-      "\030\005 \001(\tB\n\372B\007r\005\020\001\030\310\0012\223\004\n\017ContactsService\022B" +
-      "\n\010Paginate\022\030.input.PaginationRequest\032\032.c" +
-      "ontacts.ContactsResponse0\001\0226\n\005Count\022\026.in" +
-      "put.FilteredRequest\032\025.output.CountRespon" +
-      "se\022F\n\006Create\022\031.contacts.ContactsRequest\032" +
-      "\037.output.PersistenceDataResponse(\001\022F\n\006Up" +
-      "date\022\031.contacts.ContactsRequest\032\037.output" +
-      ".PersistenceDataResponse(\001\022<\n\010Inactive\022\022" +
-      ".input.UUIDRequest\032\032.output.StatusDataRe" +
-      "sponse(\001\022:\n\006Active\022\022.input.UUIDRequest\032\032" +
-      ".output.StatusDataResponse(\001\0229\n\007FindOne\022" +
-      "\022.input.UUIDRequest\032\032.contacts.ContactsR" +
-      "esponse\022?\n\006Delete\022\022.input.UUIDRequest\032\037." +
-      "output.PersistenceDataResponse(\001BY\n\025com." +
-      "soustify.contactsZ@github.com/soustify/d" +
-      "ata-gateway-buffer-go/pkg/contacts;conta" +
-      "ctsb\006proto3"
+      "otobuf/timestamp.proto\"\211\001\n\007Request\022\024\n\002id" +
+      "\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001(\0162\024.in" +
+      "put.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n\004type\030\003 " +
+      "\001(\tB\n\372B\007r\005\020\001\030\310\001\022\031\n\005value\030\004 \001(\tB\n\372B\007r\005\020\001\030" +
+      "\310\001\"\235\001\n\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n" +
+      "\006status\030\002 \001(\0162\026.output.StatusResponse\022\036\n" +
+      "\014id_auditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004type\030\004 " +
+      "\001(\tB\n\372B\007r\005\020\001\030\310\001\022\031\n\005value\030\005 \001(\tB\n\372B\007r\005\020\001\030" +
+      "\310\0012\353\003\n\007Service\022:\n\010Paginate\022\030.input.Pagin" +
+      "ationRequest\032\022.contacts.Response0\001\0226\n\005Co" +
+      "unt\022\026.input.FilteredRequest\032\025.output.Cou" +
+      "ntResponse\022>\n\006Create\022\021.contacts.Request\032" +
+      "\037.output.PersistenceDataResponse(\001\022>\n\006Up" +
+      "date\022\021.contacts.Request\032\037.output.Persist" +
+      "enceDataResponse(\001\022<\n\010Inactive\022\022.input.U" +
+      "UIDRequest\032\032.output.StatusDataResponse(\001" +
+      "\022:\n\006Active\022\022.input.UUIDRequest\032\032.output." +
+      "StatusDataResponse(\001\0221\n\007FindOne\022\022.input." +
+      "UUIDRequest\032\022.contacts.Response\022?\n\006Delet" +
+      "e\022\022.input.UUIDRequest\032\037.output.Persisten" +
+      "ceDataResponse(\001BY\n\025com.soustify.contact" +
+      "sZ@github.com/soustify/data-gateway-buff" +
+      "er-go/pkg/contacts;contactsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2129,17 +2127,17 @@ public final class Contacts {
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_contacts_ContactsRequest_descriptor =
+    internal_static_contacts_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_contacts_ContactsRequest_fieldAccessorTable = new
+    internal_static_contacts_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_contacts_ContactsRequest_descriptor,
+        internal_static_contacts_Request_descriptor,
         new java.lang.String[] { "Id", "EnStatus", "Type", "Value", });
-    internal_static_contacts_ContactsResponse_descriptor =
+    internal_static_contacts_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_contacts_ContactsResponse_fieldAccessorTable = new
+    internal_static_contacts_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_contacts_ContactsResponse_descriptor,
+        internal_static_contacts_Response_descriptor,
         new java.lang.String[] { "Id", "Status", "IdAuditable", "Type", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

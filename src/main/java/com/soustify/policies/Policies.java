@@ -14,8 +14,8 @@ public final class Policies {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface PoliciesRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:policies.PoliciesRequest)
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:policies.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -54,18 +54,18 @@ public final class Policies {
         getNameBytes();
   }
   /**
-   * Protobuf type {@code policies.PoliciesRequest}
+   * Protobuf type {@code policies.Request}
    */
-  public static final class PoliciesRequest extends
+  public static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:policies.PoliciesRequest)
-      PoliciesRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:policies.Request)
+      RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PoliciesRequest.newBuilder() to construct.
-    private PoliciesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PoliciesRequest() {
+    private Request() {
       id_ = "";
       enStatus_ = 0;
       name_ = "";
@@ -75,7 +75,7 @@ public final class Policies {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PoliciesRequest();
+      return new Request();
     }
 
     @java.lang.Override
@@ -85,15 +85,15 @@ public final class Policies {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.policies.Policies.internal_static_policies_PoliciesRequest_descriptor;
+      return com.soustify.policies.Policies.internal_static_policies_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.policies.Policies.internal_static_policies_PoliciesRequest_fieldAccessorTable
+      return com.soustify.policies.Policies.internal_static_policies_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.policies.Policies.PoliciesRequest.class, com.soustify.policies.Policies.PoliciesRequest.Builder.class);
+              com.soustify.policies.Policies.Request.class, com.soustify.policies.Policies.Request.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -244,10 +244,10 @@ public final class Policies {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.policies.Policies.PoliciesRequest)) {
+      if (!(obj instanceof com.soustify.policies.Policies.Request)) {
         return super.equals(obj);
       }
-      com.soustify.policies.Policies.PoliciesRequest other = (com.soustify.policies.Policies.PoliciesRequest) obj;
+      com.soustify.policies.Policies.Request other = (com.soustify.policies.Policies.Request) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -276,69 +276,69 @@ public final class Policies {
       return hash;
     }
 
-    public static com.soustify.policies.Policies.PoliciesRequest parseFrom(
+    public static com.soustify.policies.Policies.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.policies.Policies.PoliciesRequest parseFrom(
+    public static com.soustify.policies.Policies.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.policies.Policies.PoliciesRequest parseFrom(
+    public static com.soustify.policies.Policies.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.policies.Policies.PoliciesRequest parseFrom(
+    public static com.soustify.policies.Policies.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.policies.Policies.PoliciesRequest parseFrom(byte[] data)
+    public static com.soustify.policies.Policies.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.policies.Policies.PoliciesRequest parseFrom(
+    public static com.soustify.policies.Policies.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.policies.Policies.PoliciesRequest parseFrom(java.io.InputStream input)
+    public static com.soustify.policies.Policies.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.policies.Policies.PoliciesRequest parseFrom(
+    public static com.soustify.policies.Policies.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.policies.Policies.PoliciesRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.policies.Policies.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.policies.Policies.PoliciesRequest parseDelimitedFrom(
+    public static com.soustify.policies.Policies.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.policies.Policies.PoliciesRequest parseFrom(
+    public static com.soustify.policies.Policies.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.policies.Policies.PoliciesRequest parseFrom(
+    public static com.soustify.policies.Policies.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -351,7 +351,7 @@ public final class Policies {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.policies.Policies.PoliciesRequest prototype) {
+    public static Builder newBuilder(com.soustify.policies.Policies.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -367,26 +367,26 @@ public final class Policies {
       return builder;
     }
     /**
-     * Protobuf type {@code policies.PoliciesRequest}
+     * Protobuf type {@code policies.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:policies.PoliciesRequest)
-        com.soustify.policies.Policies.PoliciesRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:policies.Request)
+        com.soustify.policies.Policies.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.policies.Policies.internal_static_policies_PoliciesRequest_descriptor;
+        return com.soustify.policies.Policies.internal_static_policies_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.policies.Policies.internal_static_policies_PoliciesRequest_fieldAccessorTable
+        return com.soustify.policies.Policies.internal_static_policies_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.policies.Policies.PoliciesRequest.class, com.soustify.policies.Policies.PoliciesRequest.Builder.class);
+                com.soustify.policies.Policies.Request.class, com.soustify.policies.Policies.Request.Builder.class);
       }
 
-      // Construct using com.soustify.policies.Policies.PoliciesRequest.newBuilder()
+      // Construct using com.soustify.policies.Policies.Request.newBuilder()
       private Builder() {
 
       }
@@ -409,17 +409,17 @@ public final class Policies {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.policies.Policies.internal_static_policies_PoliciesRequest_descriptor;
+        return com.soustify.policies.Policies.internal_static_policies_Request_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.policies.Policies.PoliciesRequest getDefaultInstanceForType() {
-        return com.soustify.policies.Policies.PoliciesRequest.getDefaultInstance();
+      public com.soustify.policies.Policies.Request getDefaultInstanceForType() {
+        return com.soustify.policies.Policies.Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.policies.Policies.PoliciesRequest build() {
-        com.soustify.policies.Policies.PoliciesRequest result = buildPartial();
+      public com.soustify.policies.Policies.Request build() {
+        com.soustify.policies.Policies.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -427,14 +427,14 @@ public final class Policies {
       }
 
       @java.lang.Override
-      public com.soustify.policies.Policies.PoliciesRequest buildPartial() {
-        com.soustify.policies.Policies.PoliciesRequest result = new com.soustify.policies.Policies.PoliciesRequest(this);
+      public com.soustify.policies.Policies.Request buildPartial() {
+        com.soustify.policies.Policies.Request result = new com.soustify.policies.Policies.Request(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.policies.Policies.PoliciesRequest result) {
+      private void buildPartial0(com.soustify.policies.Policies.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -481,16 +481,16 @@ public final class Policies {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.policies.Policies.PoliciesRequest) {
-          return mergeFrom((com.soustify.policies.Policies.PoliciesRequest)other);
+        if (other instanceof com.soustify.policies.Policies.Request) {
+          return mergeFrom((com.soustify.policies.Policies.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.policies.Policies.PoliciesRequest other) {
-        if (other == com.soustify.policies.Policies.PoliciesRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.policies.Policies.Request other) {
+        if (other == com.soustify.policies.Policies.Request.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -771,23 +771,23 @@ public final class Policies {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:policies.PoliciesRequest)
+      // @@protoc_insertion_point(builder_scope:policies.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:policies.PoliciesRequest)
-    private static final com.soustify.policies.Policies.PoliciesRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:policies.Request)
+    private static final com.soustify.policies.Policies.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.policies.Policies.PoliciesRequest();
+      DEFAULT_INSTANCE = new com.soustify.policies.Policies.Request();
     }
 
-    public static com.soustify.policies.Policies.PoliciesRequest getDefaultInstance() {
+    public static com.soustify.policies.Policies.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PoliciesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<PoliciesRequest>() {
+    private static final com.google.protobuf.Parser<Request>
+        PARSER = new com.google.protobuf.AbstractParser<Request>() {
       @java.lang.Override
-      public PoliciesRequest parsePartialFrom(
+      public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -806,24 +806,24 @@ public final class Policies {
       }
     };
 
-    public static com.google.protobuf.Parser<PoliciesRequest> parser() {
+    public static com.google.protobuf.Parser<Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PoliciesRequest> getParserForType() {
+    public com.google.protobuf.Parser<Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.policies.Policies.PoliciesRequest getDefaultInstanceForType() {
+    public com.soustify.policies.Policies.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PoliciesResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:policies.PoliciesResponse)
+  public interface ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:policies.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -874,18 +874,18 @@ public final class Policies {
     com.soustify.output.Output.StatusResponse getStatus();
   }
   /**
-   * Protobuf type {@code policies.PoliciesResponse}
+   * Protobuf type {@code policies.Response}
    */
-  public static final class PoliciesResponse extends
+  public static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:policies.PoliciesResponse)
-      PoliciesResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:policies.Response)
+      ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PoliciesResponse.newBuilder() to construct.
-    private PoliciesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Response.newBuilder() to construct.
+    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PoliciesResponse() {
+    private Response() {
       id_ = "";
       name_ = "";
       idAuditable_ = "";
@@ -896,7 +896,7 @@ public final class Policies {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PoliciesResponse();
+      return new Response();
     }
 
     @java.lang.Override
@@ -906,15 +906,15 @@ public final class Policies {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.policies.Policies.internal_static_policies_PoliciesResponse_descriptor;
+      return com.soustify.policies.Policies.internal_static_policies_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.policies.Policies.internal_static_policies_PoliciesResponse_fieldAccessorTable
+      return com.soustify.policies.Policies.internal_static_policies_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.policies.Policies.PoliciesResponse.class, com.soustify.policies.Policies.PoliciesResponse.Builder.class);
+              com.soustify.policies.Policies.Response.class, com.soustify.policies.Policies.Response.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1110,10 +1110,10 @@ public final class Policies {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.policies.Policies.PoliciesResponse)) {
+      if (!(obj instanceof com.soustify.policies.Policies.Response)) {
         return super.equals(obj);
       }
-      com.soustify.policies.Policies.PoliciesResponse other = (com.soustify.policies.Policies.PoliciesResponse) obj;
+      com.soustify.policies.Policies.Response other = (com.soustify.policies.Policies.Response) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1146,69 +1146,69 @@ public final class Policies {
       return hash;
     }
 
-    public static com.soustify.policies.Policies.PoliciesResponse parseFrom(
+    public static com.soustify.policies.Policies.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.policies.Policies.PoliciesResponse parseFrom(
+    public static com.soustify.policies.Policies.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.policies.Policies.PoliciesResponse parseFrom(
+    public static com.soustify.policies.Policies.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.policies.Policies.PoliciesResponse parseFrom(
+    public static com.soustify.policies.Policies.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.policies.Policies.PoliciesResponse parseFrom(byte[] data)
+    public static com.soustify.policies.Policies.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.policies.Policies.PoliciesResponse parseFrom(
+    public static com.soustify.policies.Policies.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.policies.Policies.PoliciesResponse parseFrom(java.io.InputStream input)
+    public static com.soustify.policies.Policies.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.policies.Policies.PoliciesResponse parseFrom(
+    public static com.soustify.policies.Policies.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.policies.Policies.PoliciesResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.policies.Policies.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.policies.Policies.PoliciesResponse parseDelimitedFrom(
+    public static com.soustify.policies.Policies.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.policies.Policies.PoliciesResponse parseFrom(
+    public static com.soustify.policies.Policies.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.policies.Policies.PoliciesResponse parseFrom(
+    public static com.soustify.policies.Policies.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1221,7 +1221,7 @@ public final class Policies {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.policies.Policies.PoliciesResponse prototype) {
+    public static Builder newBuilder(com.soustify.policies.Policies.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1237,26 +1237,26 @@ public final class Policies {
       return builder;
     }
     /**
-     * Protobuf type {@code policies.PoliciesResponse}
+     * Protobuf type {@code policies.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:policies.PoliciesResponse)
-        com.soustify.policies.Policies.PoliciesResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:policies.Response)
+        com.soustify.policies.Policies.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.policies.Policies.internal_static_policies_PoliciesResponse_descriptor;
+        return com.soustify.policies.Policies.internal_static_policies_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.policies.Policies.internal_static_policies_PoliciesResponse_fieldAccessorTable
+        return com.soustify.policies.Policies.internal_static_policies_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.policies.Policies.PoliciesResponse.class, com.soustify.policies.Policies.PoliciesResponse.Builder.class);
+                com.soustify.policies.Policies.Response.class, com.soustify.policies.Policies.Response.Builder.class);
       }
 
-      // Construct using com.soustify.policies.Policies.PoliciesResponse.newBuilder()
+      // Construct using com.soustify.policies.Policies.Response.newBuilder()
       private Builder() {
 
       }
@@ -1280,17 +1280,17 @@ public final class Policies {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.policies.Policies.internal_static_policies_PoliciesResponse_descriptor;
+        return com.soustify.policies.Policies.internal_static_policies_Response_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.policies.Policies.PoliciesResponse getDefaultInstanceForType() {
-        return com.soustify.policies.Policies.PoliciesResponse.getDefaultInstance();
+      public com.soustify.policies.Policies.Response getDefaultInstanceForType() {
+        return com.soustify.policies.Policies.Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.policies.Policies.PoliciesResponse build() {
-        com.soustify.policies.Policies.PoliciesResponse result = buildPartial();
+      public com.soustify.policies.Policies.Response build() {
+        com.soustify.policies.Policies.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1298,14 +1298,14 @@ public final class Policies {
       }
 
       @java.lang.Override
-      public com.soustify.policies.Policies.PoliciesResponse buildPartial() {
-        com.soustify.policies.Policies.PoliciesResponse result = new com.soustify.policies.Policies.PoliciesResponse(this);
+      public com.soustify.policies.Policies.Response buildPartial() {
+        com.soustify.policies.Policies.Response result = new com.soustify.policies.Policies.Response(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.policies.Policies.PoliciesResponse result) {
+      private void buildPartial0(com.soustify.policies.Policies.Response result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -1355,16 +1355,16 @@ public final class Policies {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.policies.Policies.PoliciesResponse) {
-          return mergeFrom((com.soustify.policies.Policies.PoliciesResponse)other);
+        if (other instanceof com.soustify.policies.Policies.Response) {
+          return mergeFrom((com.soustify.policies.Policies.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.policies.Policies.PoliciesResponse other) {
-        if (other == com.soustify.policies.Policies.PoliciesResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.policies.Policies.Response other) {
+        if (other == com.soustify.policies.Policies.Response.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -1727,23 +1727,23 @@ public final class Policies {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:policies.PoliciesResponse)
+      // @@protoc_insertion_point(builder_scope:policies.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:policies.PoliciesResponse)
-    private static final com.soustify.policies.Policies.PoliciesResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:policies.Response)
+    private static final com.soustify.policies.Policies.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.policies.Policies.PoliciesResponse();
+      DEFAULT_INSTANCE = new com.soustify.policies.Policies.Response();
     }
 
-    public static com.soustify.policies.Policies.PoliciesResponse getDefaultInstance() {
+    public static com.soustify.policies.Policies.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PoliciesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<PoliciesResponse>() {
+    private static final com.google.protobuf.Parser<Response>
+        PARSER = new com.google.protobuf.AbstractParser<Response>() {
       @java.lang.Override
-      public PoliciesResponse parsePartialFrom(
+      public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1762,32 +1762,32 @@ public final class Policies {
       }
     };
 
-    public static com.google.protobuf.Parser<PoliciesResponse> parser() {
+    public static com.google.protobuf.Parser<Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PoliciesResponse> getParserForType() {
+    public com.google.protobuf.Parser<Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.policies.Policies.PoliciesResponse getDefaultInstanceForType() {
+    public com.soustify.policies.Policies.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_policies_PoliciesRequest_descriptor;
+    internal_static_policies_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_policies_PoliciesRequest_fieldAccessorTable;
+      internal_static_policies_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_policies_PoliciesResponse_descriptor;
+    internal_static_policies_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_policies_PoliciesResponse_fieldAccessorTable;
+      internal_static_policies_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1799,29 +1799,28 @@ public final class Policies {
     java.lang.String[] descriptorData = {
       "\n\016policies.proto\022\010policies\032\013input.proto\032" +
       "\014output.proto\032\016validate.proto\032\037google/pr" +
-      "otobuf/timestamp.proto\"v\n\017PoliciesReques" +
-      "t\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001" +
-      "(\0162\024.input.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n\004" +
-      "name\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\"\212\001\n\020PoliciesRespo" +
-      "nse\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\002 \001(\tB" +
-      "\n\372B\007r\005\020\001\030\310\001\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005r\003" +
-      "\260\001\001\022&\n\006status\030\004 \001(\0162\026.output.StatusRespo" +
-      "nse2\223\004\n\017PoliciesService\022B\n\010Paginate\022\030.in" +
-      "put.PaginationRequest\032\032.policies.Policie" +
-      "sResponse0\001\0226\n\005Count\022\026.input.FilteredReq" +
-      "uest\032\025.output.CountResponse\022F\n\006Create\022\031." +
-      "policies.PoliciesRequest\032\037.output.Persis" +
-      "tenceDataResponse(\001\022F\n\006Update\022\031.policies" +
-      ".PoliciesRequest\032\037.output.PersistenceDat" +
-      "aResponse(\001\022<\n\010Inactive\022\022.input.UUIDRequ" +
-      "est\032\032.output.StatusDataResponse(\001\022:\n\006Act" +
-      "ive\022\022.input.UUIDRequest\032\032.output.StatusD" +
-      "ataResponse(\001\0229\n\007FindOne\022\022.input.UUIDReq" +
-      "uest\032\032.policies.PoliciesResponse\022?\n\006Dele" +
-      "te\022\022.input.UUIDRequest\032\037.output.Persiste" +
-      "nceDataResponse(\001BY\n\025com.soustify.polici" +
-      "esZ@github.com/soustify/data-gateway-buf" +
-      "fer-go/pkg/policies;policiesb\006proto3"
+      "otobuf/timestamp.proto\"n\n\007Request\022\024\n\002id\030" +
+      "\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001(\0162\024.inp" +
+      "ut.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n\004name\030\003 \001" +
+      "(\tB\n\372B\007r\005\020\001\030\310\001\"\202\001\n\010Response\022\024\n\002id\030\001 \001(\tB" +
+      "\010\372B\005r\003\260\001\001\022\030\n\004name\030\002 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\036\n\014i" +
+      "d_auditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\004 " +
+      "\001(\0162\026.output.StatusResponse2\353\003\n\007Service\022" +
+      ":\n\010Paginate\022\030.input.PaginationRequest\032\022." +
+      "policies.Response0\001\0226\n\005Count\022\026.input.Fil" +
+      "teredRequest\032\025.output.CountResponse\022>\n\006C" +
+      "reate\022\021.policies.Request\032\037.output.Persis" +
+      "tenceDataResponse(\001\022>\n\006Update\022\021.policies" +
+      ".Request\032\037.output.PersistenceDataRespons" +
+      "e(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032\032.ou" +
+      "tput.StatusDataResponse(\001\022:\n\006Active\022\022.in" +
+      "put.UUIDRequest\032\032.output.StatusDataRespo" +
+      "nse(\001\0221\n\007FindOne\022\022.input.UUIDRequest\032\022.p" +
+      "olicies.Response\022?\n\006Delete\022\022.input.UUIDR" +
+      "equest\032\037.output.PersistenceDataResponse(" +
+      "\001BY\n\025com.soustify.policiesZ@github.com/s" +
+      "oustify/data-gateway-buffer-go/pkg/polic" +
+      "ies;policiesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1831,17 +1830,17 @@ public final class Policies {
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_policies_PoliciesRequest_descriptor =
+    internal_static_policies_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_policies_PoliciesRequest_fieldAccessorTable = new
+    internal_static_policies_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_policies_PoliciesRequest_descriptor,
+        internal_static_policies_Request_descriptor,
         new java.lang.String[] { "Id", "EnStatus", "Name", });
-    internal_static_policies_PoliciesResponse_descriptor =
+    internal_static_policies_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_policies_PoliciesResponse_fieldAccessorTable = new
+    internal_static_policies_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_policies_PoliciesResponse_descriptor,
+        internal_static_policies_Response_descriptor,
         new java.lang.String[] { "Id", "Name", "IdAuditable", "Status", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

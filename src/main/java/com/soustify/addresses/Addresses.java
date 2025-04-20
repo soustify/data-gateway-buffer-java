@@ -14,8 +14,8 @@ public final class Addresses {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface AddressesRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:addresses.AddressesRequest)
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:addresses.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -108,18 +108,18 @@ public final class Addresses {
         getNeighborhoodBytes();
   }
   /**
-   * Protobuf type {@code addresses.AddressesRequest}
+   * Protobuf type {@code addresses.Request}
    */
-  public static final class AddressesRequest extends
+  public static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:addresses.AddressesRequest)
-      AddressesRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:addresses.Request)
+      RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AddressesRequest.newBuilder() to construct.
-    private AddressesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AddressesRequest() {
+    private Request() {
       id_ = "";
       enStatus_ = 0;
       street_ = "";
@@ -132,7 +132,7 @@ public final class Addresses {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AddressesRequest();
+      return new Request();
     }
 
     @java.lang.Override
@@ -142,15 +142,15 @@ public final class Addresses {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.addresses.Addresses.internal_static_addresses_AddressesRequest_descriptor;
+      return com.soustify.addresses.Addresses.internal_static_addresses_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.addresses.Addresses.internal_static_addresses_AddressesRequest_fieldAccessorTable
+      return com.soustify.addresses.Addresses.internal_static_addresses_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.addresses.Addresses.AddressesRequest.class, com.soustify.addresses.Addresses.AddressesRequest.Builder.class);
+              com.soustify.addresses.Addresses.Request.class, com.soustify.addresses.Addresses.Request.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -490,10 +490,10 @@ public final class Addresses {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.addresses.Addresses.AddressesRequest)) {
+      if (!(obj instanceof com.soustify.addresses.Addresses.Request)) {
         return super.equals(obj);
       }
-      com.soustify.addresses.Addresses.AddressesRequest other = (com.soustify.addresses.Addresses.AddressesRequest) obj;
+      com.soustify.addresses.Addresses.Request other = (com.soustify.addresses.Addresses.Request) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -552,69 +552,69 @@ public final class Addresses {
       return hash;
     }
 
-    public static com.soustify.addresses.Addresses.AddressesRequest parseFrom(
+    public static com.soustify.addresses.Addresses.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.addresses.Addresses.AddressesRequest parseFrom(
+    public static com.soustify.addresses.Addresses.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.addresses.Addresses.AddressesRequest parseFrom(
+    public static com.soustify.addresses.Addresses.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.addresses.Addresses.AddressesRequest parseFrom(
+    public static com.soustify.addresses.Addresses.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.addresses.Addresses.AddressesRequest parseFrom(byte[] data)
+    public static com.soustify.addresses.Addresses.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.addresses.Addresses.AddressesRequest parseFrom(
+    public static com.soustify.addresses.Addresses.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.addresses.Addresses.AddressesRequest parseFrom(java.io.InputStream input)
+    public static com.soustify.addresses.Addresses.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.addresses.Addresses.AddressesRequest parseFrom(
+    public static com.soustify.addresses.Addresses.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.addresses.Addresses.AddressesRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.addresses.Addresses.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.addresses.Addresses.AddressesRequest parseDelimitedFrom(
+    public static com.soustify.addresses.Addresses.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.addresses.Addresses.AddressesRequest parseFrom(
+    public static com.soustify.addresses.Addresses.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.addresses.Addresses.AddressesRequest parseFrom(
+    public static com.soustify.addresses.Addresses.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -627,7 +627,7 @@ public final class Addresses {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.addresses.Addresses.AddressesRequest prototype) {
+    public static Builder newBuilder(com.soustify.addresses.Addresses.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -643,26 +643,26 @@ public final class Addresses {
       return builder;
     }
     /**
-     * Protobuf type {@code addresses.AddressesRequest}
+     * Protobuf type {@code addresses.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:addresses.AddressesRequest)
-        com.soustify.addresses.Addresses.AddressesRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:addresses.Request)
+        com.soustify.addresses.Addresses.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.addresses.Addresses.internal_static_addresses_AddressesRequest_descriptor;
+        return com.soustify.addresses.Addresses.internal_static_addresses_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.addresses.Addresses.internal_static_addresses_AddressesRequest_fieldAccessorTable
+        return com.soustify.addresses.Addresses.internal_static_addresses_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.addresses.Addresses.AddressesRequest.class, com.soustify.addresses.Addresses.AddressesRequest.Builder.class);
+                com.soustify.addresses.Addresses.Request.class, com.soustify.addresses.Addresses.Request.Builder.class);
       }
 
-      // Construct using com.soustify.addresses.Addresses.AddressesRequest.newBuilder()
+      // Construct using com.soustify.addresses.Addresses.Request.newBuilder()
       private Builder() {
 
       }
@@ -691,17 +691,17 @@ public final class Addresses {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.addresses.Addresses.internal_static_addresses_AddressesRequest_descriptor;
+        return com.soustify.addresses.Addresses.internal_static_addresses_Request_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.addresses.Addresses.AddressesRequest getDefaultInstanceForType() {
-        return com.soustify.addresses.Addresses.AddressesRequest.getDefaultInstance();
+      public com.soustify.addresses.Addresses.Request getDefaultInstanceForType() {
+        return com.soustify.addresses.Addresses.Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.addresses.Addresses.AddressesRequest build() {
-        com.soustify.addresses.Addresses.AddressesRequest result = buildPartial();
+      public com.soustify.addresses.Addresses.Request build() {
+        com.soustify.addresses.Addresses.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -709,14 +709,14 @@ public final class Addresses {
       }
 
       @java.lang.Override
-      public com.soustify.addresses.Addresses.AddressesRequest buildPartial() {
-        com.soustify.addresses.Addresses.AddressesRequest result = new com.soustify.addresses.Addresses.AddressesRequest(this);
+      public com.soustify.addresses.Addresses.Request buildPartial() {
+        com.soustify.addresses.Addresses.Request result = new com.soustify.addresses.Addresses.Request(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.addresses.Addresses.AddressesRequest result) {
+      private void buildPartial0(com.soustify.addresses.Addresses.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -781,16 +781,16 @@ public final class Addresses {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.addresses.Addresses.AddressesRequest) {
-          return mergeFrom((com.soustify.addresses.Addresses.AddressesRequest)other);
+        if (other instanceof com.soustify.addresses.Addresses.Request) {
+          return mergeFrom((com.soustify.addresses.Addresses.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.addresses.Addresses.AddressesRequest other) {
-        if (other == com.soustify.addresses.Addresses.AddressesRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.addresses.Addresses.Request other) {
+        if (other == com.soustify.addresses.Addresses.Request.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -1437,23 +1437,23 @@ public final class Addresses {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:addresses.AddressesRequest)
+      // @@protoc_insertion_point(builder_scope:addresses.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:addresses.AddressesRequest)
-    private static final com.soustify.addresses.Addresses.AddressesRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:addresses.Request)
+    private static final com.soustify.addresses.Addresses.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.addresses.Addresses.AddressesRequest();
+      DEFAULT_INSTANCE = new com.soustify.addresses.Addresses.Request();
     }
 
-    public static com.soustify.addresses.Addresses.AddressesRequest getDefaultInstance() {
+    public static com.soustify.addresses.Addresses.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AddressesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<AddressesRequest>() {
+    private static final com.google.protobuf.Parser<Request>
+        PARSER = new com.google.protobuf.AbstractParser<Request>() {
       @java.lang.Override
-      public AddressesRequest parsePartialFrom(
+      public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1472,24 +1472,24 @@ public final class Addresses {
       }
     };
 
-    public static com.google.protobuf.Parser<AddressesRequest> parser() {
+    public static com.google.protobuf.Parser<Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AddressesRequest> getParserForType() {
+    public com.google.protobuf.Parser<Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.addresses.Addresses.AddressesRequest getDefaultInstanceForType() {
+    public com.soustify.addresses.Addresses.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AddressesResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:addresses.AddressesResponse)
+  public interface ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:addresses.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1594,18 +1594,18 @@ public final class Addresses {
         getNeighborhoodBytes();
   }
   /**
-   * Protobuf type {@code addresses.AddressesResponse}
+   * Protobuf type {@code addresses.Response}
    */
-  public static final class AddressesResponse extends
+  public static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:addresses.AddressesResponse)
-      AddressesResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:addresses.Response)
+      ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AddressesResponse.newBuilder() to construct.
-    private AddressesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Response.newBuilder() to construct.
+    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AddressesResponse() {
+    private Response() {
       id_ = "";
       status_ = 0;
       idAuditable_ = "";
@@ -1619,7 +1619,7 @@ public final class Addresses {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AddressesResponse();
+      return new Response();
     }
 
     @java.lang.Override
@@ -1629,15 +1629,15 @@ public final class Addresses {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.addresses.Addresses.internal_static_addresses_AddressesResponse_descriptor;
+      return com.soustify.addresses.Addresses.internal_static_addresses_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.addresses.Addresses.internal_static_addresses_AddressesResponse_fieldAccessorTable
+      return com.soustify.addresses.Addresses.internal_static_addresses_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.addresses.Addresses.AddressesResponse.class, com.soustify.addresses.Addresses.AddressesResponse.Builder.class);
+              com.soustify.addresses.Addresses.Response.class, com.soustify.addresses.Addresses.Response.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -2022,10 +2022,10 @@ public final class Addresses {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.addresses.Addresses.AddressesResponse)) {
+      if (!(obj instanceof com.soustify.addresses.Addresses.Response)) {
         return super.equals(obj);
       }
-      com.soustify.addresses.Addresses.AddressesResponse other = (com.soustify.addresses.Addresses.AddressesResponse) obj;
+      com.soustify.addresses.Addresses.Response other = (com.soustify.addresses.Addresses.Response) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -2088,69 +2088,69 @@ public final class Addresses {
       return hash;
     }
 
-    public static com.soustify.addresses.Addresses.AddressesResponse parseFrom(
+    public static com.soustify.addresses.Addresses.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.addresses.Addresses.AddressesResponse parseFrom(
+    public static com.soustify.addresses.Addresses.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.addresses.Addresses.AddressesResponse parseFrom(
+    public static com.soustify.addresses.Addresses.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.addresses.Addresses.AddressesResponse parseFrom(
+    public static com.soustify.addresses.Addresses.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.addresses.Addresses.AddressesResponse parseFrom(byte[] data)
+    public static com.soustify.addresses.Addresses.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.addresses.Addresses.AddressesResponse parseFrom(
+    public static com.soustify.addresses.Addresses.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.addresses.Addresses.AddressesResponse parseFrom(java.io.InputStream input)
+    public static com.soustify.addresses.Addresses.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.addresses.Addresses.AddressesResponse parseFrom(
+    public static com.soustify.addresses.Addresses.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.addresses.Addresses.AddressesResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.addresses.Addresses.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.addresses.Addresses.AddressesResponse parseDelimitedFrom(
+    public static com.soustify.addresses.Addresses.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.addresses.Addresses.AddressesResponse parseFrom(
+    public static com.soustify.addresses.Addresses.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.addresses.Addresses.AddressesResponse parseFrom(
+    public static com.soustify.addresses.Addresses.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2163,7 +2163,7 @@ public final class Addresses {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.addresses.Addresses.AddressesResponse prototype) {
+    public static Builder newBuilder(com.soustify.addresses.Addresses.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2179,26 +2179,26 @@ public final class Addresses {
       return builder;
     }
     /**
-     * Protobuf type {@code addresses.AddressesResponse}
+     * Protobuf type {@code addresses.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:addresses.AddressesResponse)
-        com.soustify.addresses.Addresses.AddressesResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:addresses.Response)
+        com.soustify.addresses.Addresses.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.addresses.Addresses.internal_static_addresses_AddressesResponse_descriptor;
+        return com.soustify.addresses.Addresses.internal_static_addresses_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.addresses.Addresses.internal_static_addresses_AddressesResponse_fieldAccessorTable
+        return com.soustify.addresses.Addresses.internal_static_addresses_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.addresses.Addresses.AddressesResponse.class, com.soustify.addresses.Addresses.AddressesResponse.Builder.class);
+                com.soustify.addresses.Addresses.Response.class, com.soustify.addresses.Addresses.Response.Builder.class);
       }
 
-      // Construct using com.soustify.addresses.Addresses.AddressesResponse.newBuilder()
+      // Construct using com.soustify.addresses.Addresses.Response.newBuilder()
       private Builder() {
 
       }
@@ -2228,17 +2228,17 @@ public final class Addresses {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.addresses.Addresses.internal_static_addresses_AddressesResponse_descriptor;
+        return com.soustify.addresses.Addresses.internal_static_addresses_Response_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.addresses.Addresses.AddressesResponse getDefaultInstanceForType() {
-        return com.soustify.addresses.Addresses.AddressesResponse.getDefaultInstance();
+      public com.soustify.addresses.Addresses.Response getDefaultInstanceForType() {
+        return com.soustify.addresses.Addresses.Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.addresses.Addresses.AddressesResponse build() {
-        com.soustify.addresses.Addresses.AddressesResponse result = buildPartial();
+      public com.soustify.addresses.Addresses.Response build() {
+        com.soustify.addresses.Addresses.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2246,14 +2246,14 @@ public final class Addresses {
       }
 
       @java.lang.Override
-      public com.soustify.addresses.Addresses.AddressesResponse buildPartial() {
-        com.soustify.addresses.Addresses.AddressesResponse result = new com.soustify.addresses.Addresses.AddressesResponse(this);
+      public com.soustify.addresses.Addresses.Response buildPartial() {
+        com.soustify.addresses.Addresses.Response result = new com.soustify.addresses.Addresses.Response(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.addresses.Addresses.AddressesResponse result) {
+      private void buildPartial0(com.soustify.addresses.Addresses.Response result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -2321,16 +2321,16 @@ public final class Addresses {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.addresses.Addresses.AddressesResponse) {
-          return mergeFrom((com.soustify.addresses.Addresses.AddressesResponse)other);
+        if (other instanceof com.soustify.addresses.Addresses.Response) {
+          return mergeFrom((com.soustify.addresses.Addresses.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.addresses.Addresses.AddressesResponse other) {
-        if (other == com.soustify.addresses.Addresses.AddressesResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.addresses.Addresses.Response other) {
+        if (other == com.soustify.addresses.Addresses.Response.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -3059,23 +3059,23 @@ public final class Addresses {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:addresses.AddressesResponse)
+      // @@protoc_insertion_point(builder_scope:addresses.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:addresses.AddressesResponse)
-    private static final com.soustify.addresses.Addresses.AddressesResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:addresses.Response)
+    private static final com.soustify.addresses.Addresses.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.addresses.Addresses.AddressesResponse();
+      DEFAULT_INSTANCE = new com.soustify.addresses.Addresses.Response();
     }
 
-    public static com.soustify.addresses.Addresses.AddressesResponse getDefaultInstance() {
+    public static com.soustify.addresses.Addresses.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AddressesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<AddressesResponse>() {
+    private static final com.google.protobuf.Parser<Response>
+        PARSER = new com.google.protobuf.AbstractParser<Response>() {
       @java.lang.Override
-      public AddressesResponse parsePartialFrom(
+      public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3094,32 +3094,32 @@ public final class Addresses {
       }
     };
 
-    public static com.google.protobuf.Parser<AddressesResponse> parser() {
+    public static com.google.protobuf.Parser<Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AddressesResponse> getParserForType() {
+    public com.google.protobuf.Parser<Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.addresses.Addresses.AddressesResponse getDefaultInstanceForType() {
+    public com.soustify.addresses.Addresses.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_addresses_AddressesRequest_descriptor;
+    internal_static_addresses_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_addresses_AddressesRequest_fieldAccessorTable;
+      internal_static_addresses_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_addresses_AddressesResponse_descriptor;
+    internal_static_addresses_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_addresses_AddressesResponse_fieldAccessorTable;
+      internal_static_addresses_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3131,40 +3131,38 @@ public final class Addresses {
     java.lang.String[] descriptorData = {
       "\n\017addresses.proto\022\taddresses\032\013input.prot" +
       "o\032\014output.proto\032\016validate.proto\032\037google/" +
-      "protobuf/timestamp.proto\"\276\002\n\020AddressesRe" +
-      "quest\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status" +
-      "\030\002 \001(\0162\024.input.StatusRequestB\n\372B\007\202\001\004\030\000\030\001" +
-      "\022\030\n\006street\030\003 \001(\tB\010\372B\005r\003\030\310\001\022\016\n\006number\030\004 \001" +
-      "(\001\022+\n\010latitude\030\005 \001(\001B\031\372B\026\022\024\031\000\000\000\000\000\200V@)\000\000\000" +
-      "\000\000\200V\300@\000\022,\n\tlongitude\030\006 \001(\001B\031\372B\026\022\024\031\000\000\000\000\000\200" +
-      "f@)\000\000\000\000\000\200f\300@\000\022\034\n\010zip_code\030\007 \001(\tB\n\372B\007r\005\020\001" +
-      "\030\310\001\022\034\n\ncomplement\030\010 \001(\tB\010\372B\005r\003\030\310\001\022\036\n\014nei" +
-      "ghborhood\030\t \001(\tB\010\372B\005r\003\030\310\001\"\322\002\n\021AddressesR" +
-      "esponse\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030" +
-      "\002 \001(\0162\026.output.StatusResponse\022\036\n\014id_audi" +
-      "table\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\006street\030\004 \001(\tB\010\372" +
-      "B\005r\003\030\310\001\022\016\n\006number\030\005 \001(\001\022+\n\010latitude\030\006 \001(" +
-      "\001B\031\372B\026\022\024\031\000\000\000\000\000\200V@)\000\000\000\000\000\200V\300@\000\022,\n\tlongitud" +
-      "e\030\007 \001(\001B\031\372B\026\022\024\031\000\000\000\000\000\200f@)\000\000\000\000\000\200f\300@\000\022\034\n\010zi" +
-      "p_code\030\010 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\034\n\ncomplement\030\t" +
-      " \001(\tB\010\372B\005r\003\030\310\001\022\036\n\014neighborhood\030\n \001(\tB\010\372B" +
-      "\005r\003\030\310\0012\234\004\n\020AddressesService\022D\n\010Paginate\022" +
-      "\030.input.PaginationRequest\032\034.addresses.Ad" +
-      "dressesResponse0\001\0226\n\005Count\022\026.input.Filte" +
-      "redRequest\032\025.output.CountResponse\022H\n\006Cre" +
-      "ate\022\033.addresses.AddressesRequest\032\037.outpu" +
-      "t.PersistenceDataResponse(\001\022H\n\006Update\022\033." +
-      "addresses.AddressesRequest\032\037.output.Pers" +
-      "istenceDataResponse(\001\022<\n\010Inactive\022\022.inpu" +
-      "t.UUIDRequest\032\032.output.StatusDataRespons" +
-      "e(\001\022:\n\006Active\022\022.input.UUIDRequest\032\032.outp" +
-      "ut.StatusDataResponse(\001\022;\n\007FindOne\022\022.inp" +
-      "ut.UUIDRequest\032\034.addresses.AddressesResp" +
-      "onse\022?\n\006Delete\022\022.input.UUIDRequest\032\037.out" +
-      "put.PersistenceDataResponse(\001B\\\n\026com.sou" +
-      "stify.addressesZBgithub.com/soustify/dat" +
-      "a-gateway-buffer-go/pkg/addresses;addres" +
-      "sesb\006proto3"
+      "protobuf/timestamp.proto\"\265\002\n\007Request\022\024\n\002" +
+      "id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001(\0162\024." +
+      "input.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n\006stree" +
+      "t\030\003 \001(\tB\010\372B\005r\003\030\310\001\022\016\n\006number\030\004 \001(\001\022+\n\010lat" +
+      "itude\030\005 \001(\001B\031\372B\026\022\024\031\000\000\000\000\000\200V@)\000\000\000\000\000\200V\300@\000\022," +
+      "\n\tlongitude\030\006 \001(\001B\031\372B\026\022\024\031\000\000\000\000\000\200f@)\000\000\000\000\000\200" +
+      "f\300@\000\022\034\n\010zip_code\030\007 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\034\n\nco" +
+      "mplement\030\010 \001(\tB\010\372B\005r\003\030\310\001\022\036\n\014neighborhood" +
+      "\030\t \001(\tB\010\372B\005r\003\030\310\001\"\311\002\n\010Response\022\024\n\002id\030\001 \001(" +
+      "\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\002 \001(\0162\026.output.Sta" +
+      "tusResponse\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005r\003" +
+      "\260\001\001\022\030\n\006street\030\004 \001(\tB\010\372B\005r\003\030\310\001\022\016\n\006number\030" +
+      "\005 \001(\001\022+\n\010latitude\030\006 \001(\001B\031\372B\026\022\024\031\000\000\000\000\000\200V@)" +
+      "\000\000\000\000\000\200V\300@\000\022,\n\tlongitude\030\007 \001(\001B\031\372B\026\022\024\031\000\000\000" +
+      "\000\000\200f@)\000\000\000\000\000\200f\300@\000\022\034\n\010zip_code\030\010 \001(\tB\n\372B\007r" +
+      "\005\020\001\030\310\001\022\034\n\ncomplement\030\t \001(\tB\010\372B\005r\003\030\310\001\022\036\n\014" +
+      "neighborhood\030\n \001(\tB\010\372B\005r\003\030\310\0012\357\003\n\007Service" +
+      "\022;\n\010Paginate\022\030.input.PaginationRequest\032\023" +
+      ".addresses.Response0\001\0226\n\005Count\022\026.input.F" +
+      "ilteredRequest\032\025.output.CountResponse\022?\n" +
+      "\006Create\022\022.addresses.Request\032\037.output.Per" +
+      "sistenceDataResponse(\001\022?\n\006Update\022\022.addre" +
+      "sses.Request\032\037.output.PersistenceDataRes" +
+      "ponse(\001\022<\n\010Inactive\022\022.input.UUIDRequest\032" +
+      "\032.output.StatusDataResponse(\001\022:\n\006Active\022" +
+      "\022.input.UUIDRequest\032\032.output.StatusDataR" +
+      "esponse(\001\0222\n\007FindOne\022\022.input.UUIDRequest" +
+      "\032\023.addresses.Response\022?\n\006Delete\022\022.input." +
+      "UUIDRequest\032\037.output.PersistenceDataResp" +
+      "onse(\001B\\\n\026com.soustify.addressesZBgithub" +
+      ".com/soustify/data-gateway-buffer-go/pkg" +
+      "/addresses;addressesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3174,17 +3172,17 @@ public final class Addresses {
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_addresses_AddressesRequest_descriptor =
+    internal_static_addresses_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_addresses_AddressesRequest_fieldAccessorTable = new
+    internal_static_addresses_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_addresses_AddressesRequest_descriptor,
+        internal_static_addresses_Request_descriptor,
         new java.lang.String[] { "Id", "EnStatus", "Street", "Number", "Latitude", "Longitude", "ZipCode", "Complement", "Neighborhood", });
-    internal_static_addresses_AddressesResponse_descriptor =
+    internal_static_addresses_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_addresses_AddressesResponse_fieldAccessorTable = new
+    internal_static_addresses_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_addresses_AddressesResponse_descriptor,
+        internal_static_addresses_Response_descriptor,
         new java.lang.String[] { "Id", "Status", "IdAuditable", "Street", "Number", "Latitude", "Longitude", "ZipCode", "Complement", "Neighborhood", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

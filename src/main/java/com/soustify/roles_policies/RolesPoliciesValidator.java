@@ -8,16 +8,16 @@ package com.soustify.roles_policies;
 public class RolesPoliciesValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.roles_policies.RolesPolicies.RolesPoliciesRequest.class)) return new RolesPoliciesRequestValidator();
-		if (clazz.equals(com.soustify.roles_policies.RolesPolicies.RolesPoliciesResponse.class)) return new RolesPoliciesResponseValidator();
+		if (clazz.equals(com.soustify.roles_policies.RolesPolicies.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.roles_policies.RolesPolicies.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code RolesPoliciesRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class RolesPoliciesRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles_policies.RolesPolicies.RolesPoliciesRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles_policies.RolesPolicies.Request> {
 		
 	
 		
@@ -25,19 +25,19 @@ public class RolesPoliciesValidator {
 	
 	
 
-	public void assertValid(com.soustify.roles_policies.RolesPolicies.RolesPoliciesRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.roles_policies.RolesPolicies.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.RolesPoliciesRequest.id_role", proto.getIdRole());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Request.id_role", proto.getIdRole());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.RolesPoliciesRequest.id_policy", proto.getIdPolicy());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Request.id_policy", proto.getIdPolicy());
 	
 	
 	}
 }
 /**
-	 * Validates {@code RolesPoliciesResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class RolesPoliciesResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles_policies.RolesPolicies.RolesPoliciesResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles_policies.RolesPolicies.Response> {
 		
 	
 		
@@ -51,17 +51,17 @@ public class RolesPoliciesValidator {
 	
 	
 
-	public void assertValid(com.soustify.roles_policies.RolesPolicies.RolesPoliciesResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.roles_policies.RolesPolicies.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.RolesPoliciesResponse.id_role", proto.getIdRole());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Response.id_role", proto.getIdRole());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.RolesPoliciesResponse.id_policy", proto.getIdPolicy());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Response.id_policy", proto.getIdPolicy());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.RolesPoliciesResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Response.id_auditable", proto.getIdAuditable());
 	// no validation rules for Status
 
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.RolesPoliciesResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Response.id", proto.getId());
 	
 	
 	}

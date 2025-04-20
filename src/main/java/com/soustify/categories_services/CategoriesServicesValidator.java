@@ -8,16 +8,16 @@ package com.soustify.categories_services;
 public class CategoriesServicesValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest.class)) return new CategoriesServicesRequestValidator();
-		if (clazz.equals(com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse.class)) return new CategoriesServicesResponseValidator();
+		if (clazz.equals(com.soustify.categories_services.CategoriesServices.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.categories_services.CategoriesServices.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code CategoriesServicesRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class CategoriesServicesRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.categories_services.CategoriesServices.Request> {
 		
 	
 		
@@ -33,23 +33,23 @@ public class CategoriesServicesValidator {
 	
 	
 
-	public void assertValid(com.soustify.categories_services.CategoriesServices.CategoriesServicesRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.categories_services.CategoriesServices.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.CategoriesServicesRequest.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.Request.id", proto.getId());
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".categories_services.CategoriesServicesRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.CollectiveValidation.in(".categories_services.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.CategoriesServicesRequest.id_category", proto.getIdCategory());
+			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.Request.id_category", proto.getIdCategory());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.CategoriesServicesRequest.id_service", proto.getIdService());
+			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.Request.id_service", proto.getIdService());
 	
 	
 	}
 }
 /**
-	 * Validates {@code CategoriesServicesResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class CategoriesServicesResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.categories_services.CategoriesServices.Response> {
 		
 	
 		
@@ -63,17 +63,17 @@ public class CategoriesServicesValidator {
 	
 	
 
-	public void assertValid(com.soustify.categories_services.CategoriesServices.CategoriesServicesResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.categories_services.CategoriesServices.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.CategoriesServicesResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.Response.id", proto.getId());
 	// no validation rules for Status
 
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.CategoriesServicesResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.Response.id_auditable", proto.getIdAuditable());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.CategoriesServicesResponse.id_category", proto.getIdCategory());
+			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.Response.id_category", proto.getIdCategory());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.CategoriesServicesResponse.id_service", proto.getIdService());
+			io.envoyproxy.pgv.StringValidation.uuid(".categories_services.Response.id_service", proto.getIdService());
 	
 	
 	}

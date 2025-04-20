@@ -8,16 +8,16 @@ package com.soustify.roles_applications;
 public class RolesApplicationsValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.roles_applications.RolesApplications.RolesApplicationsRequest.class)) return new RolesApplicationsRequestValidator();
-		if (clazz.equals(com.soustify.roles_applications.RolesApplications.RolesApplicationsResponse.class)) return new RolesApplicationsResponseValidator();
+		if (clazz.equals(com.soustify.roles_applications.RolesApplications.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.roles_applications.RolesApplications.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code RolesApplicationsRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class RolesApplicationsRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles_applications.RolesApplications.RolesApplicationsRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles_applications.RolesApplications.Request> {
 		
 	
 		
@@ -25,19 +25,19 @@ public class RolesApplicationsValidator {
 	
 	
 
-	public void assertValid(com.soustify.roles_applications.RolesApplications.RolesApplicationsRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.roles_applications.RolesApplications.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.RolesApplicationsRequest.id_role", proto.getIdRole());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.Request.id_role", proto.getIdRole());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.RolesApplicationsRequest.id_application", proto.getIdApplication());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.Request.id_application", proto.getIdApplication());
 	
 	
 	}
 }
 /**
-	 * Validates {@code RolesApplicationsResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class RolesApplicationsResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles_applications.RolesApplications.RolesApplicationsResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles_applications.RolesApplications.Response> {
 		
 	
 		
@@ -51,17 +51,17 @@ public class RolesApplicationsValidator {
 	
 	
 
-	public void assertValid(com.soustify.roles_applications.RolesApplications.RolesApplicationsResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.roles_applications.RolesApplications.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.RolesApplicationsResponse.id_role", proto.getIdRole());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.Response.id_role", proto.getIdRole());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.RolesApplicationsResponse.id_application", proto.getIdApplication());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.Response.id_application", proto.getIdApplication());
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.RolesApplicationsResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.Response.id_auditable", proto.getIdAuditable());
 	// no validation rules for Status
 
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.RolesApplicationsResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_applications.Response.id", proto.getId());
 	
 	
 	}

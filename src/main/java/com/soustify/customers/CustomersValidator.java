@@ -8,16 +8,16 @@ package com.soustify.customers;
 public class CustomersValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.customers.Customers.CustomersRequest.class)) return new CustomersRequestValidator();
-		if (clazz.equals(com.soustify.customers.Customers.CustomersResponse.class)) return new CustomersResponseValidator();
+		if (clazz.equals(com.soustify.customers.Customers.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.customers.Customers.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code CustomersRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class CustomersRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.customers.Customers.CustomersRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.customers.Customers.Request> {
 		
 	
 		
@@ -37,30 +37,30 @@ public class CustomersValidator {
 	
 	
 
-	public void assertValid(com.soustify.customers.Customers.CustomersRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.customers.Customers.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".customers.CustomersRequest.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".customers.Request.id", proto.getId());
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".customers.CustomersRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.CollectiveValidation.in(".customers.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".customers.CustomersRequest.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".customers.CustomersRequest.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".customers.Request.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".customers.Request.name", proto.getName(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".customers.CustomersRequest.surname", proto.getSurname(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".customers.CustomersRequest.surname", proto.getSurname(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".customers.Request.surname", proto.getSurname(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".customers.Request.surname", proto.getSurname(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".customers.CustomersRequest.email", proto.getEmail(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".customers.CustomersRequest.email", proto.getEmail(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".customers.Request.email", proto.getEmail(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".customers.Request.email", proto.getEmail(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".customers.CustomersRequest.id_cognito", proto.getIdCognito());
+			io.envoyproxy.pgv.StringValidation.uuid(".customers.Request.id_cognito", proto.getIdCognito());
 	
 	
 	}
 }
 /**
-	 * Validates {@code CustomersResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class CustomersResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.customers.Customers.CustomersResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.customers.Customers.Response> {
 		
 	
 		
@@ -78,24 +78,24 @@ public class CustomersValidator {
 	
 	
 
-	public void assertValid(com.soustify.customers.Customers.CustomersResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.customers.Customers.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".customers.CustomersResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".customers.Response.id", proto.getId());
 	// no validation rules for Status
 
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".customers.CustomersResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".customers.Response.id_auditable", proto.getIdAuditable());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".customers.CustomersResponse.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".customers.CustomersResponse.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".customers.Response.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".customers.Response.name", proto.getName(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".customers.CustomersResponse.surname", proto.getSurname(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".customers.CustomersResponse.surname", proto.getSurname(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".customers.Response.surname", proto.getSurname(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".customers.Response.surname", proto.getSurname(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".customers.CustomersResponse.email", proto.getEmail(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".customers.CustomersResponse.email", proto.getEmail(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".customers.Response.email", proto.getEmail(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".customers.Response.email", proto.getEmail(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".customers.CustomersResponse.id_cognito", proto.getIdCognito());
+			io.envoyproxy.pgv.StringValidation.uuid(".customers.Response.id_cognito", proto.getIdCognito());
 	
 	
 	}

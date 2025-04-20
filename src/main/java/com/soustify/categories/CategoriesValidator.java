@@ -8,16 +8,16 @@ package com.soustify.categories;
 public class CategoriesValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.categories.Categories.CategoriesRequest.class)) return new CategoriesRequestValidator();
-		if (clazz.equals(com.soustify.categories.Categories.CategoriesResponse.class)) return new CategoriesResponseValidator();
+		if (clazz.equals(com.soustify.categories.Categories.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.categories.Categories.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code CategoriesRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class CategoriesRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.categories.Categories.CategoriesRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.categories.Categories.Request> {
 		
 	
 		
@@ -31,22 +31,22 @@ public class CategoriesValidator {
 	
 	
 
-	public void assertValid(com.soustify.categories.Categories.CategoriesRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.categories.Categories.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".categories.CategoriesRequest.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".categories.Request.id", proto.getId());
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".categories.CategoriesRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.CollectiveValidation.in(".categories.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".categories.CategoriesRequest.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".categories.CategoriesRequest.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".categories.Request.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".categories.Request.name", proto.getName(), 200);
 	
 	
 	}
 }
 /**
-	 * Validates {@code CategoriesResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class CategoriesResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.categories.Categories.CategoriesResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.categories.Categories.Response> {
 		
 	
 		
@@ -58,16 +58,16 @@ public class CategoriesValidator {
 	
 	
 
-	public void assertValid(com.soustify.categories.Categories.CategoriesResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.categories.Categories.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".categories.CategoriesResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".categories.Response.id", proto.getId());
 	// no validation rules for Status
 
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".categories.CategoriesResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".categories.Response.id_auditable", proto.getIdAuditable());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".categories.CategoriesResponse.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".categories.CategoriesResponse.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".categories.Response.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".categories.Response.name", proto.getName(), 200);
 	
 	
 	}

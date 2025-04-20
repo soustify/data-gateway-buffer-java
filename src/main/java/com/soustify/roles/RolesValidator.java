@@ -8,16 +8,16 @@ package com.soustify.roles;
 public class RolesValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.roles.Roles.RolesRequest.class)) return new RolesRequestValidator();
-		if (clazz.equals(com.soustify.roles.Roles.RolesResponse.class)) return new RolesResponseValidator();
+		if (clazz.equals(com.soustify.roles.Roles.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.roles.Roles.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code RolesRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class RolesRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles.Roles.RolesRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles.Roles.Request> {
 		
 		private final com.soustify.input.Input.StatusRequest[] EN_STATUS__IN = new com.soustify.input.Input.StatusRequest[]{
 			com.soustify.input.Input.StatusRequest.forNumber(0),
@@ -29,20 +29,20 @@ public class RolesValidator {
 	
 	
 
-	public void assertValid(com.soustify.roles.Roles.RolesRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.roles.Roles.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".roles.RolesRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.CollectiveValidation.in(".roles.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".roles.RolesRequest.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".roles.RolesRequest.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".roles.Request.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".roles.Request.name", proto.getName(), 200);
 	
 	
 	}
 }
 /**
-	 * Validates {@code RolesResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class RolesResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles.Roles.RolesResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles.Roles.Response> {
 		
 	
 		
@@ -54,14 +54,14 @@ public class RolesValidator {
 	
 	
 
-	public void assertValid(com.soustify.roles.Roles.RolesResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.roles.Roles.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles.RolesResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles.Response.id", proto.getId());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".roles.RolesResponse.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".roles.RolesResponse.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".roles.Response.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".roles.Response.name", proto.getName(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".roles.RolesResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".roles.Response.id_auditable", proto.getIdAuditable());
 	// no validation rules for Status
 
 	

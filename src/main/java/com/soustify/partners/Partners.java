@@ -14,8 +14,8 @@ public final class Partners {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface PartnersRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:partners.PartnersRequest)
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:partners.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -78,18 +78,18 @@ public final class Partners {
         getIdDocumentTypeBytes();
   }
   /**
-   * Protobuf type {@code partners.PartnersRequest}
+   * Protobuf type {@code partners.Request}
    */
-  public static final class PartnersRequest extends
+  public static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:partners.PartnersRequest)
-      PartnersRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:partners.Request)
+      RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PartnersRequest.newBuilder() to construct.
-    private PartnersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PartnersRequest() {
+    private Request() {
       id_ = "";
       enStatus_ = 0;
       name_ = "";
@@ -101,7 +101,7 @@ public final class Partners {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PartnersRequest();
+      return new Request();
     }
 
     @java.lang.Override
@@ -111,15 +111,15 @@ public final class Partners {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.partners.Partners.internal_static_partners_PartnersRequest_descriptor;
+      return com.soustify.partners.Partners.internal_static_partners_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.partners.Partners.internal_static_partners_PartnersRequest_fieldAccessorTable
+      return com.soustify.partners.Partners.internal_static_partners_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.partners.Partners.PartnersRequest.class, com.soustify.partners.Partners.PartnersRequest.Builder.class);
+              com.soustify.partners.Partners.Request.class, com.soustify.partners.Partners.Request.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -360,10 +360,10 @@ public final class Partners {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.partners.Partners.PartnersRequest)) {
+      if (!(obj instanceof com.soustify.partners.Partners.Request)) {
         return super.equals(obj);
       }
-      com.soustify.partners.Partners.PartnersRequest other = (com.soustify.partners.Partners.PartnersRequest) obj;
+      com.soustify.partners.Partners.Request other = (com.soustify.partners.Partners.Request) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -400,69 +400,69 @@ public final class Partners {
       return hash;
     }
 
-    public static com.soustify.partners.Partners.PartnersRequest parseFrom(
+    public static com.soustify.partners.Partners.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners.Partners.PartnersRequest parseFrom(
+    public static com.soustify.partners.Partners.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners.Partners.PartnersRequest parseFrom(
+    public static com.soustify.partners.Partners.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners.Partners.PartnersRequest parseFrom(
+    public static com.soustify.partners.Partners.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners.Partners.PartnersRequest parseFrom(byte[] data)
+    public static com.soustify.partners.Partners.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners.Partners.PartnersRequest parseFrom(
+    public static com.soustify.partners.Partners.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners.Partners.PartnersRequest parseFrom(java.io.InputStream input)
+    public static com.soustify.partners.Partners.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners.Partners.PartnersRequest parseFrom(
+    public static com.soustify.partners.Partners.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners.Partners.PartnersRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.partners.Partners.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.partners.Partners.PartnersRequest parseDelimitedFrom(
+    public static com.soustify.partners.Partners.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners.Partners.PartnersRequest parseFrom(
+    public static com.soustify.partners.Partners.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners.Partners.PartnersRequest parseFrom(
+    public static com.soustify.partners.Partners.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -475,7 +475,7 @@ public final class Partners {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.partners.Partners.PartnersRequest prototype) {
+    public static Builder newBuilder(com.soustify.partners.Partners.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -491,26 +491,26 @@ public final class Partners {
       return builder;
     }
     /**
-     * Protobuf type {@code partners.PartnersRequest}
+     * Protobuf type {@code partners.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:partners.PartnersRequest)
-        com.soustify.partners.Partners.PartnersRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:partners.Request)
+        com.soustify.partners.Partners.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.partners.Partners.internal_static_partners_PartnersRequest_descriptor;
+        return com.soustify.partners.Partners.internal_static_partners_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.partners.Partners.internal_static_partners_PartnersRequest_fieldAccessorTable
+        return com.soustify.partners.Partners.internal_static_partners_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.partners.Partners.PartnersRequest.class, com.soustify.partners.Partners.PartnersRequest.Builder.class);
+                com.soustify.partners.Partners.Request.class, com.soustify.partners.Partners.Request.Builder.class);
       }
 
-      // Construct using com.soustify.partners.Partners.PartnersRequest.newBuilder()
+      // Construct using com.soustify.partners.Partners.Request.newBuilder()
       private Builder() {
 
       }
@@ -535,17 +535,17 @@ public final class Partners {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.partners.Partners.internal_static_partners_PartnersRequest_descriptor;
+        return com.soustify.partners.Partners.internal_static_partners_Request_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.partners.Partners.PartnersRequest getDefaultInstanceForType() {
-        return com.soustify.partners.Partners.PartnersRequest.getDefaultInstance();
+      public com.soustify.partners.Partners.Request getDefaultInstanceForType() {
+        return com.soustify.partners.Partners.Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.partners.Partners.PartnersRequest build() {
-        com.soustify.partners.Partners.PartnersRequest result = buildPartial();
+      public com.soustify.partners.Partners.Request build() {
+        com.soustify.partners.Partners.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -553,14 +553,14 @@ public final class Partners {
       }
 
       @java.lang.Override
-      public com.soustify.partners.Partners.PartnersRequest buildPartial() {
-        com.soustify.partners.Partners.PartnersRequest result = new com.soustify.partners.Partners.PartnersRequest(this);
+      public com.soustify.partners.Partners.Request buildPartial() {
+        com.soustify.partners.Partners.Request result = new com.soustify.partners.Partners.Request(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.partners.Partners.PartnersRequest result) {
+      private void buildPartial0(com.soustify.partners.Partners.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -613,16 +613,16 @@ public final class Partners {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.partners.Partners.PartnersRequest) {
-          return mergeFrom((com.soustify.partners.Partners.PartnersRequest)other);
+        if (other instanceof com.soustify.partners.Partners.Request) {
+          return mergeFrom((com.soustify.partners.Partners.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.partners.Partners.PartnersRequest other) {
-        if (other == com.soustify.partners.Partners.PartnersRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.partners.Partners.Request other) {
+        if (other == com.soustify.partners.Partners.Request.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -1067,23 +1067,23 @@ public final class Partners {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:partners.PartnersRequest)
+      // @@protoc_insertion_point(builder_scope:partners.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:partners.PartnersRequest)
-    private static final com.soustify.partners.Partners.PartnersRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:partners.Request)
+    private static final com.soustify.partners.Partners.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.partners.Partners.PartnersRequest();
+      DEFAULT_INSTANCE = new com.soustify.partners.Partners.Request();
     }
 
-    public static com.soustify.partners.Partners.PartnersRequest getDefaultInstance() {
+    public static com.soustify.partners.Partners.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PartnersRequest>
-        PARSER = new com.google.protobuf.AbstractParser<PartnersRequest>() {
+    private static final com.google.protobuf.Parser<Request>
+        PARSER = new com.google.protobuf.AbstractParser<Request>() {
       @java.lang.Override
-      public PartnersRequest parsePartialFrom(
+      public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1102,24 +1102,24 @@ public final class Partners {
       }
     };
 
-    public static com.google.protobuf.Parser<PartnersRequest> parser() {
+    public static com.google.protobuf.Parser<Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PartnersRequest> getParserForType() {
+    public com.google.protobuf.Parser<Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.partners.Partners.PartnersRequest getDefaultInstanceForType() {
+    public com.soustify.partners.Partners.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PartnersResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:partners.PartnersResponse)
+  public interface ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:partners.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1194,18 +1194,18 @@ public final class Partners {
         getIdDocumentTypeBytes();
   }
   /**
-   * Protobuf type {@code partners.PartnersResponse}
+   * Protobuf type {@code partners.Response}
    */
-  public static final class PartnersResponse extends
+  public static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:partners.PartnersResponse)
-      PartnersResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:partners.Response)
+      ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PartnersResponse.newBuilder() to construct.
-    private PartnersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Response.newBuilder() to construct.
+    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PartnersResponse() {
+    private Response() {
       id_ = "";
       status_ = 0;
       idAuditable_ = "";
@@ -1218,7 +1218,7 @@ public final class Partners {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PartnersResponse();
+      return new Response();
     }
 
     @java.lang.Override
@@ -1228,15 +1228,15 @@ public final class Partners {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.partners.Partners.internal_static_partners_PartnersResponse_descriptor;
+      return com.soustify.partners.Partners.internal_static_partners_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.partners.Partners.internal_static_partners_PartnersResponse_fieldAccessorTable
+      return com.soustify.partners.Partners.internal_static_partners_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.partners.Partners.PartnersResponse.class, com.soustify.partners.Partners.PartnersResponse.Builder.class);
+              com.soustify.partners.Partners.Response.class, com.soustify.partners.Partners.Response.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1522,10 +1522,10 @@ public final class Partners {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.partners.Partners.PartnersResponse)) {
+      if (!(obj instanceof com.soustify.partners.Partners.Response)) {
         return super.equals(obj);
       }
-      com.soustify.partners.Partners.PartnersResponse other = (com.soustify.partners.Partners.PartnersResponse) obj;
+      com.soustify.partners.Partners.Response other = (com.soustify.partners.Partners.Response) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1566,69 +1566,69 @@ public final class Partners {
       return hash;
     }
 
-    public static com.soustify.partners.Partners.PartnersResponse parseFrom(
+    public static com.soustify.partners.Partners.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners.Partners.PartnersResponse parseFrom(
+    public static com.soustify.partners.Partners.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners.Partners.PartnersResponse parseFrom(
+    public static com.soustify.partners.Partners.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners.Partners.PartnersResponse parseFrom(
+    public static com.soustify.partners.Partners.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners.Partners.PartnersResponse parseFrom(byte[] data)
+    public static com.soustify.partners.Partners.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners.Partners.PartnersResponse parseFrom(
+    public static com.soustify.partners.Partners.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners.Partners.PartnersResponse parseFrom(java.io.InputStream input)
+    public static com.soustify.partners.Partners.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners.Partners.PartnersResponse parseFrom(
+    public static com.soustify.partners.Partners.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners.Partners.PartnersResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.partners.Partners.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.partners.Partners.PartnersResponse parseDelimitedFrom(
+    public static com.soustify.partners.Partners.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners.Partners.PartnersResponse parseFrom(
+    public static com.soustify.partners.Partners.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners.Partners.PartnersResponse parseFrom(
+    public static com.soustify.partners.Partners.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1641,7 +1641,7 @@ public final class Partners {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.partners.Partners.PartnersResponse prototype) {
+    public static Builder newBuilder(com.soustify.partners.Partners.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1657,26 +1657,26 @@ public final class Partners {
       return builder;
     }
     /**
-     * Protobuf type {@code partners.PartnersResponse}
+     * Protobuf type {@code partners.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:partners.PartnersResponse)
-        com.soustify.partners.Partners.PartnersResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:partners.Response)
+        com.soustify.partners.Partners.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.partners.Partners.internal_static_partners_PartnersResponse_descriptor;
+        return com.soustify.partners.Partners.internal_static_partners_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.partners.Partners.internal_static_partners_PartnersResponse_fieldAccessorTable
+        return com.soustify.partners.Partners.internal_static_partners_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.partners.Partners.PartnersResponse.class, com.soustify.partners.Partners.PartnersResponse.Builder.class);
+                com.soustify.partners.Partners.Response.class, com.soustify.partners.Partners.Response.Builder.class);
       }
 
-      // Construct using com.soustify.partners.Partners.PartnersResponse.newBuilder()
+      // Construct using com.soustify.partners.Partners.Response.newBuilder()
       private Builder() {
 
       }
@@ -1702,17 +1702,17 @@ public final class Partners {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.partners.Partners.internal_static_partners_PartnersResponse_descriptor;
+        return com.soustify.partners.Partners.internal_static_partners_Response_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.partners.Partners.PartnersResponse getDefaultInstanceForType() {
-        return com.soustify.partners.Partners.PartnersResponse.getDefaultInstance();
+      public com.soustify.partners.Partners.Response getDefaultInstanceForType() {
+        return com.soustify.partners.Partners.Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.partners.Partners.PartnersResponse build() {
-        com.soustify.partners.Partners.PartnersResponse result = buildPartial();
+      public com.soustify.partners.Partners.Response build() {
+        com.soustify.partners.Partners.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1720,14 +1720,14 @@ public final class Partners {
       }
 
       @java.lang.Override
-      public com.soustify.partners.Partners.PartnersResponse buildPartial() {
-        com.soustify.partners.Partners.PartnersResponse result = new com.soustify.partners.Partners.PartnersResponse(this);
+      public com.soustify.partners.Partners.Response buildPartial() {
+        com.soustify.partners.Partners.Response result = new com.soustify.partners.Partners.Response(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.partners.Partners.PartnersResponse result) {
+      private void buildPartial0(com.soustify.partners.Partners.Response result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
@@ -1783,16 +1783,16 @@ public final class Partners {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.partners.Partners.PartnersResponse) {
-          return mergeFrom((com.soustify.partners.Partners.PartnersResponse)other);
+        if (other instanceof com.soustify.partners.Partners.Response) {
+          return mergeFrom((com.soustify.partners.Partners.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.partners.Partners.PartnersResponse other) {
-        if (other == com.soustify.partners.Partners.PartnersResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.partners.Partners.Response other) {
+        if (other == com.soustify.partners.Partners.Response.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000001;
@@ -2319,23 +2319,23 @@ public final class Partners {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:partners.PartnersResponse)
+      // @@protoc_insertion_point(builder_scope:partners.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:partners.PartnersResponse)
-    private static final com.soustify.partners.Partners.PartnersResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:partners.Response)
+    private static final com.soustify.partners.Partners.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.partners.Partners.PartnersResponse();
+      DEFAULT_INSTANCE = new com.soustify.partners.Partners.Response();
     }
 
-    public static com.soustify.partners.Partners.PartnersResponse getDefaultInstance() {
+    public static com.soustify.partners.Partners.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PartnersResponse>
-        PARSER = new com.google.protobuf.AbstractParser<PartnersResponse>() {
+    private static final com.google.protobuf.Parser<Response>
+        PARSER = new com.google.protobuf.AbstractParser<Response>() {
       @java.lang.Override
-      public PartnersResponse parsePartialFrom(
+      public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2354,32 +2354,32 @@ public final class Partners {
       }
     };
 
-    public static com.google.protobuf.Parser<PartnersResponse> parser() {
+    public static com.google.protobuf.Parser<Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PartnersResponse> getParserForType() {
+    public com.google.protobuf.Parser<Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.partners.Partners.PartnersResponse getDefaultInstanceForType() {
+    public com.soustify.partners.Partners.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_partners_PartnersRequest_descriptor;
+    internal_static_partners_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_partners_PartnersRequest_fieldAccessorTable;
+      internal_static_partners_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_partners_PartnersResponse_descriptor;
+    internal_static_partners_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_partners_PartnersResponse_fieldAccessorTable;
+      internal_static_partners_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2391,33 +2391,31 @@ public final class Partners {
     java.lang.String[] descriptorData = {
       "\n\016partners.proto\022\010partners\032\013input.proto\032" +
       "\014output.proto\032\016validate.proto\032\037google/pr" +
-      "otobuf/timestamp.proto\"\266\001\n\017PartnersReque" +
-      "st\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 " +
-      "\001(\0162\024.input.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n" +
-      "\004name\030\003 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\032\n\010document\030\004 \001(" +
-      "\tB\010\372B\005r\003\030\310\001\022\"\n\020id_document_type\030\005 \001(\tB\010\372" +
-      "B\005r\003\260\001\001\"\312\001\n\020PartnersResponse\022\024\n\002id\030\001 \001(\t" +
-      "B\010\372B\005r\003\260\001\001\022&\n\006status\030\002 \001(\0162\026.output.Stat" +
-      "usResponse\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005r\003\260" +
-      "\001\001\022\030\n\004name\030\004 \001(\tB\n\372B\007r\005\020\001\030\310\001\022\032\n\010document" +
-      "\030\005 \001(\tB\010\372B\005r\003\030\310\001\022\"\n\020id_document_type\030\006 \001" +
-      "(\tB\010\372B\005r\003\260\001\0012\223\004\n\017PartnersService\022B\n\010Pagi" +
-      "nate\022\030.input.PaginationRequest\032\032.partner" +
-      "s.PartnersResponse0\001\0226\n\005Count\022\026.input.Fi" +
-      "lteredRequest\032\025.output.CountResponse\022F\n\006" +
-      "Create\022\031.partners.PartnersRequest\032\037.outp" +
-      "ut.PersistenceDataResponse(\001\022F\n\006Update\022\031" +
-      ".partners.PartnersRequest\032\037.output.Persi" +
-      "stenceDataResponse(\001\022<\n\010Inactive\022\022.input" +
-      ".UUIDRequest\032\032.output.StatusDataResponse" +
-      "(\001\022:\n\006Active\022\022.input.UUIDRequest\032\032.outpu" +
-      "t.StatusDataResponse(\001\0229\n\007FindOne\022\022.inpu" +
-      "t.UUIDRequest\032\032.partners.PartnersRespons" +
-      "e\022?\n\006Delete\022\022.input.UUIDRequest\032\037.output" +
-      ".PersistenceDataResponse(\001BY\n\025com.sousti" +
-      "fy.partnersZ@github.com/soustify/data-ga" +
-      "teway-buffer-go/pkg/partners;partnersb\006p" +
-      "roto3"
+      "otobuf/timestamp.proto\"\256\001\n\007Request\022\024\n\002id" +
+      "\030\001 \001(\tB\010\372B\005r\003\260\001\001\0223\n\ten_status\030\002 \001(\0162\024.in" +
+      "put.StatusRequestB\n\372B\007\202\001\004\030\000\030\001\022\030\n\004name\030\003 " +
+      "\001(\tB\n\372B\007r\005\020\001\030\310\001\022\032\n\010document\030\004 \001(\tB\010\372B\005r\003" +
+      "\030\310\001\022\"\n\020id_document_type\030\005 \001(\tB\010\372B\005r\003\260\001\001\"" +
+      "\302\001\n\010Response\022\024\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006st" +
+      "atus\030\002 \001(\0162\026.output.StatusResponse\022\036\n\014id" +
+      "_auditable\030\003 \001(\tB\010\372B\005r\003\260\001\001\022\030\n\004name\030\004 \001(\t" +
+      "B\n\372B\007r\005\020\001\030\310\001\022\032\n\010document\030\005 \001(\tB\010\372B\005r\003\030\310\001" +
+      "\022\"\n\020id_document_type\030\006 \001(\tB\010\372B\005r\003\260\001\0012\353\003\n" +
+      "\007Service\022:\n\010Paginate\022\030.input.PaginationR" +
+      "equest\032\022.partners.Response0\001\0226\n\005Count\022\026." +
+      "input.FilteredRequest\032\025.output.CountResp" +
+      "onse\022>\n\006Create\022\021.partners.Request\032\037.outp" +
+      "ut.PersistenceDataResponse(\001\022>\n\006Update\022\021" +
+      ".partners.Request\032\037.output.PersistenceDa" +
+      "taResponse(\001\022<\n\010Inactive\022\022.input.UUIDReq" +
+      "uest\032\032.output.StatusDataResponse(\001\022:\n\006Ac" +
+      "tive\022\022.input.UUIDRequest\032\032.output.Status" +
+      "DataResponse(\001\0221\n\007FindOne\022\022.input.UUIDRe" +
+      "quest\032\022.partners.Response\022?\n\006Delete\022\022.in" +
+      "put.UUIDRequest\032\037.output.PersistenceData" +
+      "Response(\001BY\n\025com.soustify.partnersZ@git" +
+      "hub.com/soustify/data-gateway-buffer-go/" +
+      "pkg/partners;partnersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2427,17 +2425,17 @@ public final class Partners {
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_partners_PartnersRequest_descriptor =
+    internal_static_partners_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_partners_PartnersRequest_fieldAccessorTable = new
+    internal_static_partners_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_partners_PartnersRequest_descriptor,
+        internal_static_partners_Request_descriptor,
         new java.lang.String[] { "Id", "EnStatus", "Name", "Document", "IdDocumentType", });
-    internal_static_partners_PartnersResponse_descriptor =
+    internal_static_partners_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_partners_PartnersResponse_fieldAccessorTable = new
+    internal_static_partners_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_partners_PartnersResponse_descriptor,
+        internal_static_partners_Response_descriptor,
         new java.lang.String[] { "Id", "Status", "IdAuditable", "Name", "Document", "IdDocumentType", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

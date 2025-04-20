@@ -8,16 +8,16 @@ package com.soustify.example;
 public class ExampleValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.example.Example.ExampleRequest.class)) return new ExampleRequestValidator();
-		if (clazz.equals(com.soustify.example.Example.ExampleResponse.class)) return new ExampleResponseValidator();
+		if (clazz.equals(com.soustify.example.Example.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.example.Example.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code ExampleRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class ExampleRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.example.Example.ExampleRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.example.Example.Request> {
 		
 	
 		
@@ -61,54 +61,54 @@ public class ExampleValidator {
 	
 	
 
-	public void assertValid(com.soustify.example.Example.ExampleRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.example.Example.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".example.ExampleRequest.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".example.Request.id", proto.getId());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".example.ExampleRequest.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.minLength(".example.Request.name", proto.getName(), 1);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".example.ExampleRequest.description", proto.getDescription(), 3);
+			io.envoyproxy.pgv.StringValidation.minLength(".example.Request.description", proto.getDescription(), 3);
 	
 		if (proto.hasBornDate()) {
-			io.envoyproxy.pgv.RequiredValidation.required(".example.ExampleRequest.born_date", proto.getBornDate());
+			io.envoyproxy.pgv.RequiredValidation.required(".example.Request.born_date", proto.getBornDate());
 		} else {
-			io.envoyproxy.pgv.RequiredValidation.required(".example.ExampleRequest.born_date", null);
+			io.envoyproxy.pgv.RequiredValidation.required(".example.Request.born_date", null);
 		};
 	
-			io.envoyproxy.pgv.ComparativeValidation.greaterThan(".example.ExampleRequest.price", proto.getPrice(), PRICE__GT, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.greaterThan(".example.Request.price", proto.getPrice(), PRICE__GT, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".example.ExampleRequest.category", proto.getCategory(), 5);
+			io.envoyproxy.pgv.StringValidation.minLength(".example.Request.category", proto.getCategory(), 5);
 	
-			io.envoyproxy.pgv.RepeatedValidation.minItems(".example.ExampleRequest.tags", proto.getTagsList(), 2);
+			io.envoyproxy.pgv.RepeatedValidation.minItems(".example.Request.tags", proto.getTagsList(), 2);
 			io.envoyproxy.pgv.RepeatedValidation.forEach(proto.getTagsList(), item -> {
 				// no validation rules for Tags
 
 			});
 	
-			io.envoyproxy.pgv.ComparativeValidation.greaterThan(".example.ExampleRequest.rating", proto.getRating(), RATING__GT, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.greaterThan(".example.Request.rating", proto.getRating(), RATING__GT, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.ComparativeValidation.greaterThanOrEqual(".example.ExampleRequest.quantity", proto.getQuantity(), QUANTITY__GTE, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.greaterThanOrEqual(".example.Request.quantity", proto.getQuantity(), QUANTITY__GTE, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.ComparativeValidation.greaterThanOrEqual(".example.ExampleRequest.discount", proto.getDiscount(), DISCOUNT__GTE, java.util.Comparator.naturalOrder());
+			io.envoyproxy.pgv.ComparativeValidation.greaterThanOrEqual(".example.Request.discount", proto.getDiscount(), DISCOUNT__GTE, java.util.Comparator.naturalOrder());
 	
-			io.envoyproxy.pgv.StringValidation.email(".example.ExampleRequest.email", proto.getEmail());
+			io.envoyproxy.pgv.StringValidation.email(".example.Request.email", proto.getEmail());
 	
-			io.envoyproxy.pgv.StringValidation.pattern(".example.ExampleRequest.phone", proto.getPhone(), PHONE__PATTERN);
+			io.envoyproxy.pgv.StringValidation.pattern(".example.Request.phone", proto.getPhone(), PHONE__PATTERN);
 	
 			// Validate metadata
 			if (proto.hasMetadata()) index.validatorFor(proto.getMetadata()).assertValid(proto.getMetadata());
 	// no validation rules for Public
 
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".example.ExampleRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.CollectiveValidation.in(".example.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
 	
 	}
 }
 /**
-	 * Validates {@code ExampleResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class ExampleResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.example.Example.ExampleResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.example.Example.Response> {
 		
 	
 		
@@ -148,7 +148,7 @@ public class ExampleValidator {
 	
 	
 
-	public void assertValid(com.soustify.example.Example.ExampleResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.example.Example.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	// no validation rules for Id
 
 	// no validation rules for Name

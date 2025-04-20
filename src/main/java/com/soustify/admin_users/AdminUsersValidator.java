@@ -8,16 +8,16 @@ package com.soustify.admin_users;
 public class AdminUsersValidator {
 	public static io.envoyproxy.pgv.ValidatorImpl validatorFor(Class clazz) {
 		
-		if (clazz.equals(com.soustify.admin_users.AdminUsers.AdminUsersRequest.class)) return new AdminUsersRequestValidator();
-		if (clazz.equals(com.soustify.admin_users.AdminUsers.AdminUsersResponse.class)) return new AdminUsersResponseValidator();
+		if (clazz.equals(com.soustify.admin_users.AdminUsers.Request.class)) return new RequestValidator();
+		if (clazz.equals(com.soustify.admin_users.AdminUsers.Response.class)) return new ResponseValidator();
 		return null;
 	}
 
 
 /**
-	 * Validates {@code AdminUsersRequest} protobuf objects.
+	 * Validates {@code Request} protobuf objects.
 	 */
-	public static class AdminUsersRequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.admin_users.AdminUsers.AdminUsersRequest> {
+	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.admin_users.AdminUsers.Request> {
 		
 	
 		
@@ -37,29 +37,29 @@ public class AdminUsersValidator {
 	
 	
 
-	public void assertValid(com.soustify.admin_users.AdminUsers.AdminUsersRequest proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.admin_users.AdminUsers.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".admin_users.AdminUsersRequest.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".admin_users.Request.id", proto.getId());
 	
-			io.envoyproxy.pgv.CollectiveValidation.in(".admin_users.AdminUsersRequest.en_status", proto.getEnStatus(), EN_STATUS__IN);
+			io.envoyproxy.pgv.CollectiveValidation.in(".admin_users.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".admin_users.AdminUsersRequest.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".admin_users.AdminUsersRequest.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".admin_users.Request.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".admin_users.Request.name", proto.getName(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.email(".admin_users.AdminUsersRequest.email", proto.getEmail());
+			io.envoyproxy.pgv.StringValidation.email(".admin_users.Request.email", proto.getEmail());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".admin_users.AdminUsersRequest.id_cognito", proto.getIdCognito(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".admin_users.AdminUsersRequest.id_cognito", proto.getIdCognito(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".admin_users.Request.id_cognito", proto.getIdCognito(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".admin_users.Request.id_cognito", proto.getIdCognito(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".admin_users.AdminUsersRequest.id_role_application", proto.getIdRoleApplication());
+			io.envoyproxy.pgv.StringValidation.uuid(".admin_users.Request.id_role_application", proto.getIdRoleApplication());
 	
 	
 	}
 }
 /**
-	 * Validates {@code AdminUsersResponse} protobuf objects.
+	 * Validates {@code Response} protobuf objects.
 	 */
-	public static class AdminUsersResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.admin_users.AdminUsers.AdminUsersResponse> {
+	public static class ResponseValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.admin_users.AdminUsers.Response> {
 		
 	
 		
@@ -77,23 +77,23 @@ public class AdminUsersValidator {
 	
 	
 
-	public void assertValid(com.soustify.admin_users.AdminUsers.AdminUsersResponse proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	public void assertValid(com.soustify.admin_users.AdminUsers.Response proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".admin_users.AdminUsersResponse.id", proto.getId());
+			io.envoyproxy.pgv.StringValidation.uuid(".admin_users.Response.id", proto.getId());
 	// no validation rules for Status
 
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".admin_users.AdminUsersResponse.id_auditable", proto.getIdAuditable());
+			io.envoyproxy.pgv.StringValidation.uuid(".admin_users.Response.id_auditable", proto.getIdAuditable());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".admin_users.AdminUsersResponse.name", proto.getName(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".admin_users.AdminUsersResponse.name", proto.getName(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".admin_users.Response.name", proto.getName(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".admin_users.Response.name", proto.getName(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.email(".admin_users.AdminUsersResponse.email", proto.getEmail());
+			io.envoyproxy.pgv.StringValidation.email(".admin_users.Response.email", proto.getEmail());
 	
-			io.envoyproxy.pgv.StringValidation.minLength(".admin_users.AdminUsersResponse.id_cognito", proto.getIdCognito(), 1);
-			io.envoyproxy.pgv.StringValidation.maxLength(".admin_users.AdminUsersResponse.id_cognito", proto.getIdCognito(), 200);
+			io.envoyproxy.pgv.StringValidation.minLength(".admin_users.Response.id_cognito", proto.getIdCognito(), 1);
+			io.envoyproxy.pgv.StringValidation.maxLength(".admin_users.Response.id_cognito", proto.getIdCognito(), 200);
 	
-			io.envoyproxy.pgv.StringValidation.uuid(".admin_users.AdminUsersResponse.id_role_application", proto.getIdRoleApplication());
+			io.envoyproxy.pgv.StringValidation.uuid(".admin_users.Response.id_role_application", proto.getIdRoleApplication());
 	
 	
 	}

@@ -14,8 +14,8 @@ public final class PartnersContacts {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface PartnersContactsRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:partners_contacts.PartnersContactsRequest)
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:partners_contacts.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -43,18 +43,18 @@ public final class PartnersContacts {
         getIdContactBytes();
   }
   /**
-   * Protobuf type {@code partners_contacts.PartnersContactsRequest}
+   * Protobuf type {@code partners_contacts.Request}
    */
-  public static final class PartnersContactsRequest extends
+  public static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:partners_contacts.PartnersContactsRequest)
-      PartnersContactsRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:partners_contacts.Request)
+      RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PartnersContactsRequest.newBuilder() to construct.
-    private PartnersContactsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PartnersContactsRequest() {
+    private Request() {
       idPartner_ = "";
       idContact_ = "";
     }
@@ -63,7 +63,7 @@ public final class PartnersContacts {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PartnersContactsRequest();
+      return new Request();
     }
 
     @java.lang.Override
@@ -73,15 +73,15 @@ public final class PartnersContacts {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_PartnersContactsRequest_descriptor;
+      return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_PartnersContactsRequest_fieldAccessorTable
+      return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest.class, com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest.Builder.class);
+              com.soustify.partners_contacts.PartnersContacts.Request.class, com.soustify.partners_contacts.PartnersContacts.Request.Builder.class);
     }
 
     public static final int ID_PARTNER_FIELD_NUMBER = 1;
@@ -207,10 +207,10 @@ public final class PartnersContacts {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest)) {
+      if (!(obj instanceof com.soustify.partners_contacts.PartnersContacts.Request)) {
         return super.equals(obj);
       }
-      com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest other = (com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest) obj;
+      com.soustify.partners_contacts.PartnersContacts.Request other = (com.soustify.partners_contacts.PartnersContacts.Request) obj;
 
       if (!getIdPartner()
           .equals(other.getIdPartner())) return false;
@@ -236,69 +236,69 @@ public final class PartnersContacts {
       return hash;
     }
 
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseFrom(byte[] data)
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseFrom(java.io.InputStream input)
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseDelimitedFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -311,7 +311,7 @@ public final class PartnersContacts {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest prototype) {
+    public static Builder newBuilder(com.soustify.partners_contacts.PartnersContacts.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -327,26 +327,26 @@ public final class PartnersContacts {
       return builder;
     }
     /**
-     * Protobuf type {@code partners_contacts.PartnersContactsRequest}
+     * Protobuf type {@code partners_contacts.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:partners_contacts.PartnersContactsRequest)
-        com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:partners_contacts.Request)
+        com.soustify.partners_contacts.PartnersContacts.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_PartnersContactsRequest_descriptor;
+        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_PartnersContactsRequest_fieldAccessorTable
+        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest.class, com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest.Builder.class);
+                com.soustify.partners_contacts.PartnersContacts.Request.class, com.soustify.partners_contacts.PartnersContacts.Request.Builder.class);
       }
 
-      // Construct using com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest.newBuilder()
+      // Construct using com.soustify.partners_contacts.PartnersContacts.Request.newBuilder()
       private Builder() {
 
       }
@@ -368,17 +368,17 @@ public final class PartnersContacts {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_PartnersContactsRequest_descriptor;
+        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_Request_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest getDefaultInstanceForType() {
-        return com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest.getDefaultInstance();
+      public com.soustify.partners_contacts.PartnersContacts.Request getDefaultInstanceForType() {
+        return com.soustify.partners_contacts.PartnersContacts.Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest build() {
-        com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest result = buildPartial();
+      public com.soustify.partners_contacts.PartnersContacts.Request build() {
+        com.soustify.partners_contacts.PartnersContacts.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -386,14 +386,14 @@ public final class PartnersContacts {
       }
 
       @java.lang.Override
-      public com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest buildPartial() {
-        com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest result = new com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest(this);
+      public com.soustify.partners_contacts.PartnersContacts.Request buildPartial() {
+        com.soustify.partners_contacts.PartnersContacts.Request result = new com.soustify.partners_contacts.PartnersContacts.Request(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest result) {
+      private void buildPartial0(com.soustify.partners_contacts.PartnersContacts.Request result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.idPartner_ = idPartner_;
@@ -437,16 +437,16 @@ public final class PartnersContacts {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest) {
-          return mergeFrom((com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest)other);
+        if (other instanceof com.soustify.partners_contacts.PartnersContacts.Request) {
+          return mergeFrom((com.soustify.partners_contacts.PartnersContacts.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest other) {
-        if (other == com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.partners_contacts.PartnersContacts.Request other) {
+        if (other == com.soustify.partners_contacts.PartnersContacts.Request.getDefaultInstance()) return this;
         if (!other.getIdPartner().isEmpty()) {
           idPartner_ = other.idPartner_;
           bitField0_ |= 0x00000001;
@@ -666,23 +666,23 @@ public final class PartnersContacts {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:partners_contacts.PartnersContactsRequest)
+      // @@protoc_insertion_point(builder_scope:partners_contacts.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:partners_contacts.PartnersContactsRequest)
-    private static final com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:partners_contacts.Request)
+    private static final com.soustify.partners_contacts.PartnersContacts.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest();
+      DEFAULT_INSTANCE = new com.soustify.partners_contacts.PartnersContacts.Request();
     }
 
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest getDefaultInstance() {
+    public static com.soustify.partners_contacts.PartnersContacts.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PartnersContactsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<PartnersContactsRequest>() {
+    private static final com.google.protobuf.Parser<Request>
+        PARSER = new com.google.protobuf.AbstractParser<Request>() {
       @java.lang.Override
-      public PartnersContactsRequest parsePartialFrom(
+      public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -701,24 +701,24 @@ public final class PartnersContacts {
       }
     };
 
-    public static com.google.protobuf.Parser<PartnersContactsRequest> parser() {
+    public static com.google.protobuf.Parser<Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PartnersContactsRequest> getParserForType() {
+    public com.google.protobuf.Parser<Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.partners_contacts.PartnersContacts.PartnersContactsRequest getDefaultInstanceForType() {
+    public com.soustify.partners_contacts.PartnersContacts.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PartnersContactsResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:partners_contacts.PartnersContactsResponse)
+  public interface ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:partners_contacts.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -769,18 +769,18 @@ public final class PartnersContacts {
     com.soustify.output.Output.StatusResponse getStatus();
   }
   /**
-   * Protobuf type {@code partners_contacts.PartnersContactsResponse}
+   * Protobuf type {@code partners_contacts.Response}
    */
-  public static final class PartnersContactsResponse extends
+  public static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:partners_contacts.PartnersContactsResponse)
-      PartnersContactsResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:partners_contacts.Response)
+      ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PartnersContactsResponse.newBuilder() to construct.
-    private PartnersContactsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Response.newBuilder() to construct.
+    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PartnersContactsResponse() {
+    private Response() {
       idPartner_ = "";
       idContact_ = "";
       id_ = "";
@@ -791,7 +791,7 @@ public final class PartnersContacts {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PartnersContactsResponse();
+      return new Response();
     }
 
     @java.lang.Override
@@ -801,15 +801,15 @@ public final class PartnersContacts {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_PartnersContactsResponse_descriptor;
+      return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_PartnersContactsResponse_fieldAccessorTable
+      return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse.class, com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse.Builder.class);
+              com.soustify.partners_contacts.PartnersContacts.Response.class, com.soustify.partners_contacts.PartnersContacts.Response.Builder.class);
     }
 
     public static final int ID_PARTNER_FIELD_NUMBER = 1;
@@ -1005,10 +1005,10 @@ public final class PartnersContacts {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse)) {
+      if (!(obj instanceof com.soustify.partners_contacts.PartnersContacts.Response)) {
         return super.equals(obj);
       }
-      com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse other = (com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse) obj;
+      com.soustify.partners_contacts.PartnersContacts.Response other = (com.soustify.partners_contacts.PartnersContacts.Response) obj;
 
       if (!getIdPartner()
           .equals(other.getIdPartner())) return false;
@@ -1041,69 +1041,69 @@ public final class PartnersContacts {
       return hash;
     }
 
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseFrom(byte[] data)
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseFrom(java.io.InputStream input)
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseDelimitedFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse parseFrom(
+    public static com.soustify.partners_contacts.PartnersContacts.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1116,7 +1116,7 @@ public final class PartnersContacts {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse prototype) {
+    public static Builder newBuilder(com.soustify.partners_contacts.PartnersContacts.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1132,26 +1132,26 @@ public final class PartnersContacts {
       return builder;
     }
     /**
-     * Protobuf type {@code partners_contacts.PartnersContactsResponse}
+     * Protobuf type {@code partners_contacts.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:partners_contacts.PartnersContactsResponse)
-        com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:partners_contacts.Response)
+        com.soustify.partners_contacts.PartnersContacts.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_PartnersContactsResponse_descriptor;
+        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_PartnersContactsResponse_fieldAccessorTable
+        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse.class, com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse.Builder.class);
+                com.soustify.partners_contacts.PartnersContacts.Response.class, com.soustify.partners_contacts.PartnersContacts.Response.Builder.class);
       }
 
-      // Construct using com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse.newBuilder()
+      // Construct using com.soustify.partners_contacts.PartnersContacts.Response.newBuilder()
       private Builder() {
 
       }
@@ -1175,17 +1175,17 @@ public final class PartnersContacts {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_PartnersContactsResponse_descriptor;
+        return com.soustify.partners_contacts.PartnersContacts.internal_static_partners_contacts_Response_descriptor;
       }
 
       @java.lang.Override
-      public com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse getDefaultInstanceForType() {
-        return com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse.getDefaultInstance();
+      public com.soustify.partners_contacts.PartnersContacts.Response getDefaultInstanceForType() {
+        return com.soustify.partners_contacts.PartnersContacts.Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse build() {
-        com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse result = buildPartial();
+      public com.soustify.partners_contacts.PartnersContacts.Response build() {
+        com.soustify.partners_contacts.PartnersContacts.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1193,14 +1193,14 @@ public final class PartnersContacts {
       }
 
       @java.lang.Override
-      public com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse buildPartial() {
-        com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse result = new com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse(this);
+      public com.soustify.partners_contacts.PartnersContacts.Response buildPartial() {
+        com.soustify.partners_contacts.PartnersContacts.Response result = new com.soustify.partners_contacts.PartnersContacts.Response(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse result) {
+      private void buildPartial0(com.soustify.partners_contacts.PartnersContacts.Response result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.idPartner_ = idPartner_;
@@ -1250,16 +1250,16 @@ public final class PartnersContacts {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse) {
-          return mergeFrom((com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse)other);
+        if (other instanceof com.soustify.partners_contacts.PartnersContacts.Response) {
+          return mergeFrom((com.soustify.partners_contacts.PartnersContacts.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse other) {
-        if (other == com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.soustify.partners_contacts.PartnersContacts.Response other) {
+        if (other == com.soustify.partners_contacts.PartnersContacts.Response.getDefaultInstance()) return this;
         if (!other.getIdPartner().isEmpty()) {
           idPartner_ = other.idPartner_;
           bitField0_ |= 0x00000001;
@@ -1622,23 +1622,23 @@ public final class PartnersContacts {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:partners_contacts.PartnersContactsResponse)
+      // @@protoc_insertion_point(builder_scope:partners_contacts.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:partners_contacts.PartnersContactsResponse)
-    private static final com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:partners_contacts.Response)
+    private static final com.soustify.partners_contacts.PartnersContacts.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse();
+      DEFAULT_INSTANCE = new com.soustify.partners_contacts.PartnersContacts.Response();
     }
 
-    public static com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse getDefaultInstance() {
+    public static com.soustify.partners_contacts.PartnersContacts.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PartnersContactsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<PartnersContactsResponse>() {
+    private static final com.google.protobuf.Parser<Response>
+        PARSER = new com.google.protobuf.AbstractParser<Response>() {
       @java.lang.Override
-      public PartnersContactsResponse parsePartialFrom(
+      public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1657,32 +1657,32 @@ public final class PartnersContacts {
       }
     };
 
-    public static com.google.protobuf.Parser<PartnersContactsResponse> parser() {
+    public static com.google.protobuf.Parser<Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PartnersContactsResponse> getParserForType() {
+    public com.google.protobuf.Parser<Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.soustify.partners_contacts.PartnersContacts.PartnersContactsResponse getDefaultInstanceForType() {
+    public com.soustify.partners_contacts.PartnersContacts.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_partners_contacts_PartnersContactsRequest_descriptor;
+    internal_static_partners_contacts_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_partners_contacts_PartnersContactsRequest_fieldAccessorTable;
+      internal_static_partners_contacts_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_partners_contacts_PartnersContactsResponse_descriptor;
+    internal_static_partners_contacts_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_partners_contacts_PartnersContactsResponse_fieldAccessorTable;
+      internal_static_partners_contacts_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1695,31 +1695,28 @@ public final class PartnersContacts {
       "\n\027partners_contacts.proto\022\021partners_cont" +
       "acts\032\013input.proto\032\014output.proto\032\016validat" +
       "e.proto\032\037google/protobuf/timestamp.proto" +
-      "\"U\n\027PartnersContactsRequest\022\034\n\nid_partne" +
-      "r\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\034\n\nid_contact\030\002 \001(\tB\010\372" +
-      "B\005r\003\260\001\001\"\224\001\n\030PartnersContactsResponse\022\034\n\n" +
-      "id_partner\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\034\n\nid_contact" +
-      "\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\024\n\002id\030\003 \001(\tB\010\372B\005r\003\260\001\001\022&" +
-      "\n\006status\030\004 \001(\0162\026.output.StatusResponse2\337" +
-      "\004\n\027PartnersContactsService\022S\n\010Paginate\022\030" +
-      ".input.PaginationRequest\032+.partners_cont" +
-      "acts.PartnersContactsResponse0\001\0226\n\005Count" +
-      "\022\026.input.FilteredRequest\032\025.output.CountR" +
-      "esponse\022W\n\006Create\022*.partners_contacts.Pa" +
-      "rtnersContactsRequest\032\037.output.Persisten" +
-      "ceDataResponse(\001\022W\n\006Update\022*.partners_co" +
-      "ntacts.PartnersContactsRequest\032\037.output." +
-      "PersistenceDataResponse(\001\022<\n\010Inactive\022\022." +
-      "input.UUIDRequest\032\032.output.StatusDataRes" +
-      "ponse(\001\022:\n\006Active\022\022.input.UUIDRequest\032\032." +
-      "output.StatusDataResponse(\001\022J\n\007FindOne\022\022" +
-      ".input.UUIDRequest\032+.partners_contacts.P" +
-      "artnersContactsResponse\022?\n\006Delete\022\022.inpu" +
-      "t.UUIDRequest\032\037.output.PersistenceDataRe" +
-      "sponse(\001Bt\n\036com.soustify.partners_contac" +
-      "tsZRgithub.com/soustify/data-gateway-buf" +
-      "fer-go/pkg/partners_contacts;partners_co" +
-      "ntactsb\006proto3"
+      "\"E\n\007Request\022\034\n\nid_partner\030\001 \001(\tB\010\372B\005r\003\260\001" +
+      "\001\022\034\n\nid_contact\030\002 \001(\tB\010\372B\005r\003\260\001\001\"\204\001\n\010Resp" +
+      "onse\022\034\n\nid_partner\030\001 \001(\tB\010\372B\005r\003\260\001\001\022\034\n\nid" +
+      "_contact\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\024\n\002id\030\003 \001(\tB\010\372B" +
+      "\005r\003\260\001\001\022&\n\006status\030\004 \001(\0162\026.output.StatusRe" +
+      "sponse2\217\004\n\007Service\022C\n\010Paginate\022\030.input.P" +
+      "aginationRequest\032\033.partners_contacts.Res" +
+      "ponse0\001\0226\n\005Count\022\026.input.FilteredRequest" +
+      "\032\025.output.CountResponse\022G\n\006Create\022\032.part" +
+      "ners_contacts.Request\032\037.output.Persisten" +
+      "ceDataResponse(\001\022G\n\006Update\022\032.partners_co" +
+      "ntacts.Request\032\037.output.PersistenceDataR" +
+      "esponse(\001\022<\n\010Inactive\022\022.input.UUIDReques" +
+      "t\032\032.output.StatusDataResponse(\001\022:\n\006Activ" +
+      "e\022\022.input.UUIDRequest\032\032.output.StatusDat" +
+      "aResponse(\001\022:\n\007FindOne\022\022.input.UUIDReque" +
+      "st\032\033.partners_contacts.Response\022?\n\006Delet" +
+      "e\022\022.input.UUIDRequest\032\037.output.Persisten" +
+      "ceDataResponse(\001Bt\n\036com.soustify.partner" +
+      "s_contactsZRgithub.com/soustify/data-gat" +
+      "eway-buffer-go/pkg/partners_contacts;par" +
+      "tners_contactsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1729,17 +1726,17 @@ public final class PartnersContacts {
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_partners_contacts_PartnersContactsRequest_descriptor =
+    internal_static_partners_contacts_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_partners_contacts_PartnersContactsRequest_fieldAccessorTable = new
+    internal_static_partners_contacts_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_partners_contacts_PartnersContactsRequest_descriptor,
+        internal_static_partners_contacts_Request_descriptor,
         new java.lang.String[] { "IdPartner", "IdContact", });
-    internal_static_partners_contacts_PartnersContactsResponse_descriptor =
+    internal_static_partners_contacts_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_partners_contacts_PartnersContactsResponse_fieldAccessorTable = new
+    internal_static_partners_contacts_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_partners_contacts_PartnersContactsResponse_descriptor,
+        internal_static_partners_contacts_Response_descriptor,
         new java.lang.String[] { "IdPartner", "IdContact", "Id", "Status", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
