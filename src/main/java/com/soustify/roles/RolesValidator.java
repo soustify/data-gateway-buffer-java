@@ -19,6 +19,8 @@ public class RolesValidator {
 	 */
 	public static class RequestValidator implements io.envoyproxy.pgv.ValidatorImpl<com.soustify.roles.Roles.Request> {
 		
+	
+		
 		private final com.soustify.input.Input.StatusRequest[] EN_STATUS__IN = new com.soustify.input.Input.StatusRequest[]{
 			com.soustify.input.Input.StatusRequest.forNumber(0),
 			com.soustify.input.Input.StatusRequest.forNumber(1),
@@ -30,6 +32,8 @@ public class RolesValidator {
 	
 
 	public void assertValid(com.soustify.roles.Roles.Request proto, io.envoyproxy.pgv.ValidatorIndex index) throws io.envoyproxy.pgv.ValidationException {
+	
+			io.envoyproxy.pgv.StringValidation.uuid(".roles.Request.id", proto.getId());
 	
 			io.envoyproxy.pgv.CollectiveValidation.in(".roles.Request.en_status", proto.getEnStatus(), EN_STATUS__IN);
 	
