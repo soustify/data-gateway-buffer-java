@@ -41,6 +41,18 @@ public final class RolesApplications {
      */
     com.google.protobuf.ByteString
         getIdApplicationBytes();
+
+    /**
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
   }
   /**
    * Protobuf type {@code roles_applications.Request}
@@ -57,6 +69,7 @@ public final class RolesApplications {
     private Request() {
       idRole_ = "";
       idApplication_ = "";
+      id_ = "";
     }
 
     @java.lang.Override
@@ -162,6 +175,45 @@ public final class RolesApplications {
       }
     }
 
+    public static final int ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -182,6 +234,9 @@ public final class RolesApplications {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idApplication_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, idApplication_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -196,6 +251,9 @@ public final class RolesApplications {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idApplication_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, idApplication_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -216,6 +274,8 @@ public final class RolesApplications {
           .equals(other.getIdRole())) return false;
       if (!getIdApplication()
           .equals(other.getIdApplication())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -231,6 +291,8 @@ public final class RolesApplications {
       hash = (53 * hash) + getIdRole().hashCode();
       hash = (37 * hash) + ID_APPLICATION_FIELD_NUMBER;
       hash = (53 * hash) + getIdApplication().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -362,6 +424,7 @@ public final class RolesApplications {
         bitField0_ = 0;
         idRole_ = "";
         idApplication_ = "";
+        id_ = "";
         return this;
       }
 
@@ -400,6 +463,9 @@ public final class RolesApplications {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.idApplication_ = idApplication_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.id_ = id_;
         }
       }
 
@@ -457,6 +523,11 @@ public final class RolesApplications {
           bitField0_ |= 0x00000002;
           onChanged();
         }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -493,6 +564,11 @@ public final class RolesApplications {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -650,6 +726,78 @@ public final class RolesApplications {
         checkByteStringIsUtf8(value);
         idApplication_ = value;
         bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1843,29 +1991,30 @@ public final class RolesApplications {
       "\n\030roles_applications.proto\022\022roles_applic" +
       "ations\032\013input.proto\032\014output.proto\032\016valid" +
       "ate.proto\032\037google/protobuf/timestamp.pro" +
-      "to\"F\n\007Request\022\031\n\007id_role\030\001 \001(\tB\010\372B\005r\003\260\001\001" +
-      "\022 \n\016id_application\030\002 \001(\tB\010\372B\005r\003\260\001\001\"\245\001\n\010R" +
-      "esponse\022\031\n\007id_role\030\001 \001(\tB\010\372B\005r\003\260\001\001\022 \n\016id" +
-      "_application\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\036\n\014id_audit" +
-      "able\030\003 \001(\tB\010\372B\005r\003\260\001\001\022&\n\006status\030\004 \001(\0162\026.o" +
-      "utput.StatusResponse\022\024\n\002id\030\005 \001(\tB\010\372B\005r\003\260" +
-      "\001\0012\223\004\n\007Service\022D\n\010Paginate\022\030.input.Pagin" +
-      "ationRequest\032\034.roles_applications.Respon" +
-      "se0\001\0226\n\005Count\022\026.input.FilteredRequest\032\025." +
-      "output.CountResponse\022H\n\006Create\022\033.roles_a" +
-      "pplications.Request\032\037.output.Persistence" +
-      "DataResponse(\001\022H\n\006Update\022\033.roles_applica" +
-      "tions.Request\032\037.output.PersistenceDataRe" +
-      "sponse(\001\022<\n\010Inactive\022\022.input.UUIDRequest" +
-      "\032\032.output.StatusDataResponse(\001\022:\n\006Active" +
-      "\022\022.input.UUIDRequest\032\032.output.StatusData" +
-      "Response(\001\022;\n\007FindOne\022\022.input.UUIDReques" +
-      "t\032\034.roles_applications.Response\022?\n\006Delet" +
-      "e\022\022.input.UUIDRequest\032\037.output.Persisten" +
-      "ceDataResponse(\001Bw\n\037com.soustify.roles_a" +
-      "pplicationsZTgithub.com/soustify/data-ga" +
-      "teway-buffer-go/pkg/roles_applications;r" +
-      "oles_applicationsb\006proto3"
+      "to\"\\\n\007Request\022\031\n\007id_role\030\001 \001(\tB\010\372B\005r\003\260\001\001" +
+      "\022 \n\016id_application\030\002 \001(\tB\010\372B\005r\003\260\001\001\022\024\n\002id" +
+      "\030\003 \001(\tB\010\372B\005r\003\260\001\001\"\245\001\n\010Response\022\031\n\007id_role" +
+      "\030\001 \001(\tB\010\372B\005r\003\260\001\001\022 \n\016id_application\030\002 \001(\t" +
+      "B\010\372B\005r\003\260\001\001\022\036\n\014id_auditable\030\003 \001(\tB\010\372B\005r\003\260" +
+      "\001\001\022&\n\006status\030\004 \001(\0162\026.output.StatusRespon" +
+      "se\022\024\n\002id\030\005 \001(\tB\010\372B\005r\003\260\001\0012\223\004\n\007Service\022D\n\010" +
+      "Paginate\022\030.input.PaginationRequest\032\034.rol" +
+      "es_applications.Response0\001\0226\n\005Count\022\026.in" +
+      "put.FilteredRequest\032\025.output.CountRespon" +
+      "se\022H\n\006Create\022\033.roles_applications.Reques" +
+      "t\032\037.output.PersistenceDataResponse(\001\022H\n\006" +
+      "Update\022\033.roles_applications.Request\032\037.ou" +
+      "tput.PersistenceDataResponse(\001\022<\n\010Inacti" +
+      "ve\022\022.input.UUIDRequest\032\032.output.StatusDa" +
+      "taResponse(\001\022:\n\006Active\022\022.input.UUIDReque" +
+      "st\032\032.output.StatusDataResponse(\001\022;\n\007Find" +
+      "One\022\022.input.UUIDRequest\032\034.roles_applicat" +
+      "ions.Response\022?\n\006Delete\022\022.input.UUIDRequ" +
+      "est\032\037.output.PersistenceDataResponse(\001Bw" +
+      "\n\037com.soustify.roles_applicationsZTgithu" +
+      "b.com/soustify/data-gateway-buffer-go/pk" +
+      "g/roles_applications;roles_applicationsb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1880,7 +2029,7 @@ public final class RolesApplications {
     internal_static_roles_applications_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_roles_applications_Request_descriptor,
-        new java.lang.String[] { "IdRole", "IdApplication", });
+        new java.lang.String[] { "IdRole", "IdApplication", "Id", });
     internal_static_roles_applications_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_roles_applications_Response_fieldAccessorTable = new

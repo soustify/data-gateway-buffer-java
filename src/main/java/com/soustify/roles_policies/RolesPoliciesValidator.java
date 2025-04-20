@@ -22,6 +22,8 @@ public class RolesPoliciesValidator {
 	
 		
 	
+		
+	
 	
 	
 
@@ -30,6 +32,8 @@ public class RolesPoliciesValidator {
 			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Request.id_role", proto.getIdRole());
 	
 			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Request.id_policy", proto.getIdPolicy());
+	
+			io.envoyproxy.pgv.StringValidation.uuid(".roles_policies.Request.id", proto.getId());
 	
 	
 	}
